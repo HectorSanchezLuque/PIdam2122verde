@@ -60,7 +60,7 @@
             // txtNif
             // 
             this.txtNif.Location = new System.Drawing.Point(134, 197);
-            this.txtNif.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtNif.Margin = new System.Windows.Forms.Padding(2);
             this.txtNif.Name = "txtNif";
             this.txtNif.Size = new System.Drawing.Size(166, 20);
             this.txtNif.TabIndex = 2;
@@ -68,7 +68,7 @@
             // txtPassword
             // 
             this.txtPassword.Location = new System.Drawing.Point(134, 221);
-            this.txtPassword.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtPassword.Margin = new System.Windows.Forms.Padding(2);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.Size = new System.Drawing.Size(166, 20);
             this.txtPassword.TabIndex = 3;
@@ -88,7 +88,7 @@
             // 
             this.picLight.Image = ((System.Drawing.Image)(resources.GetObject("picLight.Image")));
             this.picLight.Location = new System.Drawing.Point(120, 33);
-            this.picLight.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.picLight.Margin = new System.Windows.Forms.Padding(2);
             this.picLight.Name = "picLight";
             this.picLight.Size = new System.Drawing.Size(132, 136);
             this.picLight.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -97,13 +97,14 @@
             // 
             // btnIniSesion
             // 
-            this.btnIniSesion.Location = new System.Drawing.Point(200, 271);
-            this.btnIniSesion.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnIniSesion.Location = new System.Drawing.Point(202, 271);
+            this.btnIniSesion.Margin = new System.Windows.Forms.Padding(2);
             this.btnIniSesion.Name = "btnIniSesion";
             this.btnIniSesion.Size = new System.Drawing.Size(79, 36);
             this.btnIniSesion.TabIndex = 6;
             this.btnIniSesion.Text = "Iniciar sesión";
             this.btnIniSesion.UseVisualStyleBackColor = true;
+            this.btnIniSesion.Click += new System.EventHandler(this.btnIniSesion_Click);
             // 
             // lblOlvidoCont
             // 
@@ -118,8 +119,8 @@
             // 
             // btnRegistro
             // 
-            this.btnRegistro.Location = new System.Drawing.Point(94, 271);
-            this.btnRegistro.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnRegistro.Location = new System.Drawing.Point(95, 271);
+            this.btnRegistro.Margin = new System.Windows.Forms.Padding(2);
             this.btnRegistro.Name = "btnRegistro";
             this.btnRegistro.Size = new System.Drawing.Size(79, 36);
             this.btnRegistro.TabIndex = 8;
@@ -130,7 +131,7 @@
             // 
             this.picFlag.Image = ((System.Drawing.Image)(resources.GetObject("picFlag.Image")));
             this.picFlag.Location = new System.Drawing.Point(9, 10);
-            this.picFlag.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.picFlag.Margin = new System.Windows.Forms.Padding(2);
             this.picFlag.Name = "picFlag";
             this.picFlag.Size = new System.Drawing.Size(34, 22);
             this.picFlag.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -153,7 +154,7 @@
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
             this.pictureBox3.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox3.InitialImage")));
             this.pictureBox3.Location = new System.Drawing.Point(315, 2);
-            this.pictureBox3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(32, 40);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -188,7 +189,7 @@
             this.Controls.Add(this.txtNif);
             this.Controls.Add(this.label2);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Login";
             this.Text = "Inicio de sesión";
             ((System.ComponentModel.ISupportInitialize)(this.picLight)).EndInit();
