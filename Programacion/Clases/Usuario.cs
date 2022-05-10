@@ -23,9 +23,8 @@ namespace Programacion
         private string correo;
         private string password;
         private Image foto;
-        // private ??? foto;
 
-        //*  Constructor con foto
+        //  Constructor con foto
          public Usuario(int idusu,string niff,string nom, DateTime nacimiento, string puesto, int points, string email, string passwd, Image fot )
         {
             id = idusu;
@@ -37,6 +36,8 @@ namespace Programacion
             password = passwd;
             foto = fot;
         }
+        // Constructor vacío
+        public Usuario() { }
 
         // Getters y Setters
         public string Nif { get => nif; set => nif = value; }
@@ -72,16 +73,14 @@ namespace Programacion
             comando.ExecuteNonQuery();
             return correct;
         }
+
         /// <summary>
-        /// Agregar nuevo usuario a la tabla usuarios
+        /// Agregar usuario a la base de datos.
         /// </summary>
-        /// <param name="nif"></param>
-        /// <param name="nom"></param>
-        /// <param name="nacimiento"></param>
-        /// <param name="puesto"></param>
-        /// <param name="email"></param>
-        /// <param name="pass"></param>
-        static public int AgregarUsuario(MySqlConnection conexion, Usuario usu)
+        /// <param name="conexion"></param>
+        /// <param name="usu"></param>
+        /// <returns></returns>
+        static public int AgregarUsuario(MySqlConnection conexion, Usuario usu) // Investigar
         {
             int retorno;
 
