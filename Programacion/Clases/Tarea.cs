@@ -59,20 +59,12 @@ namespace ProyectoIntegradoVerde.Clases
             return tareas;
         }
 
-<<<<<<< HEAD
-        public static int EliminaTarea(MySqlConnection conexion, int titulo)
-        {
-            int retorno;
-           
-            string consulta = string.Format("DELETE FROM tarea WHERE titulo={0}", titulo);
-=======
-        /// <summary>
         /// Agregar tarea a la base de datos.
         /// </summary>
         /// <param name="conexion"></param>
         /// <param name="tar"></param>
         /// <returns></returns>
-        static public int NuevaTarea(MySqlConnection conexion, Tarea tar)
+        static public int AgregarTarea(MySqlConnection conexion, Tarea tar)
         {
             int retorno;
 
@@ -85,7 +77,6 @@ namespace ProyectoIntegradoVerde.Clases
             return retorno;
         }
 
-        // Modificar de aquí hacia abajo!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
         /// <summary>
         ///  Comprueba si un usuario está dado de alta o no previamente a su agregación
@@ -93,10 +84,10 @@ namespace ProyectoIntegradoVerde.Clases
         /// <param name="conexion">Conexión con la base de datos</param>
         /// <param name="nom">nombre del usuario</param>
         /// <returns>true si está y false si no está</returns>
-        public bool YaEsta(MySqlConnection conexion, string nom)
+        public bool YaEsta(MySqlConnection conexion, string titulo)
         {
             string consulta = string.Format("SELECT * FROM tarea" +
-            " WHERE titulo='{0}'", nom);
+            " WHERE titulo='{0}'", titulo);
 
             MySqlCommand comando = new MySqlCommand(consulta, conexion);
             MySqlDataReader reader = comando.ExecuteReader();
@@ -118,47 +109,22 @@ namespace ProyectoIntegradoVerde.Clases
         /// <param name="conexion">Objeto conexion</param>
         /// <param name="nom">Nombre del usuario a eliminar</param>
         /// <returns></returns>
-        public static int EliminarTarea(MySqlConnection conexion, int nom)
+        public static int EliminarTarea(MySqlConnection conexion, int titulo)
         {
             int retorno;
-            // Eliminamos definitivamente el usuario de la tabla usuario.
-            string consulta = string.Format("DELETE FROM usuarios WHERE nom={0}", nom);
->>>>>>> fab1c418c652be090bfb1f9cf27a1ad8be6192d0
+           
+            string consulta = string.Format("DELETE FROM tarea WHERE titulo={0}", titulo);
             MySqlCommand comando = new MySqlCommand(consulta, conexion);
             retorno = comando.ExecuteNonQuery();
             return retorno;
         }
-<<<<<<< HEAD
 
-
-=======
         /// <summary>
         /// Método para actualizar los datos de un usuario en la Base de Datos.
         /// </summary>
         /// <param name="conexion">objeto conexion</param>
         /// <param name="usu"> datos del usuario a modificar</param>
         /// <returns></returns>
-        public int ActualizarTarea(MySqlConnection conexion, Usuario usu)
-        {
 
-            int retorno;
-
-
-            MemoryStream ms = new MemoryStream();
-            usu.Foto.Save(ms, ImageFormat.Jpeg);
-            byte[] imgArr = ms.ToArray();
-
-            string consulta = string.Format("UPDATE usuarios SET id = '{1}',nif = '{2}',nombre = '{3}' ,fecha_nac = '{4}',cargo = '{5}',puntos = '{6}',correo = '{7}',pswd = '{8}',imagen=@imagen WHERE id={6}", usu.id, usu.nif, usu.nombre, usu.fechaNacimiento,
-                usu.cargo, usu.puntos, usu.correo, usu.password);
-
-
-            MySqlCommand comando = new MySqlCommand(consulta, conexion);
-            comando.Parameters.AddWithValue("imagen", imgArr);
-            retorno = comando.ExecuteNonQuery();
-
-
-            return retorno;
         }
->>>>>>> fab1c418c652be090bfb1f9cf27a1ad8be6192d0
     }
-}
