@@ -1,4 +1,4 @@
-﻿namespace Programacion
+﻿namespace ProyectoIntegradoVerde
 {
     partial class Login
     {

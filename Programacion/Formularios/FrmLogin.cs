@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
 
-namespace Programacion
+namespace ProyectoIntegradoVerde
 {
     public partial class Login : Form
     {
