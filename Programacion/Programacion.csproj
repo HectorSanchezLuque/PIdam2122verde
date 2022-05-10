@@ -91,6 +91,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Clases\conexion.cs" />
+    <Compile Include="Clases\Tarea.cs" />
     <Compile Include="Formularios\FrmDatos.cs">
       <SubType>Form</SubType>
     </Compile>

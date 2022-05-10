@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ProyectoIntegradoVerde.Clases;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -19,7 +20,7 @@ namespace ProyectoIntegradoVerde.Formularios
 
         private void FrmPrincipal_Load(object sender, EventArgs e)
         {
-
+            conexion.AbrirConexion();
         }
 
         private void lblAbreFormulario_MouseEnter(object sender, EventArgs e)
@@ -47,8 +48,38 @@ namespace ProyectoIntegradoVerde.Formularios
 
         private void btnTareas_Click(object sender, EventArgs e)
         {
-            FrmFuncionalidades func = new FrmFuncionalidades(0);
-            func.ShowDialog();
+            try
+            {
+                if (conexion.Conexion != null)
+                {
+                    conexion.AbrirConexion();
+                    List<Tarea> lista = new List<Tarea>();
+                    lista = Tarea.ListadoTareas();
+                    if (lista.Count > 0)
+                    {
+                       
+                        FrmFuncionalidades func = new FrmFuncionalidades(0);
+                        func.Show();
+                    }
+                    else
+                    {
+                        MessageBox.Show("No se ha podido acceder");
+                    }
+
+                }
+                else
+                {
+                    MessageBox.Show("No se ha podido abrir la conexión con la Base de Datos");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message + "\n" + ex.StackTrace);
+            }
+            finally
+            {
+                conexion.CerrarConexion();
+            }
 
         }
 

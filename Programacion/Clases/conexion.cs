@@ -26,11 +26,10 @@ namespace ProyectoIntegradoVerde
                     {
                         instancia = new MySqlConnection();
                         string server = "server=database-1.cy5wu53qozpc.us-east-1.rds.amazonaws.com;";
-                        string port = "port=3306;";
                         string database = "database=Proyecto_Integrado;";
                         string usuario = "uid=admin;";
                         string password = "pwd=admin123;";
-                        instancia.ConnectionString = server + port + database + usuario + password;
+                        instancia.ConnectionString = server + database + usuario + password;
                     }
                     return instancia;
                 }
