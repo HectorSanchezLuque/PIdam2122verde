@@ -9,7 +9,7 @@ using System.Resources;
 using System.IO;
 using System.Drawing.Imaging;
 
-namespace Programacion
+namespace ProyectoIntegradoVerde
 {
     internal class Usuario
     {

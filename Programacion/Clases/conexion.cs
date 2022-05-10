@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using MySql.Data.MySqlClient;
 
 
-namespace Programacion
+namespace ProyectoIntegradoVerde
 {
     internal class conexion
     {
