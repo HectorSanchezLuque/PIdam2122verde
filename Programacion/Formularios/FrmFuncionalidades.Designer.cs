@@ -31,28 +31,23 @@ namespace ProyectoIntegradoVerde.Formularios
         {
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-<<<<<<< HEAD
             this.dgvTareasPendientes = new System.Windows.Forms.DataGridView();
             this.dgvTareasSinAsignar = new System.Windows.Forms.DataGridView();
-=======
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
->>>>>>> 341712b5814eb094bbc5c3b08749e8ba5740b61d
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.cldCalendario = new System.Windows.Forms.MonthCalendar();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.dgvReuniones = new System.Windows.Forms.DataGridView();
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.tabPage5 = new System.Windows.Forms.TabPage();
-<<<<<<< HEAD
             this.Titulo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Puntos = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTareasPendientes)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTareasSinAsignar)).BeginInit();
-=======
             this.btnComprar = new System.Windows.Forms.Button();
             this.lblPuntos = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -78,7 +73,6 @@ namespace ProyectoIntegradoVerde.Formularios
             this.tabPage5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProductos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvBandeja)).BeginInit();
->>>>>>> 341712b5814eb094bbc5c3b08749e8ba5740b61d
             this.SuspendLayout();
             // 
             // tabControl1
@@ -108,7 +102,6 @@ namespace ProyectoIntegradoVerde.Formularios
             this.tabPage1.Text = "Tareas";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
-<<<<<<< HEAD
             // dgvTareasPendientes
             // 
             this.dgvTareasPendientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -118,7 +111,6 @@ namespace ProyectoIntegradoVerde.Formularios
             this.dgvTareasPendientes.RowTemplate.Height = 24;
             this.dgvTareasPendientes.Size = new System.Drawing.Size(324, 150);
             this.dgvTareasPendientes.TabIndex = 1;
-=======
             // label1
             // 
             this.label1.AutoSize = true;
@@ -138,11 +130,9 @@ namespace ProyectoIntegradoVerde.Formularios
             this.dataGridView2.RowTemplate.Height = 24;
             this.dataGridView2.Size = new System.Drawing.Size(309, 150);
             this.dataGridView2.TabIndex = 1;
->>>>>>> 341712b5814eb094bbc5c3b08749e8ba5740b61d
             // 
             // dgvTareasSinAsignar
             // 
-<<<<<<< HEAD
             this.dgvTareasSinAsignar.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvTareasSinAsignar.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Titulo,
@@ -153,7 +143,6 @@ namespace ProyectoIntegradoVerde.Formularios
             this.dgvTareasSinAsignar.RowTemplate.Height = 24;
             this.dgvTareasSinAsignar.Size = new System.Drawing.Size(321, 150);
             this.dgvTareasSinAsignar.TabIndex = 0;
-=======
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(36, 303);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -162,7 +151,6 @@ namespace ProyectoIntegradoVerde.Formularios
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.Size = new System.Drawing.Size(299, 150);
             this.dataGridView1.TabIndex = 0;
->>>>>>> 341712b5814eb094bbc5c3b08749e8ba5740b61d
             // 
             // tabPage2
             // 
@@ -241,7 +229,6 @@ namespace ProyectoIntegradoVerde.Formularios
             this.tabPage5.Text = "Tienda";
             this.tabPage5.UseVisualStyleBackColor = true;
             // 
-<<<<<<< HEAD
             // Titulo
             // 
             this.Titulo.HeaderText = "Titulo";
@@ -255,7 +242,6 @@ namespace ProyectoIntegradoVerde.Formularios
             this.Puntos.HeaderText = "Puntos";
             this.Puntos.MinimumWidth = 6;
             this.Puntos.Name = "Puntos";
-=======
             // btnComprar
             // 
             this.btnComprar.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -384,7 +370,6 @@ namespace ProyectoIntegradoVerde.Formularios
             this.btnLimpiar.TabIndex = 10;
             this.btnLimpiar.Text = "Limpiar campos";
             this.btnLimpiar.UseVisualStyleBackColor = true;
->>>>>>> 341712b5814eb094bbc5c3b08749e8ba5740b61d
             // 
             // FrmFuncionalidades
             // 
@@ -398,10 +383,8 @@ namespace ProyectoIntegradoVerde.Formularios
             this.Load += new System.EventHandler(this.FrmFuncionalidades_Load);
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
-<<<<<<< HEAD
             ((System.ComponentModel.ISupportInitialize)(this.dgvTareasPendientes)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTareasSinAsignar)).EndInit();
-=======
             this.tabPage1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
@@ -414,7 +397,6 @@ namespace ProyectoIntegradoVerde.Formularios
             this.tabPage5.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProductos)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvBandeja)).EndInit();
->>>>>>> 341712b5814eb094bbc5c3b08749e8ba5740b61d
             this.ResumeLayout(false);
 
         }
@@ -427,12 +409,10 @@ namespace ProyectoIntegradoVerde.Formularios
         private System.Windows.Forms.TabPage tabPage3;
         private System.Windows.Forms.TabPage tabPage4;
         private System.Windows.Forms.TabPage tabPage5;
-<<<<<<< HEAD
         private System.Windows.Forms.DataGridView dgvTareasPendientes;
         private System.Windows.Forms.DataGridView dgvTareasSinAsignar;
         private System.Windows.Forms.DataGridViewTextBoxColumn Titulo;
         private System.Windows.Forms.DataGridViewTextBoxColumn Puntos;
-=======
         private System.Windows.Forms.DataGridView dataGridView2;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label label1;
@@ -452,6 +432,5 @@ namespace ProyectoIntegradoVerde.Formularios
         private System.Windows.Forms.Button btnLimpiar;
         private System.Windows.Forms.Button btnEnviar;
         private System.Windows.Forms.TextBox txtCuerpo;
->>>>>>> 341712b5814eb094bbc5c3b08749e8ba5740b61d
     }
 }

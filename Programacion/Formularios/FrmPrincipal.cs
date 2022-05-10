@@ -1,5 +1,4 @@
-﻿using Programacion;
-using ProyectoIntegradoVerde.Clases;
+﻿using ProyectoIntegradoVerde.Clases;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
