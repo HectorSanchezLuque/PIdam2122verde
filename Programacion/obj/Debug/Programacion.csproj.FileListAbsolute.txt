@@ -34,3 +34,12 @@ C:\Users\hesalu\Desktop\PROG PI\PIdam2122verde-src\Programacion\Programacion\obj
 C:\Users\hesalu\Desktop\PROG PI\PIdam2122verde-src\Programacion\Programacion\obj\Debug\ProyectoIntegradoVerde.pdb
 C:\Users\hesalu\Desktop\PROG PI\PIdam2122verde-src\Programacion\Programacion\obj\Debug\ProyectoIntegradoVerde.Formularios.FrmFuncionalidades.resources
 C:\Users\hesalu\Desktop\PROG PI\PIdam2122verde-src\Programacion\Programacion\obj\Debug\Programacion.csproj.SuggestedBindingRedirects.cache
+C:\Users\jacaar\Documents\PIdam2122verde\Programacion\obj\Debug\Programacion.csproj.AssemblyReference.cache
+C:\Users\jacaar\Documents\PIdam2122verde\Programacion\obj\Debug\ProyectoIntegradoVerde.Formularios.FrmFuncionalidades.resources
+C:\Users\jacaar\Documents\PIdam2122verde\Programacion\obj\Debug\ProyectoIntegradoVerde.Formularios.FrmPrincipal.resources
+C:\Users\jacaar\Documents\PIdam2122verde\Programacion\obj\Debug\Programacion.Login.resources
+C:\Users\jacaar\Documents\PIdam2122verde\Programacion\obj\Debug\ProyectoIntegradoVerde.Properties.Resources.resources
+C:\Users\jacaar\Documents\PIdam2122verde\Programacion\obj\Debug\Programacion.csproj.GenerateResource.cache
+C:\Users\jacaar\Documents\PIdam2122verde\Programacion\obj\Debug\Programacion.csproj.CoreCompileInputs.cache
+C:\Users\jacaar\Documents\PIdam2122verde\Programacion\obj\Debug\ProyectoIntegradoVerde.exe
+C:\Users\jacaar\Documents\PIdam2122verde\Programacion\obj\Debug\ProyectoIntegradoVerde.pdb
