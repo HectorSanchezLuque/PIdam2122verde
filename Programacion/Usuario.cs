@@ -4,12 +4,17 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using MySql.Data.MySqlClient;
+using System.Drawing;
+using System.Resources;
+using System.IO;
+using System.Drawing.Imaging;
 
 namespace Programacion
 {
     internal class Usuario
     {
         // Atributos
+        private int id;
         private string nif;
         private string nombre;
         private DateTime fechaNacimiento;
@@ -17,30 +22,20 @@ namespace Programacion
         private int puntos;
         private string correo;
         private string password;
+        private Image foto;
         // private ??? foto;
 
-        /*  Constructor con foto
-         * public Usuario(string niff,string nom, DateTime nacimiento, string puesto, int points, string email, string passwd)//??? picture
+        //*  Constructor con foto
+         public Usuario(int idusu,string niff,string nom, DateTime nacimiento, string puesto, int points, string email, string passwd, Image fot )
         {
+            id = idusu;
             nif = niff;
             nombre = nom;
             fechaNacimiento = nacimiento;
             cargo = puesto;
             correo = email;
             password = passwd;
-            //foto = picture;
-        }
-        */
-
-        // Constructor sin foto
-        public Usuario(string niff, string nom, DateTime nacimiento, string puesto, int points, string email, string passwd)
-        {
-            nif = niff;
-            nombre = nom;
-            fechaNacimiento = nacimiento;
-            cargo = puesto;
-            correo = email;
-            password = passwd;
+            foto = fot;
         }
 
         // Getters y Setters
@@ -51,6 +46,8 @@ namespace Programacion
         public int Puntos { get => puntos; set => puntos = value; }
         public string Correo { get => correo; set => correo = value; }
         public string Password { get => password; set => password = value; }
+        public Image Foto { get { return foto; } set { foto = value; } }
+
 
         // Metodos
 
@@ -75,14 +72,40 @@ namespace Programacion
             comando.ExecuteNonQuery();
             return correct;
         }
-
-        static public void Registro(string nif, string nom, DateTime nacimiento, string puesto,string email, string pass)
+        /// <summary>
+        /// Agregar nuevo usuario a la tabla usuarios
+        /// </summary>
+        /// <param name="nif"></param>
+        /// <param name="nom"></param>
+        /// <param name="nacimiento"></param>
+        /// <param name="puesto"></param>
+        /// <param name="email"></param>
+        /// <param name="pass"></param>
+        static public int AgregarUsuario(MySqlConnection conexion, Usuario usu)
         {
-            string add = "INSERT INTO empleados VALUES(\"\",\"" + nif + "\",\"" + nom + "\",\"" + nacimiento + "\"," + puesto + ",\"\",\"" + email + "\",\"" + pass + "\")";
-            MySqlCommand comando = new MySqlCommand(add, conexion.Conexion);
-            comando.ExecuteNonQuery();
-            // Comprobar si funciona.
+            int retorno;
+
+            // Preparación de la imagen
+            MemoryStream ms = new MemoryStream();
+            usu.Foto.Save(ms, ImageFormat.Jpeg);
+            byte[] imgArr = ms.ToArray();
+
+
+            // Imp: se puede cambiar la configuración regional del ordenador para que el signo
+            // decimal sea el . y el signo de millares la , (MySQL está en formato USA)
+            // o se añade en program.cs la siguiente linea:
+            string consulta = String.Format("INSERT INTO usuarios (id,nif,nombre,fecha_nac,cargo,puntos,correo,pswd,imagen) VALUES " +
+                "('{0}','{1}','{2}','{3}','{4}','{5}','{6}','{7}','{8}',@imagen)", usu.id, usu.nif, usu.nombre, usu.fechaNacimiento,
+                usu.cargo, usu.puntos, usu.correo, usu.password);
+
+            MySqlCommand comando = new MySqlCommand(consulta, conexion);
+            comando.Parameters.AddWithValue("imagen", imgArr);
+            retorno = comando.ExecuteNonQuery();
+
+            return retorno;
         }
+
+        
 
     }
 }
