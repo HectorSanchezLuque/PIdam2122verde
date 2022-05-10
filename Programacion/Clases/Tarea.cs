@@ -42,5 +42,17 @@ namespace ProyectoIntegradoVerde.Clases
             }
             return tareas;
         }
+
+        public static int EliminaTarea(MySqlConnection conexion, int titulo)
+        {
+            int retorno;
+           
+            string consulta = string.Format("DELETE FROM tarea WHERE titulo={0}", titulo);
+            MySqlCommand comando = new MySqlCommand(consulta, conexion);
+            retorno = comando.ExecuteNonQuery();
+            return retorno;
+        }
+
+
     }
 }
