@@ -57,17 +57,19 @@ namespace ProyectoIntegradoVerde
         /// </summary>
         /// <param name="user">NIF del usuario</param>
         /// <param name="pass">Contraseña del usuario</param>
-        /// <returns>Ha introducido la contraseña correctamente o no</returns>
-        static public bool Verificador(string user, string pass)
+        /// <returns>0 si la contraseña es incorrecta. 1 si la contraseña es correcta pero no es administrador. 2 si la contraseña es correcta y es administrador.</returns>
+        static public int Verificador(string user, string pass)
         {
-            bool correct = false;
+            int correct = 0;
             string search = "SELECT nif,pswd,cargo FROM empleados WHERE nif LIKE \"" + user + "\"";
             MySqlCommand comando = new MySqlCommand(search, conexion.Conexion);
             MySqlDataReader reader = comando.ExecuteReader();
             while (reader.Read())
             {
-                if ((reader.GetString(0) == user && reader.GetString(1) == pass) && (reader.GetString(2) == "Admin"))
-                    correct = true;
+                if ((reader.GetString(0) == user && reader.GetString(1) == pass) && (reader.GetString(2) != "Admin"))
+                    return correct = 1;
+                else if ((reader.GetString(0) == user && reader.GetString(1) == pass) && (reader.GetString(2) == "Admin"))
+                    correct = 2;
             }
             reader.Close();
             comando.ExecuteNonQuery();
