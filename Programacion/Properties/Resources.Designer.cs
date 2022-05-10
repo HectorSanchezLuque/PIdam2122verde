@@ -59,5 +59,85 @@ namespace ProyectoIntegradoVerde.Properties {
                 resourceCulture = value;
             }
         }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _1814117_gear_options_preferences_setting_icon {
+            get {
+                object obj = ResourceManager.GetObject("1814117_gear_options_preferences_setting_icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _2932353_group_people_team_hr_humans_icon {
+            get {
+                object obj = ResourceManager.GetObject("2932353_group_people_team_hr_humans_icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _299086_info_sign_icon {
+            get {
+                object obj = ResourceManager.GetObject("299086_info_sign_icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _3837963_shop_business_store_market_icon {
+            get {
+                object obj = ResourceManager.GetObject("3837963_shop_business_store_market_icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _5094667_chat_communication_message_talk_icon {
+            get {
+                object obj = ResourceManager.GetObject("5094667_chat_communication_message_talk_icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _7208644_application_mail_email_message_icon {
+            get {
+                object obj = ResourceManager.GetObject("7208644_application_mail_email_message_icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _8396405_clipboard_note_document_report_paper_icon {
+            get {
+                object obj = ResourceManager.GetObject("8396405_clipboard_note_document_report_paper_icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _8725528_calendar_alt_icon {
+            get {
+                object obj = ResourceManager.GetObject("8725528_calendar_alt_icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }
