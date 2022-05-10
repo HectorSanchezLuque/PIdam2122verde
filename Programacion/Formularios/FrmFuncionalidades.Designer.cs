@@ -31,6 +31,8 @@ namespace ProyectoIntegradoVerde.Formularios
         {
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.dgvTareasPendientes = new System.Windows.Forms.DataGridView();
+            this.dgvTareasSinAsignar = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
@@ -40,6 +42,12 @@ namespace ProyectoIntegradoVerde.Formularios
             this.dgvReuniones = new System.Windows.Forms.DataGridView();
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.tabPage5 = new System.Windows.Forms.TabPage();
+            this.Titulo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Puntos = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tabControl1.SuspendLayout();
+            this.tabPage1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvTareasPendientes)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvTareasSinAsignar)).BeginInit();
             this.btnComprar = new System.Windows.Forms.Button();
             this.lblPuntos = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -83,9 +91,8 @@ namespace ProyectoIntegradoVerde.Formularios
             // 
             // tabPage1
             // 
-            this.tabPage1.Controls.Add(this.label1);
-            this.tabPage1.Controls.Add(this.dataGridView2);
-            this.tabPage1.Controls.Add(this.dataGridView1);
+            this.tabPage1.Controls.Add(this.dgvTareasPendientes);
+            this.tabPage1.Controls.Add(this.dgvTareasSinAsignar);
             this.tabPage1.Location = new System.Drawing.Point(4, 25);
             this.tabPage1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabPage1.Name = "tabPage1";
@@ -95,6 +102,15 @@ namespace ProyectoIntegradoVerde.Formularios
             this.tabPage1.Text = "Tareas";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
+            // dgvTareasPendientes
+            // 
+            this.dgvTareasPendientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvTareasPendientes.Location = new System.Drawing.Point(488, 303);
+            this.dgvTareasPendientes.Name = "dgvTareasPendientes";
+            this.dgvTareasPendientes.RowHeadersWidth = 51;
+            this.dgvTareasPendientes.RowTemplate.Height = 24;
+            this.dgvTareasPendientes.Size = new System.Drawing.Size(324, 150);
+            this.dgvTareasPendientes.TabIndex = 1;
             // label1
             // 
             this.label1.AutoSize = true;
@@ -115,8 +131,18 @@ namespace ProyectoIntegradoVerde.Formularios
             this.dataGridView2.Size = new System.Drawing.Size(309, 150);
             this.dataGridView2.TabIndex = 1;
             // 
-            // dataGridView1
+            // dgvTareasSinAsignar
             // 
+            this.dgvTareasSinAsignar.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvTareasSinAsignar.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Titulo,
+            this.Puntos});
+            this.dgvTareasSinAsignar.Location = new System.Drawing.Point(36, 303);
+            this.dgvTareasSinAsignar.Name = "dgvTareasSinAsignar";
+            this.dgvTareasSinAsignar.RowHeadersWidth = 51;
+            this.dgvTareasSinAsignar.RowTemplate.Height = 24;
+            this.dgvTareasSinAsignar.Size = new System.Drawing.Size(321, 150);
+            this.dgvTareasSinAsignar.TabIndex = 0;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(36, 303);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -203,6 +229,19 @@ namespace ProyectoIntegradoVerde.Formularios
             this.tabPage5.Text = "Tienda";
             this.tabPage5.UseVisualStyleBackColor = true;
             // 
+            // Titulo
+            // 
+            this.Titulo.HeaderText = "Titulo";
+            this.Titulo.MinimumWidth = 6;
+            this.Titulo.Name = "Titulo";
+            this.Titulo.Width = 125;
+            // 
+            // Puntos
+            // 
+            this.Puntos.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Puntos.HeaderText = "Puntos";
+            this.Puntos.MinimumWidth = 6;
+            this.Puntos.Name = "Puntos";
             // btnComprar
             // 
             this.btnComprar.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -344,6 +383,8 @@ namespace ProyectoIntegradoVerde.Formularios
             this.Load += new System.EventHandler(this.FrmFuncionalidades_Load);
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvTareasPendientes)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvTareasSinAsignar)).EndInit();
             this.tabPage1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
@@ -368,6 +409,10 @@ namespace ProyectoIntegradoVerde.Formularios
         private System.Windows.Forms.TabPage tabPage3;
         private System.Windows.Forms.TabPage tabPage4;
         private System.Windows.Forms.TabPage tabPage5;
+        private System.Windows.Forms.DataGridView dgvTareasPendientes;
+        private System.Windows.Forms.DataGridView dgvTareasSinAsignar;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Titulo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Puntos;
         private System.Windows.Forms.DataGridView dataGridView2;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label label1;
