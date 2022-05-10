@@ -30,21 +30,15 @@ namespace ProyectoIntegradoVerde.Formularios
         private void InitializeComponent()
         {
             this.lblAbreFormulario = new System.Windows.Forms.Label();
-            this.ptbChat = new System.Windows.Forms.PictureBox();
-            this.ptbTienda = new System.Windows.Forms.PictureBox();
-            this.ptbCorreo = new System.Windows.Forms.PictureBox();
-            this.ptbReuniones = new System.Windows.Forms.PictureBox();
-            this.ptbTareas = new System.Windows.Forms.PictureBox();
-            this.ptbCalendario = new System.Windows.Forms.PictureBox();
+            this.btnCerrarSesion = new System.Windows.Forms.Button();
             this.ptbOpciones = new System.Windows.Forms.PictureBox();
             this.ptbInfo = new System.Windows.Forms.PictureBox();
-            this.btnCerrarSesion = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.ptbChat)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ptbTienda)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ptbCorreo)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ptbReuniones)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ptbTareas)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ptbCalendario)).BeginInit();
+            this.btnTareas = new System.Windows.Forms.Button();
+            this.btnCalendario = new System.Windows.Forms.Button();
+            this.btnReuniones = new System.Windows.Forms.Button();
+            this.btnCorreo = new System.Windows.Forms.Button();
+            this.btnTienda = new System.Windows.Forms.Button();
+            this.btnChat = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.ptbOpciones)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptbInfo)).BeginInit();
             this.SuspendLayout();
@@ -62,70 +56,20 @@ namespace ProyectoIntegradoVerde.Formularios
             this.lblAbreFormulario.MouseEnter += new System.EventHandler(this.lblAbreFormulario_MouseEnter);
             this.lblAbreFormulario.MouseLeave += new System.EventHandler(this.lblAbreFormulario_MouseLeave);
             // 
-            // ptbChat
+            // btnCerrarSesion
             // 
-            this.ptbChat.Image = global::ProyectoIntegradoVerde.Properties.Resources._5094667_chat_communication_message_talk_icon;
-            this.ptbChat.Location = new System.Drawing.Point(280, 403);
-            this.ptbChat.Name = "ptbChat";
-            this.ptbChat.Size = new System.Drawing.Size(128, 128);
-            this.ptbChat.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.ptbChat.TabIndex = 8;
-            this.ptbChat.TabStop = false;
-            // 
-            // ptbTienda
-            // 
-            this.ptbTienda.Image = global::ProyectoIntegradoVerde.Properties.Resources._3837963_shop_business_store_market_icon;
-            this.ptbTienda.Location = new System.Drawing.Point(45, 403);
-            this.ptbTienda.Name = "ptbTienda";
-            this.ptbTienda.Size = new System.Drawing.Size(128, 128);
-            this.ptbTienda.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.ptbTienda.TabIndex = 7;
-            this.ptbTienda.TabStop = false;
-            // 
-            // ptbCorreo
-            // 
-            this.ptbCorreo.Image = global::ProyectoIntegradoVerde.Properties.Resources._7208644_application_mail_email_message_icon;
-            this.ptbCorreo.Location = new System.Drawing.Point(280, 248);
-            this.ptbCorreo.Name = "ptbCorreo";
-            this.ptbCorreo.Size = new System.Drawing.Size(128, 128);
-            this.ptbCorreo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.ptbCorreo.TabIndex = 6;
-            this.ptbCorreo.TabStop = false;
-            // 
-            // ptbReuniones
-            // 
-            this.ptbReuniones.Image = global::ProyectoIntegradoVerde.Properties.Resources._2932353_group_people_team_hr_humans_icon;
-            this.ptbReuniones.Location = new System.Drawing.Point(45, 248);
-            this.ptbReuniones.Name = "ptbReuniones";
-            this.ptbReuniones.Size = new System.Drawing.Size(128, 128);
-            this.ptbReuniones.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.ptbReuniones.TabIndex = 5;
-            this.ptbReuniones.TabStop = false;
-            // 
-            // ptbTareas
-            // 
-            this.ptbTareas.Image = global::ProyectoIntegradoVerde.Properties.Resources._8396405_clipboard_note_document_report_paper_icon;
-            this.ptbTareas.Location = new System.Drawing.Point(45, 81);
-            this.ptbTareas.Name = "ptbTareas";
-            this.ptbTareas.Size = new System.Drawing.Size(128, 128);
-            this.ptbTareas.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.ptbTareas.TabIndex = 4;
-            this.ptbTareas.TabStop = false;
-            // 
-            // ptbCalendario
-            // 
-            this.ptbCalendario.Image = global::ProyectoIntegradoVerde.Properties.Resources._8725528_calendar_alt_icon;
-            this.ptbCalendario.Location = new System.Drawing.Point(280, 81);
-            this.ptbCalendario.Name = "ptbCalendario";
-            this.ptbCalendario.Size = new System.Drawing.Size(128, 128);
-            this.ptbCalendario.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.ptbCalendario.TabIndex = 3;
-            this.ptbCalendario.TabStop = false;
+            this.btnCerrarSesion.Location = new System.Drawing.Point(470, 648);
+            this.btnCerrarSesion.Name = "btnCerrarSesion";
+            this.btnCerrarSesion.Size = new System.Drawing.Size(132, 38);
+            this.btnCerrarSesion.TabIndex = 9;
+            this.btnCerrarSesion.Text = "Cerrar Sesión";
+            this.btnCerrarSesion.UseVisualStyleBackColor = true;
+            this.btnCerrarSesion.Click += new System.EventHandler(this.btnCerrarSesion_Click);
             // 
             // ptbOpciones
             // 
             this.ptbOpciones.Image = global::ProyectoIntegradoVerde.Properties.Resources._1814117_gear_options_preferences_setting_icon;
-            this.ptbOpciones.Location = new System.Drawing.Point(422, 1);
+            this.ptbOpciones.Location = new System.Drawing.Point(554, 3);
             this.ptbOpciones.Name = "ptbOpciones";
             this.ptbOpciones.Size = new System.Drawing.Size(48, 48);
             this.ptbOpciones.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -142,40 +86,83 @@ namespace ProyectoIntegradoVerde.Formularios
             this.ptbInfo.TabIndex = 1;
             this.ptbInfo.TabStop = false;
             // 
-            // btnCerrarSesion
+            // btnTareas
             // 
-            this.btnCerrarSesion.Location = new System.Drawing.Point(328, 559);
-            this.btnCerrarSesion.Name = "btnCerrarSesion";
-            this.btnCerrarSesion.Size = new System.Drawing.Size(132, 38);
-            this.btnCerrarSesion.TabIndex = 9;
-            this.btnCerrarSesion.Text = "Cerrar Sesión";
-            this.btnCerrarSesion.UseVisualStyleBackColor = true;
-            this.btnCerrarSesion.Click += new System.EventHandler(this.btnCerrarSesion_Click);
+            this.btnTareas.Image = global::ProyectoIntegradoVerde.Properties.Resources._8396405_clipboard_note_document_report_paper_icon;
+            this.btnTareas.Location = new System.Drawing.Point(45, 81);
+            this.btnTareas.Name = "btnTareas";
+            this.btnTareas.Size = new System.Drawing.Size(213, 172);
+            this.btnTareas.TabIndex = 10;
+            this.btnTareas.UseVisualStyleBackColor = true;
+            this.btnTareas.Click += new System.EventHandler(this.btnTareas_Click);
+            // 
+            // btnCalendario
+            // 
+            this.btnCalendario.Image = global::ProyectoIntegradoVerde.Properties.Resources._8725528_calendar_alt_icon;
+            this.btnCalendario.Location = new System.Drawing.Point(337, 81);
+            this.btnCalendario.Name = "btnCalendario";
+            this.btnCalendario.Size = new System.Drawing.Size(213, 172);
+            this.btnCalendario.TabIndex = 11;
+            this.btnCalendario.UseVisualStyleBackColor = true;
+            this.btnCalendario.Click += new System.EventHandler(this.btnCalendario_Click);
+            // 
+            // btnReuniones
+            // 
+            this.btnReuniones.Image = global::ProyectoIntegradoVerde.Properties.Resources._2932353_group_people_team_hr_humans_icon;
+            this.btnReuniones.Location = new System.Drawing.Point(45, 268);
+            this.btnReuniones.Name = "btnReuniones";
+            this.btnReuniones.Size = new System.Drawing.Size(213, 172);
+            this.btnReuniones.TabIndex = 12;
+            this.btnReuniones.UseVisualStyleBackColor = true;
+            this.btnReuniones.Click += new System.EventHandler(this.btnReuniones_Click);
+            // 
+            // btnCorreo
+            // 
+            this.btnCorreo.Image = global::ProyectoIntegradoVerde.Properties.Resources._7208644_application_mail_email_message_icon;
+            this.btnCorreo.Location = new System.Drawing.Point(337, 268);
+            this.btnCorreo.Name = "btnCorreo";
+            this.btnCorreo.Size = new System.Drawing.Size(213, 172);
+            this.btnCorreo.TabIndex = 13;
+            this.btnCorreo.UseVisualStyleBackColor = true;
+            this.btnCorreo.Click += new System.EventHandler(this.btnCorreo_Click);
+            // 
+            // btnTienda
+            // 
+            this.btnTienda.Image = global::ProyectoIntegradoVerde.Properties.Resources._3837963_shop_business_store_market_icon;
+            this.btnTienda.Location = new System.Drawing.Point(45, 455);
+            this.btnTienda.Name = "btnTienda";
+            this.btnTienda.Size = new System.Drawing.Size(213, 172);
+            this.btnTienda.TabIndex = 14;
+            this.btnTienda.UseVisualStyleBackColor = true;
+            this.btnTienda.Click += new System.EventHandler(this.btnTienda_Click);
+            // 
+            // btnChat
+            // 
+            this.btnChat.Image = global::ProyectoIntegradoVerde.Properties.Resources._5094667_chat_communication_message_talk_icon;
+            this.btnChat.Location = new System.Drawing.Point(337, 455);
+            this.btnChat.Name = "btnChat";
+            this.btnChat.Size = new System.Drawing.Size(213, 172);
+            this.btnChat.TabIndex = 15;
+            this.btnChat.UseVisualStyleBackColor = true;
             // 
             // FrmPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(482, 609);
+            this.ClientSize = new System.Drawing.Size(614, 698);
+            this.Controls.Add(this.btnChat);
+            this.Controls.Add(this.btnTienda);
+            this.Controls.Add(this.btnCorreo);
+            this.Controls.Add(this.btnReuniones);
+            this.Controls.Add(this.btnCalendario);
+            this.Controls.Add(this.btnTareas);
             this.Controls.Add(this.btnCerrarSesion);
-            this.Controls.Add(this.ptbChat);
-            this.Controls.Add(this.ptbTienda);
-            this.Controls.Add(this.ptbCorreo);
-            this.Controls.Add(this.ptbReuniones);
-            this.Controls.Add(this.ptbTareas);
-            this.Controls.Add(this.ptbCalendario);
             this.Controls.Add(this.ptbOpciones);
             this.Controls.Add(this.ptbInfo);
             this.Controls.Add(this.lblAbreFormulario);
             this.Name = "FrmPrincipal";
             this.Text = "FrmPrincipal";
             this.Load += new System.EventHandler(this.FrmPrincipal_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.ptbChat)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ptbTienda)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ptbCorreo)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ptbReuniones)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ptbTareas)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ptbCalendario)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptbOpciones)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptbInfo)).EndInit();
             this.ResumeLayout(false);
@@ -188,12 +175,12 @@ namespace ProyectoIntegradoVerde.Formularios
         private System.Windows.Forms.Label lblAbreFormulario;
         private System.Windows.Forms.PictureBox ptbInfo;
         private System.Windows.Forms.PictureBox ptbOpciones;
-        private System.Windows.Forms.PictureBox ptbCalendario;
-        private System.Windows.Forms.PictureBox ptbTareas;
-        private System.Windows.Forms.PictureBox ptbReuniones;
-        private System.Windows.Forms.PictureBox ptbCorreo;
-        private System.Windows.Forms.PictureBox ptbTienda;
-        private System.Windows.Forms.PictureBox ptbChat;
         private System.Windows.Forms.Button btnCerrarSesion;
+        private System.Windows.Forms.Button btnTareas;
+        private System.Windows.Forms.Button btnCalendario;
+        private System.Windows.Forms.Button btnReuniones;
+        private System.Windows.Forms.Button btnCorreo;
+        private System.Windows.Forms.Button btnTienda;
+        private System.Windows.Forms.Button btnChat;
     }
 }

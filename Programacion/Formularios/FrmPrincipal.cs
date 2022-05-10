@@ -41,6 +41,39 @@ namespace ProyectoIntegradoVerde.Formularios
         private void btnCerrarSesion_Click(object sender, EventArgs e)
         {
             Environment.Exit(1);
+            FrmFuncionalidades func = new FrmFuncionalidades(0);
+            func.ShowDialog();
+        }
+
+        private void btnTareas_Click(object sender, EventArgs e)
+        {
+            FrmFuncionalidades func = new FrmFuncionalidades(0);
+            func.ShowDialog();
+
+        }
+
+        private void btnCalendario_Click(object sender, EventArgs e)
+        {
+            FrmFuncionalidades func = new FrmFuncionalidades(1);
+            func.ShowDialog();
+        }
+
+        private void btnReuniones_Click(object sender, EventArgs e)
+        {
+            FrmFuncionalidades func = new FrmFuncionalidades(2);
+            func.ShowDialog();
+        }
+
+        private void btnCorreo_Click(object sender, EventArgs e)
+        {
+            FrmFuncionalidades func = new FrmFuncionalidades(3);
+            func.ShowDialog();
+        }
+
+        private void btnTienda_Click(object sender, EventArgs e)
+        {
+            FrmFuncionalidades func = new FrmFuncionalidades(4);
+            func.ShowDialog();
         }
     }
 }
