@@ -103,8 +103,48 @@ namespace ProyectoIntegradoVerde
 
             return retorno;
         }
+        /// <summary>
+        ///  Comprueba si un usuario está dado de alta o no previamente a su agregación
+        /// </summary>
+        /// <param name="conexion">Conexión con la base de datos</param>
+        /// <param name="nom">nombre del usuario</param>
+        /// <returns>true si está y false si no está</returns>
+        public bool YaEsta(MySqlConnection conexion, string nom)
+        {
+            string consulta = string.Format("SELECT * FROM usuarios" +
+            " WHERE nombre='{0}'", nom);
 
-        
+            MySqlCommand comando = new MySqlCommand(consulta, conexion);
+            MySqlDataReader reader = comando.ExecuteReader();
+            if (reader.HasRows)
+            { // si existen registros en la devolución de la consulta
+                reader.Close();   // Cierro el reader para utilizar la misma conexión en AgregarUsuario
+                return true;
+            }
+            else
+            {
+                reader.Close();  // Cierro el reader para utilizar la misma conexión en AgregarUsuario
+                return false;
+            }
+
+        }
+        /// <summary>
+        /// Método para eliminar un usuario en la Base de Datos.
+        /// </summary>
+        /// <param name="conexion">Objeto conexion</param>
+        /// <param name="nom">Nombre del usuario a eliminar</param>
+        /// <returns></returns>
+        public static int EliminaUsuario(MySqlConnection conexion, int nom)
+        {
+            int retorno;   
+            // Eliminamos definitivamente el usuario de la tabla usuario.
+            string consulta = string.Format("DELETE FROM usuarios WHERE nom={0}", nom);
+            MySqlCommand comando = new MySqlCommand(consulta, conexion);
+            retorno = comando.ExecuteNonQuery();
+            return retorno;
+        }
+
+
 
     }
 }
