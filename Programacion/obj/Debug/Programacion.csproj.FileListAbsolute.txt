@@ -34,3 +34,52 @@ C:\Users\hesalu\Desktop\PROG PI\PIdam2122verde-src\Programacion\Programacion\obj
 C:\Users\hesalu\Desktop\PROG PI\PIdam2122verde-src\Programacion\Programacion\obj\Debug\ProyectoIntegradoVerde.pdb
 C:\Users\hesalu\Desktop\PROG PI\PIdam2122verde-src\Programacion\Programacion\obj\Debug\ProyectoIntegradoVerde.Formularios.FrmFuncionalidades.resources
 C:\Users\hesalu\Desktop\PROG PI\PIdam2122verde-src\Programacion\Programacion\obj\Debug\Programacion.csproj.SuggestedBindingRedirects.cache
+<<<<<<< HEAD
+C:\Users\jacaar\Documents\PIdam2122verde\Programacion\obj\Debug\Programacion.csproj.AssemblyReference.cache
+C:\Users\jacaar\Documents\PIdam2122verde\Programacion\obj\Debug\ProyectoIntegradoVerde.Formularios.FrmFuncionalidades.resources
+C:\Users\jacaar\Documents\PIdam2122verde\Programacion\obj\Debug\ProyectoIntegradoVerde.Formularios.FrmPrincipal.resources
+C:\Users\jacaar\Documents\PIdam2122verde\Programacion\obj\Debug\Programacion.Login.resources
+C:\Users\jacaar\Documents\PIdam2122verde\Programacion\obj\Debug\ProyectoIntegradoVerde.Properties.Resources.resources
+C:\Users\jacaar\Documents\PIdam2122verde\Programacion\obj\Debug\Programacion.csproj.GenerateResource.cache
+C:\Users\jacaar\Documents\PIdam2122verde\Programacion\obj\Debug\Programacion.csproj.CoreCompileInputs.cache
+C:\Users\jacaar\Documents\PIdam2122verde\Programacion\obj\Debug\ProyectoIntegradoVerde.exe
+C:\Users\jacaar\Documents\PIdam2122verde\Programacion\obj\Debug\ProyectoIntegradoVerde.pdb
+=======
+C:\Users\Akayu\Desktop\ProyectoIntegrado\Programacion\bin\Debug\ProyectoIntegradoVerde.exe.config
+C:\Users\Akayu\Desktop\ProyectoIntegrado\Programacion\bin\Debug\ProyectoIntegradoVerde.exe
+C:\Users\Akayu\Desktop\ProyectoIntegrado\Programacion\bin\Debug\ProyectoIntegradoVerde.pdb
+C:\Users\Akayu\Desktop\ProyectoIntegrado\Programacion\bin\Debug\BouncyCastle.Crypto.dll
+C:\Users\Akayu\Desktop\ProyectoIntegrado\Programacion\bin\Debug\Google.Protobuf.dll
+C:\Users\Akayu\Desktop\ProyectoIntegrado\Programacion\bin\Debug\K4os.Compression.LZ4.dll
+C:\Users\Akayu\Desktop\ProyectoIntegrado\Programacion\bin\Debug\K4os.Compression.LZ4.Streams.dll
+C:\Users\Akayu\Desktop\ProyectoIntegrado\Programacion\bin\Debug\K4os.Hash.xxHash.dll
+C:\Users\Akayu\Desktop\ProyectoIntegrado\Programacion\bin\Debug\MySql.Data.dll
+C:\Users\Akayu\Desktop\ProyectoIntegrado\Programacion\bin\Debug\System.Buffers.dll
+C:\Users\Akayu\Desktop\ProyectoIntegrado\Programacion\bin\Debug\System.Memory.dll
+C:\Users\Akayu\Desktop\ProyectoIntegrado\Programacion\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\Akayu\Desktop\ProyectoIntegrado\Programacion\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\Akayu\Desktop\ProyectoIntegrado\Programacion\bin\Debug\Ubiety.Dns.Core.dll
+C:\Users\Akayu\Desktop\ProyectoIntegrado\Programacion\bin\Debug\ZstdNet.dll
+C:\Users\Akayu\Desktop\ProyectoIntegrado\Programacion\bin\Debug\Google.Protobuf.pdb
+C:\Users\Akayu\Desktop\ProyectoIntegrado\Programacion\bin\Debug\Google.Protobuf.xml
+C:\Users\Akayu\Desktop\ProyectoIntegrado\Programacion\bin\Debug\K4os.Compression.LZ4.xml
+C:\Users\Akayu\Desktop\ProyectoIntegrado\Programacion\bin\Debug\K4os.Compression.LZ4.Streams.xml
+C:\Users\Akayu\Desktop\ProyectoIntegrado\Programacion\bin\Debug\K4os.Hash.xxHash.xml
+C:\Users\Akayu\Desktop\ProyectoIntegrado\Programacion\bin\Debug\MySql.Data.xml
+C:\Users\Akayu\Desktop\ProyectoIntegrado\Programacion\bin\Debug\System.Buffers.xml
+C:\Users\Akayu\Desktop\ProyectoIntegrado\Programacion\bin\Debug\System.Memory.xml
+C:\Users\Akayu\Desktop\ProyectoIntegrado\Programacion\bin\Debug\System.Numerics.Vectors.xml
+C:\Users\Akayu\Desktop\ProyectoIntegrado\Programacion\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\Akayu\Desktop\ProyectoIntegrado\Programacion\obj\Debug\Programacion.csproj.AssemblyReference.cache
+C:\Users\Akayu\Desktop\ProyectoIntegrado\Programacion\obj\Debug\Programacion.csproj.SuggestedBindingRedirects.cache
+C:\Users\Akayu\Desktop\ProyectoIntegrado\Programacion\obj\Debug\ProyectoIntegradoVerde.Formularios.FrmFuncionalidades.resources
+C:\Users\Akayu\Desktop\ProyectoIntegrado\Programacion\obj\Debug\ProyectoIntegradoVerde.Formularios.FrmPrincipal.resources
+C:\Users\Akayu\Desktop\ProyectoIntegrado\Programacion\obj\Debug\ProyectoIntegradoVerde.Properties.Resources.resources
+C:\Users\Akayu\Desktop\ProyectoIntegrado\Programacion\obj\Debug\Programacion.csproj.GenerateResource.cache
+C:\Users\Akayu\Desktop\ProyectoIntegrado\Programacion\obj\Debug\Programacion.csproj.CoreCompileInputs.cache
+C:\Users\Akayu\Desktop\ProyectoIntegrado\Programacion\obj\Debug\Programacion.csproj.CopyComplete
+C:\Users\Akayu\Desktop\ProyectoIntegrado\Programacion\obj\Debug\ProyectoIntegradoVerde.exe
+C:\Users\Akayu\Desktop\ProyectoIntegrado\Programacion\obj\Debug\ProyectoIntegradoVerde.pdb
+C:\Users\Akayu\Desktop\ProyectoIntegrado\Programacion\obj\Debug\ProyectoIntegradoVerde.Login.resources
+>>>>>>> 107c7618c2d95955cbd662c3b16ae4194c6d3d77
+C:\Users\jacaar\Documents\PIdam2122verde\Programacion\obj\Debug\ProyectoIntegradoVerde.Login.resources

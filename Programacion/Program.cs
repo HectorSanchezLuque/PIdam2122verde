@@ -5,7 +5,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Programacion
+namespace ProyectoIntegradoVerde
 {
     internal static class Program
     {
@@ -17,7 +17,7 @@ namespace Programacion
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FrmPrincipal());
+            Application.Run(new Login());
         }
     }
 }

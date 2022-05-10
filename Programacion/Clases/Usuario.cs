@@ -9,7 +9,7 @@ using System.Resources;
 using System.IO;
 using System.Drawing.Imaging;
 
-namespace Programacion
+namespace ProyectoIntegradoVerde
 {
     internal class Usuario
     {
@@ -57,17 +57,19 @@ namespace Programacion
         /// </summary>
         /// <param name="user">NIF del usuario</param>
         /// <param name="pass">Contraseña del usuario</param>
-        /// <returns>Ha introducido la contraseña correctamente o no</returns>
-        static public bool Verificador(string user, string pass)
+        /// <returns>0 si la contraseña es incorrecta. 1 si la contraseña es correcta pero no es administrador. 2 si la contraseña es correcta y es administrador.</returns>
+        static public int Verificador(string user, string pass)
         {
-            bool correct = false;
+            int correct = 0;
             string search = "SELECT nif,pswd,cargo FROM empleados WHERE nif LIKE \"" + user + "\"";
             MySqlCommand comando = new MySqlCommand(search, conexion.Conexion);
             MySqlDataReader reader = comando.ExecuteReader();
             while (reader.Read())
             {
-                if ((reader.GetString(0) == user && reader.GetString(1) == pass) && (reader.GetString(2) == "Admin"))
-                    correct = true;
+                if ((reader.GetString(0) == user && reader.GetString(1) == pass) && (reader.GetString(2) != "Admin"))
+                    return correct = 1;
+                else if ((reader.GetString(0) == user && reader.GetString(1) == pass) && (reader.GetString(2) == "Admin"))
+                    correct = 2;
             }
             reader.Close();
             comando.ExecuteNonQuery();
@@ -89,7 +91,6 @@ namespace Programacion
             usu.Foto.Save(ms, ImageFormat.Jpeg);
             byte[] imgArr = ms.ToArray();
 
-
             // Imp: se puede cambiar la configuración regional del ordenador para que el signo
             // decimal sea el . y el signo de millares la , (MySQL está en formato USA)
             // o se añade en program.cs la siguiente linea:
@@ -103,8 +104,73 @@ namespace Programacion
 
             return retorno;
         }
+        /// <summary>
+        ///  Comprueba si un usuario está dado de alta o no previamente a su agregación
+        /// </summary>
+        /// <param name="conexion">Conexión con la base de datos</param>
+        /// <param name="nom">nombre del usuario</param>
+        /// <returns>true si está y false si no está</returns>
+        public bool YaEsta(MySqlConnection conexion, string nom)
+        {
+            string consulta = string.Format("SELECT * FROM usuarios" +
+            " WHERE nombre='{0}'", nom);
 
-        
+            MySqlCommand comando = new MySqlCommand(consulta, conexion);
+            MySqlDataReader reader = comando.ExecuteReader();
+            if (reader.HasRows)
+            { // si existen registros en la devolución de la consulta
+                reader.Close();   // Cierro el reader para utilizar la misma conexión en AgregarUsuario
+                return true;
+            }
+            else
+            {
+                reader.Close();  // Cierro el reader para utilizar la misma conexión en AgregarUsuario
+                return false;
+            }
+
+        }
+        /// <summary>
+        /// Método para eliminar un usuario en la Base de Datos.
+        /// </summary>
+        /// <param name="conexion">Objeto conexion</param>
+        /// <param name="nom">Nombre del usuario a eliminar</param>
+        /// <returns></returns>
+        public static int EliminaUsuario(MySqlConnection conexion, int nom)
+        {
+            int retorno;   
+            // Eliminamos definitivamente el usuario de la tabla usuario.
+            string consulta = string.Format("DELETE FROM usuarios WHERE nom={0}", nom);
+            MySqlCommand comando = new MySqlCommand(consulta, conexion);
+            retorno = comando.ExecuteNonQuery();
+            return retorno;
+        }
+        /// <summary>
+        /// Método para actualizar los datos de un usuario en la Base de Datos.
+        /// </summary>
+        /// <param name="conexion">objeto conexion</param>
+        /// <param name="usu"> datos del usuario a modificar</param>
+        /// <returns></returns>
+        public int ActualizaUsuario(MySqlConnection conexion, Usuario usu)
+        {
+
+            int retorno;
+
+          
+            MemoryStream ms = new MemoryStream();
+            usu.Foto.Save(ms, ImageFormat.Jpeg);
+            byte[] imgArr = ms.ToArray();
+
+            string consulta = string.Format("UPDATE usuarios SET id = '{1}',nif = '{2}',nombre = '{3}' ,fecha_nac = '{4}',cargo = '{5}',puntos = '{6}',correo = '{7}',pswd = '{8}',imagen=@imagen WHERE id={6}", usu.id, usu.nif, usu.nombre, usu.fechaNacimiento,
+                usu.cargo, usu.puntos, usu.correo, usu.password);
+     
+
+            MySqlCommand comando = new MySqlCommand(consulta, conexion);
+            comando.Parameters.AddWithValue("imagen", imgArr);
+            retorno = comando.ExecuteNonQuery();
+
+       
+            return retorno;
+        }
 
     }
 }
