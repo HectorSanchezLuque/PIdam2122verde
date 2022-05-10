@@ -37,22 +37,34 @@ namespace ProyectoIntegradoVerde.Formularios
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.cldCalendario = new System.Windows.Forms.MonthCalendar();
             this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.dgvReuniones = new System.Windows.Forms.DataGridView();
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.tabPage5 = new System.Windows.Forms.TabPage();
             this.btnComprar = new System.Windows.Forms.Button();
             this.lblPuntos = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.dgvProductos = new System.Windows.Forms.DataGridView();
-            this.dgvReuniones = new System.Windows.Forms.DataGridView();
+            this.dgvBandeja = new System.Windows.Forms.DataGridView();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.txtAsunto = new System.Windows.Forms.TextBox();
+            this.txtDest = new System.Windows.Forms.TextBox();
+            this.txtRemit = new System.Windows.Forms.TextBox();
+            this.txtCuerpo = new System.Windows.Forms.TextBox();
+            this.btnEnviar = new System.Windows.Forms.Button();
+            this.btnLimpiar = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.tabPage2.SuspendLayout();
             this.tabPage3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvReuniones)).BeginInit();
+            this.tabPage4.SuspendLayout();
             this.tabPage5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProductos)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvReuniones)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvBandeja)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -63,10 +75,10 @@ namespace ProyectoIntegradoVerde.Formularios
             this.tabControl1.Controls.Add(this.tabPage4);
             this.tabControl1.Controls.Add(this.tabPage5);
             this.tabControl1.Location = new System.Drawing.Point(1, 1);
-            this.tabControl1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabControl1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(650, 431);
+            this.tabControl1.Size = new System.Drawing.Size(867, 530);
             this.tabControl1.TabIndex = 0;
             // 
             // tabPage1
@@ -74,11 +86,11 @@ namespace ProyectoIntegradoVerde.Formularios
             this.tabPage1.Controls.Add(this.label1);
             this.tabPage1.Controls.Add(this.dataGridView2);
             this.tabPage1.Controls.Add(this.dataGridView1);
-            this.tabPage1.Location = new System.Drawing.Point(4, 22);
-            this.tabPage1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPage1.Location = new System.Drawing.Point(4, 25);
+            this.tabPage1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.tabPage1.Size = new System.Drawing.Size(642, 405);
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tabPage1.Size = new System.Drawing.Size(859, 501);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Tareas";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -86,43 +98,42 @@ namespace ProyectoIntegradoVerde.Formularios
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(48, 24);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Location = new System.Drawing.Point(64, 30);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(35, 13);
+            this.label1.Size = new System.Drawing.Size(44, 16);
             this.label1.TabIndex = 2;
             this.label1.Text = "label1";
             // 
             // dataGridView2
             // 
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(376, 246);
-            this.dataGridView2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dataGridView2.Location = new System.Drawing.Point(501, 303);
+            this.dataGridView2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.RowHeadersWidth = 51;
             this.dataGridView2.RowTemplate.Height = 24;
-            this.dataGridView2.Size = new System.Drawing.Size(232, 122);
+            this.dataGridView2.Size = new System.Drawing.Size(309, 150);
             this.dataGridView2.TabIndex = 1;
             // 
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(27, 246);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dataGridView1.Location = new System.Drawing.Point(36, 303);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(224, 122);
+            this.dataGridView1.Size = new System.Drawing.Size(299, 150);
             this.dataGridView1.TabIndex = 0;
             // 
             // tabPage2
             // 
             this.tabPage2.Controls.Add(this.cldCalendario);
-            this.tabPage2.Location = new System.Drawing.Point(4, 22);
-            this.tabPage2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPage2.Location = new System.Drawing.Point(4, 25);
+            this.tabPage2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.tabPage2.Size = new System.Drawing.Size(642, 405);
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tabPage2.Size = new System.Drawing.Size(859, 501);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Calendario";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -130,30 +141,49 @@ namespace ProyectoIntegradoVerde.Formularios
             // cldCalendario
             // 
             this.cldCalendario.CalendarDimensions = new System.Drawing.Size(2, 1);
-            this.cldCalendario.Location = new System.Drawing.Point(157, 10);
-            this.cldCalendario.Margin = new System.Windows.Forms.Padding(7, 7, 7, 7);
+            this.cldCalendario.Location = new System.Drawing.Point(209, 12);
             this.cldCalendario.Name = "cldCalendario";
             this.cldCalendario.TabIndex = 0;
             // 
             // tabPage3
             // 
             this.tabPage3.Controls.Add(this.dgvReuniones);
-            this.tabPage3.Location = new System.Drawing.Point(4, 22);
-            this.tabPage3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPage3.Location = new System.Drawing.Point(4, 25);
+            this.tabPage3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.tabPage3.Size = new System.Drawing.Size(642, 405);
+            this.tabPage3.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tabPage3.Size = new System.Drawing.Size(859, 501);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Reuniones";
             this.tabPage3.UseVisualStyleBackColor = true;
             // 
+            // dgvReuniones
+            // 
+            this.dgvReuniones.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvReuniones.Location = new System.Drawing.Point(12, 11);
+            this.dgvReuniones.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dgvReuniones.Name = "dgvReuniones";
+            this.dgvReuniones.RowHeadersWidth = 51;
+            this.dgvReuniones.Size = new System.Drawing.Size(837, 478);
+            this.dgvReuniones.TabIndex = 0;
+            // 
             // tabPage4
             // 
-            this.tabPage4.Location = new System.Drawing.Point(4, 22);
-            this.tabPage4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPage4.Controls.Add(this.btnLimpiar);
+            this.tabPage4.Controls.Add(this.btnEnviar);
+            this.tabPage4.Controls.Add(this.txtCuerpo);
+            this.tabPage4.Controls.Add(this.txtRemit);
+            this.tabPage4.Controls.Add(this.txtDest);
+            this.tabPage4.Controls.Add(this.txtAsunto);
+            this.tabPage4.Controls.Add(this.label5);
+            this.tabPage4.Controls.Add(this.label4);
+            this.tabPage4.Controls.Add(this.label3);
+            this.tabPage4.Controls.Add(this.dgvBandeja);
+            this.tabPage4.Location = new System.Drawing.Point(4, 25);
+            this.tabPage4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.tabPage4.Size = new System.Drawing.Size(642, 405);
+            this.tabPage4.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tabPage4.Size = new System.Drawing.Size(859, 501);
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "Correo";
             this.tabPage4.UseVisualStyleBackColor = true;
@@ -164,11 +194,11 @@ namespace ProyectoIntegradoVerde.Formularios
             this.tabPage5.Controls.Add(this.lblPuntos);
             this.tabPage5.Controls.Add(this.label2);
             this.tabPage5.Controls.Add(this.dgvProductos);
-            this.tabPage5.Location = new System.Drawing.Point(4, 22);
-            this.tabPage5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPage5.Location = new System.Drawing.Point(4, 25);
+            this.tabPage5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabPage5.Name = "tabPage5";
-            this.tabPage5.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.tabPage5.Size = new System.Drawing.Size(642, 405);
+            this.tabPage5.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tabPage5.Size = new System.Drawing.Size(859, 501);
             this.tabPage5.TabIndex = 4;
             this.tabPage5.Text = "Tienda";
             this.tabPage5.UseVisualStyleBackColor = true;
@@ -176,10 +206,10 @@ namespace ProyectoIntegradoVerde.Formularios
             // btnComprar
             // 
             this.btnComprar.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnComprar.Location = new System.Drawing.Point(524, 364);
-            this.btnComprar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnComprar.Location = new System.Drawing.Point(699, 448);
+            this.btnComprar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnComprar.Name = "btnComprar";
-            this.btnComprar.Size = new System.Drawing.Size(112, 33);
+            this.btnComprar.Size = new System.Drawing.Size(149, 41);
             this.btnComprar.TabIndex = 3;
             this.btnComprar.Text = "Comprar";
             this.btnComprar.UseVisualStyleBackColor = true;
@@ -188,10 +218,9 @@ namespace ProyectoIntegradoVerde.Formularios
             // 
             this.lblPuntos.AutoSize = true;
             this.lblPuntos.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPuntos.Location = new System.Drawing.Point(154, 368);
-            this.lblPuntos.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblPuntos.Location = new System.Drawing.Point(205, 453);
             this.lblPuntos.Name = "lblPuntos";
-            this.lblPuntos.Size = new System.Drawing.Size(65, 20);
+            this.lblPuntos.Size = new System.Drawing.Size(79, 25);
             this.lblPuntos.TabIndex = 2;
             this.lblPuntos.Text = "Puntos";
             // 
@@ -199,39 +228,117 @@ namespace ProyectoIntegradoVerde.Formularios
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(5, 368);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Location = new System.Drawing.Point(7, 453);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(165, 20);
+            this.label2.Size = new System.Drawing.Size(201, 25);
             this.label2.TabIndex = 1;
             this.label2.Text = "Puntos disponibles:";
             // 
             // dgvProductos
             // 
             this.dgvProductos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvProductos.Location = new System.Drawing.Point(5, 5);
-            this.dgvProductos.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dgvProductos.Location = new System.Drawing.Point(7, 6);
+            this.dgvProductos.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dgvProductos.Name = "dgvProductos";
             this.dgvProductos.RowHeadersWidth = 51;
             this.dgvProductos.RowTemplate.Height = 24;
-            this.dgvProductos.Size = new System.Drawing.Size(631, 341);
+            this.dgvProductos.Size = new System.Drawing.Size(841, 420);
             this.dgvProductos.TabIndex = 0;
             // 
-            // dgvReuniones
+            // dgvBandeja
             // 
-            this.dgvReuniones.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvReuniones.Location = new System.Drawing.Point(9, 9);
-            this.dgvReuniones.Name = "dgvReuniones";
-            this.dgvReuniones.Size = new System.Drawing.Size(628, 388);
-            this.dgvReuniones.TabIndex = 0;
+            this.dgvBandeja.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvBandeja.Location = new System.Drawing.Point(7, 5);
+            this.dgvBandeja.Name = "dgvBandeja";
+            this.dgvBandeja.RowHeadersWidth = 51;
+            this.dgvBandeja.RowTemplate.Height = 24;
+            this.dgvBandeja.Size = new System.Drawing.Size(846, 195);
+            this.dgvBandeja.TabIndex = 0;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(7, 216);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(106, 22);
+            this.label3.TabIndex = 1;
+            this.label3.Text = "Remitente:";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(418, 216);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(124, 22);
+            this.label4.TabIndex = 2;
+            this.label4.Text = "Destinatario:";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(7, 288);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(78, 22);
+            this.label5.TabIndex = 3;
+            this.label5.Text = "Asunto:";
+            // 
+            // txtAsunto
+            // 
+            this.txtAsunto.Location = new System.Drawing.Point(91, 290);
+            this.txtAsunto.Name = "txtAsunto";
+            this.txtAsunto.Size = new System.Drawing.Size(475, 22);
+            this.txtAsunto.TabIndex = 5;
+            // 
+            // txtDest
+            // 
+            this.txtDest.Location = new System.Drawing.Point(548, 216);
+            this.txtDest.Name = "txtDest";
+            this.txtDest.Size = new System.Drawing.Size(305, 22);
+            this.txtDest.TabIndex = 6;
+            // 
+            // txtRemit
+            // 
+            this.txtRemit.Location = new System.Drawing.Point(119, 216);
+            this.txtRemit.Name = "txtRemit";
+            this.txtRemit.Size = new System.Drawing.Size(293, 22);
+            this.txtRemit.TabIndex = 7;
+            // 
+            // txtCuerpo
+            // 
+            this.txtCuerpo.Location = new System.Drawing.Point(7, 318);
+            this.txtCuerpo.Multiline = true;
+            this.txtCuerpo.Name = "txtCuerpo";
+            this.txtCuerpo.Size = new System.Drawing.Size(841, 176);
+            this.txtCuerpo.TabIndex = 8;
+            // 
+            // btnEnviar
+            // 
+            this.btnEnviar.Location = new System.Drawing.Point(713, 270);
+            this.btnEnviar.Name = "btnEnviar";
+            this.btnEnviar.Size = new System.Drawing.Size(135, 42);
+            this.btnEnviar.TabIndex = 9;
+            this.btnEnviar.Text = "Enviar";
+            this.btnEnviar.UseVisualStyleBackColor = true;
+            // 
+            // btnLimpiar
+            // 
+            this.btnLimpiar.Location = new System.Drawing.Point(572, 270);
+            this.btnLimpiar.Name = "btnLimpiar";
+            this.btnLimpiar.Size = new System.Drawing.Size(135, 42);
+            this.btnLimpiar.TabIndex = 10;
+            this.btnLimpiar.Text = "Limpiar campos";
+            this.btnLimpiar.UseVisualStyleBackColor = true;
             // 
             // FrmFuncionalidades
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(649, 432);
+            this.ClientSize = new System.Drawing.Size(865, 532);
             this.Controls.Add(this.tabControl1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "FrmFuncionalidades";
             this.Text = "FrmFuncionalidades";
             this.Load += new System.EventHandler(this.FrmFuncionalidades_Load);
@@ -242,10 +349,13 @@ namespace ProyectoIntegradoVerde.Formularios
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.tabPage2.ResumeLayout(false);
             this.tabPage3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvReuniones)).EndInit();
+            this.tabPage4.ResumeLayout(false);
+            this.tabPage4.PerformLayout();
             this.tabPage5.ResumeLayout(false);
             this.tabPage5.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProductos)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvReuniones)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvBandeja)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -267,5 +377,15 @@ namespace ProyectoIntegradoVerde.Formularios
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.DataGridView dgvProductos;
         private System.Windows.Forms.DataGridView dgvReuniones;
+        private System.Windows.Forms.TextBox txtRemit;
+        private System.Windows.Forms.TextBox txtDest;
+        private System.Windows.Forms.TextBox txtAsunto;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.DataGridView dgvBandeja;
+        private System.Windows.Forms.Button btnLimpiar;
+        private System.Windows.Forms.Button btnEnviar;
+        private System.Windows.Forms.TextBox txtCuerpo;
     }
 }
