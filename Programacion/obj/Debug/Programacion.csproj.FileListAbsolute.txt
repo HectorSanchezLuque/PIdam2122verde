@@ -82,3 +82,4 @@ C:\Users\Akayu\Desktop\ProyectoIntegrado\Programacion\obj\Debug\ProyectoIntegrad
 C:\Users\Akayu\Desktop\ProyectoIntegrado\Programacion\obj\Debug\ProyectoIntegradoVerde.pdb
 C:\Users\Akayu\Desktop\ProyectoIntegrado\Programacion\obj\Debug\ProyectoIntegradoVerde.Login.resources
 >>>>>>> 107c7618c2d95955cbd662c3b16ae4194c6d3d77
+C:\Users\jacaar\Documents\PIdam2122verde\Programacion\obj\Debug\ProyectoIntegradoVerde.Login.resources

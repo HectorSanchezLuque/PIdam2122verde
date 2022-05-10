@@ -89,7 +89,6 @@ namespace ProyectoIntegradoVerde
             usu.Foto.Save(ms, ImageFormat.Jpeg);
             byte[] imgArr = ms.ToArray();
 
-
             // Imp: se puede cambiar la configuración regional del ordenador para que el signo
             // decimal sea el . y el signo de millares la , (MySQL está en formato USA)
             // o se añade en program.cs la siguiente linea:
@@ -143,8 +142,33 @@ namespace ProyectoIntegradoVerde
             retorno = comando.ExecuteNonQuery();
             return retorno;
         }
+        /// <summary>
+        /// Método para actualizar los datos de un usuario en la Base de Datos.
+        /// </summary>
+        /// <param name="conexion">objeto conexion</param>
+        /// <param name="usu"> datos del usuario a modificar</param>
+        /// <returns></returns>
+        public int ActualizaUsuario(MySqlConnection conexion, Usuario usu)
+        {
 
+            int retorno;
 
+          
+            MemoryStream ms = new MemoryStream();
+            usu.Foto.Save(ms, ImageFormat.Jpeg);
+            byte[] imgArr = ms.ToArray();
+
+            string consulta = string.Format("UPDATE usuarios SET id = '{1}',nif = '{2}',nombre = '{3}' ,fecha_nac = '{4}',cargo = '{5}',puntos = '{6}',correo = '{7}',pswd = '{8}',imagen=@imagen WHERE id={6}", usu.id, usu.nif, usu.nombre, usu.fechaNacimiento,
+                usu.cargo, usu.puntos, usu.correo, usu.password);
+     
+
+            MySqlCommand comando = new MySqlCommand(consulta, conexion);
+            comando.Parameters.AddWithValue("imagen", imgArr);
+            retorno = comando.ExecuteNonQuery();
+
+       
+            return retorno;
+        }
 
     }
 }
