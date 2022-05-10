@@ -37,5 +37,10 @@ namespace ProyectoIntegradoVerde.Formularios
             FrmDatos d = new FrmDatos();
             d.ShowDialog();
         }
+
+        private void btnCerrarSesion_Click(object sender, EventArgs e)
+        {
+            Environment.Exit(1);
+        }
     }
 }

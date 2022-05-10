@@ -144,5 +144,26 @@
   <ItemGroup>
     <None Include="Resources\299086_info_sign_icon.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1814117_gear_options_preferences_setting_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\8725528_calendar_alt_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\8396405_clipboard_note_document_report_paper_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\2932353_group_people_team_hr_humans_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\7208644_application_mail_email_message_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\3837963_shop_business_store_market_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\5094667_chat_communication_message_talk_icon.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
