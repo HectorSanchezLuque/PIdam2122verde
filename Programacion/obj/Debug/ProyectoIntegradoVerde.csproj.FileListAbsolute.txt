@@ -30,7 +30,6 @@ C:\Users\alvar\Desktop\proyecto\PIdam2122verde\Programacion\obj\Debug\ProyectoIn
 C:\Users\alvar\Desktop\proyecto\PIdam2122verde\Programacion\obj\Debug\ProyectoIntegradoVerde.Formularios.FrmDatos.resources
 C:\Users\alvar\Desktop\proyecto\PIdam2122verde\Programacion\obj\Debug\ProyectoIntegradoVerde.Formularios.FrmFuncionalidades.resources
 C:\Users\alvar\Desktop\proyecto\PIdam2122verde\Programacion\obj\Debug\ProyectoIntegradoVerde.Formularios.FrmPrincipal.resources
-C:\Users\alvar\Desktop\proyecto\PIdam2122verde\Programacion\obj\Debug\ProyectoIntegradoVerde.Login.resources
 C:\Users\alvar\Desktop\proyecto\PIdam2122verde\Programacion\obj\Debug\ProyectoIntegradoVerde.Properties.Resources.resources
 C:\Users\alvar\Desktop\proyecto\PIdam2122verde\Programacion\obj\Debug\ProyectoIntegradoVerde.RecursosLocalizables.StringRecursos.EN.resources
 C:\Users\alvar\Desktop\proyecto\PIdam2122verde\Programacion\obj\Debug\ProyectoIntegradoVerde.RecursosLocalizables.StringRecursos.ES.resources
