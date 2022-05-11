@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace projectoI
+namespace ProyectoIntegradoVerde
 {
     public partial class Registro : Form
     {
