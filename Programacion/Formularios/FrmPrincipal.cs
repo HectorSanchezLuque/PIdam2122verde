@@ -13,8 +13,10 @@ namespace ProyectoIntegradoVerde.Formularios
 {
     public partial class FrmPrincipal : Form
     {
-        public FrmPrincipal()
+        private string nif;
+        public FrmPrincipal(string n)
         {
+            nif = n;
             InitializeComponent();
         }
 

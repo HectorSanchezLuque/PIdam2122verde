@@ -1,4 +1,5 @@
-﻿using ProyectoIntegradoVerde.Formularios;
+﻿using Programacion;
+using ProyectoIntegradoVerde.Formularios;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -17,7 +18,7 @@ namespace ProyectoIntegradoVerde
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FrmPrincipal());
+            Application.Run(new Login());
         }
     }
 }
