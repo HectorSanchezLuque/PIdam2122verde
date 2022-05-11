@@ -12,22 +12,24 @@ namespace ProyectoIntegradoVerde.Clases
         private string titulo;
         private string descripcion;
         private int puntos;
-<<<<<<< HEAD
         private DateTime fPublicacion;
         private DateTime fLimite;
-
-        public string Titulo { get { return titulo; } set { titulo = value; } }
-        public int Puntos { get { return puntos; } set { puntos = value; } }
-        public DateTime FPublicacion { get { return fPublicacion; } set { fPublicacion = value; } }
-        public DateTime FLimite { get { return fLimite; } set { fLimite = value; } }
-        
-=======
         private bool asignado;
         private bool finalizado;
 
+        // Getters/Setters
+        public string Titulo { get => titulo; set => titulo = value; }
+        public string Descripcion { get => descripcion; set => descripcion = value; }
+        public int Puntos { get => puntos; set => puntos = value; }
+        public bool Asignado { get => asignado; set => asignado = value; }
+        public bool Finalizado { get => finalizado; set => finalizado = value; }
+        public DateTime FPublicacion { get => fPublicacion; set => fPublicacion = value; }
+        public DateTime FLimite { get => fLimite; set => fLimite = value; }
+
+
+
         // Constructor vacio
         public Tarea() { }
->>>>>>> 4900fe07a30cdb8f2e5880ffb9d45eb3a4be59d5
 
         // Constructor
         public Tarea(string titulo, string descripcion, int puntos, bool asignado, bool finalizado)
@@ -39,12 +41,7 @@ namespace ProyectoIntegradoVerde.Clases
             this.finalizado = finalizado;
         }
 
-        // Getters/Setters
-        public string Titulo { get => titulo; set => titulo = value; }
-        public string Descripcion { get => descripcion; set => descripcion = value; }
-        public int Puntos { get => puntos; set => puntos = value; }
-        public bool Asignado { get => asignado; set => asignado = value; }
-        public bool Finalizado { get => finalizado; set => finalizado = value; }
+ 
 
         // Metodos
 
