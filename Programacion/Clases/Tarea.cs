@@ -24,7 +24,7 @@ namespace ProyectoIntegradoVerde.Clases
         public static List<Tarea> ListadoTareas()
         {
             List<Tarea> tareas = new List<Tarea>();
-            string consulta = String.Format("SELECT * FROM tarea;");
+            string consulta = String.Format("SELECT * FROM tarea WHERE asignado = false && finalizado = false;");
             MySqlCommand comando = new MySqlCommand(consulta, conexion.Conexion);
             MySqlDataReader reader = comando.ExecuteReader();
 
@@ -38,8 +38,8 @@ namespace ProyectoIntegradoVerde.Clases
                     t.puntos = reader.GetInt32(3);
                     tareas.Add(t);
                 }
-                reader.Close();
             }
+            reader.Close();
             return tareas;
         }
     }
