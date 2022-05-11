@@ -81,11 +81,11 @@ namespace ProyectoIntegradoVerde.Clases
         // Modificar de aquí hacia abajo!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
         /// <summary>
-        ///  Comprueba si un usuario está dado de alta o no previamente a su agregación
+        ///  Comprueba si una tarea existe previamente a su agregación
         /// </summary>
         /// <param name="conexion">Conexión con la base de datos</param>
-        /// <param name="nom">nombre del usuario</param>
-        /// <returns>true si está y false si no está</returns>
+        /// <param name="nom">Nombre de la tarea</param>
+        /// <returns>True si está y False si no está</returns>
         public bool YaEsta(MySqlConnection conexion, string nom)
         {
             string consulta = string.Format("SELECT * FROM tarea" +
