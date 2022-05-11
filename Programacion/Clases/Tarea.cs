@@ -120,11 +120,13 @@ namespace ProyectoIntegradoVerde.Clases
         }
 
         /// <summary>
-        /// Método para actualizar los datos de un usuario en la Base de Datos.
+        /// Método para actualizar Tarea
         /// </summary>
         /// <param name="conexion">objeto conexion</param>
-        /// <param name="usu"> datos del usuario a modificar</param>
+        /// <param name="usu"> datos de la Tareaa modificar</param>
         /// <returns></returns>
+
+
 
         }
     }
