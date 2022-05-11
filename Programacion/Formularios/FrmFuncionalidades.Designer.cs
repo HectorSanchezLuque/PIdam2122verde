@@ -33,6 +33,11 @@ namespace ProyectoIntegradoVerde.Formularios
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.dgvTareasPendientes = new System.Windows.Forms.DataGridView();
             this.dgvTareasSinAsignar = new System.Windows.Forms.DataGridView();
+<<<<<<< HEAD
+=======
+            this.Titulo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Puntos = new System.Windows.Forms.DataGridViewTextBoxColumn();
+>>>>>>> 4900fe07a30cdb8f2e5880ffb9d45eb3a4be59d5
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.cldCalendario = new System.Windows.Forms.MonthCalendar();
             this.tabPage3 = new System.Windows.Forms.TabPage();
@@ -56,6 +61,7 @@ namespace ProyectoIntegradoVerde.Formularios
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+<<<<<<< HEAD
             this.tituloasignado = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.F_Publicacion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.F_limite = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -66,6 +72,8 @@ namespace ProyectoIntegradoVerde.Formularios
             this.Fecha_p = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.fecha_l = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Puntos = new System.Windows.Forms.DataGridViewTextBoxColumn();
+=======
+>>>>>>> 4900fe07a30cdb8f2e5880ffb9d45eb3a4be59d5
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTareasPendientes)).BeginInit();
@@ -137,8 +145,27 @@ namespace ProyectoIntegradoVerde.Formularios
             this.dgvTareasSinAsignar.Name = "dgvTareasSinAsignar";
             this.dgvTareasSinAsignar.RowHeadersWidth = 51;
             this.dgvTareasSinAsignar.RowTemplate.Height = 24;
+<<<<<<< HEAD
             this.dgvTareasSinAsignar.Size = new System.Drawing.Size(526, 150);
             this.dgvTareasSinAsignar.TabIndex = 0;
+=======
+            this.dgvTareasSinAsignar.Size = new System.Drawing.Size(318, 150);
+            this.dgvTareasSinAsignar.TabIndex = 0;
+            // 
+            // Titulo
+            // 
+            this.Titulo.HeaderText = "Titulo";
+            this.Titulo.MinimumWidth = 6;
+            this.Titulo.Name = "Titulo";
+            this.Titulo.Width = 125;
+            // 
+            // Puntos
+            // 
+            this.Puntos.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Puntos.HeaderText = "Puntos";
+            this.Puntos.MinimumWidth = 6;
+            this.Puntos.Name = "Puntos";
+>>>>>>> 4900fe07a30cdb8f2e5880ffb9d45eb3a4be59d5
             // 
             // tabPage2
             // 
@@ -255,7 +282,11 @@ namespace ProyectoIntegradoVerde.Formularios
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(7, 288);
             this.label5.Name = "label5";
+<<<<<<< HEAD
             this.label5.Size = new System.Drawing.Size(78, 22);
+=======
+            this.label5.Size = new System.Drawing.Size(81, 24);
+>>>>>>> 4900fe07a30cdb8f2e5880ffb9d45eb3a4be59d5
             this.label5.TabIndex = 3;
             this.label5.Text = "Asunto:";
             // 
@@ -265,7 +296,11 @@ namespace ProyectoIntegradoVerde.Formularios
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(418, 216);
             this.label4.Name = "label4";
+<<<<<<< HEAD
             this.label4.Size = new System.Drawing.Size(124, 22);
+=======
+            this.label4.Size = new System.Drawing.Size(125, 24);
+>>>>>>> 4900fe07a30cdb8f2e5880ffb9d45eb3a4be59d5
             this.label4.TabIndex = 2;
             this.label4.Text = "Destinatario:";
             // 
@@ -275,7 +310,11 @@ namespace ProyectoIntegradoVerde.Formularios
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(7, 216);
             this.label3.Name = "label3";
+<<<<<<< HEAD
             this.label3.Size = new System.Drawing.Size(106, 22);
+=======
+            this.label3.Size = new System.Drawing.Size(110, 24);
+>>>>>>> 4900fe07a30cdb8f2e5880ffb9d45eb3a4be59d5
             this.label3.TabIndex = 1;
             this.label3.Text = "Remitente:";
             // 
@@ -376,6 +415,7 @@ namespace ProyectoIntegradoVerde.Formularios
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.Size = new System.Drawing.Size(299, 150);
             this.dataGridView1.TabIndex = 0;
+<<<<<<< HEAD
             // 
             // tituloasignado
             // 
@@ -460,6 +500,8 @@ namespace ProyectoIntegradoVerde.Formularios
             this.Puntos.MinimumWidth = 6;
             this.Puntos.Name = "Puntos";
             this.Puntos.ReadOnly = true;
+=======
+>>>>>>> 4900fe07a30cdb8f2e5880ffb9d45eb3a4be59d5
             // 
             // FrmFuncionalidades
             // 
