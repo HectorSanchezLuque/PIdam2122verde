@@ -110,12 +110,12 @@ namespace ProyectoIntegradoVerde
         /// <param name="conexion">Conexión con la base de datos</param>
         /// <param name="nom">nombre del usuario</param>
         /// <returns>true si está y false si no está</returns>
-        public bool YaEsta(MySqlConnection conexion, string nom)
+        public bool YaEsta(string nif)
         {
             string consulta = string.Format("SELECT * FROM usuarios" +
-            " WHERE nombre='{0}'", nom);
+            " WHERE nombre='{0}'", nif);
 
-            MySqlCommand comando = new MySqlCommand(consulta, conexion);
+            MySqlCommand comando = new MySqlCommand(consulta, conexion.Conexion);
             MySqlDataReader reader = comando.ExecuteReader();
             if (reader.HasRows)
             { // si existen registros en la devolución de la consulta
@@ -172,5 +172,24 @@ namespace ProyectoIntegradoVerde
             return retorno;
         }
 
+        public static Usuario BuscarUsuario(string nif)
+        {
+            Usuario usu = new Usuario();
+            string consulta = String.Format("SELECT * FROM usuarios WHERE nif = '{0}';", nif); ;
+            MySqlCommand comando = new MySqlCommand(consulta, conexion.Conexion);
+            MySqlDataReader reader = comando.ExecuteReader();
+
+            if (reader.HasRows)   // En caso que se hallen registros en el objeto reader
+            {
+                // Recorremos el reader y cargamos la lista de tareas.
+                while (reader.Read())
+                {
+                    usu.Nif = reader.GetString(1);
+                    usu.Password = reader.GetString(7);
+                }
+            }
+            reader.Close();
+            return usu;
+        }
     }
 }

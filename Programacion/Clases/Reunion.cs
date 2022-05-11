@@ -33,7 +33,12 @@ namespace ProyectoIntegradoVerde.Clases
 
         // Metodos
 
-
+        /// <summary>
+        /// Agrega una reunion a la base de datos
+        /// </summary>
+        /// <param name="conexion"></param>
+        /// <param name="reu"></param>
+        /// <returns></returns>
         static public int AgregarReunion(MySqlConnection conexion, Reunion reu)
         {
             int retorno;
@@ -93,7 +98,7 @@ namespace ProyectoIntegradoVerde.Clases
         /// <param name="reu"> Nuevos datos de la reunion</param>
         /// <param name="ident"> Antiguo ID de la reunion</param>
         /// <returns></returns>
-        public int ActualizaUsuario(MySqlConnection conexion, Reunion reu, int ident)
+        public int ActualizarReunion(MySqlConnection conexion, Reunion reu, int ident)
         {
 
             int retorno;
