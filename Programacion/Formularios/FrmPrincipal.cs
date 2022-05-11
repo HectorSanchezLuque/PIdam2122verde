@@ -20,7 +20,7 @@ namespace ProyectoIntegradoVerde.Formularios
 
         private void FrmPrincipal_Load(object sender, EventArgs e)
         {
-            conexion.AbrirConexion();
+
         }
 
         private void lblAbreFormulario_MouseEnter(object sender, EventArgs e)
@@ -52,20 +52,9 @@ namespace ProyectoIntegradoVerde.Formularios
             {
                 if (conexion.Conexion != null)
                 {
-                    conexion.AbrirConexion();
-                    List<Tarea> lista = new List<Tarea>();
-                    lista = Tarea.ListadoTareas();
-                    if (lista.Count > 0)
-                    {
-                       
+                        conexion.AbrirConexion();                       
                         FrmFuncionalidades func = new FrmFuncionalidades(0);
                         func.Show();
-                    }
-                    else
-                    {
-                        MessageBox.Show("No se ha podido acceder");
-                    }
-
                 }
                 else
                 {

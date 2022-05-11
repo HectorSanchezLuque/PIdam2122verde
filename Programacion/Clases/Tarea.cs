@@ -12,11 +12,22 @@ namespace ProyectoIntegradoVerde.Clases
         private string titulo;
         private string descripcion;
         private int puntos;
+<<<<<<< HEAD
+        private DateTime fPublicacion;
+        private DateTime fLimite;
+
+        public string Titulo { get { return titulo; } set { titulo = value; } }
+        public int Puntos { get { return puntos; } set { puntos = value; } }
+        public DateTime FPublicacion { get { return fPublicacion; } set { fPublicacion = value; } }
+        public DateTime FLimite { get { return fLimite; } set { fLimite = value; } }
+        
+=======
         private bool asignado;
         private bool finalizado;
 
         // Constructor vacio
         public Tarea() { }
+>>>>>>> 4900fe07a30cdb8f2e5880ffb9d45eb3a4be59d5
 
         // Constructor
         public Tarea(string titulo, string descripcion, int puntos, bool asignado, bool finalizado)
@@ -40,7 +51,7 @@ namespace ProyectoIntegradoVerde.Clases
         public static List<Tarea> ListadoTareas()
         {
             List<Tarea> tareas = new List<Tarea>();
-            string consulta = String.Format("SELECT * FROM tarea;");
+            string consulta = String.Format("SELECT * FROM tarea WHERE asignado = false && finalizado = false && fecha_limite > CURRENT_DATE() ;");
             MySqlCommand comando = new MySqlCommand(consulta, conexion.Conexion);
             MySqlDataReader reader = comando.ExecuteReader();
 
@@ -52,10 +63,36 @@ namespace ProyectoIntegradoVerde.Clases
                     Tarea t = new Tarea();
                     t.Titulo = reader.GetString(1);
                     t.puntos = reader.GetInt32(3);
+                    t.FPublicacion = reader.GetDateTime(6);
+                    t.FLimite = reader.GetDateTime(7);
                     tareas.Add(t);
                 }
-                reader.Close();
             }
+            reader.Close();
+            return tareas;
+        }
+
+        public static List<Tarea> ListadoTareasAsignadas()
+        {
+            List<Tarea> tareas = new List<Tarea>();
+            string consulta = String.Format("SELECT * FROM tarea WHERE asignado = true && finalizado = false && fecha_limite > CURRENT_DATE() && usuarios_nif =  ;");
+            MySqlCommand comando = new MySqlCommand(consulta, conexion.Conexion);
+            MySqlDataReader reader = comando.ExecuteReader();
+
+            if (reader.HasRows)   // En caso que se hallen registros en el objeto reader
+            {
+                // Recorremos el reader y cargamos la lista de tareas.
+                while (reader.Read())
+                {
+                    Tarea t = new Tarea();
+                    t.Titulo = reader.GetString(1);
+                    t.puntos = reader.GetInt32(3);
+                    t.FPublicacion = reader.GetDateTime(6);
+                    t.FLimite = reader.GetDateTime(7);
+                    tareas.Add(t);
+                }
+            }
+            reader.Close();
             return tareas;
         }
 
