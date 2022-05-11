@@ -16,5 +16,10 @@ namespace ProyectoIntegradoVerde.Formularios
         {
             InitializeComponent();
         }
+
+        private void FrmDatos_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
