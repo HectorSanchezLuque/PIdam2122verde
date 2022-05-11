@@ -25,5 +25,9 @@ namespace ProyectoIntegradoVerde
             conexion.CerrarConexion();
         }
 
+        private void Login_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

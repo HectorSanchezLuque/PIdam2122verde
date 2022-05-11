@@ -19,7 +19,7 @@ namespace ProyectoIntegradoVerde.Formularios
             list = Tarea.ListadoTareas();
             for (int i = 0; i < list.Count; i++)
             {
-                dgvTareasSinAsignar.Rows.Add(list[i].Titulo, list[i].Puntos);
+                dgvTareasSinAsignar.Rows.Add(list[i].Titulo, list[i].FPublicacion.ToString("dd-MM-yyyy"), list[i].FLimite.ToString("dd-MM-yyyy"), list[i].Puntos);
             }
         }
         private int numPag;
