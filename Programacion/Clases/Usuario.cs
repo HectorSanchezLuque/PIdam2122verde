@@ -82,7 +82,7 @@ namespace ProyectoIntegradoVerde
         /// <param name="conexion"></param>
         /// <param name="usu"></param>
         /// <returns></returns>
-        static public int AgregarUsuario(MySqlConnection conexion, Usuario usu) // Investigar
+        static public int AgregarUsuario(Usuario usu) // Investigar
         {
             int retorno;
 
@@ -98,7 +98,7 @@ namespace ProyectoIntegradoVerde
                 "('{0}','{1}','{2}','{3}','{4}','{5}','{6}','{7}','{8}',@imagen)", usu.id, usu.nif, usu.nombre, usu.fechaNacimiento,
                 usu.cargo, usu.puntos, usu.correo, usu.password);
 
-            MySqlCommand comando = new MySqlCommand(consulta, conexion);
+            MySqlCommand comando = new MySqlCommand(consulta, conexion.Conexion);
             comando.Parameters.AddWithValue("imagen", imgArr);
             retorno = comando.ExecuteNonQuery();
 
@@ -135,12 +135,12 @@ namespace ProyectoIntegradoVerde
         /// <param name="conexion">Objeto conexion</param>
         /// <param name="nom">Nombre del usuario a eliminar</param>
         /// <returns></returns>
-        public static int EliminaUsuario(MySqlConnection conexion, int nom)
+        public static int EliminaUsuario(int nom)
         {
             int retorno;   
             // Eliminamos definitivamente el usuario de la tabla usuario.
             string consulta = string.Format("DELETE FROM usuarios WHERE nom={0}", nom);
-            MySqlCommand comando = new MySqlCommand(consulta, conexion);
+            MySqlCommand comando = new MySqlCommand(consulta, conexion.Conexion);
             retorno = comando.ExecuteNonQuery();
             return retorno;
         }
@@ -150,7 +150,7 @@ namespace ProyectoIntegradoVerde
         /// <param name="conexion">objeto conexion</param>
         /// <param name="usu"> datos del usuario a modificar</param>
         /// <returns></returns>
-        public int ActualizaUsuario(MySqlConnection conexion, Usuario usu)
+        public int ActualizaUsuario(Usuario usu)
         {
 
             int retorno;
@@ -164,7 +164,7 @@ namespace ProyectoIntegradoVerde
                 usu.cargo, usu.puntos, usu.correo, usu.password);
      
 
-            MySqlCommand comando = new MySqlCommand(consulta, conexion);
+            MySqlCommand comando = new MySqlCommand(consulta, conexion.Conexion);
             comando.Parameters.AddWithValue("imagen", imgArr);
             retorno = comando.ExecuteNonQuery();
 
