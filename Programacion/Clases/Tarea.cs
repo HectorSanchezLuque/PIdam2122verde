@@ -8,7 +8,7 @@ namespace ProyectoIntegradoVerde.Clases
 {
     internal class Tarea
     {
-
+        private int id;
         private string titulo;
         private string descripcion;
         private int puntos;
@@ -111,12 +111,9 @@ namespace ProyectoIntegradoVerde.Clases
             return retorno;
         }
 
-        // Modificar de aquí hacia abajo!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-
         /// <summary>
         ///  Comprueba si una tarea existe previamente a su agregación
         /// </summary>
-        /// <param name="conexion">Conexión con la base de datos</param>
         /// <param name="nom">Nombre de la tarea</param>
         /// <returns>True si está y False si no está</returns>
         public bool YaEsta(string nom)
@@ -139,10 +136,9 @@ namespace ProyectoIntegradoVerde.Clases
 
         }
         /// <summary>
-        /// Método para eliminar un usuario en la Base de Datos.
+        /// Método para eliminar una tarea en la Base de Datos.
         /// </summary>
-        /// <param name="conexion">Objeto conexion</param>
-        /// <param name="nom">Nombre del usuario a eliminar</param>
+        /// <param name="titulo">Nombre de la tarea a eliminar</param>
         /// <returns></returns>
         public static int EliminarTarea(int titulo)
         {
@@ -157,11 +153,25 @@ namespace ProyectoIntegradoVerde.Clases
         /// <summary>
         /// Método para actualizar Tarea
         /// </summary>
-        /// <param name="conexion">objeto conexion</param>
-        /// <param name="usu"> datos de la Tareaa modificar</param>
+        /// <param name="tar"> datos de la Tareaa modificar</param>
         /// <returns></returns>
+        public int ActualizaUsuario(Tarea tar)
+        {
+
+            int retorno;
+
+            string consulta = string.Format("UPDATE usuarios SET id_tarea = '{0}',titulo = '{1}',descripcion = '{2}' ,puntos = '{3}',asignado = '{4}',finalizado = '{5}',fecha_publicacion = '{6}',fecha_limite = '{7}' WHERE id={8}", tar.id, tar.titulo, tar.descripcion, tar.puntos,
+                tar.asignado, tar.finalizado, tar.fPublicacion, tar.fLimite);
 
 
+            MySqlCommand comando = new MySqlCommand(consulta, conexion.Conexion);
+            retorno = comando.ExecuteNonQuery();
 
+
+            return retorno;
         }
+
+
+
+    }
     }
