@@ -30,7 +30,6 @@ C:\Users\alvar\Desktop\proyecto\PIdam2122verde\Programacion\obj\Debug\ProyectoIn
 C:\Users\alvar\Desktop\proyecto\PIdam2122verde\Programacion\obj\Debug\ProyectoIntegradoVerde.Formularios.FrmDatos.resources
 C:\Users\alvar\Desktop\proyecto\PIdam2122verde\Programacion\obj\Debug\ProyectoIntegradoVerde.Formularios.FrmFuncionalidades.resources
 C:\Users\alvar\Desktop\proyecto\PIdam2122verde\Programacion\obj\Debug\ProyectoIntegradoVerde.Formularios.FrmPrincipal.resources
-C:\Users\alvar\Desktop\proyecto\PIdam2122verde\Programacion\obj\Debug\ProyectoIntegradoVerde.Login.resources
 C:\Users\alvar\Desktop\proyecto\PIdam2122verde\Programacion\obj\Debug\ProyectoIntegradoVerde.Properties.Resources.resources
 C:\Users\alvar\Desktop\proyecto\PIdam2122verde\Programacion\obj\Debug\ProyectoIntegradoVerde.RecursosLocalizables.StringRecursos.EN.resources
 C:\Users\alvar\Desktop\proyecto\PIdam2122verde\Programacion\obj\Debug\ProyectoIntegradoVerde.RecursosLocalizables.StringRecursos.ES.resources
@@ -84,6 +83,7 @@ C:\Users\hesalu\Desktop\PROG PI\PIdam2122verde-src\Programacion\Programacion\obj
 C:\Users\hesalu\Desktop\PROG PI\PIdam2122verde-src\Programacion\Programacion\obj\Debug\ProyectoIntegradoVerde.csproj.CopyComplete
 C:\Users\hesalu\Desktop\PROG PI\PIdam2122verde-src\Programacion\Programacion\obj\Debug\Programacion.Login.resources
 C:\Users\hesalu\Desktop\PROG PI\PIdam2122verde-src\Programacion\Programacion\obj\Debug\ProyectoIntegradoVerde.Registro.resources
+<<<<<<< HEAD
 C:\Users\jacaar\Documents\PIdam2122verde\Programacion\bin\Debug\ProyectoIntegradoVerde.exe.config
 C:\Users\jacaar\Documents\PIdam2122verde\Programacion\bin\Debug\ProyectoIntegradoVerde.exe
 C:\Users\jacaar\Documents\PIdam2122verde\Programacion\bin\Debug\ProyectoIntegradoVerde.pdb
@@ -127,3 +127,7 @@ C:\Users\jacaar\Documents\PIdam2122verde\Programacion\obj\Debug\ES\ProyectoInteg
 C:\Users\jacaar\Documents\PIdam2122verde\Programacion\obj\Debug\ProyectoIntegradoVerde.csproj.CopyComplete
 C:\Users\jacaar\Documents\PIdam2122verde\Programacion\obj\Debug\ProyectoIntegradoVerde.exe
 C:\Users\jacaar\Documents\PIdam2122verde\Programacion\obj\Debug\ProyectoIntegradoVerde.pdb
+=======
+C:\Users\alvar\Desktop\proyecto\PIdam2122verde\Programacion\obj\Debug\Programacion.Login.resources
+C:\Users\alvar\Desktop\proyecto\PIdam2122verde\Programacion\obj\Debug\ProyectoIntegradoVerde.Registro.resources
+>>>>>>> a7cbd7e38ea44d9e2dd538d7770604f94544dd35

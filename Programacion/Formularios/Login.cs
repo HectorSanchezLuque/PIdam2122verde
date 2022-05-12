@@ -22,41 +22,59 @@ namespace Programacion
 
         private void btnIniSesion_Click(object sender, EventArgs e)
         {
-            try
+            if (Usuario.compNif(txtNif.Text))
             {
-                if (conexion.Conexion != null)
+                try
                 {
-                    conexion.AbrirConexion();
-                    Usuario user = Usuario.BuscarUsuario(txtNif.Text);
-
-                    if (user.Nif == txtNif.Text && user.Password == txtPassword.Text)
+                    if (conexion.Conexion != null)
                     {
-                        FrmPrincipal princ = new FrmPrincipal(txtNif.Text);
-                        princ.Show();
+                        conexion.AbrirConexion();
+                        Usuario user = Usuario.BuscarUsuario(txtNif.Text);
+
+                        if (user.Nif == txtNif.Text && user.Password == txtPassword.Text)
+                        {
+                            
+                            
+                            FrmPrincipal princ = new FrmPrincipal(txtNif.Text);
+                            princ.Show();
+                            
+
+
+
+
+                        }
+                        else
+                        {
+                            MessageBox.Show("No se ha podido iniciar sesión");
+                        }
                     }
                     else
                     {
-                        MessageBox.Show("No se ha podido iniciar sesión");
+                        MessageBox.Show("No se ha podido abrir la conexión con la Base de Datos");
                     }
                 }
-                else
+                catch (Exception ex)
                 {
-                    MessageBox.Show("No se ha podido abrir la conexión con la Base de Datos");
+                    MessageBox.Show(ex.Message + "\n" + ex.StackTrace);
+                }
+                finally
+                {
+                    conexion.CerrarConexion();
                 }
             }
-            catch (Exception ex)
+            else
             {
-                MessageBox.Show(ex.Message + "\n" + ex.StackTrace);
-            }
-            finally
-            {
-                conexion.CerrarConexion();
+                MessageBox.Show("El NIF no es válido");
             }
         }
 
         private void Login_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void txtNif_TextChanged(object sender, EventArgs e)
+        {
         }
     }
 }
