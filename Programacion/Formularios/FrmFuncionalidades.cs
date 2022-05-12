@@ -35,11 +35,13 @@ namespace ProyectoIntegradoVerde.Formularios
         {
             this.tabControl1.SelectTab(numPag);
             RellenarDataGrid();
+            txtCAJACAJA.Text = nif;
         }
 
         private void tabPage1_Click(object sender, EventArgs e)
         {
-
+            
         }
+        
     }
 }

@@ -19,12 +19,8 @@ namespace ProyectoIntegradoVerde.Formularios
             nif = n;
             InitializeComponent();
         }
-
-        private void FrmPrincipal_Load(object sender, EventArgs e)
-        {
-
-        }
-
+        
+   
         private void lblAbreFormulario_MouseEnter(object sender, EventArgs e)
         {
             lblAbreFormulario.ForeColor = Color.Blue;
@@ -97,5 +93,7 @@ namespace ProyectoIntegradoVerde.Formularios
             FrmFuncionalidades func = new FrmFuncionalidades(4,nif);
             func.ShowDialog();
         }
+
+
     }
 }

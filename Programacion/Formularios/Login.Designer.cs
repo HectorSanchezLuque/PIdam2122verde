@@ -39,11 +39,11 @@
             this.btnRegistro = new System.Windows.Forms.Button();
             this.picFlag = new System.Windows.Forms.PictureBox();
             this.lblLang = new System.Windows.Forms.Label();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pcbLuz = new System.Windows.Forms.PictureBox();
             this.lblNotif = new System.Windows.Forms.LinkLabel();
             ((System.ComponentModel.ISupportInitialize)(this.picLight)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picFlag)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pcbLuz)).BeginInit();
             this.SuspendLayout();
             // 
             // lblPsw
@@ -147,17 +147,18 @@
             this.lblLang.TabIndex = 10;
             this.lblLang.Text = "ESP";
             // 
-            // pictureBox3
+            // pcbLuz
             // 
-            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox3.InitialImage")));
-            this.pictureBox3.Location = new System.Drawing.Point(420, 2);
-            this.pictureBox3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(43, 49);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox3.TabIndex = 11;
-            this.pictureBox3.TabStop = false;
+            this.pcbLuz.Image = ((System.Drawing.Image)(resources.GetObject("pcbLuz.Image")));
+            this.pcbLuz.InitialImage = ((System.Drawing.Image)(resources.GetObject("pcbLuz.InitialImage")));
+            this.pcbLuz.Location = new System.Drawing.Point(420, 11);
+            this.pcbLuz.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pcbLuz.Name = "pcbLuz";
+            this.pcbLuz.Size = new System.Drawing.Size(43, 57);
+            this.pcbLuz.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pcbLuz.TabIndex = 11;
+            this.pcbLuz.TabStop = false;
+            this.pcbLuz.Click += new System.EventHandler(this.pcbLuz_Click);
             // 
             // lblNotif
             // 
@@ -176,7 +177,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(475, 450);
             this.Controls.Add(this.lblNotif);
-            this.Controls.Add(this.pictureBox3);
+            this.Controls.Add(this.pcbLuz);
             this.Controls.Add(this.lblLang);
             this.Controls.Add(this.picFlag);
             this.Controls.Add(this.btnRegistro);
@@ -194,7 +195,7 @@
             this.Load += new System.EventHandler(this.Login_Load);
             ((System.ComponentModel.ISupportInitialize)(this.picLight)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picFlag)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pcbLuz)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -211,7 +212,7 @@
         private System.Windows.Forms.Button btnRegistro;
         private System.Windows.Forms.PictureBox picFlag;
         private System.Windows.Forms.Label lblLang;
-        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.PictureBox pcbLuz;
         private System.Windows.Forms.LinkLabel lblNotif;
     }
 }
