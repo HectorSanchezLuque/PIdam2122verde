@@ -108,18 +108,38 @@ namespace Programacion
 
         private void btnRegistro_Click(object sender, EventArgs e)
         {
-            
-             Usuario usu = Usuario.BuscarUsuario(txtNif.Text);
-            if (usu.Cargo == "Administrador" || usu.Cargo == "Jefe")
+            if (Usuario.compNif(txtNif.Text))
             {
-                Registro reg = new Registro();
-                reg.ShowDialog();
+                try
+                {
+                    if (conexion.Conexion != null)
+                    {
+                        conexion.AbrirConexion();
+                        Usuario usu = Usuario.BuscarUsuario(txtNif.Text);
+                        if (usu.Cargo == "Administrador" || usu.Cargo == "Jefe" && usu.Password == txtPassword.Text)
+                        {
+                            Registro reg = new Registro();
+                            reg.ShowDialog();
+                        }
+                        else
+                        {
+                            MessageBox.Show("Datos incorrectos o El Usuario no tiene permisos para esta acción");
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message + "\n" + ex.StackTrace);
+                }
+                finally
+                {
+                    conexion.CerrarConexion();
+                }
             }
             else
             {
-                MessageBox.Show("No tiene permisos para acceder a esta función");
+                MessageBox.Show("El NIF no es válido");
             }
-
         }
     }
 }

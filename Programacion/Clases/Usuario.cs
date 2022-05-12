@@ -185,6 +185,7 @@ namespace ProyectoIntegradoVerde
                 while (reader.Read())
                 {
                     usu.Nif = reader.GetString(1);
+                    usu.Cargo = reader.GetString(4);
                     usu.Password = reader.GetString(7);
                 }
             }
