@@ -45,6 +45,8 @@ namespace ProyectoIntegradoVerde.Formularios
         private void btnCerrarSesion_Click(object sender, EventArgs e)
         {
             Environment.Exit(1);
+            FrmFuncionalidades func = new FrmFuncionalidades();
+            func.ShowDialog();
         }
 
         private void btnTareas_Click(object sender, EventArgs e)
@@ -54,8 +56,9 @@ namespace ProyectoIntegradoVerde.Formularios
                 if (conexion.Conexion != null)
                 {
                         conexion.AbrirConexion();
-                    func.NumPag= 0;
-                    func.Show();
+                        func.NumPag= 0;
+                        func.Show();
+                        func.Show();
                 }
                 else
                 {
@@ -95,6 +98,11 @@ namespace ProyectoIntegradoVerde.Formularios
         {
             func.NumPag = 4;
             func.ShowDialog();
+        }
+
+        private void FrmPrincipal_Load_1(object sender, EventArgs e)
+        {
+
         }
     }
 }

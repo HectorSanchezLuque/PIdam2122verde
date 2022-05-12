@@ -39,11 +39,11 @@
             this.btnRegistro = new System.Windows.Forms.Button();
             this.picFlag = new System.Windows.Forms.PictureBox();
             this.lblLang = new System.Windows.Forms.Label();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pcbLuz = new System.Windows.Forms.PictureBox();
             this.lblNotif = new System.Windows.Forms.LinkLabel();
             ((System.ComponentModel.ISupportInitialize)(this.picLight)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picFlag)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pcbLuz)).BeginInit();
             this.SuspendLayout();
             // 
             // lblPsw
@@ -60,9 +60,11 @@
             // 
             this.txtNif.Location = new System.Drawing.Point(179, 242);
             this.txtNif.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtNif.MaxLength = 9;
             this.txtNif.Name = "txtNif";
             this.txtNif.Size = new System.Drawing.Size(220, 22);
             this.txtNif.TabIndex = 2;
+            this.txtNif.TextChanged += new System.EventHandler(this.txtNif_TextChanged);
             // 
             // txtPassword
             // 
@@ -109,7 +111,7 @@
             this.lblOlvidoCont.AutoSize = true;
             this.lblOlvidoCont.Location = new System.Drawing.Point(201, 299);
             this.lblOlvidoCont.Name = "lblOlvidoCont";
-            this.lblOlvidoCont.Size = new System.Drawing.Size(197, 17);
+            this.lblOlvidoCont.Size = new System.Drawing.Size(185, 16);
             this.lblOlvidoCont.TabIndex = 7;
             this.lblOlvidoCont.TabStop = true;
             this.lblOlvidoCont.Text = "¿Has olvidado tu contraseña?";
@@ -141,21 +143,22 @@
             this.lblLang.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblLang.Location = new System.Drawing.Point(63, 23);
             this.lblLang.Name = "lblLang";
-            this.lblLang.Size = new System.Drawing.Size(38, 17);
+            this.lblLang.Size = new System.Drawing.Size(37, 16);
             this.lblLang.TabIndex = 10;
             this.lblLang.Text = "ESP";
             // 
-            // pictureBox3
+            // pcbLuz
             // 
-            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox3.InitialImage")));
-            this.pictureBox3.Location = new System.Drawing.Point(420, 2);
-            this.pictureBox3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(43, 49);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox3.TabIndex = 11;
-            this.pictureBox3.TabStop = false;
+            this.pcbLuz.Image = ((System.Drawing.Image)(resources.GetObject("pcbLuz.Image")));
+            this.pcbLuz.InitialImage = ((System.Drawing.Image)(resources.GetObject("pcbLuz.InitialImage")));
+            this.pcbLuz.Location = new System.Drawing.Point(420, 11);
+            this.pcbLuz.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pcbLuz.Name = "pcbLuz";
+            this.pcbLuz.Size = new System.Drawing.Size(43, 57);
+            this.pcbLuz.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pcbLuz.TabIndex = 11;
+            this.pcbLuz.TabStop = false;
+            this.pcbLuz.Click += new System.EventHandler(this.pcbLuz_Click);
             // 
             // lblNotif
             // 
@@ -163,7 +166,7 @@
             this.lblNotif.Location = new System.Drawing.Point(283, 423);
             this.lblNotif.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblNotif.Name = "lblNotif";
-            this.lblNotif.Size = new System.Drawing.Size(186, 17);
+            this.lblNotif.Size = new System.Drawing.Size(172, 16);
             this.lblNotif.TabIndex = 12;
             this.lblNotif.TabStop = true;
             this.lblNotif.Text = "Notificar a un administrador.";
@@ -174,7 +177,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(475, 450);
             this.Controls.Add(this.lblNotif);
-            this.Controls.Add(this.pictureBox3);
+            this.Controls.Add(this.pcbLuz);
             this.Controls.Add(this.lblLang);
             this.Controls.Add(this.picFlag);
             this.Controls.Add(this.btnRegistro);
@@ -192,7 +195,7 @@
             this.Load += new System.EventHandler(this.Login_Load);
             ((System.ComponentModel.ISupportInitialize)(this.picLight)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picFlag)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pcbLuz)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -209,7 +212,7 @@
         private System.Windows.Forms.Button btnRegistro;
         private System.Windows.Forms.PictureBox picFlag;
         private System.Windows.Forms.Label lblLang;
-        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.PictureBox pcbLuz;
         private System.Windows.Forms.LinkLabel lblNotif;
     }
 }

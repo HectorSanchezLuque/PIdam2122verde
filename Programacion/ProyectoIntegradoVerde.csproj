@@ -132,6 +132,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\FrmFuncionalidades.resx">
       <DependentUpon>FrmFuncionalidades.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\FrmPrincipal.resx">
       <DependentUpon>FrmPrincipal.cs</DependentUpon>

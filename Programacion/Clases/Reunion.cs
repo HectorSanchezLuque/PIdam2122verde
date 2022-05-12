@@ -39,14 +39,14 @@ namespace ProyectoIntegradoVerde.Clases
         /// <param name="conexion"></param>
         /// <param name="reu"></param>
         /// <returns></returns>
-        static public int AgregarReunion(MySqlConnection conexion, Reunion reu)
+        static public int AgregarReunion(Reunion reu)
         {
             int retorno;
 
             string consulta = String.Format("INSERT INTO reuniones (id,participantes,nombre,fechaHora) VALUES " +
                 "('{0}','{1}','{2}','{3}')", reu.id, reu.participantes, reu.titulo, reu.fechaHora);
 
-            MySqlCommand comando = new MySqlCommand(consulta, conexion);
+            MySqlCommand comando = new MySqlCommand(consulta, conexion.Conexion);
             retorno = comando.ExecuteNonQuery();
 
             return retorno;
@@ -57,12 +57,12 @@ namespace ProyectoIntegradoVerde.Clases
         /// <param name="conexion">Conexión con la base de datos</param>
         /// <param name="nom">Titulo de la reunion</param>
         /// <returns>True si está y False si no está</returns>
-        public bool YaEsta(MySqlConnection conexion, string nom)
+        public bool YaEsta( string nom)
         {
             string consulta = string.Format("SELECT * FROM reuniones" +
             " WHERE nombre='{0}'", nom);
 
-            MySqlCommand comando = new MySqlCommand(consulta, conexion);
+            MySqlCommand comando = new MySqlCommand(consulta, conexion.Conexion);
             MySqlDataReader reader = comando.ExecuteReader();
             if (reader.HasRows)
             { // si existen registros en la devolución de la consulta
@@ -82,12 +82,12 @@ namespace ProyectoIntegradoVerde.Clases
         /// <param name="conexion">Objeto conexion</param>
         /// <param name="id">ID de la reunion a eliminar</param>
         /// <returns></returns>
-        public static int EliminarReunion(MySqlConnection conexion, int id)
+        public static int EliminarReunion(int id)
         {
             int retorno;
             // Eliminamos definitivamente el usuario de la tabla usuario.
             string consulta = string.Format("DELETE FROM reuniones WHERE id={0}", id);
-            MySqlCommand comando = new MySqlCommand(consulta, conexion);
+            MySqlCommand comando = new MySqlCommand(consulta, conexion.Conexion);
             retorno = comando.ExecuteNonQuery();
             return retorno;
         }
@@ -98,7 +98,7 @@ namespace ProyectoIntegradoVerde.Clases
         /// <param name="reu"> Nuevos datos de la reunion</param>
         /// <param name="ident"> Antiguo ID de la reunion</param>
         /// <returns></returns>
-        public int ActualizarReunion(MySqlConnection conexion, Reunion reu, int ident)
+        public int ActualizarReunion(Reunion reu, int ident)
         {
 
             int retorno;
@@ -106,7 +106,7 @@ namespace ProyectoIntegradoVerde.Clases
             string consulta = string.Format("UPDATE reuniones SET id = '{0}',participantes = '{1}',nombre = '{2}' ,fechaHora = '{3}' WHERE id={4}", reu.id, reu.participantes, reu.titulo, reu.fechaHora,ident);
 
 
-            MySqlCommand comando = new MySqlCommand(consulta, conexion);
+            MySqlCommand comando = new MySqlCommand(consulta, conexion.Conexion);
             retorno = comando.ExecuteNonQuery();
 
 

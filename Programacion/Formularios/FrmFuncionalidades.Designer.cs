@@ -69,6 +69,7 @@ namespace ProyectoIntegradoVerde.Formularios
             this.Fecha_p = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.fecha_l = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Puntos = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.txtCAJACAJA = new System.Windows.Forms.TextBox();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTareasPendientes)).BeginInit();
@@ -101,6 +102,7 @@ namespace ProyectoIntegradoVerde.Formularios
             // tabPage1
             // 
             this.tabPage1.Controls.Add(this.lblDobleClick);
+            this.tabPage1.Controls.Add(this.txtCAJACAJA);
             this.tabPage1.Controls.Add(this.lblInfo2);
             this.tabPage1.Controls.Add(this.lblInfo1);
             this.tabPage1.Controls.Add(this.dgvTareasPendientes);
@@ -492,6 +494,13 @@ namespace ProyectoIntegradoVerde.Formularios
             this.Puntos.MinimumWidth = 6;
             this.Puntos.Name = "Puntos";
             this.Puntos.ReadOnly = true;
+            
+            // txtCAJACAJA
+            // 
+            this.txtCAJACAJA.Location = new System.Drawing.Point(129, 232);
+            this.txtCAJACAJA.Name = "txtCAJACAJA";
+            this.txtCAJACAJA.Size = new System.Drawing.Size(100, 22);
+            this.txtCAJACAJA.TabIndex = 4;
             // 
             // FrmFuncionalidades
             // 
@@ -565,5 +574,6 @@ namespace ProyectoIntegradoVerde.Formularios
         private System.Windows.Forms.DataGridViewTextBoxColumn Fecha_p;
         private System.Windows.Forms.DataGridViewTextBoxColumn fecha_l;
         private System.Windows.Forms.DataGridViewTextBoxColumn Puntos;
+        private System.Windows.Forms.TextBox txtCAJACAJA;
     }
 }

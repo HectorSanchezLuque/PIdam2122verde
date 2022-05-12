@@ -100,33 +100,30 @@ namespace ProyectoIntegradoVerde.Clases
         /// <param name="conexion"></param>
         /// <param name="tar"></param>
         /// <returns></returns>
-        static public int AgregarTarea(MySqlConnection conexion, Tarea tar)
+        static public int AgregarTarea(Tarea tar)
         {
             int retorno;
 
             string consulta = String.Format("INSERT INTO tarea (titulo,descripcion,puntos,asignado,finalizado) VALUES " +
                 "('{0}','{1}','{2}','{3}','{4}','{5}')", tar.titulo, tar.descripcion, tar.puntos, tar.asignado, tar.finalizado);
 
-            MySqlCommand comando = new MySqlCommand(consulta, conexion);
+            MySqlCommand comando = new MySqlCommand(consulta, conexion.Conexion);
             retorno = comando.ExecuteNonQuery();
 
             return retorno;
         }
 
-        // Modificar de aquí hacia abajo!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-
         /// <summary>
         ///  Comprueba si una tarea existe previamente a su agregación
         /// </summary>
-        /// <param name="conexion">Conexión con la base de datos</param>
         /// <param name="nom">Nombre de la tarea</param>
         /// <returns>True si está y False si no está</returns>
-        public bool YaEsta(MySqlConnection conexion, string nom)
+        public bool YaEsta(string nom)
         {
             string consulta = string.Format("SELECT * FROM tarea" +
             " WHERE titulo='{0}'", nom);
 
-            MySqlCommand comando = new MySqlCommand(consulta, conexion);
+            MySqlCommand comando = new MySqlCommand(consulta, conexion.Conexion);
             MySqlDataReader reader = comando.ExecuteReader();
             if (reader.HasRows)
             { // si existen registros en la devolución de la consulta
@@ -141,17 +138,16 @@ namespace ProyectoIntegradoVerde.Clases
 
         }
         /// <summary>
-        /// Método para eliminar un usuario en la Base de Datos.
+        /// Método para eliminar una tarea en la Base de Datos.
         /// </summary>
-        /// <param name="conexion">Objeto conexion</param>
-        /// <param name="nom">Nombre del usuario a eliminar</param>
+        /// <param name="titulo">Nombre de la tarea a eliminar</param>
         /// <returns></returns>
-        public static int EliminarTarea(MySqlConnection conexion, int titulo)
+        public static int EliminarTarea(int titulo)
         {
             int retorno;
            
             string consulta = string.Format("DELETE FROM tarea WHERE titulo={0}", titulo);
-            MySqlCommand comando = new MySqlCommand(consulta, conexion);
+            MySqlCommand comando = new MySqlCommand(consulta, conexion.Conexion);
             retorno = comando.ExecuteNonQuery();
             return retorno;
         }
@@ -162,14 +158,22 @@ namespace ProyectoIntegradoVerde.Clases
 
         /// <param name="conexion">objeto conexion</param>
         /// <param name="usu"> datos de la Tareaa modificar</param>
+        /// <param name="tar"> datos de la Tareaa modificar</param>
         /// <returns></returns>
+        public int ActualizaUsuario(Tarea tar)
+        {
+
+            int retorno;
+
+            string consulta = string.Format("UPDATE usuarios SET id_tarea = '{0}',titulo = '{1}',descripcion = '{2}' ,puntos = '{3}',asignado = '{4}',finalizado = '{5}',fecha_publicacion = '{6}',fecha_limite = '{7}' WHERE id={8}", tar.id, tar.titulo, tar.descripcion, tar.puntos,
+                tar.asignado, tar.finalizado, tar.fPublicacion, tar.fLimite);
 
 
+            MySqlCommand comando = new MySqlCommand(consulta, conexion.Conexion);
+            retorno = comando.ExecuteNonQuery();
 
-
-
-
-
+            return retorno;
+        }
 
 
         public static int AsignarTarea(string idTarea, int id) 
@@ -184,5 +188,9 @@ namespace ProyectoIntegradoVerde.Clases
 
             return retorno;
         }
+
+
+
     }
- }
+    }
+ 
