@@ -41,6 +41,7 @@ namespace Programacion
                             
                             
                             FrmPrincipal princ = new FrmPrincipal(txtNif.Text);
+                            this.Hide();
                             princ.Show();
             
 
