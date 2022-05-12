@@ -13,16 +13,17 @@ namespace ProyectoIntegradoVerde.Formularios
 {
     public partial class FrmPrincipal : Form
     {
-        private string nif;
-        public FrmPrincipal(string n)
+        private int id;
+        FrmFuncionalidades func = new FrmFuncionalidades();
+        public FrmPrincipal(int n)
         {
-            nif = n;
+            id = n;
             InitializeComponent();
         }
 
         private void FrmPrincipal_Load(object sender, EventArgs e)
         {
-
+            func.Id = id;
         }
 
         private void lblAbreFormulario_MouseEnter(object sender, EventArgs e)
@@ -44,8 +45,6 @@ namespace ProyectoIntegradoVerde.Formularios
         private void btnCerrarSesion_Click(object sender, EventArgs e)
         {
             Environment.Exit(1);
-            FrmFuncionalidades func = new FrmFuncionalidades(0);
-            func.ShowDialog();
         }
 
         private void btnTareas_Click(object sender, EventArgs e)
@@ -54,9 +53,9 @@ namespace ProyectoIntegradoVerde.Formularios
             {
                 if (conexion.Conexion != null)
                 {
-                        conexion.AbrirConexion();                       
-                        FrmFuncionalidades func = new FrmFuncionalidades(0);
-                        func.Show();
+                        conexion.AbrirConexion();
+                    func.NumPag= 0;
+                    func.Show();
                 }
                 else
                 {
@@ -76,25 +75,25 @@ namespace ProyectoIntegradoVerde.Formularios
 
         private void btnCalendario_Click(object sender, EventArgs e)
         {
-            FrmFuncionalidades func = new FrmFuncionalidades(1);
+            func.NumPag = 1;
             func.ShowDialog();
         }
 
         private void btnReuniones_Click(object sender, EventArgs e)
         {
-            FrmFuncionalidades func = new FrmFuncionalidades(2);
+            func.NumPag = 2;
             func.ShowDialog();
         }
 
         private void btnCorreo_Click(object sender, EventArgs e)
         {
-            FrmFuncionalidades func = new FrmFuncionalidades(3);
+            func.NumPag = 3;
             func.ShowDialog();
         }
 
         private void btnTienda_Click(object sender, EventArgs e)
         {
-            FrmFuncionalidades func = new FrmFuncionalidades(4);
+            func.NumPag = 4;
             func.ShowDialog();
         }
     }

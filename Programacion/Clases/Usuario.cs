@@ -40,6 +40,7 @@ namespace ProyectoIntegradoVerde
         public Usuario() { }
 
         // Getters y Setters
+        public int Id { get => id; set  => id = value; }
         public string Nif { get => nif; set => nif = value; }
         public string Nombre { get => nombre; set => nombre = value; }
         public DateTime FechaNacimiento { get => fechaNacimiento; set => fechaNacimiento = value; }
