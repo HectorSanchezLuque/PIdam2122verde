@@ -176,7 +176,7 @@ namespace ProyectoIntegradoVerde
         public static Usuario BuscarUsuario(string nif)
         {
             Usuario usu = new Usuario();
-            string consulta = String.Format("SELECT * FROM usuarios WHERE nif = '{0}';", nif); ;
+            string consulta = String.Format("SELECT * FROM usuarios WHERE nif = '{0}' && borrado = false;", nif); ;
             MySqlCommand comando = new MySqlCommand(consulta, conexion.Conexion);
             MySqlDataReader reader = comando.ExecuteReader();
 
