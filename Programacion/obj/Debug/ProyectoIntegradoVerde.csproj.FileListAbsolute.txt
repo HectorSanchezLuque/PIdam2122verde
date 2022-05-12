@@ -83,3 +83,5 @@ C:\Users\hesalu\Desktop\PROG PI\PIdam2122verde-src\Programacion\Programacion\obj
 C:\Users\hesalu\Desktop\PROG PI\PIdam2122verde-src\Programacion\Programacion\obj\Debug\ProyectoIntegradoVerde.csproj.CopyComplete
 C:\Users\hesalu\Desktop\PROG PI\PIdam2122verde-src\Programacion\Programacion\obj\Debug\Programacion.Login.resources
 C:\Users\hesalu\Desktop\PROG PI\PIdam2122verde-src\Programacion\Programacion\obj\Debug\ProyectoIntegradoVerde.Registro.resources
+C:\Users\alvar\Desktop\proyecto\PIdam2122verde\Programacion\obj\Debug\Programacion.Login.resources
+C:\Users\alvar\Desktop\proyecto\PIdam2122verde\Programacion\obj\Debug\ProyectoIntegradoVerde.Registro.resources

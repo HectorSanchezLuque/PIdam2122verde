@@ -191,5 +191,33 @@ namespace ProyectoIntegradoVerde
             reader.Close();
             return usu;
         }
+        static public bool compNif(string nif)
+        {
+            string num = "";
+            string lets = "TRWAGMYFPDXBNJZSQVHLCKE";
+            char let;
+            for (int i = 0; i < nif.Length - 1; i++)
+            {
+                if (char.IsDigit(nif[i]))
+                {
+                    num += nif[i];
+                }
+                else
+                {
+                    return false;
+                }
+
+            }
+            let = lets[int.Parse(num) % 23];
+            if (let == nif[nif.Length - 1])
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+            
+        }
     }
 }
