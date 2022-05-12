@@ -13,8 +13,10 @@ using ProyectoIntegradoVerde.Formularios;
 
 namespace Programacion
 {
+   
     public partial class Login : Form
     {
+        bool luz = true;
         public Login()
         {
             InitializeComponent();
@@ -33,17 +35,14 @@ namespace Programacion
                     {
                         conexion.AbrirConexion();
                         Usuario user = Usuario.BuscarUsuario(txtNif.Text);
-
+                        
                         if (user.Nif == txtNif.Text && user.Password == txtPassword.Text)
                         {
                             
                             
                             FrmPrincipal princ = new FrmPrincipal(txtNif.Text);
                             princ.Show();
-                            
-
-
-
+            
 
                         }
                         else
@@ -78,6 +77,38 @@ namespace Programacion
 
         private void txtNif_TextChanged(object sender, EventArgs e)
         {
+            txtNif.Text = txtNif.Text.ToUpper();
+        }
+
+        private void pcbLuz_Click(object sender, EventArgs e)
+        {
+
+            if (luz)
+            {
+
+                luz = false;
+                this.BackColor = Color.FromArgb(0, 0,122);
+                lblLang.ForeColor = Color.FromArgb(255, 255, 255);
+                lblNIF.ForeColor = Color.FromArgb(255, 255, 255);
+                lblPsw.ForeColor = Color.FromArgb(255, 255, 255);
+                lblNotif.LinkColor = Color.FromArgb(255, 255, 255);
+                lblOlvidoCont.LinkColor = Color.FromArgb(255, 255, 255);
+
+
+            }
+            else
+            {
+                luz = true;
+                this.BackColor = Color.FromArgb(255, 255, 255);
+                lblLang.ForeColor = Color.FromArgb(0, 0, 0);
+                lblNIF.ForeColor = Color.FromArgb(0, 0, 0);
+                lblPsw.ForeColor = Color.FromArgb(0, 0, 0);
+                lblNotif.LinkColor = Color.FromArgb(0, 0, 204);
+                lblOlvidoCont.LinkColor = Color.FromArgb(0, 0, 204);
+
+
+            }
+
         }
     }
 }
