@@ -45,7 +45,7 @@ namespace Programacion
                         }
                         else
                         {
-                            MessageBox.Show("No se ha podido iniciar sesión");
+                            MessageBox.Show("NIF o contraseña incorrectos");
                         }
                     }
                     else

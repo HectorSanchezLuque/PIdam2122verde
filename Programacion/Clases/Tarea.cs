@@ -180,7 +180,7 @@ namespace ProyectoIntegradoVerde.Clases
         {
             int retorno;
 
-            string consulta = String.Format("UPDATE tarea SET asignado = true, usuarios_id = ({1}) WHERE id_tarea = ({0})", idTarea, id);
+            string consulta = String.Format("UPDATE tarea SET usuarios_id = ({1}) WHERE id_tarea = ('{0}')", idTarea, id);
 
             MySqlCommand comando = new MySqlCommand(consulta, conexion.Conexion);
 
