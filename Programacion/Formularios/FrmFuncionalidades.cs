@@ -23,8 +23,10 @@ namespace ProyectoIntegradoVerde.Formularios
             }
         }
         private int numPag;
-        public FrmFuncionalidades(int num)
+        private string nif;
+        public FrmFuncionalidades(int num,string niff)
         {
+            nif = niff;
             numPag = num;
             InitializeComponent();
         }
