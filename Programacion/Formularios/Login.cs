@@ -82,6 +82,7 @@ namespace Programacion
 
             if (luz)
             {
+
                 luz = false;
                 this.BackColor = Color.FromArgb(0, 0,122);
                 lblLang.ForeColor = Color.FromArgb(255, 255, 255);
@@ -89,8 +90,6 @@ namespace Programacion
                 lblPsw.ForeColor = Color.FromArgb(255, 255, 255);
                 lblNotif.LinkColor = Color.FromArgb(255, 255, 255);
                 lblOlvidoCont.LinkColor = Color.FromArgb(255, 255, 255);
-
-
 
 
             }
