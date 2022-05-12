@@ -32,7 +32,10 @@ namespace ProyectoIntegradoVerde.Formularios
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.lblDobleClick = new System.Windows.Forms.Label();
+<<<<<<< HEAD
             this.txtCAJACAJA = new System.Windows.Forms.TextBox();
+=======
+>>>>>>> 30642ed61b8a13c9025401084a27af5b1337ec38
             this.lblInfo2 = new System.Windows.Forms.Label();
             this.lblInfo1 = new System.Windows.Forms.Label();
             this.dgvTareasPendientes = new System.Windows.Forms.DataGridView();
@@ -70,11 +73,14 @@ namespace ProyectoIntegradoVerde.Formularios
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+<<<<<<< HEAD
             this.ideee = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.title = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.recip = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.remit = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.date = new System.Windows.Forms.DataGridViewTextBoxColumn();
+=======
+>>>>>>> 30642ed61b8a13c9025401084a27af5b1337ec38
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTareasPendientes)).BeginInit();
@@ -107,7 +113,6 @@ namespace ProyectoIntegradoVerde.Formularios
             // tabPage1
             // 
             this.tabPage1.Controls.Add(this.lblDobleClick);
-            this.tabPage1.Controls.Add(this.txtCAJACAJA);
             this.tabPage1.Controls.Add(this.lblInfo2);
             this.tabPage1.Controls.Add(this.lblInfo1);
             this.tabPage1.Controls.Add(this.dgvTareasPendientes);
@@ -132,6 +137,7 @@ namespace ProyectoIntegradoVerde.Formularios
             this.lblDobleClick.TabIndex = 4;
             this.lblDobleClick.Text = "Doble click para asignarte una tarea";
             // 
+<<<<<<< HEAD
             // txtCAJACAJA
             // 
             this.txtCAJACAJA.Location = new System.Drawing.Point(129, 232);
@@ -139,6 +145,8 @@ namespace ProyectoIntegradoVerde.Formularios
             this.txtCAJACAJA.Size = new System.Drawing.Size(100, 22);
             this.txtCAJACAJA.TabIndex = 4;
             // 
+=======
+>>>>>>> 30642ed61b8a13c9025401084a27af5b1337ec38
             // lblInfo2
             // 
             this.lblInfo2.AutoSize = true;
@@ -513,6 +521,7 @@ namespace ProyectoIntegradoVerde.Formularios
             this.dataGridView1.Size = new System.Drawing.Size(299, 150);
             this.dataGridView1.TabIndex = 0;
             // 
+<<<<<<< HEAD
             // ideee
             // 
             this.ideee.HeaderText = "ID";
@@ -553,6 +562,8 @@ namespace ProyectoIntegradoVerde.Formularios
             this.date.ReadOnly = true;
             this.date.Width = 125;
             // 
+=======
+>>>>>>> 30642ed61b8a13c9025401084a27af5b1337ec38
             // FrmFuncionalidades
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -625,11 +636,14 @@ namespace ProyectoIntegradoVerde.Formularios
         private System.Windows.Forms.DataGridViewTextBoxColumn Fecha_p;
         private System.Windows.Forms.DataGridViewTextBoxColumn fecha_l;
         private System.Windows.Forms.DataGridViewTextBoxColumn Puntos;
+<<<<<<< HEAD
         private System.Windows.Forms.TextBox txtCAJACAJA;
         private System.Windows.Forms.DataGridViewTextBoxColumn ideee;
         private System.Windows.Forms.DataGridViewTextBoxColumn title;
         private System.Windows.Forms.DataGridViewTextBoxColumn recip;
         private System.Windows.Forms.DataGridViewTextBoxColumn remit;
         private System.Windows.Forms.DataGridViewTextBoxColumn date;
+=======
+>>>>>>> 30642ed61b8a13c9025401084a27af5b1337ec38
     }
 }
