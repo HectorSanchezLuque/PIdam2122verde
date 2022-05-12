@@ -38,25 +38,25 @@ namespace ProyectoIntegradoVerde.Clases
         //Metodos
 
 
-        static public int AgregarProducto(MySqlConnection conexion, Tienda prod)
+        static public int AgregarProducto( Tienda prod)
         {
             int retorno;
 
             string consulta = String.Format("INSERT INTO tienda (id_prod,nombre,coste,descripcion) VALUES " +
                 "('{0}','{1}','{2}','{3}')", prod.id_prod, prod.nombre, prod.coste, prod.descripcion);
 
-            MySqlCommand comando = new MySqlCommand(consulta, conexion);
+            MySqlCommand comando = new MySqlCommand(consulta, conexion.Conexion);
             retorno = comando.ExecuteNonQuery();
 
             return retorno;
         }
 
-        public bool YaEsta(MySqlConnection conexion, string nom)
+        public bool YaEsta(string nom)
         {
             string consulta = string.Format("SELECT * FROM tienda" +
             " WHERE nombre='{0}'", nom);
 
-            MySqlCommand comando = new MySqlCommand(consulta, conexion);
+            MySqlCommand comando = new MySqlCommand(consulta, conexion.Conexion);
             MySqlDataReader reader = comando.ExecuteReader();
             if (reader.HasRows)
             { 
@@ -70,12 +70,12 @@ namespace ProyectoIntegradoVerde.Clases
             }
         }
 
-        public static int EliminarProducto(MySqlConnection conexion, string nom)
+        public static int EliminarProducto(string nom)
         {
             int retorno;
 
             string consulta = string.Format("DELETE FROM tienda WHERE nom={0}", nom);
-            MySqlCommand comando = new MySqlCommand(consulta, conexion);
+            MySqlCommand comando = new MySqlCommand(consulta, conexion.Conexion);
             retorno = comando.ExecuteNonQuery();
             return retorno;
         }
