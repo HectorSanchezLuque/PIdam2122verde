@@ -17,13 +17,14 @@ namespace ProyectoIntegradoVerde.Clases
         private string recipiente;
         private string remitente;
         private DateTime fecha;
+        private int usuario_id;
 
         // Constructor vacio
 
         public Correo() { }
 
         // Constructor
-        public Correo(int id, string asunto, string cuerpo, string recipiente, string remitente, DateTime fecha)
+        public Correo(int id, string asunto, string cuerpo, string recipiente, string remitente, DateTime fecha, int usuario_id)
         {
             this.id = id;
             this.asunto = asunto;
@@ -31,7 +32,9 @@ namespace ProyectoIntegradoVerde.Clases
             this.recipiente = recipiente;
             this.remitente = remitente;
             this.fecha = fecha;
+            this.usuario_id = usuario_id;
         }
+
 
         // Getters/Setters
         public int Id { get => id; set => id = value; }
@@ -40,6 +43,7 @@ namespace ProyectoIntegradoVerde.Clases
         public string Recipiente { get => recipiente; set => recipiente = value; }
         public string Remitente { get => remitente; set => remitente = value; }
         public DateTime Fecha { get => fecha; set => fecha = value; }
+        public int Usuario_id { get => usuario_id; set => usuario_id = value; }
 
         // Metodos
 
@@ -121,6 +125,28 @@ namespace ProyectoIntegradoVerde.Clases
 
 
             return retorno;
+        }
+        /// <summary>
+        /// Crea una lista con la bandeja de entrada del usuario.
+        /// </summary>
+        /// <param name="usu">Usuario</param>
+        /// <returns>Lista de correos</returns>
+        public List<Correo> Bandeja(Usuario usu)
+        {
+            List<Correo> bandeja = new List<Correo>();
+            string consulta = String.Format("SELECT * from Correo WHERE usuario_id = " + usu.Id + ";");
+            MySqlCommand comando = new MySqlCommand(consulta, conexion.Conexion);
+            MySqlDataReader reader = comando.ExecuteReader();
+            if (reader.HasRows)
+            {
+                while (reader.Read())
+                {
+                    Correo co = new Correo(reader.GetInt32(0), reader.GetString(1), reader.GetString(2), reader.GetString(3), reader.GetString(4), reader.GetDateTime(5), reader.GetInt32(6));
+                    bandeja.Add(co);
+                }
+                reader.Close();
+            }
+            return bandeja;
         }
     }
 }
