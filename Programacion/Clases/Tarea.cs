@@ -18,6 +18,7 @@ namespace ProyectoIntegradoVerde.Clases
         private bool finalizado;
 
         // Getters/Setters
+        public int Id { get => id; set => id = value; }
         public string Titulo { get => titulo; set => titulo = value; }
         public string Descripcion { get => descripcion; set => descripcion = value; }
         public int Puntos { get => puntos; set => puntos = value; }
@@ -32,7 +33,7 @@ namespace ProyectoIntegradoVerde.Clases
         public Tarea() { }
 
         // Constructor
-        public Tarea(string titulo, string descripcion, int puntos, bool asignado, bool finalizado)
+        public Tarea(int i, string titulo, string descripcion, int puntos, bool asignado, bool finalizado)
         {
             this.titulo = titulo;
             this.descripcion = descripcion;
@@ -58,6 +59,7 @@ namespace ProyectoIntegradoVerde.Clases
                 while (reader.Read())
                 {
                     Tarea t = new Tarea();
+                    t.Id = reader.GetInt32(0);
                     t.Titulo = reader.GetString(1);
                     t.puntos = reader.GetInt32(3);
                     t.FPublicacion = reader.GetDateTime(6);
@@ -153,6 +155,9 @@ namespace ProyectoIntegradoVerde.Clases
         /// <summary>
         /// Método para actualizar Tarea
         /// </summary>
+
+        /// <param name="conexion">objeto conexion</param>
+        /// <param name="usu"> datos de la Tareaa modificar</param>
         /// <param name="tar"> datos de la Tareaa modificar</param>
         /// <returns></returns>
         public int ActualizaUsuario(Tarea tar)
@@ -167,6 +172,19 @@ namespace ProyectoIntegradoVerde.Clases
             MySqlCommand comando = new MySqlCommand(consulta, conexion.Conexion);
             retorno = comando.ExecuteNonQuery();
 
+            return retorno;
+        }
+
+
+        public static int AsignarTarea(string idTarea, int id) 
+        {
+            int retorno;
+
+            string consulta = String.Format("UPDATE tarea SET asignado = true, usuarios_id = ({1}) WHERE id_tarea = ({0})", idTarea, id);
+
+            MySqlCommand comando = new MySqlCommand(consulta, conexion.Conexion);
+
+            retorno = comando.ExecuteNonQuery();
 
             return retorno;
         }
@@ -175,3 +193,4 @@ namespace ProyectoIntegradoVerde.Clases
 
     }
     }
+ 

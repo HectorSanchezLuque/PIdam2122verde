@@ -22,6 +22,9 @@ namespace Programacion
             InitializeComponent();
         }
 
+        Usuario user = new Usuario();
+
+
         private void btnIniSesion_Click(object sender, EventArgs e)
         {
             if (Usuario.compNif(txtNif.Text))
@@ -34,13 +37,17 @@ namespace Programacion
                         Usuario user = Usuario.BuscarUsuario(txtNif.Text);
                         
                         if (user.Nif == txtNif.Text && user.Password == txtPassword.Text)
+<<<<<<< HEAD
                         {
                             
                             
                             FrmPrincipal princ = new FrmPrincipal(txtNif.Text,luz);
+=======
+                        {                           
+                            FrmPrincipal princ = new FrmPrincipal(user.Id);
+                            this.Hide();
+>>>>>>> 6d9747e5285ef3988fe41235b18f6a988fe39027
                             princ.Show();
-            
-
                         }
                         else
                         {

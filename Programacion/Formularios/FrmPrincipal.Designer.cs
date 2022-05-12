@@ -162,7 +162,7 @@ namespace ProyectoIntegradoVerde.Formularios
             this.Controls.Add(this.lblAbreFormulario);
             this.Name = "FrmPrincipal";
             this.Text = "FrmPrincipal";
-            this.Load += new System.EventHandler(this.FrmPrincipal_Load);
+            this.Load += new System.EventHandler(this.FrmPrincipal_Load_1);
             ((System.ComponentModel.ISupportInitialize)(this.ptbOpciones)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptbInfo)).EndInit();
             this.ResumeLayout(false);

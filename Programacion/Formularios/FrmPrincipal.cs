@@ -13,18 +13,26 @@ namespace ProyectoIntegradoVerde.Formularios
 {
     public partial class FrmPrincipal : Form
     {
+<<<<<<< HEAD
         private string nif;
         private bool luz;
         public FrmPrincipal(string n, bool l)
         {
             luz = l;
             nif = n;
+=======
+        private int id;
+        FrmFuncionalidades func = new FrmFuncionalidades();
+        public FrmPrincipal(int n)
+        {
+            id = n;
+>>>>>>> 6d9747e5285ef3988fe41235b18f6a988fe39027
             InitializeComponent();
         }
 
         private void FrmPrincipal_Load(object sender, EventArgs e)
         {
-
+            func.Id = id;
         }
 
         private void lblAbreFormulario_MouseEnter(object sender, EventArgs e)
@@ -46,7 +54,7 @@ namespace ProyectoIntegradoVerde.Formularios
         private void btnCerrarSesion_Click(object sender, EventArgs e)
         {
             Environment.Exit(1);
-            FrmFuncionalidades func = new FrmFuncionalidades(0);
+            FrmFuncionalidades func = new FrmFuncionalidades();
             func.ShowDialog();
         }
 
@@ -56,8 +64,9 @@ namespace ProyectoIntegradoVerde.Formularios
             {
                 if (conexion.Conexion != null)
                 {
-                        conexion.AbrirConexion();                       
-                        FrmFuncionalidades func = new FrmFuncionalidades(0);
+                        conexion.AbrirConexion();
+                        func.NumPag= 0;
+                        func.Show();
                         func.Show();
                 }
                 else
@@ -78,28 +87,35 @@ namespace ProyectoIntegradoVerde.Formularios
 
         private void btnCalendario_Click(object sender, EventArgs e)
         {
-            FrmFuncionalidades func = new FrmFuncionalidades(1);
+            func.NumPag = 1;
             func.ShowDialog();
         }
 
         private void btnReuniones_Click(object sender, EventArgs e)
         {
-            FrmFuncionalidades func = new FrmFuncionalidades(2);
+            func.NumPag = 2;
             func.ShowDialog();
         }
 
         private void btnCorreo_Click(object sender, EventArgs e)
         {
-            FrmFuncionalidades func = new FrmFuncionalidades(3);
+            func.NumPag = 3;
             func.ShowDialog();
         }
 
         private void btnTienda_Click(object sender, EventArgs e)
         {
-            FrmFuncionalidades func = new FrmFuncionalidades(4);
+            func.NumPag = 4;
             func.ShowDialog();
         }
 
+<<<<<<< HEAD
         
+=======
+        private void FrmPrincipal_Load_1(object sender, EventArgs e)
+        {
+
+        }
+>>>>>>> 6d9747e5285ef3988fe41235b18f6a988fe39027
     }
 }
