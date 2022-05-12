@@ -14,8 +14,10 @@ namespace ProyectoIntegradoVerde.Formularios
     public partial class FrmPrincipal : Form
     {
         private string nif;
-        public FrmPrincipal(string n)
+        private bool luz;
+        public FrmPrincipal(string n, bool l)
         {
+            luz = l;
             nif = n;
             InitializeComponent();
         }
@@ -97,5 +99,7 @@ namespace ProyectoIntegradoVerde.Formularios
             FrmFuncionalidades func = new FrmFuncionalidades(4);
             func.ShowDialog();
         }
+
+        
     }
 }

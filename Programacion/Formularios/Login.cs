@@ -37,7 +37,7 @@ namespace Programacion
                         {
                             
                             
-                            FrmPrincipal princ = new FrmPrincipal(txtNif.Text);
+                            FrmPrincipal princ = new FrmPrincipal(txtNif.Text,luz);
                             princ.Show();
             
 
@@ -91,7 +91,6 @@ namespace Programacion
                 lblNotif.LinkColor = Color.FromArgb(255, 255, 255);
                 lblOlvidoCont.LinkColor = Color.FromArgb(255, 255, 255);
 
-
             }
             else
             {
@@ -103,7 +102,22 @@ namespace Programacion
                 lblNotif.LinkColor = Color.FromArgb(0, 0, 204);
                 lblOlvidoCont.LinkColor = Color.FromArgb(0, 0, 204);
 
+            }
 
+        }
+
+        private void btnRegistro_Click(object sender, EventArgs e)
+        {
+            
+             Usuario usu = Usuario.BuscarUsuario(txtNif.Text);
+            if (usu.Cargo == "Administrador" || usu.Cargo == "Jefe")
+            {
+                Registro reg = new Registro();
+                reg.ShowDialog();
+            }
+            else
+            {
+                MessageBox.Show("No tiene permisos para acceder a esta función");
             }
 
         }
