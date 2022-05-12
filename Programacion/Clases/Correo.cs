@@ -49,14 +49,14 @@ namespace ProyectoIntegradoVerde.Clases
         /// <param name="conexion"></param>
         /// <param name="cor"></param>
         /// <returns></returns>
-        static public int AgregarCorreo(MySqlConnection conexion, Correo cor)
+        static public int AgregarCorreo(Correo cor)
         {
             int retorno;
 
             string consulta = String.Format("INSERT INTO reuniones (idCorreo,asunto,cuerpo,recipiente,remitente,fecha) VALUES " +
                 "('{0}','{1}','{2}','{3}','{4}','{5}')", cor.id, cor.asunto, cor.cuerpo, cor.recipiente,cor.remitente,cor.fecha);
 
-            MySqlCommand comando = new MySqlCommand(consulta, conexion);
+            MySqlCommand comando = new MySqlCommand(consulta, conexion.Conexion);
             retorno = comando.ExecuteNonQuery();
 
             return retorno;
@@ -67,12 +67,12 @@ namespace ProyectoIntegradoVerde.Clases
         /// <param name="conexion">Conexión con la base de datos</param>
         /// <param name="id">Id del correo</param>
         /// <returns>True si está y False si no está</returns>
-        public bool YaEsta(MySqlConnection conexion, string id)
+        public bool YaEsta( string id)
         {
             string consulta = string.Format("SELECT * FROM Correos" +
             " WHERE idCorreo='{0}'", id);
 
-            MySqlCommand comando = new MySqlCommand(consulta, conexion);
+            MySqlCommand comando = new MySqlCommand(consulta, conexion.Conexion);
             MySqlDataReader reader = comando.ExecuteReader();
             if (reader.HasRows)
             { // si existen registros en la devolución de la consulta
@@ -92,12 +92,12 @@ namespace ProyectoIntegradoVerde.Clases
         /// <param name="conexion">Objeto conexion</param>
         /// <param name="id">ID de la reunion a eliminar</param>
         /// <returns></returns>
-        public static int EliminarCorreo(MySqlConnection conexion, int id)
+        public static int EliminarCorreo(int id)
         {
             int retorno;
             // Eliminamos definitivamente el usuario de la tabla usuario.
             string consulta = string.Format("DELETE FROM Correos WHERE id={0}", id);
-            MySqlCommand comando = new MySqlCommand(consulta, conexion);
+            MySqlCommand comando = new MySqlCommand(consulta, conexion.Conexion);
             retorno = comando.ExecuteNonQuery();
             return retorno;
         }
@@ -108,7 +108,7 @@ namespace ProyectoIntegradoVerde.Clases
         /// <param name="cor"> Nuevos datos del correo</param>
         /// <param name="ident"> Antiguo ID del correo</param>
         /// <returns></returns>
-        public int ActualizarCorreo(MySqlConnection conexion, Correo cor, int ident)
+        public int ActualizarCorreo(Correo cor, int ident)
         {
 
             int retorno;
@@ -116,7 +116,7 @@ namespace ProyectoIntegradoVerde.Clases
             string consulta = string.Format("UPDATE Correos SET idCorreo = '{0}',asunto = '{1}',cuerpo = '{2}' ,remitente = '{3}', recipiente = '{4}' WHERE idCorreo={5}", cor.id, cor.asunto, cor.cuerpo, cor.remitente, cor.recipiente, ident);
 
 
-            MySqlCommand comando = new MySqlCommand(consulta, conexion);
+            MySqlCommand comando = new MySqlCommand(consulta, conexion.Conexion);
             retorno = comando.ExecuteNonQuery();
 
 
