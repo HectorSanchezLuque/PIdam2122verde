@@ -23,8 +23,10 @@ namespace ProyectoIntegradoVerde.Formularios
             }
         }
         private int numPag;
-        public FrmFuncionalidades(int num)
+        private string nif;
+        public FrmFuncionalidades(int num,string niff)
         {
+            nif = niff;
             numPag = num;
             InitializeComponent();
         }
@@ -33,11 +35,13 @@ namespace ProyectoIntegradoVerde.Formularios
         {
             this.tabControl1.SelectTab(numPag);
             RellenarDataGrid();
+            txtCAJACAJA.Text = nif;
         }
 
         private void tabPage1_Click(object sender, EventArgs e)
         {
-
+            
         }
+        
     }
 }
