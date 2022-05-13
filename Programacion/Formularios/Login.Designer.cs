@@ -33,17 +33,17 @@
             this.txtNif = new System.Windows.Forms.TextBox();
             this.txtPassword = new System.Windows.Forms.TextBox();
             this.lblNIF = new System.Windows.Forms.Label();
-            this.picLight = new System.Windows.Forms.PictureBox();
             this.btnIniSesion = new System.Windows.Forms.Button();
             this.lblOlvidoCont = new System.Windows.Forms.LinkLabel();
             this.btnRegistro = new System.Windows.Forms.Button();
-            this.picFlag = new System.Windows.Forms.PictureBox();
             this.lblLang = new System.Windows.Forms.Label();
-            this.pcbLuz = new System.Windows.Forms.PictureBox();
             this.lblNotif = new System.Windows.Forms.LinkLabel();
-            ((System.ComponentModel.ISupportInitialize)(this.picLight)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picFlag)).BeginInit();
+            this.pcbLuz = new System.Windows.Forms.PictureBox();
+            this.picFlag = new System.Windows.Forms.PictureBox();
+            this.picLight = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pcbLuz)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picFlag)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picLight)).BeginInit();
             this.SuspendLayout();
             // 
             // lblPsw
@@ -84,17 +84,6 @@
             this.lblNIF.TabIndex = 4;
             this.lblNIF.Text = "NIF";
             // 
-            // picLight
-            // 
-            this.picLight.Image = ((System.Drawing.Image)(resources.GetObject("picLight.Image")));
-            this.picLight.Location = new System.Drawing.Point(160, 41);
-            this.picLight.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.picLight.Name = "picLight";
-            this.picLight.Size = new System.Drawing.Size(176, 167);
-            this.picLight.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picLight.TabIndex = 5;
-            this.picLight.TabStop = false;
-            // 
             // btnIniSesion
             // 
             this.btnIniSesion.Location = new System.Drawing.Point(269, 334);
@@ -126,17 +115,6 @@
             this.btnRegistro.Text = "Registrar usuario";
             this.btnRegistro.UseVisualStyleBackColor = true;
             // 
-            // picFlag
-            // 
-            this.picFlag.Image = ((System.Drawing.Image)(resources.GetObject("picFlag.Image")));
-            this.picFlag.Location = new System.Drawing.Point(12, 12);
-            this.picFlag.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.picFlag.Name = "picFlag";
-            this.picFlag.Size = new System.Drawing.Size(45, 27);
-            this.picFlag.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picFlag.TabIndex = 9;
-            this.picFlag.TabStop = false;
-            // 
             // lblLang
             // 
             this.lblLang.AutoSize = true;
@@ -146,6 +124,17 @@
             this.lblLang.Size = new System.Drawing.Size(37, 16);
             this.lblLang.TabIndex = 10;
             this.lblLang.Text = "ESP";
+            // 
+            // lblNotif
+            // 
+            this.lblNotif.AutoSize = true;
+            this.lblNotif.Location = new System.Drawing.Point(283, 423);
+            this.lblNotif.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblNotif.Name = "lblNotif";
+            this.lblNotif.Size = new System.Drawing.Size(172, 16);
+            this.lblNotif.TabIndex = 12;
+            this.lblNotif.TabStop = true;
+            this.lblNotif.Text = "Notificar a un administrador.";
             // 
             // pcbLuz
             // 
@@ -160,16 +149,28 @@
             this.pcbLuz.TabStop = false;
             this.pcbLuz.Click += new System.EventHandler(this.pcbLuz_Click);
             // 
-            // lblNotif
+            // picFlag
             // 
-            this.lblNotif.AutoSize = true;
-            this.lblNotif.Location = new System.Drawing.Point(283, 423);
-            this.lblNotif.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblNotif.Name = "lblNotif";
-            this.lblNotif.Size = new System.Drawing.Size(172, 16);
-            this.lblNotif.TabIndex = 12;
-            this.lblNotif.TabStop = true;
-            this.lblNotif.Text = "Notificar a un administrador.";
+            this.picFlag.Image = global::ProyectoIntegradoVerde.Properties.Resources.spFlag;
+            this.picFlag.Location = new System.Drawing.Point(12, 12);
+            this.picFlag.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.picFlag.Name = "picFlag";
+            this.picFlag.Size = new System.Drawing.Size(45, 27);
+            this.picFlag.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picFlag.TabIndex = 9;
+            this.picFlag.TabStop = false;
+            this.picFlag.Click += new System.EventHandler(this.picFlag_Click);
+            // 
+            // picLight
+            // 
+            this.picLight.Image = ((System.Drawing.Image)(resources.GetObject("picLight.Image")));
+            this.picLight.Location = new System.Drawing.Point(160, 41);
+            this.picLight.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.picLight.Name = "picLight";
+            this.picLight.Size = new System.Drawing.Size(176, 167);
+            this.picLight.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picLight.TabIndex = 5;
+            this.picLight.TabStop = false;
             // 
             // Login
             // 
@@ -193,9 +194,9 @@
             this.Name = "Login";
             this.Text = "Inicio de sesión";
             this.Load += new System.EventHandler(this.Login_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.picLight)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picFlag)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcbLuz)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picFlag)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picLight)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

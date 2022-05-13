@@ -209,5 +209,11 @@
   <ItemGroup>
     <None Include="Resources\5094667_chat_communication_message_talk_icon.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\engFlag.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\spFlag.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
