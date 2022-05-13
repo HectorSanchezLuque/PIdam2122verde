@@ -38,14 +38,18 @@ namespace Programacion
                         
                         if (user.Nif == txtNif.Text && user.Password == txtPassword.Text)
                         {                           
+<<<<<<< HEAD
                                                     
                             FrmPrincipal princ = new FrmPrincipal(luz, user);
+=======
+                            FrmPrincipal princ = new FrmPrincipal(user.Id);
+>>>>>>> 2964338d006bea43383035aaa0ade4b0c7ee4ee4
                             this.Hide();
                             princ.Show();
                         }
                         else
                         {
-                            MessageBox.Show("NIF o contraseña incorrectos");
+                            MessageBox.Show("No se ha podido iniciar sesión");
                         }
                     }
                     else
@@ -92,6 +96,7 @@ namespace Programacion
                 lblNotif.LinkColor = Color.FromArgb(255, 255, 255);
                 lblOlvidoCont.LinkColor = Color.FromArgb(255, 255, 255);
 
+
             }
             else
             {
@@ -103,44 +108,9 @@ namespace Programacion
                 lblNotif.LinkColor = Color.FromArgb(0, 0, 204);
                 lblOlvidoCont.LinkColor = Color.FromArgb(0, 0, 204);
 
+
             }
 
-        }
-
-        private void btnRegistro_Click(object sender, EventArgs e)
-        {
-            if (Usuario.compNif(txtNif.Text))
-            {
-                try
-                {
-                    if (conexion.Conexion != null)
-                    {
-                        conexion.AbrirConexion();
-                        Usuario usu = Usuario.BuscarUsuario(txtNif.Text);
-                        if (usu.Cargo == "Administrador" || usu.Cargo == "Jefe" && usu.Password == txtPassword.Text)
-                        {
-                            Registro reg = new Registro();
-                            reg.ShowDialog();
-                        }
-                        else
-                        {
-                            MessageBox.Show("Datos incorrectos o El Usuario no tiene permisos para esta acción");
-                        }
-                    }
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show(ex.Message + "\n" + ex.StackTrace);
-                }
-                finally
-                {
-                    conexion.CerrarConexion();
-                }
-            }
-            else
-            {
-                MessageBox.Show("El NIF no es válido");
-            }
         }
     }
 }

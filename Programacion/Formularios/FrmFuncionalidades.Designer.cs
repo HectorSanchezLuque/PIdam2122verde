@@ -107,6 +107,7 @@ namespace ProyectoIntegradoVerde.Formularios
             // tabPage1
             // 
             this.tabPage1.Controls.Add(this.lblDobleClick);
+            this.tabPage1.Controls.Add(this.txtCAJACAJA);
             this.tabPage1.Controls.Add(this.lblInfo2);
             this.tabPage1.Controls.Add(this.lblInfo1);
             this.tabPage1.Controls.Add(this.dgvTareasPendientes);
