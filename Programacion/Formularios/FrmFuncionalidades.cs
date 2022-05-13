@@ -21,12 +21,23 @@ namespace ProyectoIntegradoVerde.Formularios
         
         public void RellenarDataGrid()
         {
+            conexion.AbrirConexion();
+            // Tareas
             List<Tarea> list = new List<Tarea>();
             list = Tarea.ListadoTareas();
             for (int i = 0; i < list.Count; i++)
             {
                 dgvTareasSinAsignar.Rows.Add(list[i].Id, list[i].Titulo, list[i].FPublicacion.ToString("dd-MM-yyyy"), list[i].FLimite.ToString("dd-MM-yyyy"), list[i].Puntos);
             }
+
+            // Correo
+            List<Correo> correos = new List<Correo>();
+            correos = Correo.Bandeja(Id);
+            for (int i = 0; i < correos.Count; i++)
+            {
+                dgvBandeja.Rows.Add(correos[i].Id, correos[i].Asunto, correos[i].Recipiente, correos[i].Remitente, correos[i].Fecha.ToString("dd-MM-yyyy"));
+            }
+            conexion.CerrarConexion();
         }
         public FrmFuncionalidades()
         {
@@ -74,5 +85,6 @@ namespace ProyectoIntegradoVerde.Formularios
                 conexion.CerrarConexion();
             }
         }
+
     }
 }
