@@ -33,11 +33,8 @@ namespace ProyectoIntegradoVerde.Formularios
 
             // Correo
             List<Correo> correos = new List<Correo>();
-<<<<<<< HEAD
             correos = Correo.Bandeja(user.Id);
-=======
             correos = Correo.Bandeja("aa"); //Introducir correo del usuario como parámetro
->>>>>>> 2964338d006bea43383035aaa0ade4b0c7ee4ee4
             for (int i = 0; i < correos.Count; i++)
             {
                 dgvBandeja.Rows.Add(correos[i].Id, correos[i].Asunto, correos[i].Recipiente, correos[i].Remitente, correos[i].Fecha.ToString("dd-MM-yyyy"));

@@ -13,22 +13,14 @@ namespace ProyectoIntegradoVerde.Formularios
 {
     public partial class FrmPrincipal : Form
     {
-<<<<<<< HEAD
-     
+
         private bool luz;
-        private  Usuario user;
+        private Usuario user;
         FrmFuncionalidades func = new FrmFuncionalidades();
 
 
         public FrmPrincipal(bool l, Usuario us)
         {
-=======
-        private int id;
-        FrmFuncionalidades func = new FrmFuncionalidades();
-        public FrmPrincipal(int n)
-        {
-            id = n;
->>>>>>> 2964338d006bea43383035aaa0ade4b0c7ee4ee4
             InitializeComponent();
             luz = l;
             user = us;

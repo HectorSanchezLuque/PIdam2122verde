@@ -187,14 +187,11 @@ namespace ProyectoIntegradoVerde
                 {
                     usu.Id = reader.GetInt32(0);
                     usu.Nif = reader.GetString(1);
-<<<<<<< HEAD
                     usu.Nombre = reader.GetString(2);
                     usu.FechaNacimiento = reader.GetDateTime(3);
                     usu.Cargo = reader.GetString(4);
                     usu.Puntos = reader.GetInt32(5);
                     usu.Correo = reader.GetString(6);
-=======
->>>>>>> 2964338d006bea43383035aaa0ade4b0c7ee4ee4
                     usu.Password = reader.GetString(7);
                 }
             }
