@@ -18,28 +18,31 @@ namespace ProyectoIntegradoVerde.Formularios
 
         public int NumPag { get => numPag; set => numPag = value; }
         public Usuario User { get => user; set => user = value; }
+
+
+        
         
         public void RellenarDataGrid()
         {
-
+            
             // Tareas
             List<Tarea> list = new List<Tarea>();
             list = Tarea.ListadoTareas();
-            conexion.CerrarConexion();
+           
             for (int i = 0; i < list.Count; i++)
             {
                 dgvTareasSinAsignar.Rows.Add(list[i].Id, list[i].Titulo, list[i].FPublicacion.ToString("dd-MM-yyyy"), list[i].FLimite.ToString("dd-MM-yyyy"), list[i].Puntos);
             }
 
             // Correo
-            List<Correo> correos = new List<Correo>();
-            correos = Correo.Bandeja(user.Id);
-            correos = Correo.Bandeja("aa"); //Introducir correo del usuario como parámetro
+            List<Correo> correos;
+            correos = Correo.Bandeja(user.Correo);
+            conexion.CerrarConexion();
             for (int i = 0; i < correos.Count; i++)
             {
                 dgvBandeja.Rows.Add(correos[i].Id, correos[i].Asunto, correos[i].Recipiente, correos[i].Remitente, correos[i].Fecha.ToString("dd-MM-yyyy"));
             }
-            conexion.CerrarConexion();
+            
         }
         public FrmFuncionalidades()
         {
@@ -89,7 +92,7 @@ namespace ProyectoIntegradoVerde.Formularios
                 {
 
                     conexion.AbrirConexion();
-                    Tarea.AsignarTarea(idTarea, user.Id);
+                    Tarea.AsignarTarea(idTarea, User.Id);
                     RellenarDataGrid();
 
                 }
