@@ -18,17 +18,20 @@ namespace ProyectoIntegradoVerde.Formularios
     {
 
         private bool luz;
+        bool lang;
         private Usuario user;
-        
+
+        FrmFuncionalidades func = new FrmFuncionalidades();
         
 
-       
+        public FrmPrincipal(bool l, Usuario us,bool leng)
 
-        public FrmPrincipal(bool l, Usuario us)
+
         {
             InitializeComponent();
             luz = l;
             user = us;
+            lang = leng;
         }
 
         
