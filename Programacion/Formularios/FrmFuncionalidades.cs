@@ -18,29 +18,43 @@ namespace ProyectoIntegradoVerde.Formularios
 
         public int NumPag { get => numPag; set => numPag = value; }
         public Usuario User { get => user; set => user = value; }
-        
+
         public void RellenarDataGrid()
         {
 
             // Tareas
+            dgvTareasSinAsignar.Rows.Clear();
             List<Tarea> list = new List<Tarea>();
             list = Tarea.ListadoTareas();
-            conexion.CerrarConexion();
             for (int i = 0; i < list.Count; i++)
             {
                 dgvTareasSinAsignar.Rows.Add(list[i].Id, list[i].Titulo, list[i].FPublicacion.ToString("dd-MM-yyyy"), list[i].FLimite.ToString("dd-MM-yyyy"), list[i].Puntos);
             }
-
-            // Correo
-            List<Correo> correos = new List<Correo>();
-            correos = Correo.Bandeja(user.Id);
-            correos = Correo.Bandeja("aa"); //Introducir correo del usuario como parámetro
-            for (int i = 0; i < correos.Count; i++)
-            {
-                dgvBandeja.Rows.Add(correos[i].Id, correos[i].Asunto, correos[i].Recipiente, correos[i].Remitente, correos[i].Fecha.ToString("dd-MM-yyyy"));
-            }
-            conexion.CerrarConexion();
         }
+
+        public void RellenarDataGridPendientes()
+        {
+            dgvTareasPendientes.Rows.Clear();
+            List<Tarea> list = new List<Tarea>();
+            list = Tarea.ListadoTareasAsignadas(user.Id);
+            for (int i = 0; i < list.Count; i++)
+            {
+                dgvTareasPendientes.Rows.Add(list[i].Id, list[i].Titulo, list[i].FPublicacion.ToString("dd-MM-yyyy"), list[i].FLimite.ToString("dd-MM-yyyy"), list[i].Puntos);
+            }
+        }
+
+        public void RellenarDataGridReuniones() 
+        {
+            dgvReuniones.Rows.Clear();
+            List<Reuniones> list = new List<Reuniones>();
+            list = Reuniones.ListadoReuniones(user.Id);
+            conexion.CerrarConexion();
+            for (int i = 0; i < list.Count; i++)
+            {
+                dgvReuniones.Rows.Add(list[i].Id, list[i].Nombre, list[i].Descripcion, list[i].Fecha);
+            }
+        }
+        
         public FrmFuncionalidades()
         {
             InitializeComponent();
@@ -56,6 +70,8 @@ namespace ProyectoIntegradoVerde.Formularios
 
                     conexion.AbrirConexion();
                     RellenarDataGrid();
+                    RellenarDataGridPendientes();
+                    RellenarDataGridReuniones();
 
                 }
                 else
@@ -91,6 +107,7 @@ namespace ProyectoIntegradoVerde.Formularios
                     conexion.AbrirConexion();
                     Tarea.AsignarTarea(idTarea, user.Id);
                     RellenarDataGrid();
+                    RellenarDataGridPendientes();
 
                 }
                 else
@@ -109,5 +126,25 @@ namespace ProyectoIntegradoVerde.Formularios
             }
         }
 
+        private void btnActualizar_Click(object sender, EventArgs e)
+        {
+            conexion.AbrirConexion();
+            RellenarDataGrid();
+            RellenarDataGridPendientes();
+            conexion.CerrarConexion();
+        }
+
+        private void btnActualizar2_Click(object sender, EventArgs e)
+        {
+            conexion.AbrirConexion();
+            RellenarDataGridReuniones();
+            conexion.CerrarConexion();
+        }
+
+        private void btnCrear_Click(object sender, EventArgs e)
+        {
+            CrearReunion crear = new CrearReunion();
+            crear.ShowDialog();
+        }
     }
 }

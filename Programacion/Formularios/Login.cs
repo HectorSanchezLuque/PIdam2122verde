@@ -22,9 +22,6 @@ namespace Programacion
             InitializeComponent();
         }
 
-    
-
-
         private void btnIniSesion_Click(object sender, EventArgs e)
         {
             if (Usuario.compNif(txtNif.Text))

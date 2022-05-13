@@ -132,3 +132,4 @@ C:\Users\Akayu\Desktop\ProyectoIntegrado\Programacion\obj\Debug\ProyectoIntegrad
 C:\Users\Akayu\Desktop\ProyectoIntegrado\Programacion\obj\Debug\ProyectoIntegradoVerde.exe
 C:\Users\Akayu\Desktop\ProyectoIntegrado\Programacion\obj\Debug\ProyectoIntegradoVerde.pdb
 >>>>>>> a17a9ccf6c601a1dbad38e29a726e850ad72200a
+C:\Users\hesalu\Desktop\PROG PI\PIdam2122verde-src\Programacion\Programacion\obj\Debug\ProyectoIntegradoVerde.Formularios.CrearReunion.resources

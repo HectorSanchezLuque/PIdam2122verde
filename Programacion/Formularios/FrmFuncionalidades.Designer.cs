@@ -31,8 +31,8 @@ namespace ProyectoIntegradoVerde.Formularios
         {
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.btnActualizar = new System.Windows.Forms.Button();
             this.lblDobleClick = new System.Windows.Forms.Label();
-            this.txtCAJACAJA = new System.Windows.Forms.TextBox();
             this.lblInfo2 = new System.Windows.Forms.Label();
             this.lblInfo1 = new System.Windows.Forms.Label();
             this.dgvTareasPendientes = new System.Windows.Forms.DataGridView();
@@ -62,6 +62,11 @@ namespace ProyectoIntegradoVerde.Formularios
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.dgvBandeja = new System.Windows.Forms.DataGridView();
+            this.ideee = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.title = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.recip = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.remit = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.date = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabPage5 = new System.Windows.Forms.TabPage();
             this.btnComprar = new System.Windows.Forms.Button();
             this.lblPuntos = new System.Windows.Forms.Label();
@@ -70,11 +75,12 @@ namespace ProyectoIntegradoVerde.Formularios
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.ideee = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.title = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.recip = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.remit = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.date = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idReunion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nombreReunion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.descReunion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fechaReunion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnActualizar2 = new System.Windows.Forms.Button();
+            this.btnCrear = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTareasPendientes)).BeginInit();
@@ -106,8 +112,8 @@ namespace ProyectoIntegradoVerde.Formularios
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.btnActualizar);
             this.tabPage1.Controls.Add(this.lblDobleClick);
-            this.tabPage1.Controls.Add(this.txtCAJACAJA);
             this.tabPage1.Controls.Add(this.lblInfo2);
             this.tabPage1.Controls.Add(this.lblInfo1);
             this.tabPage1.Controls.Add(this.dgvTareasPendientes);
@@ -122,6 +128,16 @@ namespace ProyectoIntegradoVerde.Formularios
             this.tabPage1.UseVisualStyleBackColor = true;
             this.tabPage1.Click += new System.EventHandler(this.tabPage1_Click);
             // 
+            // btnActualizar
+            // 
+            this.btnActualizar.Location = new System.Drawing.Point(707, 462);
+            this.btnActualizar.Name = "btnActualizar";
+            this.btnActualizar.Size = new System.Drawing.Size(108, 32);
+            this.btnActualizar.TabIndex = 5;
+            this.btnActualizar.Text = "Actualizar";
+            this.btnActualizar.UseVisualStyleBackColor = true;
+            this.btnActualizar.Click += new System.EventHandler(this.btnActualizar_Click);
+            // 
             // lblDobleClick
             // 
             this.lblDobleClick.AutoSize = true;
@@ -132,18 +148,11 @@ namespace ProyectoIntegradoVerde.Formularios
             this.lblDobleClick.TabIndex = 4;
             this.lblDobleClick.Text = "Doble click para asignarte una tarea";
             // 
-            // txtCAJACAJA
-            // 
-            this.txtCAJACAJA.Location = new System.Drawing.Point(129, 232);
-            this.txtCAJACAJA.Name = "txtCAJACAJA";
-            this.txtCAJACAJA.Size = new System.Drawing.Size(100, 22);
-            this.txtCAJACAJA.TabIndex = 4;
-            // 
             // lblInfo2
             // 
             this.lblInfo2.AutoSize = true;
             this.lblInfo2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.lblInfo2.Location = new System.Drawing.Point(333, 280);
+            this.lblInfo2.Location = new System.Drawing.Point(333, 255);
             this.lblInfo2.Name = "lblInfo2";
             this.lblInfo2.Size = new System.Drawing.Size(147, 20);
             this.lblInfo2.TabIndex = 3;
@@ -168,7 +177,7 @@ namespace ProyectoIntegradoVerde.Formularios
             this.F_Publicacion,
             this.F_limite,
             this.puntosasignados});
-            this.dgvTareasPendientes.Location = new System.Drawing.Point(129, 321);
+            this.dgvTareasPendientes.Location = new System.Drawing.Point(129, 296);
             this.dgvTareasPendientes.Name = "dgvTareasPendientes";
             this.dgvTareasPendientes.RowHeadersWidth = 51;
             this.dgvTareasPendientes.RowTemplate.Height = 24;
@@ -291,6 +300,8 @@ namespace ProyectoIntegradoVerde.Formularios
             // 
             // tabPage3
             // 
+            this.tabPage3.Controls.Add(this.btnCrear);
+            this.tabPage3.Controls.Add(this.btnActualizar2);
             this.tabPage3.Controls.Add(this.dgvReuniones);
             this.tabPage3.Location = new System.Drawing.Point(4, 25);
             this.tabPage3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -304,11 +315,16 @@ namespace ProyectoIntegradoVerde.Formularios
             // dgvReuniones
             // 
             this.dgvReuniones.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvReuniones.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.idReunion,
+            this.nombreReunion,
+            this.descReunion,
+            this.fechaReunion});
             this.dgvReuniones.Location = new System.Drawing.Point(12, 11);
             this.dgvReuniones.Margin = new System.Windows.Forms.Padding(4);
             this.dgvReuniones.Name = "dgvReuniones";
             this.dgvReuniones.RowHeadersWidth = 51;
-            this.dgvReuniones.Size = new System.Drawing.Size(837, 478);
+            this.dgvReuniones.Size = new System.Drawing.Size(837, 416);
             this.dgvReuniones.TabIndex = 0;
             // 
             // tabPage4
@@ -425,6 +441,46 @@ namespace ProyectoIntegradoVerde.Formularios
             this.dgvBandeja.Size = new System.Drawing.Size(846, 195);
             this.dgvBandeja.TabIndex = 0;
             // 
+            // ideee
+            // 
+            this.ideee.HeaderText = "ID";
+            this.ideee.MinimumWidth = 6;
+            this.ideee.Name = "ideee";
+            this.ideee.ReadOnly = true;
+            this.ideee.Width = 125;
+            // 
+            // title
+            // 
+            this.title.HeaderText = "Asunto";
+            this.title.MinimumWidth = 6;
+            this.title.Name = "title";
+            this.title.ReadOnly = true;
+            this.title.Width = 125;
+            // 
+            // recip
+            // 
+            this.recip.HeaderText = "Recipiente";
+            this.recip.MinimumWidth = 6;
+            this.recip.Name = "recip";
+            this.recip.ReadOnly = true;
+            this.recip.Width = 125;
+            // 
+            // remit
+            // 
+            this.remit.HeaderText = "Remitente";
+            this.remit.MinimumWidth = 6;
+            this.remit.Name = "remit";
+            this.remit.ReadOnly = true;
+            this.remit.Width = 125;
+            // 
+            // date
+            // 
+            this.date.HeaderText = "Fecha";
+            this.date.MinimumWidth = 6;
+            this.date.Name = "date";
+            this.date.ReadOnly = true;
+            this.date.Width = 125;
+            // 
             // tabPage5
             // 
             this.tabPage5.Controls.Add(this.btnComprar);
@@ -513,45 +569,53 @@ namespace ProyectoIntegradoVerde.Formularios
             this.dataGridView1.Size = new System.Drawing.Size(299, 150);
             this.dataGridView1.TabIndex = 0;
             // 
-            // ideee
+            // idReunion
             // 
-            this.ideee.HeaderText = "ID";
-            this.ideee.MinimumWidth = 6;
-            this.ideee.Name = "ideee";
-            this.ideee.ReadOnly = true;
-            this.ideee.Width = 125;
+            this.idReunion.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.idReunion.HeaderText = "ID";
+            this.idReunion.MinimumWidth = 6;
+            this.idReunion.Name = "idReunion";
             // 
-            // title
+            // nombreReunion
             // 
-            this.title.HeaderText = "Asunto";
-            this.title.MinimumWidth = 6;
-            this.title.Name = "title";
-            this.title.ReadOnly = true;
-            this.title.Width = 125;
+            this.nombreReunion.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.nombreReunion.HeaderText = "Nombre";
+            this.nombreReunion.MinimumWidth = 6;
+            this.nombreReunion.Name = "nombreReunion";
             // 
-            // recip
+            // descReunion
             // 
-            this.recip.HeaderText = "Recipiente";
-            this.recip.MinimumWidth = 6;
-            this.recip.Name = "recip";
-            this.recip.ReadOnly = true;
-            this.recip.Width = 125;
+            this.descReunion.HeaderText = "Descripción";
+            this.descReunion.MinimumWidth = 6;
+            this.descReunion.Name = "descReunion";
+            this.descReunion.Width = 125;
             // 
-            // remit
+            // fechaReunion
             // 
-            this.remit.HeaderText = "Remitente";
-            this.remit.MinimumWidth = 6;
-            this.remit.Name = "remit";
-            this.remit.ReadOnly = true;
-            this.remit.Width = 125;
+            this.fechaReunion.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.fechaReunion.HeaderText = "Fecha";
+            this.fechaReunion.MinimumWidth = 6;
+            this.fechaReunion.Name = "fechaReunion";
             // 
-            // date
+            // btnActualizar2
             // 
-            this.date.HeaderText = "Fecha";
-            this.date.MinimumWidth = 6;
-            this.date.Name = "date";
-            this.date.ReadOnly = true;
-            this.date.Width = 125;
+            this.btnActualizar2.Location = new System.Drawing.Point(667, 444);
+            this.btnActualizar2.Name = "btnActualizar2";
+            this.btnActualizar2.Size = new System.Drawing.Size(157, 38);
+            this.btnActualizar2.TabIndex = 1;
+            this.btnActualizar2.Text = "Actualizar";
+            this.btnActualizar2.UseVisualStyleBackColor = true;
+            this.btnActualizar2.Click += new System.EventHandler(this.btnActualizar2_Click);
+            // 
+            // btnCrear
+            // 
+            this.btnCrear.Location = new System.Drawing.Point(50, 444);
+            this.btnCrear.Name = "btnCrear";
+            this.btnCrear.Size = new System.Drawing.Size(128, 38);
+            this.btnCrear.TabIndex = 2;
+            this.btnCrear.Text = "Crear Reunión";
+            this.btnCrear.UseVisualStyleBackColor = true;
+            this.btnCrear.Click += new System.EventHandler(this.btnCrear_Click);
             // 
             // FrmFuncionalidades
             // 
@@ -625,11 +689,17 @@ namespace ProyectoIntegradoVerde.Formularios
         private System.Windows.Forms.DataGridViewTextBoxColumn Fecha_p;
         private System.Windows.Forms.DataGridViewTextBoxColumn fecha_l;
         private System.Windows.Forms.DataGridViewTextBoxColumn Puntos;
-        private System.Windows.Forms.TextBox txtCAJACAJA;
         private System.Windows.Forms.DataGridViewTextBoxColumn ideee;
         private System.Windows.Forms.DataGridViewTextBoxColumn title;
         private System.Windows.Forms.DataGridViewTextBoxColumn recip;
         private System.Windows.Forms.DataGridViewTextBoxColumn remit;
         private System.Windows.Forms.DataGridViewTextBoxColumn date;
+        private System.Windows.Forms.Button btnActualizar;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idReunion;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nombreReunion;
+        private System.Windows.Forms.DataGridViewTextBoxColumn descReunion;
+        private System.Windows.Forms.DataGridViewTextBoxColumn fechaReunion;
+        private System.Windows.Forms.Button btnActualizar2;
+        private System.Windows.Forms.Button btnCrear;
     }
 }
