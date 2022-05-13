@@ -22,7 +22,7 @@ namespace Programacion
             InitializeComponent();
         }
 
-        Usuario user = new Usuario();
+    
 
 
         private void btnIniSesion_Click(object sender, EventArgs e)
@@ -38,7 +38,8 @@ namespace Programacion
                         
                         if (user.Nif == txtNif.Text && user.Password == txtPassword.Text)
                         {                           
-                            FrmPrincipal princ = new FrmPrincipal(user.Id);
+                                                    
+                            FrmPrincipal princ = new FrmPrincipal(luz, user);
                             this.Hide();
                             princ.Show();
                         }

@@ -11,7 +11,7 @@ using System.Drawing.Imaging;
 
 namespace ProyectoIntegradoVerde
 {
-    internal class Usuario
+    public class Usuario
     {
         // Atributos
         private int id;
@@ -181,7 +181,13 @@ namespace ProyectoIntegradoVerde
                 // Recorremos el reader y cargamos la lista de tareas.
                 while (reader.Read())
                 {
+                    usu.Id = reader.GetInt32(0);
                     usu.Nif = reader.GetString(1);
+                    usu.Nombre = reader.GetString(2);
+                    usu.FechaNacimiento = reader.GetDateTime(3);
+                    usu.Cargo = reader.GetString(4);
+                    usu.Puntos = reader.GetInt32(5);
+                    usu.Correo = reader.GetString(6);
                     usu.Password = reader.GetString(7);
                 }
             }

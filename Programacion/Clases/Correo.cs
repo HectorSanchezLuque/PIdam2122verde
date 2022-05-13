@@ -128,10 +128,10 @@ namespace ProyectoIntegradoVerde.Clases
         /// </summary>
         /// <param name="correo">Usuario</param>
         /// <returns>Lista de correos</returns>
-        public static List<Correo> Bandeja(string correo)
+        public static List<Correo> Bandeja(int id)
         {
             List<Correo> bandeja = new List<Correo>();
-            string consulta = String.Format("SELECT * from Correos WHERE recipiente = " + correo + ";");
+            string consulta = String.Format("SELECT * from Correos WHERE recipiente = " + id + ";");
             MySqlCommand comando = new MySqlCommand(consulta, conexion.Conexion);
             MySqlDataReader reader = comando.ExecuteReader();
             if (reader.HasRows)

@@ -13,18 +13,19 @@ namespace ProyectoIntegradoVerde.Formularios
 {
     public partial class FrmFuncionalidades : Form
     {
-        private int id;
+        private Usuario user;
         private int numPag;
 
         public int NumPag { get => numPag; set => numPag = value; }
-        public int Id { get => id; set => id = value; }
+        public Usuario User { get => user; set => user = value; }
         
         public void RellenarDataGrid()
         {
-            conexion.AbrirConexion();
+
             // Tareas
             List<Tarea> list = new List<Tarea>();
             list = Tarea.ListadoTareas();
+            conexion.CerrarConexion();
             for (int i = 0; i < list.Count; i++)
             {
                 dgvTareasSinAsignar.Rows.Add(list[i].Id, list[i].Titulo, list[i].FPublicacion.ToString("dd-MM-yyyy"), list[i].FLimite.ToString("dd-MM-yyyy"), list[i].Puntos);
@@ -32,6 +33,7 @@ namespace ProyectoIntegradoVerde.Formularios
 
             // Correo
             List<Correo> correos = new List<Correo>();
+            correos = Correo.Bandeja(user.Id);
             correos = Correo.Bandeja("aa"); //Introducir correo del usuario como parámetro
             for (int i = 0; i < correos.Count; i++)
             {
@@ -47,7 +49,29 @@ namespace ProyectoIntegradoVerde.Formularios
         private void FrmFuncionalidades_Load(object sender, EventArgs e)
         {
             this.tabControl1.SelectTab(numPag);
-            RellenarDataGrid();
+            try
+            {
+                if (conexion.Conexion != null)
+                {
+
+                    conexion.AbrirConexion();
+                    RellenarDataGrid();
+
+                }
+                else
+                {
+                    MessageBox.Show("No se ha podido abrir la conexión con la Base de Datos");
+                }
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message + "\n" + ex.StackTrace);
+            }
+            finally
+            {
+                conexion.CerrarConexion();
+            }
         }
 
         private void tabPage1_Click(object sender, EventArgs e)
@@ -65,9 +89,8 @@ namespace ProyectoIntegradoVerde.Formularios
                 {
 
                     conexion.AbrirConexion();
-                    Tarea.AsignarTarea(idTarea, id);
+                    Tarea.AsignarTarea(idTarea, user.Id);
                     RellenarDataGrid();
-                    conexion.CerrarConexion();
 
                 }
                 else
