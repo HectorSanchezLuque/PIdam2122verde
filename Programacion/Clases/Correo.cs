@@ -68,10 +68,9 @@ namespace ProyectoIntegradoVerde.Clases
         /// <summary>
         ///  Comprueba si un correo ya existe o no previamente a su agregación
         /// </summary>
-        /// <param name="conexion">Conexión con la base de datos</param>
         /// <param name="id">Id del correo</param>
         /// <returns>True si está y False si no está</returns>
-        public bool YaEsta( string id)
+        public bool YaEsta(string id)
         {
             string consulta = string.Format("SELECT * FROM Correos" +
             " WHERE idCorreo='{0}'", id);
@@ -93,7 +92,6 @@ namespace ProyectoIntegradoVerde.Clases
         /// <summary>
         /// Método para eliminar un correo en la Base de Datos.
         /// </summary>
-        /// <param name="conexion">Objeto conexion</param>
         /// <param name="id">ID de la reunion a eliminar</param>
         /// <returns></returns>
         public static int EliminarCorreo(int id)
@@ -108,7 +106,6 @@ namespace ProyectoIntegradoVerde.Clases
         /// <summary>
         /// Método para actualizar los datos de un correo en la Base de Datos.
         /// </summary>
-        /// <param name="conexion">objeto conexion</param>
         /// <param name="cor"> Nuevos datos del correo</param>
         /// <param name="ident"> Antiguo ID del correo</param>
         /// <returns></returns>
@@ -129,19 +126,25 @@ namespace ProyectoIntegradoVerde.Clases
         /// <summary>
         /// Crea una lista con la bandeja de entrada del usuario.
         /// </summary>
-        /// <param name="usu">Usuario</param>
+        /// <param name="correo">Usuario</param>
         /// <returns>Lista de correos</returns>
-        public List<Correo> Bandeja(Usuario usu)
+        public static List<Correo> Bandeja(int id)
         {
             List<Correo> bandeja = new List<Correo>();
-            string consulta = String.Format("SELECT * from Correo WHERE usuario_id = " + usu.Id + ";");
+            string consulta = String.Format("SELECT * from Correos WHERE recipiente = " + id + ";");
             MySqlCommand comando = new MySqlCommand(consulta, conexion.Conexion);
             MySqlDataReader reader = comando.ExecuteReader();
             if (reader.HasRows)
             {
                 while (reader.Read())
                 {
-                    Correo co = new Correo(reader.GetInt32(0), reader.GetString(1), reader.GetString(2), reader.GetString(3), reader.GetString(4), reader.GetDateTime(5), reader.GetInt32(6));
+                    Correo co = new Correo();
+                    co.id = reader.GetInt32(0);
+                    co.asunto = reader.GetString(1);
+                    co.cuerpo = reader.GetString(2);
+                    co.recipiente = reader.GetString(3);
+                    co.remitente = reader.GetString(4);
+                    co.fecha = reader.GetDateTime(5);
                     bandeja.Add(co);
                 }
                 reader.Close();
