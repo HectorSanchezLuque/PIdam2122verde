@@ -132,5 +132,3 @@ C:\Users\Akayu\Desktop\ProyectoIntegrado\Programacion\obj\Debug\ProyectoIntegrad
 C:\Users\Akayu\Desktop\ProyectoIntegrado\Programacion\obj\Debug\ProyectoIntegradoVerde.exe
 C:\Users\Akayu\Desktop\ProyectoIntegrado\Programacion\obj\Debug\ProyectoIntegradoVerde.pdb
 >>>>>>> a17a9ccf6c601a1dbad38e29a726e850ad72200a
-C:\Users\alvar\Desktop\proyecto\PIdam2122verde\Programacion\obj\Debug\Programacion.Login.resources
-C:\Users\alvar\Desktop\proyecto\PIdam2122verde\Programacion\obj\Debug\ProyectoIntegradoVerde.Registro.resources
