@@ -16,8 +16,10 @@ namespace ProyectoIntegradoVerde.Formularios
 
         private bool luz;
         private Usuario user;
-        FrmFuncionalidades func = new FrmFuncionalidades();
+        
+        
 
+       
 
         public FrmPrincipal(bool l, Usuario us)
         {
@@ -25,11 +27,11 @@ namespace ProyectoIntegradoVerde.Formularios
             luz = l;
             user = us;
         }
-        
 
+        
         private void FrmPrincipal_Load(object sender, EventArgs e)
         {
-
+            
         }
 
         private void lblAbreFormulario_MouseEnter(object sender, EventArgs e)
@@ -62,9 +64,11 @@ namespace ProyectoIntegradoVerde.Formularios
                 if (conexion.Conexion != null)
                 {
                         conexion.AbrirConexion();
-                        func.NumPag= 0;
-                        func.User = user;
-                        func.Show();
+                    FrmFuncionalidades func = new FrmFuncionalidades();
+                    func.User = user;
+                    func.NumPag = 0;
+
+                    func.Show();
                 }
                 else
                 {
@@ -84,24 +88,34 @@ namespace ProyectoIntegradoVerde.Formularios
 
         private void btnCalendario_Click(object sender, EventArgs e)
         {
+
+            FrmFuncionalidades func = new FrmFuncionalidades();
+            func.User = user;
             func.NumPag = 1;
             func.ShowDialog();
         }
 
         private void btnReuniones_Click(object sender, EventArgs e)
         {
+            FrmFuncionalidades func = new FrmFuncionalidades();
+            func.User = user;
             func.NumPag = 2;
             func.ShowDialog();
         }
 
         private void btnCorreo_Click(object sender, EventArgs e)
         {
+            
+            FrmFuncionalidades func = new FrmFuncionalidades();
+            func.User = user;
             func.NumPag = 3;
             func.ShowDialog();
         }
 
         private void btnTienda_Click(object sender, EventArgs e)
         {
+            FrmFuncionalidades func = new FrmFuncionalidades();
+            func.User = user;
             func.NumPag = 4;
             func.ShowDialog();
         }
