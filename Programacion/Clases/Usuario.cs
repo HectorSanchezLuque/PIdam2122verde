@@ -80,7 +80,6 @@ namespace ProyectoIntegradoVerde
         /// <summary>
         /// Agregar usuario a la base de datos.
         /// </summary>
-        /// <param name="conexion"></param>
         /// <param name="usu"></param>
         /// <returns></returns>
         static public int AgregarUsuario(Usuario usu) // Investigar
@@ -108,8 +107,7 @@ namespace ProyectoIntegradoVerde
         /// <summary>
         ///  Comprueba si un usuario está dado de alta o no previamente a su agregación
         /// </summary>
-        /// <param name="conexion">Conexión con la base de datos</param>
-        /// <param name="nom">nombre del usuario</param>
+        /// <param name="nif">nif del usuario</param>
         /// <returns>true si está y false si no está</returns>
         public bool YaEsta(string nif)
         {
@@ -133,14 +131,13 @@ namespace ProyectoIntegradoVerde
         /// <summary>
         /// Método para eliminar un usuario en la Base de Datos.
         /// </summary>
-        /// <param name="conexion">Objeto conexion</param>
-        /// <param name="nom">Nombre del usuario a eliminar</param>
+        /// <param name="nif">Nombre del usuario a eliminar</param>
         /// <returns></returns>
-        public static int EliminaUsuario(int nom)
+        public static int EliminaUsuario(int nif)
         {
             int retorno;   
             // Eliminamos definitivamente el usuario de la tabla usuario.
-            string consulta = string.Format("DELETE FROM usuarios WHERE nom={0}", nom);
+            string consulta = string.Format("DELETE FROM usuarios WHERE nif={0}", nif);
             MySqlCommand comando = new MySqlCommand(consulta, conexion.Conexion);
             retorno = comando.ExecuteNonQuery();
             return retorno;
@@ -148,7 +145,6 @@ namespace ProyectoIntegradoVerde
         /// <summary>
         /// Método para actualizar los datos de un usuario en la Base de Datos.
         /// </summary>
-        /// <param name="conexion">objeto conexion</param>
         /// <param name="usu"> datos del usuario a modificar</param>
         /// <returns></returns>
         public int ActualizaUsuario(Usuario usu)
@@ -192,6 +188,12 @@ namespace ProyectoIntegradoVerde
             reader.Close();
             return usu;
         }
+
+        /// <summary>
+        /// Comprueba si el nif introducido es válido
+        /// </summary>
+        /// <param name="nif">nif del usuario</param>
+        /// <returns></returns>
         static public bool compNif(string nif)
         {
             string num = "";
