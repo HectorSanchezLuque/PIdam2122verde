@@ -40,7 +40,7 @@ namespace ProyectoIntegradoVerde.Formularios
             conexion.CerrarConexion();
             for (int i = 0; i < correos.Count; i++)
             {
-                dgvBandeja.Rows.Add(correos[i].Id, correos[i].Asunto, correos[i].Recipiente, correos[i].Remitente, correos[i].Fecha.ToString("dd-MM-yyyy"));
+                dgvBandeja.Rows.Add(correos[i].Id, correos[i].Asunto,correos[i].Cuerpo, correos[i].Recipiente, correos[i].Remitente, correos[i].Fecha.ToString("dd-MM-yyyy"));
             }
             
         }
@@ -112,5 +112,35 @@ namespace ProyectoIntegradoVerde.Formularios
             }
         }
 
+        private void dgvBandeja_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            string cuerpo = RowMessage();
+            string title = "Cuerpo: ";
+            MessageBox.Show(""+cuerpo,title);
+        }
+
+        private string RowMessage()
+        {
+            int count = 0;
+            string message = "";
+            for (int j = 0; j < dgvBandeja.Rows.Count; j++)
+            {
+                if (count < dgvBandeja.Rows.Count)
+                {
+                    string cuerpo = dgvBandeja.Rows[count].Cells[2].Value.ToString();
+                    message += cuerpo;
+                    count++;
+                    if (count % 1 == 0)
+                    {
+                        break;
+                    }
+                }
+                else
+                {
+                    break;
+                }
+            }
+            return message;
+        }
     }
 }
