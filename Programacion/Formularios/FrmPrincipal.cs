@@ -15,18 +15,21 @@ namespace ProyectoIntegradoVerde.Formularios
     {
      
         private bool luz;
-        private int id;
+        private  Usuario user;
         FrmFuncionalidades func = new FrmFuncionalidades();
-        public FrmPrincipal(int n,bool l)
+
+
+        public FrmPrincipal(bool l, Usuario us)
         {
-            id = n;
-            luz = l;
             InitializeComponent();
+            luz = l;
+            user = us;
         }
+        
 
         private void FrmPrincipal_Load(object sender, EventArgs e)
         {
-            func.Id = id;
+
         }
 
         private void lblAbreFormulario_MouseEnter(object sender, EventArgs e)
@@ -60,7 +63,7 @@ namespace ProyectoIntegradoVerde.Formularios
                 {
                         conexion.AbrirConexion();
                         func.NumPag= 0;
-                        func.Show();
+                        func.User = user;
                         func.Show();
                 }
                 else
