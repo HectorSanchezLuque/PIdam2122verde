@@ -42,7 +42,7 @@ namespace ProyectoIntegradoVerde
             this.txtEmailRegistro = new System.Windows.Forms.TextBox();
             this.lblEmailRegistro = new System.Windows.Forms.Label();
             this.txtApellidosRegistro = new System.Windows.Forms.TextBox();
-            this.lblApellidosRegistro = new System.Windows.Forms.Label();
+            this.lblCargo = new System.Windows.Forms.Label();
             this.txtNombreRegistro = new System.Windows.Forms.TextBox();
             this.lblNombreRegistro = new System.Windows.Forms.Label();
             this.lblRegistro = new System.Windows.Forms.Label();
@@ -136,7 +136,7 @@ namespace ProyectoIntegradoVerde
             // pbProfPicRegistro
             // 
             this.pbProfPicRegistro.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.pbProfPicRegistro.Location = new System.Drawing.Point(715, 130);
+            this.pbProfPicRegistro.Location = new System.Drawing.Point(727, 130);
             this.pbProfPicRegistro.Name = "pbProfPicRegistro";
             this.pbProfPicRegistro.Size = new System.Drawing.Size(248, 161);
             this.pbProfPicRegistro.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -219,19 +219,19 @@ namespace ProyectoIntegradoVerde
             this.txtApellidosRegistro.Size = new System.Drawing.Size(464, 38);
             this.txtApellidosRegistro.TabIndex = 28;
             // 
-            // lblApellidosRegistro
+            // lblCargo
             // 
-            this.lblApellidosRegistro.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.lblCargo.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblApellidosRegistro.AutoSize = true;
-            this.lblApellidosRegistro.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblApellidosRegistro.ForeColor = System.Drawing.Color.Black;
-            this.lblApellidosRegistro.Location = new System.Drawing.Point(41, 191);
-            this.lblApellidosRegistro.Name = "lblApellidosRegistro";
-            this.lblApellidosRegistro.Size = new System.Drawing.Size(137, 32);
-            this.lblApellidosRegistro.TabIndex = 27;
-            this.lblApellidosRegistro.Text = "Surname:";
+            this.lblCargo.AutoSize = true;
+            this.lblCargo.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCargo.ForeColor = System.Drawing.Color.Black;
+            this.lblCargo.Location = new System.Drawing.Point(70, 194);
+            this.lblCargo.Name = "lblCargo";
+            this.lblCargo.Size = new System.Drawing.Size(99, 32);
+            this.lblCargo.TabIndex = 27;
+            this.lblCargo.Text = "Cargo:";
             // 
             // txtNombreRegistro
             // 
@@ -330,7 +330,7 @@ namespace ProyectoIntegradoVerde
             this.Controls.Add(this.txtEmailRegistro);
             this.Controls.Add(this.lblEmailRegistro);
             this.Controls.Add(this.txtApellidosRegistro);
-            this.Controls.Add(this.lblApellidosRegistro);
+            this.Controls.Add(this.lblCargo);
             this.Controls.Add(this.txtNombreRegistro);
             this.Controls.Add(this.lblNombreRegistro);
             this.Controls.Add(this.lblRegistro);
@@ -357,7 +357,7 @@ namespace ProyectoIntegradoVerde
         private System.Windows.Forms.TextBox txtEmailRegistro;
         private System.Windows.Forms.Label lblEmailRegistro;
         private System.Windows.Forms.TextBox txtApellidosRegistro;
-        private System.Windows.Forms.Label lblApellidosRegistro;
+        private System.Windows.Forms.Label lblCargo;
         private System.Windows.Forms.TextBox txtNombreRegistro;
         private System.Windows.Forms.Label lblNombreRegistro;
         private System.Windows.Forms.Label lblRegistro;

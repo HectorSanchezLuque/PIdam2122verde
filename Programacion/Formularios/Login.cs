@@ -43,7 +43,7 @@ namespace Programacion
                         if (user.Nif == txtNif.Text && user.Password == txtPassword.Text)
                         {                           
                                                     
-                            FrmPrincipal princ = new FrmPrincipal(luz, user);
+                            FrmPrincipal princ = new FrmPrincipal(luz, user,lang);
                             this.Hide();
                             princ.Show();
                         }
