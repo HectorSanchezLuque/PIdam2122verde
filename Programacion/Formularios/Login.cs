@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Globalization;
+using System.Threading;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -10,6 +12,8 @@ using System.Windows.Forms;
 using MySql.Data.MySqlClient;
 using ProyectoIntegradoVerde;
 using ProyectoIntegradoVerde.Formularios;
+using ProyectoIntegradoVerde.RecursosLocalizables;
+using ProyectoIntegradoVerde.Properties;
 
 namespace Programacion
 {
@@ -17,11 +21,17 @@ namespace Programacion
     public partial class Login : Form
     {
         bool luz = true;
+        bool lang = false;
         public Login()
         {
             InitializeComponent();
         }
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 63372ebeb04806ab0909949de7c59a546c18326f
         private void btnIniSesion_Click(object sender, EventArgs e)
         {
             if (Usuario.compNif(txtNif.Text))
@@ -36,7 +46,7 @@ namespace Programacion
                         if (user.Nif == txtNif.Text && user.Password == txtPassword.Text)
                         {                           
                                                     
-                            FrmPrincipal princ = new FrmPrincipal(luz, user);
+                            FrmPrincipal princ = new FrmPrincipal(luz, user,lang);
                             this.Hide();
                             princ.Show();
                         }
@@ -103,6 +113,39 @@ namespace Programacion
 
 
             }
+
+        }
+
+        private void picFlag_Click(object sender, EventArgs e)
+        {
+            if (lang)
+            {
+                picFlag.Image = Resources.spFlag;
+                Thread.CurrentThread.CurrentUICulture = new CultureInfo("");
+                lang = false;
+
+            }
+            else
+            {
+                picFlag.Image = Resources.engFlag;
+                Thread.CurrentThread.CurrentUICulture = new CultureInfo("EN");
+                lang = true;
+
+                
+            }
+
+            AplicarIdioma();
+        }
+        private void AplicarIdioma()
+        {
+            lblLang.Text = StringRecursos.lang;
+            lblNotif.Text = StringRecursos.notiAd;
+            lblOlvidoCont.Text = StringRecursos.contOlv;
+            lblPsw.Text = StringRecursos.passwd;
+            btnIniSesion.Text = StringRecursos.logIn;
+            btnRegistro.Text = StringRecursos.regUsu;
+           
+
 
         }
     }

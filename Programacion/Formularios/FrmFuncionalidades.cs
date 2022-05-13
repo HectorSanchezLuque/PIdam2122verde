@@ -19,17 +19,40 @@ namespace ProyectoIntegradoVerde.Formularios
         public int NumPag { get => numPag; set => numPag = value; }
         public Usuario User { get => user; set => user = value; }
 
+<<<<<<< HEAD
+=======
+
+        
+        
+>>>>>>> 63372ebeb04806ab0909949de7c59a546c18326f
         public void RellenarDataGrid()
         {
-
+            
             // Tareas
             dgvTareasSinAsignar.Rows.Clear();
             List<Tarea> list = new List<Tarea>();
             list = Tarea.ListadoTareas();
+<<<<<<< HEAD
+=======
+           
+>>>>>>> 63372ebeb04806ab0909949de7c59a546c18326f
             for (int i = 0; i < list.Count; i++)
             {
                 dgvTareasSinAsignar.Rows.Add(list[i].Id, list[i].Titulo, list[i].FPublicacion.ToString("dd-MM-yyyy"), list[i].FLimite.ToString("dd-MM-yyyy"), list[i].Puntos);
             }
+<<<<<<< HEAD
+=======
+
+            // Correo
+            List<Correo> correos;
+            correos = Correo.Bandeja(user.Correo);
+            conexion.CerrarConexion();
+            for (int i = 0; i < correos.Count; i++)
+            {
+                dgvBandeja.Rows.Add(correos[i].Id, correos[i].Asunto, correos[i].Recipiente, correos[i].Remitente, correos[i].Fecha.ToString("dd-MM-yyyy"));
+            }
+            
+>>>>>>> 63372ebeb04806ab0909949de7c59a546c18326f
         }
 
         public void RellenarDataGridPendientes()
@@ -105,7 +128,7 @@ namespace ProyectoIntegradoVerde.Formularios
                 {
 
                     conexion.AbrirConexion();
-                    Tarea.AsignarTarea(idTarea, user.Id);
+                    Tarea.AsignarTarea(idTarea, User.Id);
                     RellenarDataGrid();
                     RellenarDataGridPendientes();
 

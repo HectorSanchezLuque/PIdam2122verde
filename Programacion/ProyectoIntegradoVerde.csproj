@@ -134,9 +134,22 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Clases\Usuario.cs" />
+<<<<<<< HEAD
     <EmbeddedResource Include="Formularios\CrearReunion.resx">
       <DependentUpon>CrearReunion.cs</DependentUpon>
     </EmbeddedResource>
+=======
+    <Compile Include="RecursosLocalizables\StringRecursos.EN.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>StringRecursos.EN.resx</DependentUpon>
+    </Compile>
+    <Compile Include="RecursosLocalizables\StringRecursos.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>StringRecursos.resx</DependentUpon>
+    </Compile>
+>>>>>>> 63372ebeb04806ab0909949de7c59a546c18326f
     <EmbeddedResource Include="Formularios\FrmDatos.resx">
       <DependentUpon>FrmDatos.cs</DependentUpon>
     </EmbeddedResource>
@@ -163,8 +176,14 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="RecursosLocalizables\StringRecursos.EN.resx" />
-    <EmbeddedResource Include="RecursosLocalizables\StringRecursos.ES.resx" />
+    <EmbeddedResource Include="RecursosLocalizables\StringRecursos.EN.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>StringRecursos.EN.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RecursosLocalizables\StringRecursos.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>StringRecursos.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -202,6 +221,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\5094667_chat_communication_message_talk_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\engFlag.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\spFlag.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
