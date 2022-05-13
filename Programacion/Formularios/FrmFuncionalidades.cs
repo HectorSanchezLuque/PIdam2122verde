@@ -32,7 +32,7 @@ namespace ProyectoIntegradoVerde.Formularios
 
             // Correo
             List<Correo> correos = new List<Correo>();
-            correos = Correo.Bandeja(Id);
+            correos = Correo.Bandeja("aa"); //Introducir correo del usuario como parámetro
             for (int i = 0; i < correos.Count; i++)
             {
                 dgvBandeja.Rows.Add(correos[i].Id, correos[i].Asunto, correos[i].Recipiente, correos[i].Remitente, correos[i].Fecha.ToString("dd-MM-yyyy"));
