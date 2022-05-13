@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
 using ProyectoIntegradoVerde;
-using ProyectoIntegradoVerde.Formularios;
+using ProyectoIntegradoVerde.RecursosLocalizables;
 
 namespace Programacion
 {

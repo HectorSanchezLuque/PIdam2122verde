@@ -117,25 +117,22 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="contra" xml:space="preserve">
-    <value>Password</value>
+  <data name="contOlv" xml:space="preserve">
+    <value>forgotten password?</value>
   </data>
-  <data name="contraOlv" xml:space="preserve">
-    <value>forgot password?</value>
+  <data name="lang" xml:space="preserve">
+    <value>ING</value>
   </data>
-  <data name="iniciar" xml:space="preserve">
+  <data name="logIn" xml:space="preserve">
     <value>Log in</value>
   </data>
-  <data name="lenguaje" xml:space="preserve">
-    <value>ENG</value>
-  </data>
-  <data name="nif" xml:space="preserve">
-    <value>NIF</value>
-  </data>
-  <data name="notificarAdmin" xml:space="preserve">
+  <data name="notiAd" xml:space="preserve">
     <value>Notify an administrator.</value>
   </data>
-  <data name="registrar" xml:space="preserve">
-    <value>Register user</value>
+  <data name="passwd" xml:space="preserve">
+    <value>Password</value>
+  </data>
+  <data name="regUsu" xml:space="preserve">
+    <value>Register User</value>
   </data>
 </root>
