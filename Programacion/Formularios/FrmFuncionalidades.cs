@@ -164,36 +164,31 @@ namespace ProyectoIntegradoVerde.Formularios
                 conexion.CerrarConexion();
                 DateTime myDateTime = DateTime.Now;
                 string sqlFormattedDate = myDateTime.ToString("yyyy-MM-dd HH:mm:ss");
-                //DateTime hola = Convert.ToDateTime(sqlFormattedDate);
 
-            Correo cor = new Correo();
 
-            cor.Asunto = txtAsunto.Text;
-            cor.Cuerpo = txtCuerpo.Text;
-            cor.Recipiente = txtDest.Text;
-            cor.Remitente = user.Correo;
-            cor.Fecha = sqlFormattedDate;
-            cor.Usuario_id = user.Id;
+                Correo cor = new Correo();
 
-<<<<<<< HEAD
-            conexion.AbrirConexion();
-            Correo.AgregarCorreo(cor);
-            conexion.CerrarConexion();
+                cor.Asunto = txtAsunto.Text;
+                cor.Cuerpo = txtCuerpo.Text;
+                cor.Recipiente = txtDest.Text;
+                cor.Remitente = user.Correo;
+                cor.Fecha = sqlFormattedDate;
+                cor.Usuario_id = user.Id;
+
+
+                conexion.AbrirConexion();
+                Correo.AgregarCorreo(cor);
+                conexion.CerrarConexion();
+                MessageBox.Show("Correo enviado con éxito.");
+            }
         }
-
 
         private void dgvBandeja_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             if (dgvBandeja.Rows[e.RowIndex].Cells[e.ColumnIndex].Value != null)
             {
-                MessageBox.Show(dgvBandeja.Rows[e.RowIndex].Cells[e.ColumnIndex].Value.ToString(),"Cuerpo");
-=======
-                conexion.AbrirConexion();
-                Correo.AgregarCorreo(cor);
-                conexion.CerrarConexion();
+                MessageBox.Show(dgvBandeja.Rows[e.RowIndex].Cells[e.ColumnIndex].Value.ToString(), "Cuerpo");
 
-                MessageBox.Show("Correo enviado con éxito.");
->>>>>>> 1ddfefcb7f1f20de1a9cb1b907818b79b7eb8774
             }
         }
     }
