@@ -25,9 +25,9 @@ namespace ProyectoIntegradoVerde
         private Image foto;
 
         //  Constructor con foto
-         public Usuario(int idusu,string niff,string nom, DateTime nacimiento, string puesto, int points, string email, string passwd, Image fot )
+         public Usuario(string niff,string nom, DateTime nacimiento, string puesto, string email, string passwd, Image fot )
         {
-            id = idusu;
+           
             nif = niff;
             nombre = nom;
             fechaNacimiento = nacimiento;
@@ -199,33 +199,41 @@ namespace ProyectoIntegradoVerde
         /// Comprueba si el nif introducido es válido
         /// </summary>
         /// <param name="nif">nif del usuario</param>
-        /// <returns></returns>
+        /// <returns>Compureba si la letra de nif es correcta devuele true si es asi</returns>
         static public bool compNif(string nif)
         {
 
             string num = "";
             string lets = "TRWAGMYFPDXBNJZSQVHLCKE";
             char let;
-            for (int i = 0; i < nif.Length - 1; i++)
+
+            if (nif.Length != 9)
             {
-                if (char.IsDigit(nif[i]))
+                return false;
+            }
+            else
+            {
+                for (int i = 0; i < nif.Length - 1; i++)
                 {
-                    num += nif[i];
+                    if (char.IsDigit(nif[i]))
+                    {
+                        num += nif[i];
+                    }
+                    else
+                    {
+                        return false;
+                    }
+
+                }
+                let = lets[int.Parse(num) % 23];
+                if (let == nif[nif.Length - 1])
+                {
+                    return true;
                 }
                 else
                 {
                     return false;
                 }
-
-            }
-            let = lets[int.Parse(num) % 23];
-            if (let == nif[nif.Length - 1])
-            {
-                return true;
-            }
-            else
-            {
-                return false;
             }
             
         }

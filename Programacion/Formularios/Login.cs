@@ -173,14 +173,22 @@ namespace Programacion
                         {
                             conexion.AbrirConexion();
                             Usuario user = Usuario.BuscarUsuario(txtNif.Text);
-                            if (user.Password == txtPassword.Text && user.Cargo == "Administrador" || user.Cargo == "Jefe")
+                            if (user.Password == txtPassword.Text)
                             {
-                                Registro reg = new Registro();
-                                reg.ShowDialog();
+                                if (user.Cargo == "Administrador" || user.Cargo == "Jefe")
+                                {
+                                    Registro reg = new Registro();
+                                    reg.ShowDialog();
+                                }
+                                else
+                                {
+                                    MessageBox.Show("El usuario no tiene acceso");
+                                }
+                                
                             }
                             else
                             {
-                                MessageBox.Show("Error en registar: Usuario sin permisos para registrar usuarios");
+                                MessageBox.Show("Error en registar: nombre o cantraseña incorrecta");
                             }
                         }
                     }
@@ -198,6 +206,16 @@ namespace Programacion
                     MessageBox.Show("El NIF no es válido");
                 }
             }
+        }
+
+        private void lblOlvidoCont_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            MessageBox.Show("Contacte con el servicio de Administrcion de su empresa");
+        }
+
+        private void lblNotif_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            MessageBox.Show("Contacte o diríjase al adiministrador");
         }
     }
 }

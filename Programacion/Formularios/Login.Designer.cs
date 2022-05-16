@@ -106,6 +106,7 @@
             this.lblOlvidoCont.TabIndex = 7;
             this.lblOlvidoCont.TabStop = true;
             this.lblOlvidoCont.Text = "¿Has olvidado tu contraseña?";
+            this.lblOlvidoCont.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lblOlvidoCont_LinkClicked);
             // 
             // btnRegistro
             // 
@@ -138,6 +139,7 @@
             this.lblNotif.TabIndex = 12;
             this.lblNotif.TabStop = true;
             this.lblNotif.Text = "Notificar a un administrador.";
+            this.lblNotif.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lblNotif_LinkClicked);
             // 
             // pcbLuz
             // 
@@ -180,7 +182,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
-            this.ClientSize = new System.Drawing.Size(475, 450);
+            this.ClientSize = new System.Drawing.Size(478, 481);
             this.Controls.Add(this.lblNotif);
             this.Controls.Add(this.pcbLuz);
             this.Controls.Add(this.lblLang);

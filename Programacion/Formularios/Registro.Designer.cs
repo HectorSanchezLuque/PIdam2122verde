@@ -29,7 +29,7 @@ namespace ProyectoIntegradoVerde
         /// </summary>
         private void InitializeComponent()
         {
-            this.chkShowReg = new System.Windows.Forms.CheckBox();
+            this.components = new System.ComponentModel.Container();
             this.dtpFNRegistro = new System.Windows.Forms.DateTimePicker();
             this.lblFNacRegistro = new System.Windows.Forms.Label();
             this.btnVolverRegistro = new System.Windows.Forms.Button();
@@ -41,31 +41,19 @@ namespace ProyectoIntegradoVerde
             this.lblPasswordRegistro = new System.Windows.Forms.Label();
             this.txtEmailRegistro = new System.Windows.Forms.TextBox();
             this.lblEmailRegistro = new System.Windows.Forms.Label();
-            this.txtApellidosRegistro = new System.Windows.Forms.TextBox();
+            this.txtCargo = new System.Windows.Forms.TextBox();
             this.lblCargo = new System.Windows.Forms.Label();
             this.txtNombreRegistro = new System.Windows.Forms.TextBox();
             this.lblNombreRegistro = new System.Windows.Forms.Label();
             this.lblRegistro = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnClos = new System.Windows.Forms.Button();
             this.txtNifRegistro = new System.Windows.Forms.TextBox();
             this.lblNifRegistro = new System.Windows.Forms.Label();
+            this.chkShowReg = new System.Windows.Forms.CheckBox();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pbProfPicRegistro)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // chkShowReg
-            // 
-            this.chkShowReg.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.chkShowReg.AutoSize = true;
-            this.chkShowReg.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkShowReg.ForeColor = System.Drawing.Color.Black;
-            this.chkShowReg.Location = new System.Drawing.Point(175, 470);
-            this.chkShowReg.Name = "chkShowReg";
-            this.chkShowReg.Size = new System.Drawing.Size(149, 24);
-            this.chkShowReg.TabIndex = 42;
-            this.chkShowReg.Text = "Show password";
-            this.chkShowReg.UseVisualStyleBackColor = true;
             // 
             // dtpFNRegistro
             // 
@@ -116,9 +104,9 @@ namespace ProyectoIntegradoVerde
             this.lblFpRegistro.ForeColor = System.Drawing.Color.Black;
             this.lblFpRegistro.Location = new System.Drawing.Point(712, 107);
             this.lblFpRegistro.Name = "lblFpRegistro";
-            this.lblFpRegistro.Size = new System.Drawing.Size(102, 18);
+            this.lblFpRegistro.Size = new System.Drawing.Size(60, 18);
             this.lblFpRegistro.TabIndex = 36;
-            this.lblFpRegistro.Text = "Profile picture:";
+            this.lblFpRegistro.Text = "Imagen:";
             // 
             // btnCargarRegistro
             // 
@@ -126,11 +114,11 @@ namespace ProyectoIntegradoVerde
             this.btnCargarRegistro.BackColor = System.Drawing.SystemColors.Control;
             this.btnCargarRegistro.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnCargarRegistro.ForeColor = System.Drawing.Color.Black;
-            this.btnCargarRegistro.Location = new System.Drawing.Point(888, 297);
+            this.btnCargarRegistro.Location = new System.Drawing.Point(900, 372);
             this.btnCargarRegistro.Name = "btnCargarRegistro";
             this.btnCargarRegistro.Size = new System.Drawing.Size(75, 28);
             this.btnCargarRegistro.TabIndex = 35;
-            this.btnCargarRegistro.Text = "Load";
+            this.btnCargarRegistro.Text = "Cargar";
             this.btnCargarRegistro.UseVisualStyleBackColor = false;
             this.btnCargarRegistro.Click += new System.EventHandler(this.btnCargarRegistro_Click);
             // 
@@ -139,7 +127,7 @@ namespace ProyectoIntegradoVerde
             this.pbProfPicRegistro.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.pbProfPicRegistro.Location = new System.Drawing.Point(727, 130);
             this.pbProfPicRegistro.Name = "pbProfPicRegistro";
-            this.pbProfPicRegistro.Size = new System.Drawing.Size(248, 161);
+            this.pbProfPicRegistro.Size = new System.Drawing.Size(248, 229);
             this.pbProfPicRegistro.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbProfPicRegistro.TabIndex = 34;
             this.pbProfPicRegistro.TabStop = false;
@@ -156,8 +144,9 @@ namespace ProyectoIntegradoVerde
             this.btnRegistrarseRegistro.Name = "btnRegistrarseRegistro";
             this.btnRegistrarseRegistro.Size = new System.Drawing.Size(466, 49);
             this.btnRegistrarseRegistro.TabIndex = 33;
-            this.btnRegistrarseRegistro.Text = "Register";
+            this.btnRegistrarseRegistro.Text = "Registrar";
             this.btnRegistrarseRegistro.UseVisualStyleBackColor = false;
+            this.btnRegistrarseRegistro.Click += new System.EventHandler(this.btnRegistrarseRegistro_Click);
             // 
             // txtPasswordRegistro
             // 
@@ -178,11 +167,11 @@ namespace ProyectoIntegradoVerde
             this.lblPasswordRegistro.AutoSize = true;
             this.lblPasswordRegistro.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPasswordRegistro.ForeColor = System.Drawing.Color.Black;
-            this.lblPasswordRegistro.Location = new System.Drawing.Point(23, 431);
+            this.lblPasswordRegistro.Location = new System.Drawing.Point(74, 429);
             this.lblPasswordRegistro.Name = "lblPasswordRegistro";
-            this.lblPasswordRegistro.Size = new System.Drawing.Size(146, 32);
+            this.lblPasswordRegistro.Size = new System.Drawing.Size(95, 32);
             this.lblPasswordRegistro.TabIndex = 31;
-            this.lblPasswordRegistro.Text = "Password:";
+            this.lblPasswordRegistro.Text = "Clave:";
             // 
             // txtEmailRegistro
             // 
@@ -209,16 +198,16 @@ namespace ProyectoIntegradoVerde
             this.lblEmailRegistro.TabIndex = 29;
             this.lblEmailRegistro.Text = "E-mail:";
             // 
-            // txtApellidosRegistro
+            // txtCargo
             // 
-            this.txtApellidosRegistro.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.txtCargo.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtApellidosRegistro.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtApellidosRegistro.Location = new System.Drawing.Point(175, 188);
-            this.txtApellidosRegistro.Name = "txtApellidosRegistro";
-            this.txtApellidosRegistro.Size = new System.Drawing.Size(464, 38);
-            this.txtApellidosRegistro.TabIndex = 28;
+            this.txtCargo.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCargo.Location = new System.Drawing.Point(175, 188);
+            this.txtCargo.Name = "txtCargo";
+            this.txtCargo.Size = new System.Drawing.Size(464, 38);
+            this.txtCargo.TabIndex = 28;
             // 
             // lblCargo
             // 
@@ -271,19 +260,20 @@ namespace ProyectoIntegradoVerde
             this.lblRegistro.TabIndex = 24;
             this.lblRegistro.Text = "Registro de Usuario";
             // 
-            // button1
+            // btnClos
             // 
-            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.button1.BackColor = System.Drawing.SystemColors.Control;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.Black;
-            this.button1.Location = new System.Drawing.Point(787, 525);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(118, 40);
-            this.button1.TabIndex = 43;
-            this.button1.Text = "Return";
-            this.button1.UseVisualStyleBackColor = false;
+            this.btnClos.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnClos.BackColor = System.Drawing.SystemColors.Control;
+            this.btnClos.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnClos.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnClos.ForeColor = System.Drawing.Color.Black;
+            this.btnClos.Location = new System.Drawing.Point(857, 545);
+            this.btnClos.Name = "btnClos";
+            this.btnClos.Size = new System.Drawing.Size(118, 40);
+            this.btnClos.TabIndex = 43;
+            this.btnClos.Text = "Cerrar";
+            this.btnClos.UseVisualStyleBackColor = false;
+            this.btnClos.Click += new System.EventHandler(this.btnClos_Click);
             // 
             // txtNifRegistro
             // 
@@ -310,6 +300,25 @@ namespace ProyectoIntegradoVerde
             this.lblNifRegistro.TabIndex = 44;
             this.lblNifRegistro.Text = "Nif:";
             // 
+            // chkShowReg
+            // 
+            this.chkShowReg.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.chkShowReg.AutoSize = true;
+            this.chkShowReg.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chkShowReg.ForeColor = System.Drawing.Color.Black;
+            this.chkShowReg.Location = new System.Drawing.Point(175, 470);
+            this.chkShowReg.Name = "chkShowReg";
+            this.chkShowReg.Size = new System.Drawing.Size(177, 24);
+            this.chkShowReg.TabIndex = 42;
+            this.chkShowReg.Text = "Mostrar contraseña";
+            this.chkShowReg.UseVisualStyleBackColor = true;
+            // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
             // Registro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -317,7 +326,7 @@ namespace ProyectoIntegradoVerde
             this.ClientSize = new System.Drawing.Size(1028, 665);
             this.Controls.Add(this.txtNifRegistro);
             this.Controls.Add(this.lblNifRegistro);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnClos);
             this.Controls.Add(this.chkShowReg);
             this.Controls.Add(this.dtpFNRegistro);
             this.Controls.Add(this.lblFNacRegistro);
@@ -330,22 +339,22 @@ namespace ProyectoIntegradoVerde
             this.Controls.Add(this.lblPasswordRegistro);
             this.Controls.Add(this.txtEmailRegistro);
             this.Controls.Add(this.lblEmailRegistro);
-            this.Controls.Add(this.txtApellidosRegistro);
+            this.Controls.Add(this.txtCargo);
             this.Controls.Add(this.lblCargo);
             this.Controls.Add(this.txtNombreRegistro);
             this.Controls.Add(this.lblNombreRegistro);
             this.Controls.Add(this.lblRegistro);
             this.Name = "Registro";
             this.Text = "Registro";
+            this.Load += new System.EventHandler(this.Registro_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pbProfPicRegistro)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.CheckBox chkShowReg;
         private System.Windows.Forms.DateTimePicker dtpFNRegistro;
         private System.Windows.Forms.Label lblFNacRegistro;
         private System.Windows.Forms.Button btnVolverRegistro;
@@ -357,13 +366,15 @@ namespace ProyectoIntegradoVerde
         private System.Windows.Forms.Label lblPasswordRegistro;
         private System.Windows.Forms.TextBox txtEmailRegistro;
         private System.Windows.Forms.Label lblEmailRegistro;
-        private System.Windows.Forms.TextBox txtApellidosRegistro;
+        private System.Windows.Forms.TextBox txtCargo;
         private System.Windows.Forms.Label lblCargo;
         private System.Windows.Forms.TextBox txtNombreRegistro;
         private System.Windows.Forms.Label lblNombreRegistro;
         private System.Windows.Forms.Label lblRegistro;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnClos;
         private System.Windows.Forms.TextBox txtNifRegistro;
         private System.Windows.Forms.Label lblNifRegistro;
+        private System.Windows.Forms.CheckBox chkShowReg;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }
