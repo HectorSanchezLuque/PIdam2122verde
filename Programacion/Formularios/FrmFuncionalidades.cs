@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -164,25 +165,30 @@ namespace ProyectoIntegradoVerde.Formularios
             RellenarDataGrid();
             conexion.CerrarConexion();
         }
-        private void btnEnviar_Click(object sender, EventArgs e)
+
+        private void btnEnviar_Click_1(object sender, EventArgs e)
         {
             //DateTime myDateTime = DateTime.Now;
             //string sqlFormattedDate = myDateTime.ToString("yyyy-MM-dd HH:mm:ss");
             //DateTime hola = Convert.ToDateTime(sqlFormattedDate);
 
-            string dateString = DateTime.Now.ToString();
-            dateString = string.Format("yyyy-MM-dd HH:mm:ss");
+            //string dateString = DateTime.Now.ToString();
+            //DateTime dateString = DateTime.Now;
             //string format = "yyyy-MM-dd HH:mm:ss";
-            //try
-            //{
-                //result = DateTime.ParseExact(dateString, format, provider);
+            //DateTime result = DateTime.Parse(dateString,format);
+
+            var cultureInfo = new CultureInfo("us-US"); //En nuestro caso ("us-US") creo //fecha
+            string dateString = DateTime.Now.ToString(); //fecha
+            DateTime dateTime = DateTime.ParseExact(dateString, "yyyy-MM-dd HH:mm:ss", cultureInfo);
+            string fecha = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
 
             Correo cor = new Correo();
+            
             cor.Asunto = txtAsunto.Text;
             cor.Cuerpo = txtCuerpo.Text;
             cor.Recipiente = txtDest.Text;
             cor.Recipiente = txtRemit.Text;
-            cor.Fecha = Convert.ToDateTime(dateString);
+            cor.Fecha = dateTime;
             cor.Usuario_id = user.Id;
 
             conexion.AbrirConexion();
@@ -190,6 +196,5 @@ namespace ProyectoIntegradoVerde.Formularios
             conexion.CerrarConexion();
 
         }
-
     }
 }
