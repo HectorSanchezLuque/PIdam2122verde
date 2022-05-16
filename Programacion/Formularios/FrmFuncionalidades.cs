@@ -191,6 +191,11 @@ namespace ProyectoIntegradoVerde.Formularios
                 Correo.AgregarCorreo(cor);
                 conexion.CerrarConexion();
             }
+
+        private void btnCrearReunion_Click(object sender, EventArgs e)
+        {
+
         }
     }
+}
 

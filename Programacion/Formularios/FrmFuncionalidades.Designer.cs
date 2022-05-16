@@ -50,7 +50,13 @@ namespace ProyectoIntegradoVerde.Formularios
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.cldCalendario = new System.Windows.Forms.MonthCalendar();
             this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.btnCrearReunion = new System.Windows.Forms.Button();
+            this.btnActualizarReuniones = new System.Windows.Forms.Button();
             this.dgvReuniones = new System.Windows.Forms.DataGridView();
+            this.idreu = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nombreReu = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.descReu = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fechaReu = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.btnLimpiar = new System.Windows.Forms.Button();
             this.btnEnviar = new System.Windows.Forms.Button();
@@ -74,13 +80,6 @@ namespace ProyectoIntegradoVerde.Formularios
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.btnActualizar = new System.Windows.Forms.Button();
-            this.idreu = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nombreReu = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.descReu = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.fechaReu = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnActualizarReuniones = new System.Windows.Forms.Button();
-            this.btnCrearReunion = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTareasPendientes)).BeginInit();
@@ -317,6 +316,26 @@ namespace ProyectoIntegradoVerde.Formularios
             this.tabPage3.Text = "Reuniones";
             this.tabPage3.UseVisualStyleBackColor = true;
             // 
+            // btnCrearReunion
+            // 
+            this.btnCrearReunion.Location = new System.Drawing.Point(48, 438);
+            this.btnCrearReunion.Name = "btnCrearReunion";
+            this.btnCrearReunion.Size = new System.Drawing.Size(129, 35);
+            this.btnCrearReunion.TabIndex = 2;
+            this.btnCrearReunion.Text = "Crear Reunión";
+            this.btnCrearReunion.UseVisualStyleBackColor = true;
+            this.btnCrearReunion.Click += new System.EventHandler(this.btnCrearReunion_Click);
+            // 
+            // btnActualizarReuniones
+            // 
+            this.btnActualizarReuniones.Location = new System.Drawing.Point(688, 438);
+            this.btnActualizarReuniones.Name = "btnActualizarReuniones";
+            this.btnActualizarReuniones.Size = new System.Drawing.Size(129, 35);
+            this.btnActualizarReuniones.TabIndex = 1;
+            this.btnActualizarReuniones.Text = "Actualizar";
+            this.btnActualizarReuniones.UseVisualStyleBackColor = true;
+            this.btnActualizarReuniones.Click += new System.EventHandler(this.btnActualizarReuniones_Click);
+            // 
             // dgvReuniones
             // 
             this.dgvReuniones.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -331,6 +350,38 @@ namespace ProyectoIntegradoVerde.Formularios
             this.dgvReuniones.RowHeadersWidth = 51;
             this.dgvReuniones.Size = new System.Drawing.Size(837, 408);
             this.dgvReuniones.TabIndex = 0;
+            // 
+            // idreu
+            // 
+            this.idreu.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.idreu.HeaderText = "ID";
+            this.idreu.MinimumWidth = 6;
+            this.idreu.Name = "idreu";
+            this.idreu.ReadOnly = true;
+            // 
+            // nombreReu
+            // 
+            this.nombreReu.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.nombreReu.HeaderText = "Nombre";
+            this.nombreReu.MinimumWidth = 6;
+            this.nombreReu.Name = "nombreReu";
+            this.nombreReu.ReadOnly = true;
+            // 
+            // descReu
+            // 
+            this.descReu.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.descReu.HeaderText = "Descripción";
+            this.descReu.MinimumWidth = 6;
+            this.descReu.Name = "descReu";
+            this.descReu.ReadOnly = true;
+            // 
+            // fechaReu
+            // 
+            this.fechaReu.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.fechaReu.HeaderText = "Fecha";
+            this.fechaReu.MinimumWidth = 6;
+            this.fechaReu.Name = "fechaReu";
+            this.fechaReu.ReadOnly = true;
             // 
             // tabPage4
             // 
@@ -564,68 +615,6 @@ namespace ProyectoIntegradoVerde.Formularios
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.Size = new System.Drawing.Size(299, 150);
             this.dataGridView1.TabIndex = 0;
-            // 
-            // btnActualizar
-            // 
-            this.btnActualizar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.btnActualizar.Location = new System.Drawing.Point(739, 321);
-            this.btnActualizar.Name = "btnActualizar";
-            this.btnActualizar.Size = new System.Drawing.Size(109, 29);
-            this.btnActualizar.TabIndex = 5;
-            this.btnActualizar.Text = "Actualizar";
-            this.btnActualizar.UseVisualStyleBackColor = true;
-            this.btnActualizar.Click += new System.EventHandler(this.btnActualizar_Click);
-            // 
-            // idreu
-            // 
-            this.idreu.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.idreu.HeaderText = "ID";
-            this.idreu.MinimumWidth = 6;
-            this.idreu.Name = "idreu";
-            this.idreu.ReadOnly = true;
-            // 
-            // nombreReu
-            // 
-            this.nombreReu.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.nombreReu.HeaderText = "Nombre";
-            this.nombreReu.MinimumWidth = 6;
-            this.nombreReu.Name = "nombreReu";
-            this.nombreReu.ReadOnly = true;
-            // 
-            // descReu
-            // 
-            this.descReu.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.descReu.HeaderText = "Descripción";
-            this.descReu.MinimumWidth = 6;
-            this.descReu.Name = "descReu";
-            this.descReu.ReadOnly = true;
-            // 
-            // fechaReu
-            // 
-            this.fechaReu.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.fechaReu.HeaderText = "Fecha";
-            this.fechaReu.MinimumWidth = 6;
-            this.fechaReu.Name = "fechaReu";
-            this.fechaReu.ReadOnly = true;
-            // 
-            // btnActualizarReuniones
-            // 
-            this.btnActualizarReuniones.Location = new System.Drawing.Point(688, 438);
-            this.btnActualizarReuniones.Name = "btnActualizarReuniones";
-            this.btnActualizarReuniones.Size = new System.Drawing.Size(129, 35);
-            this.btnActualizarReuniones.TabIndex = 1;
-            this.btnActualizarReuniones.Text = "Actualizar";
-            this.btnActualizarReuniones.UseVisualStyleBackColor = true;
-            this.btnActualizarReuniones.Click += new System.EventHandler(this.btnActualizarReuniones_Click);
-            // 
-            // btnCrearReunion
-            // 
-            this.btnCrearReunion.Location = new System.Drawing.Point(48, 438);
-            this.btnCrearReunion.Name = "btnCrearReunion";
-            this.btnCrearReunion.Size = new System.Drawing.Size(129, 35);
-            this.btnCrearReunion.TabIndex = 2;
-            this.btnCrearReunion.Text = "Crear Reunión";
-            this.btnCrearReunion.UseVisualStyleBackColor = true;
             // 
             // FrmFuncionalidades
             // 
