@@ -88,11 +88,11 @@ namespace ProyectoIntegradoVerde
             this.lblFNacRegistro.AutoSize = true;
             this.lblFNacRegistro.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblFNacRegistro.ForeColor = System.Drawing.Color.Black;
-            this.lblFNacRegistro.Location = new System.Drawing.Point(39, 313);
+            this.lblFNacRegistro.Location = new System.Drawing.Point(4, 313);
             this.lblFNacRegistro.Name = "lblFNacRegistro";
-            this.lblFNacRegistro.Size = new System.Drawing.Size(137, 32);
+            this.lblFNacRegistro.Size = new System.Drawing.Size(165, 32);
             this.lblFNacRegistro.TabIndex = 40;
-            this.lblFNacRegistro.Text = "Birthdate:";
+            this.lblFNacRegistro.Text = "Nacimiento:";
             // 
             // btnVolverRegistro
             // 
@@ -132,6 +132,7 @@ namespace ProyectoIntegradoVerde
             this.btnCargarRegistro.TabIndex = 35;
             this.btnCargarRegistro.Text = "Load";
             this.btnCargarRegistro.UseVisualStyleBackColor = false;
+            this.btnCargarRegistro.Click += new System.EventHandler(this.btnCargarRegistro_Click);
             // 
             // pbProfPicRegistro
             // 
@@ -252,11 +253,11 @@ namespace ProyectoIntegradoVerde
             this.lblNombreRegistro.AutoSize = true;
             this.lblNombreRegistro.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNombreRegistro.ForeColor = System.Drawing.Color.Black;
-            this.lblNombreRegistro.Location = new System.Drawing.Point(76, 130);
+            this.lblNombreRegistro.Location = new System.Drawing.Point(47, 130);
             this.lblNombreRegistro.Name = "lblNombreRegistro";
-            this.lblNombreRegistro.Size = new System.Drawing.Size(97, 32);
+            this.lblNombreRegistro.Size = new System.Drawing.Size(122, 32);
             this.lblNombreRegistro.TabIndex = 25;
-            this.lblNombreRegistro.Text = "Name:";
+            this.lblNombreRegistro.Text = "Nombre:";
             // 
             // lblRegistro
             // 
@@ -264,11 +265,11 @@ namespace ProyectoIntegradoVerde
             this.lblRegistro.AutoSize = true;
             this.lblRegistro.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblRegistro.ForeColor = System.Drawing.Color.Black;
-            this.lblRegistro.Location = new System.Drawing.Point(283, 53);
+            this.lblRegistro.Location = new System.Drawing.Point(165, 9);
             this.lblRegistro.Name = "lblRegistro";
-            this.lblRegistro.Size = new System.Drawing.Size(253, 69);
+            this.lblRegistro.Size = new System.Drawing.Size(557, 69);
             this.lblRegistro.TabIndex = 24;
-            this.lblRegistro.Text = "Register";
+            this.lblRegistro.Text = "Registro de Usuario";
             // 
             // button1
             // 

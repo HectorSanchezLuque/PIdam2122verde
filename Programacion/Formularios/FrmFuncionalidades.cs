@@ -1,12 +1,6 @@
 ﻿using ProyectoIntegradoVerde.Clases;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace ProyectoIntegradoVerde.Formularios
@@ -53,7 +47,7 @@ namespace ProyectoIntegradoVerde.Formularios
             correos = Correo.Bandeja(user.Correo);
             for (int i = 0; i < correos.Count; i++)
             {
-                dgvBandeja.Rows.Add(correos[i].Id, correos[i].Asunto,correos[i].Cuerpo, correos[i].Recipiente, correos[i].Remitente, correos[i].Fecha.ToString("dd-MM-yyyy"));
+                dgvBandeja.Rows.Add(correos[i].Id, correos[i].Asunto,correos[i].Cuerpo, correos[i].Recipiente, correos[i].Remitente, correos[i].Fecha);
             }
 
             // Reuniones
@@ -178,6 +172,25 @@ namespace ProyectoIntegradoVerde.Formularios
             conexion.AbrirConexion();
             RellenarDataGrid();
             conexion.CerrarConexion();
+        }
+        private void btnEnviar_Click_1(object sender, EventArgs e)
+        {
+            DateTime myDateTime = DateTime.Now;
+            string sqlFormattedDate = myDateTime.ToString("yyyy-MM-dd HH:mm:ss");
+
+            Correo cor = new Correo();
+            
+            cor.Asunto = txtAsunto.Text;
+            cor.Cuerpo = txtCuerpo.Text;
+            cor.Recipiente = txtDest.Text;
+            cor.Remitente = user.Correo;
+            cor.Fecha = sqlFormattedDate;
+            cor.Usuario_id = user.Id;
+
+            conexion.AbrirConexion();
+            Correo.AgregarCorreo(cor);
+            conexion.CerrarConexion();
+
         }
     }
 }
