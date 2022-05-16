@@ -190,6 +190,7 @@ namespace ProyectoIntegradoVerde.Formularios
                 MessageBox.Show(dgvBandeja.Rows[e.RowIndex].Cells[e.ColumnIndex].Value.ToString(), "Cuerpo");
 
             }
+        }
 
         private void btnCrearReunion_Click(object sender, EventArgs e)
         {
