@@ -161,14 +161,15 @@ namespace ProyectoIntegradoVerde.Formularios
 
         private void btnEnviar_Click_1(object sender, EventArgs e)
         {
-            if (Usuario.ComprobarBorrado("correo", txtRemit.Text) == true)
-            {
-                MessageBox.Show("El usuario al que intenta mandar el correo está eliminado.");
-            }
-            else if (Correo.YaEsta(txtDest.Text) == false)
+            if (Correo.YaEsta(txtDest.Text) == false)
             {
                 MessageBox.Show("El destinatario ha sido introducido incorrectamente o no existe.");
             }
+            else if (Usuario.ComprobarBorrado("correo", txtDest.Text) == true)
+            {
+                MessageBox.Show("El usuario al que intenta mandar el correo está eliminado.");
+            }
+
             else
             {
                 DateTime myDateTime = DateTime.Now;
@@ -191,7 +192,7 @@ namespace ProyectoIntegradoVerde.Formularios
                 cor.Asunto = txtAsunto.Text;
                 cor.Cuerpo = txtCuerpo.Text;
                 cor.Recipiente = txtDest.Text;
-                cor.Remitente = txtRemit.Text;
+                cor.Remitente = user.Correo;
                 cor.Fecha = sqlFormattedDate;
                 cor.Usuario_id = user.Id;
 
