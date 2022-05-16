@@ -46,10 +46,16 @@ namespace Programacion
 
                             if (user.Nif == txtNif.Text && user.Password == txtPassword.Text)
                             {
-
-                                FrmPrincipal princ = new FrmPrincipal(luz, user, lang);
-                                this.Hide();
-                                princ.Show();
+                                if (Usuario.ComprobarBorrado("nif", txtNif.Text) == true)
+                                {
+                                    MessageBox.Show("Este usuario ya no existe.");
+                                }
+                                else
+                                {
+                                    FrmPrincipal princ = new FrmPrincipal(luz, user, lang);
+                                    this.Hide();
+                                    princ.Show();
+                                }
                             }
                             else
                             {

@@ -57,13 +57,13 @@ namespace ProyectoIntegradoVerde.Clases
         {
             int retorno;
 
-            string consulta = String.Format("INSERT INTO Correos (idCorreo,asunto,cuerpo,recipiente,remitente,fecha) VALUES " +
-                "('{0}','{1}','{2}','{3}','{4}','{5}')", cor.id, cor.asunto, cor.cuerpo, cor.recipiente,cor.remitente,cor.fecha);
+                string consulta = String.Format("INSERT INTO Correos (idCorreo,asunto,cuerpo,recipiente,remitente,fecha) VALUES " +
+                    "('{0}','{1}','{2}','{3}','{4}','{5}')", cor.id, cor.asunto, cor.cuerpo, cor.recipiente, cor.remitente, cor.fecha);
 
-            MySqlCommand comando = new MySqlCommand(consulta, conexion.Conexion);
-            retorno = comando.ExecuteNonQuery();
+                MySqlCommand comando = new MySqlCommand(consulta, conexion.Conexion);
+                retorno = comando.ExecuteNonQuery();
 
-            return retorno;
+                return retorno;
         }
         /// <summary>
         ///  Comprueba si un correo ya existe o no previamente a su agregación
