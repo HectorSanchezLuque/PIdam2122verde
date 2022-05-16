@@ -202,6 +202,7 @@ namespace ProyectoIntegradoVerde
         /// <returns></returns>
         static public bool compNif(string nif)
         {
+
             string num = "";
             string lets = "TRWAGMYFPDXBNJZSQVHLCKE";
             char let;
