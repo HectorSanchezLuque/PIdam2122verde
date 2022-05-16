@@ -27,8 +27,11 @@ namespace Programacion
             InitializeComponent();
         }
 
+<<<<<<< HEAD
+=======
 
 
+>>>>>>> 63372ebeb04806ab0909949de7c59a546c18326f
         private void btnIniSesion_Click(object sender, EventArgs e)
         {
             if (Usuario.compNif(txtNif.Text))

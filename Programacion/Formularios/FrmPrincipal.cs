@@ -20,11 +20,17 @@ namespace ProyectoIntegradoVerde.Formularios
         private bool luz;
         bool lang;
         private Usuario user;
+<<<<<<< HEAD
+        
+
+        public bool Luz { get => luz; }
+=======
 
         FrmFuncionalidades func = new FrmFuncionalidades();
         
 
         public FrmPrincipal(bool l, Usuario us,bool leng)
+>>>>>>> 63372ebeb04806ab0909949de7c59a546c18326f
 
 
         {
@@ -59,8 +65,6 @@ namespace ProyectoIntegradoVerde.Formularios
         private void btnCerrarSesion_Click(object sender, EventArgs e)
         {
             Environment.Exit(1);
-            FrmFuncionalidades func = new FrmFuncionalidades();
-            func.ShowDialog();
         }
 
         private void btnTareas_Click(object sender, EventArgs e)
@@ -69,12 +73,19 @@ namespace ProyectoIntegradoVerde.Formularios
             {
                 if (conexion.Conexion != null)
                 {
+<<<<<<< HEAD
+                    FrmFuncionalidades func = new FrmFuncionalidades();
+                        func.NumPag= 0;
+                        func.User = user;
+                        func.Show();
+=======
                         conexion.AbrirConexion();
                     FrmFuncionalidades func = new FrmFuncionalidades();
                     func.User = user;
                     func.NumPag = 0;
 
                     func.Show();
+>>>>>>> 63372ebeb04806ab0909949de7c59a546c18326f
                 }
                 else
                 {
@@ -94,7 +105,10 @@ namespace ProyectoIntegradoVerde.Formularios
 
         private void btnCalendario_Click(object sender, EventArgs e)
         {
+<<<<<<< HEAD
+=======
 
+>>>>>>> 63372ebeb04806ab0909949de7c59a546c18326f
             FrmFuncionalidades func = new FrmFuncionalidades();
             func.User = user;
             func.NumPag = 1;
@@ -111,7 +125,10 @@ namespace ProyectoIntegradoVerde.Formularios
 
         private void btnCorreo_Click(object sender, EventArgs e)
         {
+<<<<<<< HEAD
+=======
             
+>>>>>>> 63372ebeb04806ab0909949de7c59a546c18326f
             FrmFuncionalidades func = new FrmFuncionalidades();
             func.User = user;
             func.NumPag = 3;
