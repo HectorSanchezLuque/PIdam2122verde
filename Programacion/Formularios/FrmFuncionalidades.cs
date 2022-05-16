@@ -24,14 +24,27 @@ namespace ProyectoIntegradoVerde.Formularios
         
         public void RellenarDataGrid()
         {
+
+            // Tareas sin asignar
+
+            dgvTareasPendientes.Rows.Clear();
+            dgvTareasSinAsignar.Rows.Clear();
             
-            // Tareas
             List<Tarea> list = new List<Tarea>();
             list = Tarea.ListadoTareas();
            
             for (int i = 0; i < list.Count; i++)
             {
                 dgvTareasSinAsignar.Rows.Add(list[i].Id, list[i].Titulo, list[i].FPublicacion.ToString("dd-MM-yyyy"), list[i].FLimite.ToString("dd-MM-yyyy"), list[i].Puntos);
+            }
+
+            // Tareas asignadas
+            
+            List<Tarea> list2 = new List<Tarea>();
+            list2 = Tarea.ListadoTareasAsignadas(user.Id);
+            for (int i = 0; i < list2.Count; i++)
+            {
+                dgvTareasPendientes.Rows.Add(list2[i].Id, list2[i].Titulo, list2[i].FPublicacion.ToString("dd-MM-yyyy"), list2[i].FLimite.ToString("dd-MM-yyyy"), list2[i].Puntos);
             }
 
             // Correo
@@ -42,6 +55,8 @@ namespace ProyectoIntegradoVerde.Formularios
             {
                 dgvBandeja.Rows.Add(correos[i].Id, correos[i].Asunto,correos[i].Cuerpo, correos[i].Recipiente, correos[i].Remitente, correos[i].Fecha.ToString("dd-MM-yyyy"));
             }
+
+
             
         }
         public FrmFuncionalidades()
@@ -141,6 +156,13 @@ namespace ProyectoIntegradoVerde.Formularios
                 }
             }
             return message;
+        }
+
+        private void btnActualizar_Click(object sender, EventArgs e)
+        {
+            conexion.AbrirConexion();
+            RellenarDataGrid();
+            conexion.CerrarConexion();
         }
     }
 }

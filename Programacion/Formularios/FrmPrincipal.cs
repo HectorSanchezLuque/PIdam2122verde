@@ -69,7 +69,6 @@ namespace ProyectoIntegradoVerde.Formularios
             {
                 if (conexion.Conexion != null)
                 {
-                        conexion.AbrirConexion();
                     FrmFuncionalidades func = new FrmFuncionalidades();
                     func.User = user;
                     func.NumPag = 0;

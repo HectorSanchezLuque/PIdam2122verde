@@ -71,10 +71,10 @@ namespace ProyectoIntegradoVerde.Clases
             return tareas;
         }
 
-        public static List<Tarea> ListadoTareasAsignadas()
+        public static List<Tarea> ListadoTareasAsignadas(int id)
         {
             List<Tarea> tareas = new List<Tarea>();
-            string consulta = String.Format("SELECT * FROM tarea WHERE asignado = true && finalizado = false && fecha_limite > CURRENT_DATE() && usuarios_nif =  ;");
+            string consulta = String.Format("SELECT * FROM tarea WHERE asignado = true && finalizado = false && fecha_limite > CURRENT_DATE() && usuarios_id = ({0}) ;", id);
             MySqlCommand comando = new MySqlCommand(consulta, conexion.Conexion);
             MySqlDataReader reader = comando.ExecuteReader();
 
@@ -84,6 +84,7 @@ namespace ProyectoIntegradoVerde.Clases
                 while (reader.Read())
                 {
                     Tarea t = new Tarea();
+                    t.Id = reader.GetInt32(0);
                     t.Titulo = reader.GetString(1);
                     t.puntos = reader.GetInt32(3);
                     t.FPublicacion = reader.GetDateTime(6);
