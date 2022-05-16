@@ -23,7 +23,8 @@ namespace ProyectoIntegradoVerde.Formularios
 
             dgvTareasPendientes.Rows.Clear();
             dgvTareasSinAsignar.Rows.Clear();
-            
+            dgvReuniones.Rows.Clear();
+
             List<Tarea> list = new List<Tarea>();
             list = Tarea.ListadoTareas();
            
@@ -44,14 +45,21 @@ namespace ProyectoIntegradoVerde.Formularios
             // Correo
             List<Correo> correos;
             correos = Correo.Bandeja(user.Correo);
-            conexion.CerrarConexion();
             for (int i = 0; i < correos.Count; i++)
             {
                 dgvBandeja.Rows.Add(correos[i].Id, correos[i].Asunto,correos[i].Cuerpo, correos[i].Recipiente, correos[i].Remitente, correos[i].Fecha);
             }
 
+            // Reuniones
 
-            
+            List<Reuniones> list3 = new List<Reuniones>();
+            list3 = Reuniones.ListadoReuniones(user.Id);
+            for (int i = 0; i < list3.Count; i++)
+            {
+                string f = list3[i].Fecha.ToString("dd-MM-yyyy") + " // " + list3[i].Hora.ToString("HH:mm");
+                dgvReuniones.Rows.Add(list3[i].Id, list3[i].Nombre, list3[i].Descripcion, f);
+            }
+            conexion.CerrarConexion();
         }
         public FrmFuncionalidades()
         {
@@ -159,6 +167,12 @@ namespace ProyectoIntegradoVerde.Formularios
             conexion.CerrarConexion();
         }
 
+        private void btnActualizarReuniones_Click(object sender, EventArgs e)
+        {
+            conexion.AbrirConexion();
+            RellenarDataGrid();
+            conexion.CerrarConexion();
+        }
         private void btnEnviar_Click_1(object sender, EventArgs e)
         {
             conexion.AbrirConexion();
@@ -179,25 +193,14 @@ namespace ProyectoIntegradoVerde.Formularios
                 string sqlFormattedDate = myDateTime.ToString("yyyy-MM-dd HH:mm:ss");
                 //DateTime hola = Convert.ToDateTime(sqlFormattedDate);
 
-                //string dateString = DateTime.Now.ToString();
-                //DateTime dateString = DateTime.Now;
-                //string format = "yyyy-MM-dd HH:mm:ss";
-                //DateTime result = DateTime.Parse(dateString,format);
-
-                //var cultureInfo = new CultureInfo("us-US"); //En nuestro caso ("us-US") creo //fecha
-                //string dateString = DateTime.Now.ToString(); //fecha
-                //DateTime dateTime = DateTime.ParseExact(dateString, "yyyy-MM-dd HH:mm:ss", cultureInfo);
-                //string fecha = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
-
-
-                Correo cor = new Correo();
-
-                cor.Asunto = txtAsunto.Text;
-                cor.Cuerpo = txtCuerpo.Text;
-                cor.Recipiente = txtDest.Text;
-                cor.Remitente = user.Correo;
-                cor.Fecha = sqlFormattedDate;
-                cor.Usuario_id = user.Id;
+            Correo cor = new Correo();
+            
+            cor.Asunto = txtAsunto.Text;
+            cor.Cuerpo = txtCuerpo.Text;
+            cor.Recipiente = txtDest.Text;
+            cor.Remitente = user.Correo;
+            cor.Fecha = sqlFormattedDate;
+            cor.Usuario_id = user.Id;
 
                 conexion.AbrirConexion();
                 Correo.AgregarCorreo(cor);
@@ -207,4 +210,4 @@ namespace ProyectoIntegradoVerde.Formularios
             }
         }
     }
-}
+
