@@ -74,19 +74,22 @@ namespace ProyectoIntegradoVerde.Clases
         {
             string consulta = string.Format("SELECT correo FROM usuarios" +
             " WHERE correo='{0}'", correo);
-
-            MySqlCommand comando = new MySqlCommand(consulta, conexion.Conexion);
-            MySqlDataReader reader = comando.ExecuteReader();
-            if (reader.HasRows)
+            try
             {
-                reader.Close();
-                return true;
+                MySqlCommand comando = new MySqlCommand(consulta, conexion.Conexion);
+                MySqlDataReader reader = comando.ExecuteReader();
+                if (reader.HasRows)
+                {
+                    reader.Close();
+                    return true;
+                }
+                else
+                {
+                    reader.Close();
+                    return false;
+                }
             }
-            else
-            {
-                reader.Close();
-                return false;
-            }
+            catch { return false; }
 
         }
         /// <summary>
