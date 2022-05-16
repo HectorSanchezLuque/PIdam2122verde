@@ -148,8 +148,23 @@ namespace ProyectoIntegradoVerde.Formularios
         }
         private void btnEnviar_Click_1(object sender, EventArgs e)
         {
-            DateTime myDateTime = DateTime.Now;
-            string sqlFormattedDate = myDateTime.ToString("yyyy-MM-dd HH:mm:ss");
+            conexion.AbrirConexion();
+            if (Correo.YaEsta(txtDest.Text) == false)
+            {
+                MessageBox.Show("El destinatario ha sido introducido incorrectamente o no existe.");
+                conexion.CerrarConexion();
+            }
+            else if (Usuario.ComprobarBorrado("correo", txtDest.Text) == true)
+            {
+                MessageBox.Show("El usuario al que intenta mandar el correo está eliminado.");
+                conexion.CerrarConexion();
+            }
+            else
+            {
+                conexion.CerrarConexion();
+                DateTime myDateTime = DateTime.Now;
+                string sqlFormattedDate = myDateTime.ToString("yyyy-MM-dd HH:mm:ss");
+                //DateTime hola = Convert.ToDateTime(sqlFormattedDate);
 
             Correo cor = new Correo();
 
@@ -160,6 +175,7 @@ namespace ProyectoIntegradoVerde.Formularios
             cor.Fecha = sqlFormattedDate;
             cor.Usuario_id = user.Id;
 
+<<<<<<< HEAD
             conexion.AbrirConexion();
             Correo.AgregarCorreo(cor);
             conexion.CerrarConexion();
@@ -171,6 +187,13 @@ namespace ProyectoIntegradoVerde.Formularios
             if (dgvBandeja.Rows[e.RowIndex].Cells[e.ColumnIndex].Value != null)
             {
                 MessageBox.Show(dgvBandeja.Rows[e.RowIndex].Cells[e.ColumnIndex].Value.ToString(),"Cuerpo");
+=======
+                conexion.AbrirConexion();
+                Correo.AgregarCorreo(cor);
+                conexion.CerrarConexion();
+
+                MessageBox.Show("Correo enviado con éxito.");
+>>>>>>> 1ddfefcb7f1f20de1a9cb1b907818b79b7eb8774
             }
         }
     }
