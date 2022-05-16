@@ -170,6 +170,7 @@ namespace Programacion
                             if (user.Password == txtPassword.Text && user.Cargo == "Administrador" || user.Cargo == "Jefe")
                             {
                                 Registro reg = new Registro();
+                                reg.ShowDialog();
                             }
                             else
                             {
