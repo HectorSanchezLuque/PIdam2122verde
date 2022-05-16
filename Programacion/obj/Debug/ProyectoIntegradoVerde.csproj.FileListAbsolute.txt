@@ -180,3 +180,4 @@ C:\Users\alvar\Desktop\proyecto\PIdam2122verde\Programacion\obj\Debug\ProyectoIn
 C:\Users\alvar\Desktop\proyecto\PIdam2122verde\Programacion\obj\Debug\ProyectoIntegradoVerde.RecursosLocalizables.StringRecursos.resources
 >>>>>>> 25431d9b182b2e1d3acc18b29fe9fee2cdd574ee
 C:\Users\jacaar\Documents\PIdam2122verde\Programacion\obj\Debug\ProyectoIntegradoVerde.RecursosLocalizables.StringRecursos.resources
+C:\Users\Akayu\Desktop\ProyectoIntegrado\Programacion\obj\Debug\ProyectoIntegradoVerde.RecursosLocalizables.StringRecursos.resources
