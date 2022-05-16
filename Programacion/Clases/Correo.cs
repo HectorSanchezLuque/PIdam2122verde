@@ -68,23 +68,23 @@ namespace ProyectoIntegradoVerde.Clases
         /// <summary>
         ///  Comprueba si un correo ya existe o no previamente a su agregación
         /// </summary>
-        /// <param name="id">Id del correo</param>
+        /// <param name="correo">Id del correo</param>
         /// <returns>True si está y False si no está</returns>
-        public bool YaEsta(string id)
+        static public bool YaEsta(string correo)
         {
-            string consulta = string.Format("SELECT * FROM Correos" +
-            " WHERE idCorreo='{0}'", id);
+            string consulta = string.Format("SELECT correo FROM usuarios" +
+            " WHERE correo='{0}'", correo);
 
             MySqlCommand comando = new MySqlCommand(consulta, conexion.Conexion);
             MySqlDataReader reader = comando.ExecuteReader();
             if (reader.HasRows)
-            { // si existen registros en la devolución de la consulta
-                reader.Close();   // Cierro el reader para utilizar la misma conexión en AgregarUsuario
+            {
+                reader.Close();
                 return true;
             }
             else
             {
-                reader.Close();  // Cierro el reader para utilizar la misma conexión en AgregarUsuario
+                reader.Close();
                 return false;
             }
 

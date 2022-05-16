@@ -175,22 +175,44 @@ namespace ProyectoIntegradoVerde.Formularios
         }
         private void btnEnviar_Click_1(object sender, EventArgs e)
         {
-            DateTime myDateTime = DateTime.Now;
-            string sqlFormattedDate = myDateTime.ToString("yyyy-MM-dd HH:mm:ss");
+            if (Usuario.ComprobarBorrado("correo", txtRemit.Text) == true)
+            {
+                MessageBox.Show("El usuario al que intenta mandar el correo está eliminado.");
+            }
+            else if (Correo.YaEsta(txtDest.Text) == false)
+            {
+                MessageBox.Show("El destinatario ha sido introducido incorrectamente o no existe.");
+            }
+            else
+            {
+                DateTime myDateTime = DateTime.Now;
+                string sqlFormattedDate = myDateTime.ToString("yyyy-MM-dd HH:mm:ss");
+                //DateTime hola = Convert.ToDateTime(sqlFormattedDate);
 
-            Correo cor = new Correo();
-            
-            cor.Asunto = txtAsunto.Text;
-            cor.Cuerpo = txtCuerpo.Text;
-            cor.Recipiente = txtDest.Text;
-            cor.Remitente = user.Correo;
-            cor.Fecha = sqlFormattedDate;
-            cor.Usuario_id = user.Id;
+                //string dateString = DateTime.Now.ToString();
+                //DateTime dateString = DateTime.Now;
+                //string format = "yyyy-MM-dd HH:mm:ss";
+                //DateTime result = DateTime.Parse(dateString,format);
 
-            conexion.AbrirConexion();
-            Correo.AgregarCorreo(cor);
-            conexion.CerrarConexion();
+                //var cultureInfo = new CultureInfo("us-US"); //En nuestro caso ("us-US") creo //fecha
+                //string dateString = DateTime.Now.ToString(); //fecha
+                //DateTime dateTime = DateTime.ParseExact(dateString, "yyyy-MM-dd HH:mm:ss", cultureInfo);
+                //string fecha = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
 
+
+                Correo cor = new Correo();
+
+                cor.Asunto = txtAsunto.Text;
+                cor.Cuerpo = txtCuerpo.Text;
+                cor.Recipiente = txtDest.Text;
+                cor.Remitente = txtRemit.Text;
+                cor.Fecha = sqlFormattedDate;
+                cor.Usuario_id = user.Id;
+
+                conexion.AbrirConexion();
+                Correo.AgregarCorreo(cor);
+                conexion.CerrarConexion();
+            }
         }
     }
 }
