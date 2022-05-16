@@ -1,13 +1,6 @@
 ﻿using ProyectoIntegradoVerde.Clases;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Globalization;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace ProyectoIntegradoVerde.Formularios
@@ -54,7 +47,7 @@ namespace ProyectoIntegradoVerde.Formularios
             conexion.CerrarConexion();
             for (int i = 0; i < correos.Count; i++)
             {
-                dgvBandeja.Rows.Add(correos[i].Id, correos[i].Asunto,correos[i].Cuerpo, correos[i].Recipiente, correos[i].Remitente, correos[i].Fecha.ToString("dd-MM-yyyy"));
+                dgvBandeja.Rows.Add(correos[i].Id, correos[i].Asunto,correos[i].Cuerpo, correos[i].Recipiente, correos[i].Remitente, correos[i].Fecha);
             }
 
 
@@ -168,8 +161,8 @@ namespace ProyectoIntegradoVerde.Formularios
 
         private void btnEnviar_Click_1(object sender, EventArgs e)
         {
-            //DateTime myDateTime = DateTime.Now;
-            //string sqlFormattedDate = myDateTime.ToString("yyyy-MM-dd HH:mm:ss");
+            DateTime myDateTime = DateTime.Now;
+            string sqlFormattedDate = myDateTime.ToString("yyyy-MM-dd HH:mm:ss");
             //DateTime hola = Convert.ToDateTime(sqlFormattedDate);
 
             //string dateString = DateTime.Now.ToString();
@@ -177,18 +170,19 @@ namespace ProyectoIntegradoVerde.Formularios
             //string format = "yyyy-MM-dd HH:mm:ss";
             //DateTime result = DateTime.Parse(dateString,format);
 
-            var cultureInfo = new CultureInfo("us-US"); //En nuestro caso ("us-US") creo //fecha
-            string dateString = DateTime.Now.ToString(); //fecha
-            DateTime dateTime = DateTime.ParseExact(dateString, "yyyy-MM-dd HH:mm:ss", cultureInfo);
-            string fecha = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
+            //var cultureInfo = new CultureInfo("us-US"); //En nuestro caso ("us-US") creo //fecha
+            //string dateString = DateTime.Now.ToString(); //fecha
+            //DateTime dateTime = DateTime.ParseExact(dateString, "yyyy-MM-dd HH:mm:ss", cultureInfo);
+            //string fecha = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
+            
 
             Correo cor = new Correo();
             
             cor.Asunto = txtAsunto.Text;
             cor.Cuerpo = txtCuerpo.Text;
             cor.Recipiente = txtDest.Text;
-            cor.Recipiente = txtRemit.Text;
-            cor.Fecha = dateTime;
+            cor.Remitente = txtRemit.Text;
+            cor.Fecha = sqlFormattedDate;
             cor.Usuario_id = user.Id;
 
             conexion.AbrirConexion();

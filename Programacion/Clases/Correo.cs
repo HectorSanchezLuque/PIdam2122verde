@@ -16,7 +16,7 @@ namespace ProyectoIntegradoVerde.Clases
         private string cuerpo;
         private string recipiente;
         private string remitente;
-        private DateTime fecha;
+        private string fecha;
         private int usuario_id;
 
         // Constructor vacio
@@ -24,7 +24,7 @@ namespace ProyectoIntegradoVerde.Clases
         public Correo() { }
 
         // Constructor
-        public Correo(int id, string asunto, string cuerpo, string recipiente, string remitente, DateTime fecha, int usuario_id)
+        public Correo(int id, string asunto, string cuerpo, string recipiente, string remitente, string fecha, int usuario_id)
         {
             this.id = id;
             this.asunto = asunto;
@@ -42,7 +42,7 @@ namespace ProyectoIntegradoVerde.Clases
         public string Cuerpo { get => cuerpo; set => cuerpo = value; }
         public string Recipiente { get => recipiente; set => recipiente = value; }
         public string Remitente { get => remitente; set => remitente = value; }
-        public DateTime Fecha { get => fecha; set => fecha = value; }
+        public string Fecha { get => fecha; set => fecha = value; }
         public int Usuario_id { get => usuario_id; set => usuario_id = value; }
 
         // Metodos
@@ -144,7 +144,7 @@ namespace ProyectoIntegradoVerde.Clases
                     co.cuerpo = reader.GetString(2);
                     co.recipiente = reader.GetString(3);
                     co.remitente = reader.GetString(4);
-                    co.fecha = reader.GetDateTime(5);
+                    co.fecha = reader.GetString(5);
                     co.usuario_id = reader.GetInt32(6);
                     bandeja.Add(co);
                 }
