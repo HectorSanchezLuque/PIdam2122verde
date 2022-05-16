@@ -166,17 +166,23 @@ namespace ProyectoIntegradoVerde.Formularios
         }
         private void btnEnviar_Click(object sender, EventArgs e)
         {
-            DateTime myDateTime = DateTime.Now;
-            string sqlFormattedDate = myDateTime.ToString("yyyy-MM-dd HH:mm:ss");
-            DateTime hola = Convert.ToDateTime(sqlFormattedDate);
+            //DateTime myDateTime = DateTime.Now;
+            //string sqlFormattedDate = myDateTime.ToString("yyyy-MM-dd HH:mm:ss");
+            //DateTime hola = Convert.ToDateTime(sqlFormattedDate);
 
+            string dateString = DateTime.Now.ToString();
+            dateString = string.Format("yyyy-MM-dd HH:mm:ss");
+            //string format = "yyyy-MM-dd HH:mm:ss";
+            //try
+            //{
+                //result = DateTime.ParseExact(dateString, format, provider);
 
             Correo cor = new Correo();
             cor.Asunto = txtAsunto.Text;
             cor.Cuerpo = txtCuerpo.Text;
             cor.Recipiente = txtDest.Text;
             cor.Recipiente = txtRemit.Text;
-            cor.Fecha = hola;
+            cor.Fecha = Convert.ToDateTime(dateString);
             cor.Usuario_id = user.Id;
 
             conexion.AbrirConexion();
