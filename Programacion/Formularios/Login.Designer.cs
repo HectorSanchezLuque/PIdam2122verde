@@ -114,6 +114,7 @@
             this.btnRegistro.TabIndex = 8;
             this.btnRegistro.Text = "Registrar usuario";
             this.btnRegistro.UseVisualStyleBackColor = true;
+            this.btnRegistro.Click += new System.EventHandler(this.btnRegistro_Click);
             // 
             // lblLang
             // 
