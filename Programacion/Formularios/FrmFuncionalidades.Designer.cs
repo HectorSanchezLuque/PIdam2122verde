@@ -76,6 +76,12 @@ namespace ProyectoIntegradoVerde.Formularios
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.btnActualizar = new System.Windows.Forms.Button();
+            this.idreu = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nombreReu = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.descReu = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fechaReu = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnActualizarReuniones = new System.Windows.Forms.Button();
+            this.btnCrearReunion = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTareasPendientes)).BeginInit();
@@ -176,6 +182,7 @@ namespace ProyectoIntegradoVerde.Formularios
             this.Tid.HeaderText = "ID";
             this.Tid.MinimumWidth = 6;
             this.Tid.Name = "Tid";
+            this.Tid.ReadOnly = true;
             // 
             // tituloasignado
             // 
@@ -233,6 +240,7 @@ namespace ProyectoIntegradoVerde.Formularios
             this.Tareaid.HeaderText = "ID";
             this.Tareaid.MinimumWidth = 6;
             this.Tareaid.Name = "Tareaid";
+            this.Tareaid.ReadOnly = true;
             // 
             // Titulo
             // 
@@ -287,6 +295,8 @@ namespace ProyectoIntegradoVerde.Formularios
             // 
             // tabPage3
             // 
+            this.tabPage3.Controls.Add(this.btnCrearReunion);
+            this.tabPage3.Controls.Add(this.btnActualizarReuniones);
             this.tabPage3.Controls.Add(this.dgvReuniones);
             this.tabPage3.Location = new System.Drawing.Point(4, 25);
             this.tabPage3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -300,11 +310,16 @@ namespace ProyectoIntegradoVerde.Formularios
             // dgvReuniones
             // 
             this.dgvReuniones.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvReuniones.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.idreu,
+            this.nombreReu,
+            this.descReu,
+            this.fechaReu});
             this.dgvReuniones.Location = new System.Drawing.Point(12, 11);
             this.dgvReuniones.Margin = new System.Windows.Forms.Padding(4);
             this.dgvReuniones.Name = "dgvReuniones";
             this.dgvReuniones.RowHeadersWidth = 51;
-            this.dgvReuniones.Size = new System.Drawing.Size(837, 478);
+            this.dgvReuniones.Size = new System.Drawing.Size(837, 408);
             this.dgvReuniones.TabIndex = 0;
             // 
             // tabPage4
@@ -569,6 +584,57 @@ namespace ProyectoIntegradoVerde.Formularios
             this.btnActualizar.UseVisualStyleBackColor = true;
             this.btnActualizar.Click += new System.EventHandler(this.btnActualizar_Click);
             // 
+            // idreu
+            // 
+            this.idreu.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.idreu.HeaderText = "ID";
+            this.idreu.MinimumWidth = 6;
+            this.idreu.Name = "idreu";
+            this.idreu.ReadOnly = true;
+            // 
+            // nombreReu
+            // 
+            this.nombreReu.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.nombreReu.HeaderText = "Nombre";
+            this.nombreReu.MinimumWidth = 6;
+            this.nombreReu.Name = "nombreReu";
+            this.nombreReu.ReadOnly = true;
+            // 
+            // descReu
+            // 
+            this.descReu.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.descReu.HeaderText = "Descripción";
+            this.descReu.MinimumWidth = 6;
+            this.descReu.Name = "descReu";
+            this.descReu.ReadOnly = true;
+            // 
+            // fechaReu
+            // 
+            this.fechaReu.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.fechaReu.HeaderText = "Fecha";
+            this.fechaReu.MinimumWidth = 6;
+            this.fechaReu.Name = "fechaReu";
+            this.fechaReu.ReadOnly = true;
+            // 
+            // btnActualizarReuniones
+            // 
+            this.btnActualizarReuniones.Location = new System.Drawing.Point(688, 438);
+            this.btnActualizarReuniones.Name = "btnActualizarReuniones";
+            this.btnActualizarReuniones.Size = new System.Drawing.Size(129, 35);
+            this.btnActualizarReuniones.TabIndex = 1;
+            this.btnActualizarReuniones.Text = "Actualizar";
+            this.btnActualizarReuniones.UseVisualStyleBackColor = true;
+            this.btnActualizarReuniones.Click += new System.EventHandler(this.btnActualizarReuniones_Click);
+            // 
+            // btnCrearReunion
+            // 
+            this.btnCrearReunion.Location = new System.Drawing.Point(48, 438);
+            this.btnCrearReunion.Name = "btnCrearReunion";
+            this.btnCrearReunion.Size = new System.Drawing.Size(129, 35);
+            this.btnCrearReunion.TabIndex = 2;
+            this.btnCrearReunion.Text = "Crear Reunión";
+            this.btnCrearReunion.UseVisualStyleBackColor = true;
+            // 
             // FrmFuncionalidades
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -648,5 +714,11 @@ namespace ProyectoIntegradoVerde.Formularios
         private System.Windows.Forms.DataGridViewTextBoxColumn remit;
         private System.Windows.Forms.DataGridViewTextBoxColumn date;
         private System.Windows.Forms.Button btnActualizar;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idreu;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nombreReu;
+        private System.Windows.Forms.DataGridViewTextBoxColumn descReu;
+        private System.Windows.Forms.DataGridViewTextBoxColumn fechaReu;
+        private System.Windows.Forms.Button btnCrearReunion;
+        private System.Windows.Forms.Button btnActualizarReuniones;
     }
 }

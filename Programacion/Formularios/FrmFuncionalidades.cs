@@ -29,7 +29,8 @@ namespace ProyectoIntegradoVerde.Formularios
 
             dgvTareasPendientes.Rows.Clear();
             dgvTareasSinAsignar.Rows.Clear();
-            
+            dgvReuniones.Rows.Clear();
+
             List<Tarea> list = new List<Tarea>();
             list = Tarea.ListadoTareas();
            
@@ -50,14 +51,21 @@ namespace ProyectoIntegradoVerde.Formularios
             // Correo
             List<Correo> correos;
             correos = Correo.Bandeja(user.Correo);
-            conexion.CerrarConexion();
             for (int i = 0; i < correos.Count; i++)
             {
                 dgvBandeja.Rows.Add(correos[i].Id, correos[i].Asunto,correos[i].Cuerpo, correos[i].Recipiente, correos[i].Remitente, correos[i].Fecha.ToString("dd-MM-yyyy"));
             }
 
+            // Reuniones
 
-            
+            List<Reuniones> list3 = new List<Reuniones>();
+            list3 = Reuniones.ListadoReuniones(user.Id);
+            for (int i = 0; i < list3.Count; i++)
+            {
+                string f = list3[i].Fecha.ToString("dd-MM-yyyy") + " // " + list3[i].Hora.ToString("HH:mm");
+                dgvReuniones.Rows.Add(list3[i].Id, list3[i].Nombre, list3[i].Descripcion, f);
+            }
+            conexion.CerrarConexion();
         }
         public FrmFuncionalidades()
         {
@@ -159,6 +167,13 @@ namespace ProyectoIntegradoVerde.Formularios
         }
 
         private void btnActualizar_Click(object sender, EventArgs e)
+        {
+            conexion.AbrirConexion();
+            RellenarDataGrid();
+            conexion.CerrarConexion();
+        }
+
+        private void btnActualizarReuniones_Click(object sender, EventArgs e)
         {
             conexion.AbrirConexion();
             RellenarDataGrid();
