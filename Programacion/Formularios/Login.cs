@@ -31,44 +31,49 @@ namespace Programacion
 
         private void btnIniSesion_Click(object sender, EventArgs e)
         {
-            if (Usuario.compNif(txtNif.Text))
-            {
-                try
+            if (string.IsNullOrEmpty(txtNif.Text)) {
+                MessageBox.Show("Error al Iniciar sesion: El campo NIF esta vacío", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else {
+                if (Usuario.compNif(txtNif.Text))
                 {
-                    if (conexion.Conexion != null)
+                    try
                     {
-                        conexion.AbrirConexion();
-                        Usuario user = Usuario.BuscarUsuario(txtNif.Text);
-                        
-                        if (user.Nif == txtNif.Text && user.Password == txtPassword.Text)
-                        {                           
-                                                    
-                            FrmPrincipal princ = new FrmPrincipal(luz, user,lang);
-                            this.Hide();
-                            princ.Show();
+                        if (conexion.Conexion != null)
+                        {
+                            conexion.AbrirConexion();
+                            Usuario user = Usuario.BuscarUsuario(txtNif.Text);
+
+                            if (user.Nif == txtNif.Text && user.Password == txtPassword.Text)
+                            {
+
+                                FrmPrincipal princ = new FrmPrincipal(luz, user, lang);
+                                this.Hide();
+                                princ.Show();
+                            }
+                            else
+                            {
+                                MessageBox.Show("No se ha podido iniciar sesión");
+                            }
                         }
                         else
                         {
-                            MessageBox.Show("No se ha podido iniciar sesión");
+                            MessageBox.Show("No se ha podido abrir la conexión con la Base de Datos");
                         }
                     }
-                    else
+                    catch (Exception ex)
                     {
-                        MessageBox.Show("No se ha podido abrir la conexión con la Base de Datos");
+                        MessageBox.Show(ex.Message + "\n" + ex.StackTrace);
+                    }
+                    finally
+                    {
+                        conexion.CerrarConexion();
                     }
                 }
-                catch (Exception ex)
+                else
                 {
-                    MessageBox.Show(ex.Message + "\n" + ex.StackTrace);
+                    MessageBox.Show("El NIF no es válido");
                 }
-                finally
-                {
-                    conexion.CerrarConexion();
-                }
-            }
-            else
-            {
-                MessageBox.Show("El NIF no es válido");
             }
         }
 
