@@ -237,7 +237,7 @@ namespace ProyectoIntegradoVerde
         /// </summary>
         /// <param name="campoDato">Campo de la BdD</param>
         /// <param name="valorDato">Valor del dato</param>
-        /// <returns></returns>
+        /// <returns>True si está borrado, False si no está borrado.</returns>
         static public bool ComprobarBorrado(string campoDato,string valorDato)
         {
             bool existe = false;
