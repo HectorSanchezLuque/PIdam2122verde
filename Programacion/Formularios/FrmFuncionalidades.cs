@@ -14,8 +14,8 @@ namespace ProyectoIntegradoVerde.Formularios
         public Usuario User { get => user; set => user = value; }
 
 
-        
-        
+
+
         public void RellenarDataGrid()
         {
 
@@ -27,14 +27,14 @@ namespace ProyectoIntegradoVerde.Formularios
 
             List<Tarea> list = new List<Tarea>();
             list = Tarea.ListadoTareas();
-           
+
             for (int i = 0; i < list.Count; i++)
             {
                 dgvTareasSinAsignar.Rows.Add(list[i].Id, list[i].Titulo, list[i].FPublicacion.ToString("dd-MM-yyyy"), list[i].FLimite.ToString("dd-MM-yyyy"), list[i].Puntos);
             }
 
             // Tareas asignadas
-            
+
             List<Tarea> list2 = new List<Tarea>();
             list2 = Tarea.ListadoTareasAsignadas(user.Id);
             for (int i = 0; i < list2.Count; i++)
@@ -47,7 +47,7 @@ namespace ProyectoIntegradoVerde.Formularios
             correos = Correo.Bandeja(user.Correo);
             for (int i = 0; i < correos.Count; i++)
             {
-                dgvBandeja.Rows.Add(correos[i].Id, correos[i].Asunto,correos[i].Cuerpo, correos[i].Recipiente, correos[i].Remitente, correos[i].Fecha);
+                dgvBandeja.Rows.Add(correos[i].Id, correos[i].Asunto, correos[i].Cuerpo, correos[i].Recipiente, correos[i].Remitente, correos[i].Fecha);
             }
 
             // Reuniones
@@ -96,7 +96,7 @@ namespace ProyectoIntegradoVerde.Formularios
 
         private void tabPage1_Click(object sender, EventArgs e)
         {
-            
+
         }
 
         private void dgvTareasSinAsignar_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
@@ -129,36 +129,9 @@ namespace ProyectoIntegradoVerde.Formularios
             }
         }
 
-        private void dgvBandeja_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            string cuerpo = RowMessage();
-            string title = "Cuerpo: ";
-            MessageBox.Show(""+cuerpo,title);
-        }
 
-        private string RowMessage()
-        {
-            int count = 0;
-            string message = "";
-            for (int j = 0; j < dgvBandeja.Rows.Count; j++)
-            {
-                if (count < dgvBandeja.Rows.Count)
-                {
-                    string cuerpo = dgvBandeja.Rows[count].Cells[2].Value.ToString();
-                    message += cuerpo;
-                    count++;
-                    if (count % 1 == 0)
-                    {
-                        break;
-                    }
-                }
-                else
-                {
-                    break;
-                }
-            }
-            return message;
-        }
+
+
 
         private void btnActualizar_Click(object sender, EventArgs e)
         {
@@ -175,21 +148,47 @@ namespace ProyectoIntegradoVerde.Formularios
         }
         private void btnEnviar_Click_1(object sender, EventArgs e)
         {
-            DateTime myDateTime = DateTime.Now;
-            string sqlFormattedDate = myDateTime.ToString("yyyy-MM-dd HH:mm:ss");
+            conexion.AbrirConexion();
+            if (Correo.YaEsta(txtDest.Text) == false)
+            {
+                MessageBox.Show("El destinatario ha sido introducido incorrectamente o no existe.");
+                conexion.CerrarConexion();
+            }
+            else if (Usuario.ComprobarBorrado("correo", txtDest.Text) == true)
+            {
+                MessageBox.Show("El usuario al que intenta mandar el correo está eliminado.");
+                conexion.CerrarConexion();
+            }
+            else
+            {
+                conexion.CerrarConexion();
+                DateTime myDateTime = DateTime.Now;
+                string sqlFormattedDate = myDateTime.ToString("yyyy-MM-dd HH:mm:ss");
 
-            Correo cor = new Correo();
-            
-            cor.Asunto = txtAsunto.Text;
-            cor.Cuerpo = txtCuerpo.Text;
-            cor.Recipiente = txtDest.Text;
-            cor.Remitente = user.Correo;
-            cor.Fecha = sqlFormattedDate;
-            cor.Usuario_id = user.Id;
+
+                Correo cor = new Correo();
+
+                cor.Asunto = txtAsunto.Text;
+                cor.Cuerpo = txtCuerpo.Text;
+                cor.Recipiente = txtDest.Text;
+                cor.Remitente = user.Correo;
+                cor.Fecha = sqlFormattedDate;
+                cor.Usuario_id = user.Id;
+
 
                 conexion.AbrirConexion();
                 Correo.AgregarCorreo(cor);
                 conexion.CerrarConexion();
+                MessageBox.Show("Correo enviado con éxito.");
+            }
+        }
+
+        private void dgvBandeja_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (dgvBandeja.Rows[e.RowIndex].Cells[e.ColumnIndex].Value != null)
+            {
+                MessageBox.Show(dgvBandeja.Rows[e.RowIndex].Cells[e.ColumnIndex].Value.ToString(), "Cuerpo");
+
             }
 
         private void btnCrearReunion_Click(object sender, EventArgs e)
