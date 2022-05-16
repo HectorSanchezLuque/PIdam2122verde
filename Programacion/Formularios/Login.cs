@@ -27,51 +27,59 @@ namespace Programacion
             InitializeComponent();
         }
 
-<<<<<<< HEAD
-=======
 
 
->>>>>>> 63372ebeb04806ab0909949de7c59a546c18326f
         private void btnIniSesion_Click(object sender, EventArgs e)
         {
-            if (Usuario.compNif(txtNif.Text))
-            {
-                try
+            if (string.IsNullOrEmpty(txtNif.Text)) {
+                MessageBox.Show("Error al Iniciar sesion: El campo NIF esta vacío", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else {
+                if (Usuario.compNif(txtNif.Text))
                 {
-                    if (conexion.Conexion != null)
+                    try
                     {
-                        conexion.AbrirConexion();
-                        Usuario user = Usuario.BuscarUsuario(txtNif.Text);
-                        
-                        if (user.Nif == txtNif.Text && user.Password == txtPassword.Text)
-                        {                           
-                                                    
-                            FrmPrincipal princ = new FrmPrincipal(luz, user,lang);
-                            this.Hide();
-                            princ.Show();
+                        if (conexion.Conexion != null)
+                        {
+                            conexion.AbrirConexion();
+                            Usuario user = Usuario.BuscarUsuario(txtNif.Text);
+
+                            if (user.Nif == txtNif.Text && user.Password == txtPassword.Text)
+                            {
+                                if (Usuario.ComprobarBorrado("nif", txtNif.Text) == true)
+                                {
+                                    MessageBox.Show("Este usuario ya no existe.");
+                                }
+                                else
+                                {
+                                    FrmPrincipal princ = new FrmPrincipal(luz, user, lang);
+                                    this.Hide();
+                                    princ.Show();
+                                }
+                            }
+                            else
+                            {
+                                MessageBox.Show("No se ha podido iniciar sesión");
+                            }
                         }
                         else
                         {
-                            MessageBox.Show("No se ha podido iniciar sesión");
+                            MessageBox.Show("No se ha podido abrir la conexión con la Base de Datos");
                         }
                     }
-                    else
+                    catch (Exception ex)
                     {
-                        MessageBox.Show("No se ha podido abrir la conexión con la Base de Datos");
+                        MessageBox.Show(ex.Message + "\n" + ex.StackTrace);
+                    }
+                    finally
+                    {
+                        conexion.CerrarConexion();
                     }
                 }
-                catch (Exception ex)
+                else
                 {
-                    MessageBox.Show(ex.Message + "\n" + ex.StackTrace);
+                    MessageBox.Show("El NIF no es válido");
                 }
-                finally
-                {
-                    conexion.CerrarConexion();
-                }
-            }
-            else
-            {
-                MessageBox.Show("El NIF no es válido");
             }
         }
 
@@ -147,6 +155,49 @@ namespace Programacion
            
 
 
+        }
+
+        private void btnRegistro_Click(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(txtNif.Text))
+            {
+                MessageBox.Show("Error al registrar usuario: El campo NIF esta vacío", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                if (Usuario.compNif(txtNif.Text))
+                {
+                    try
+                    {
+                        if (conexion.Conexion != null)
+                        {
+                            conexion.AbrirConexion();
+                            Usuario user = Usuario.BuscarUsuario(txtNif.Text);
+                            if (user.Password == txtPassword.Text && user.Cargo == "Administrador" || user.Cargo == "Jefe")
+                            {
+                                Registro reg = new Registro();
+                                reg.ShowDialog();
+                            }
+                            else
+                            {
+                                MessageBox.Show("Error en registar: Usuario sin permisos para registrar usuarios");
+                            }
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message + "\n" + ex.StackTrace);
+                    }
+                    finally
+                    {
+                        conexion.CerrarConexion();
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("El NIF no es válido");
+                }
+            }
         }
     }
 }

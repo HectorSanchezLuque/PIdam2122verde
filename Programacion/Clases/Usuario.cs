@@ -202,6 +202,7 @@ namespace ProyectoIntegradoVerde
         /// <returns></returns>
         static public bool compNif(string nif)
         {
+
             string num = "";
             string lets = "TRWAGMYFPDXBNJZSQVHLCKE";
             char let;
@@ -227,6 +228,34 @@ namespace ProyectoIntegradoVerde
                 return false;
             }
             
+        }
+
+        /// <summary>
+        /// A través de un tipo de campo de la base de datos introducido junto a su valor, devolvera si el usuario al cual pertenece ese valor está borrado o no.
+        /// Ejemplo: ComprobarBorrado("correo","ejemplo@hotmail.com"). Buscara en el campo correo el usuario de "ejemplo@hotmail.com" y devolverá si está borrado o no.
+        /// 
+        /// </summary>
+        /// <param name="campoDato">Campo de la BdD</param>
+        /// <param name="valorDato">Valor del dato</param>
+        /// <returns>True si está borrado, False si no está borrado.</returns>
+        static public bool ComprobarBorrado(string campoDato,string valorDato)
+        {
+            bool existe = false;
+
+            string verificador = "SELECT borrado FROM usuarios WHERE "+campoDato+"='" + valorDato + "';";
+
+            MySqlCommand verif = new MySqlCommand(verificador, conexion.Conexion);
+            MySqlDataReader reader = verif.ExecuteReader();
+
+            while (reader.Read())
+            {
+                if (reader.GetBoolean(0) == true)
+                {
+                    existe = true;
+                }
+                else existe = false;
+            }
+            return existe;
         }
     }
 }

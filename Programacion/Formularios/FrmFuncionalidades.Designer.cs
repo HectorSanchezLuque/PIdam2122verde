@@ -31,7 +31,6 @@ namespace ProyectoIntegradoVerde.Formularios
         {
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.btnActualizar = new System.Windows.Forms.Button();
             this.lblDobleClick = new System.Windows.Forms.Label();
             this.lblInfo2 = new System.Windows.Forms.Label();
             this.lblInfo1 = new System.Windows.Forms.Label();
@@ -64,6 +63,7 @@ namespace ProyectoIntegradoVerde.Formularios
             this.dgvBandeja = new System.Windows.Forms.DataGridView();
             this.ideee = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.title = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cuerp = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.recip = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.remit = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.date = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -75,21 +75,7 @@ namespace ProyectoIntegradoVerde.Formularios
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-<<<<<<< HEAD
-            this.idReunion = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nombreReunion = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.descReunion = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.fechaReunion = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnActualizar2 = new System.Windows.Forms.Button();
-            this.btnCrear = new System.Windows.Forms.Button();
-=======
-            this.ideee = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.title = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cuerp = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.recip = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.remit = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.date = new System.Windows.Forms.DataGridViewTextBoxColumn();
->>>>>>> f4efb22d260410cef7e0fd12eeedc4000ce677c5
+            this.btnActualizar = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTareasPendientes)).BeginInit();
@@ -137,23 +123,13 @@ namespace ProyectoIntegradoVerde.Formularios
             this.tabPage1.UseVisualStyleBackColor = true;
             this.tabPage1.Click += new System.EventHandler(this.tabPage1_Click);
             // 
-            // btnActualizar
-            // 
-            this.btnActualizar.Location = new System.Drawing.Point(707, 462);
-            this.btnActualizar.Name = "btnActualizar";
-            this.btnActualizar.Size = new System.Drawing.Size(108, 32);
-            this.btnActualizar.TabIndex = 5;
-            this.btnActualizar.Text = "Actualizar";
-            this.btnActualizar.UseVisualStyleBackColor = true;
-            this.btnActualizar.Click += new System.EventHandler(this.btnActualizar_Click);
-            // 
             // lblDobleClick
             // 
             this.lblDobleClick.AutoSize = true;
             this.lblDobleClick.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDobleClick.Location = new System.Drawing.Point(486, 216);
             this.lblDobleClick.Name = "lblDobleClick";
-            this.lblDobleClick.Size = new System.Drawing.Size(237, 17);
+            this.lblDobleClick.Size = new System.Drawing.Size(223, 16);
             this.lblDobleClick.TabIndex = 4;
             this.lblDobleClick.Text = "Doble click para asignarte una tarea";
             // 
@@ -161,7 +137,7 @@ namespace ProyectoIntegradoVerde.Formularios
             // 
             this.lblInfo2.AutoSize = true;
             this.lblInfo2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.lblInfo2.Location = new System.Drawing.Point(333, 255);
+            this.lblInfo2.Location = new System.Drawing.Point(333, 280);
             this.lblInfo2.Name = "lblInfo2";
             this.lblInfo2.Size = new System.Drawing.Size(147, 20);
             this.lblInfo2.TabIndex = 3;
@@ -186,8 +162,9 @@ namespace ProyectoIntegradoVerde.Formularios
             this.F_Publicacion,
             this.F_limite,
             this.puntosasignados});
-            this.dgvTareasPendientes.Location = new System.Drawing.Point(129, 296);
+            this.dgvTareasPendientes.Location = new System.Drawing.Point(129, 321);
             this.dgvTareasPendientes.Name = "dgvTareasPendientes";
+            this.dgvTareasPendientes.ReadOnly = true;
             this.dgvTareasPendientes.RowHeadersWidth = 51;
             this.dgvTareasPendientes.RowTemplate.Height = 24;
             this.dgvTareasPendientes.Size = new System.Drawing.Size(580, 150);
@@ -243,6 +220,7 @@ namespace ProyectoIntegradoVerde.Formularios
             this.Puntos});
             this.dgvTareasSinAsignar.Location = new System.Drawing.Point(129, 54);
             this.dgvTareasSinAsignar.Name = "dgvTareasSinAsignar";
+            this.dgvTareasSinAsignar.ReadOnly = true;
             this.dgvTareasSinAsignar.RowHeadersWidth = 51;
             this.dgvTareasSinAsignar.RowTemplate.Height = 24;
             this.dgvTareasSinAsignar.Size = new System.Drawing.Size(580, 150);
@@ -309,8 +287,6 @@ namespace ProyectoIntegradoVerde.Formularios
             // 
             // tabPage3
             // 
-            this.tabPage3.Controls.Add(this.btnCrear);
-            this.tabPage3.Controls.Add(this.btnActualizar2);
             this.tabPage3.Controls.Add(this.dgvReuniones);
             this.tabPage3.Location = new System.Drawing.Point(4, 25);
             this.tabPage3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -324,16 +300,11 @@ namespace ProyectoIntegradoVerde.Formularios
             // dgvReuniones
             // 
             this.dgvReuniones.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvReuniones.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.idReunion,
-            this.nombreReunion,
-            this.descReunion,
-            this.fechaReunion});
             this.dgvReuniones.Location = new System.Drawing.Point(12, 11);
             this.dgvReuniones.Margin = new System.Windows.Forms.Padding(4);
             this.dgvReuniones.Name = "dgvReuniones";
             this.dgvReuniones.RowHeadersWidth = 51;
-            this.dgvReuniones.Size = new System.Drawing.Size(837, 416);
+            this.dgvReuniones.Size = new System.Drawing.Size(837, 478);
             this.dgvReuniones.TabIndex = 0;
             // 
             // tabPage4
@@ -410,7 +381,7 @@ namespace ProyectoIntegradoVerde.Formularios
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(7, 288);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(81, 24);
+            this.label5.Size = new System.Drawing.Size(78, 22);
             this.label5.TabIndex = 3;
             this.label5.Text = "Asunto:";
             // 
@@ -420,7 +391,7 @@ namespace ProyectoIntegradoVerde.Formularios
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(418, 216);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(125, 24);
+            this.label4.Size = new System.Drawing.Size(124, 22);
             this.label4.TabIndex = 2;
             this.label4.Text = "Destinatario:";
             // 
@@ -430,7 +401,7 @@ namespace ProyectoIntegradoVerde.Formularios
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(7, 216);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(110, 24);
+            this.label3.Size = new System.Drawing.Size(106, 22);
             this.label3.TabIndex = 1;
             this.label3.Text = "Remitente:";
             // 
@@ -467,6 +438,13 @@ namespace ProyectoIntegradoVerde.Formularios
             this.title.Name = "title";
             this.title.ReadOnly = true;
             this.title.Width = 125;
+            // 
+            // cuerp
+            // 
+            this.cuerp.HeaderText = "Cuerpo";
+            this.cuerp.MinimumWidth = 6;
+            this.cuerp.Name = "cuerp";
+            this.cuerp.Width = 125;
             // 
             // recip
             // 
@@ -580,64 +558,16 @@ namespace ProyectoIntegradoVerde.Formularios
             this.dataGridView1.Size = new System.Drawing.Size(299, 150);
             this.dataGridView1.TabIndex = 0;
             // 
-            // idReunion
+            // btnActualizar
             // 
-            this.idReunion.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.idReunion.HeaderText = "ID";
-            this.idReunion.MinimumWidth = 6;
-            this.idReunion.Name = "idReunion";
-            // 
-            // nombreReunion
-            // 
-            this.nombreReunion.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.nombreReunion.HeaderText = "Nombre";
-            this.nombreReunion.MinimumWidth = 6;
-            this.nombreReunion.Name = "nombreReunion";
-            // 
-<<<<<<< HEAD
-            // descReunion
-=======
-            // cuerp
-            // 
-            this.cuerp.HeaderText = "Cuerpo";
-            this.cuerp.MinimumWidth = 6;
-            this.cuerp.Name = "cuerp";
-            this.cuerp.Width = 125;
-            // 
-            // recip
->>>>>>> f4efb22d260410cef7e0fd12eeedc4000ce677c5
-            // 
-            this.descReunion.HeaderText = "Descripción";
-            this.descReunion.MinimumWidth = 6;
-            this.descReunion.Name = "descReunion";
-            this.descReunion.Width = 125;
-            // 
-            // fechaReunion
-            // 
-            this.fechaReunion.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.fechaReunion.HeaderText = "Fecha";
-            this.fechaReunion.MinimumWidth = 6;
-            this.fechaReunion.Name = "fechaReunion";
-            // 
-            // btnActualizar2
-            // 
-            this.btnActualizar2.Location = new System.Drawing.Point(667, 444);
-            this.btnActualizar2.Name = "btnActualizar2";
-            this.btnActualizar2.Size = new System.Drawing.Size(157, 38);
-            this.btnActualizar2.TabIndex = 1;
-            this.btnActualizar2.Text = "Actualizar";
-            this.btnActualizar2.UseVisualStyleBackColor = true;
-            this.btnActualizar2.Click += new System.EventHandler(this.btnActualizar2_Click);
-            // 
-            // btnCrear
-            // 
-            this.btnCrear.Location = new System.Drawing.Point(50, 444);
-            this.btnCrear.Name = "btnCrear";
-            this.btnCrear.Size = new System.Drawing.Size(128, 38);
-            this.btnCrear.TabIndex = 2;
-            this.btnCrear.Text = "Crear Reunión";
-            this.btnCrear.UseVisualStyleBackColor = true;
-            this.btnCrear.Click += new System.EventHandler(this.btnCrear_Click);
+            this.btnActualizar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.btnActualizar.Location = new System.Drawing.Point(739, 321);
+            this.btnActualizar.Name = "btnActualizar";
+            this.btnActualizar.Size = new System.Drawing.Size(109, 29);
+            this.btnActualizar.TabIndex = 5;
+            this.btnActualizar.Text = "Actualizar";
+            this.btnActualizar.UseVisualStyleBackColor = true;
+            this.btnActualizar.Click += new System.EventHandler(this.btnActualizar_Click);
             // 
             // FrmFuncionalidades
             // 
@@ -718,11 +648,5 @@ namespace ProyectoIntegradoVerde.Formularios
         private System.Windows.Forms.DataGridViewTextBoxColumn remit;
         private System.Windows.Forms.DataGridViewTextBoxColumn date;
         private System.Windows.Forms.Button btnActualizar;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idReunion;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nombreReunion;
-        private System.Windows.Forms.DataGridViewTextBoxColumn descReunion;
-        private System.Windows.Forms.DataGridViewTextBoxColumn fechaReunion;
-        private System.Windows.Forms.Button btnActualizar2;
-        private System.Windows.Forms.Button btnCrear;
     }
 }

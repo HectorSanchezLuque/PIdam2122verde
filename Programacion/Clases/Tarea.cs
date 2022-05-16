@@ -49,7 +49,7 @@ namespace ProyectoIntegradoVerde.Clases
         public static List<Tarea> ListadoTareas()
         {
             List<Tarea> tareas = new List<Tarea>();
-            string consulta = String.Format("SELECT * FROM tarea WHERE asignado = false && finalizado = false && fecha_limite > CURRENT_DATE();");
+            string consulta = String.Format("SELECT * FROM tarea WHERE asignado = false && finalizado = false && fecha_limite > CURRENT_DATE() ;");
             MySqlCommand comando = new MySqlCommand(consulta, conexion.Conexion);
             MySqlDataReader reader = comando.ExecuteReader();
 
@@ -74,7 +74,7 @@ namespace ProyectoIntegradoVerde.Clases
         public static List<Tarea> ListadoTareasAsignadas(int id)
         {
             List<Tarea> tareas = new List<Tarea>();
-            string consulta = String.Format("SELECT * FROM tarea WHERE asignado = true && finalizado = false && fecha_limite > CURRENT_DATE() && usuarios_id = ({0});", id);
+            string consulta = String.Format("SELECT * FROM tarea WHERE asignado = true && finalizado = false && fecha_limite > CURRENT_DATE() && usuarios_id = ({0}) ;", id);
             MySqlCommand comando = new MySqlCommand(consulta, conexion.Conexion);
             MySqlDataReader reader = comando.ExecuteReader();
 
