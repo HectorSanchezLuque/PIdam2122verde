@@ -16,5 +16,10 @@ namespace ProyectoIntegradoVerde
         {
             InitializeComponent();
         }
+
+        private void btnCargarRegistro_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
