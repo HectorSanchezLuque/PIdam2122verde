@@ -240,7 +240,7 @@ namespace ProyectoIntegradoVerde
         /// <returns></returns>
         static public bool ComprobarBorrado(string campoDato,string valorDato)
         {
-            bool existe = true;
+            bool existe = false;
 
             string verificador = "SELECT borrado FROM usuarios WHERE "+campoDato+"='" + valorDato + "';";
 
@@ -251,9 +251,9 @@ namespace ProyectoIntegradoVerde
             {
                 if (reader.GetBoolean(0) == true)
                 {
-                    existe = false;
+                    existe = true;
                 }
-                else existe = true;
+                else existe = false;
             }
             return existe;
         }
