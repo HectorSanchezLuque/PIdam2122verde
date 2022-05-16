@@ -324,6 +324,7 @@ namespace ProyectoIntegradoVerde.Formularios
             this.btnCrearReunion.TabIndex = 2;
             this.btnCrearReunion.Text = "Crear Reunión";
             this.btnCrearReunion.UseVisualStyleBackColor = true;
+            this.btnCrearReunion.Click += new System.EventHandler(this.btnCrearReunion_Click);
             // 
             // btnActualizarReuniones
             // 

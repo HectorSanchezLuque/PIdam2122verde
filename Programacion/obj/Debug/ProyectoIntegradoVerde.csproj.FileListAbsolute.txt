@@ -224,3 +224,4 @@ C:\Users\hesalu\Desktop\PI\Programacion\obj\Debug\ProyectoIntegradoVerde.exe
 C:\Users\hesalu\Desktop\PI\Programacion\obj\Debug\ProyectoIntegradoVerde.pdb
 C:\Users\Akayu\Desktop\ProyectoIntegrado\Programacion\obj\Debug\ProyectoIntegradoVerde.RecursosLocalizables.StringRecursos.resources
 >>>>>>> d2d976103637a2e17d565e34793b791b70d6486d
+C:\Users\hesalu\Desktop\PI\Programacion\obj\Debug\ProyectoIntegradoVerde.Formularios.CrearReunion.resources
