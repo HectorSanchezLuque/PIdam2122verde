@@ -223,5 +223,10 @@ namespace Programacion
             sup.NumPag = 0;
             sup.ShowDialog();
         }
+
+        private void Login_SizeChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
