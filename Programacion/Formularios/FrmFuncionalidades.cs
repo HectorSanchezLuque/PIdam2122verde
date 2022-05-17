@@ -47,7 +47,7 @@ namespace ProyectoIntegradoVerde.Formularios
             correos = Correo.Bandeja(user.Correo);
             for (int i = 0; i < correos.Count; i++)
             {
-                dgvBandeja.Rows.Add(correos[i].Id, correos[i].Asunto, correos[i].Cuerpo, correos[i].Recipiente, correos[i].Remitente, correos[i].Fecha);
+                dgvBandeja.Rows.Add(correos[i].Id, correos[i].Asunto, correos[i].Cuerpo, correos[i].Remitente, correos[i].Fecha);
             }
 
             // Reuniones
@@ -180,6 +180,9 @@ namespace ProyectoIntegradoVerde.Formularios
                 Correo.AgregarCorreo(cor);
                 conexion.CerrarConexion();
                 MessageBox.Show("Correo enviado con éxito.");
+                txtAsunto.Text = "";
+                txtCuerpo.Text = "";
+                txtDest.Text = "";
             }
         }
 
@@ -195,6 +198,13 @@ namespace ProyectoIntegradoVerde.Formularios
         private void btnCrearReunion_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnLimpiar_Click(object sender, EventArgs e)
+        {
+            txtAsunto.Text = "";
+            txtCuerpo.Text = "";
+            txtDest.Text = "";
         }
     }
 }
