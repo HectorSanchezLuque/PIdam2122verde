@@ -68,11 +68,6 @@ namespace ProyectoIntegradoVerde.Formularios
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.dgvBandeja = new System.Windows.Forms.DataGridView();
-            this.ideee = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.title = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cuerp = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.remit = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.date = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabPage5 = new System.Windows.Forms.TabPage();
             this.btnComprar = new System.Windows.Forms.Button();
             this.lblPuntos = new System.Windows.Forms.Label();
@@ -81,6 +76,11 @@ namespace ProyectoIntegradoVerde.Formularios
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.ideee = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.title = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cuerp = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.remit = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.date = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTareasPendientes)).BeginInit();
@@ -506,45 +506,6 @@ namespace ProyectoIntegradoVerde.Formularios
             this.dgvBandeja.TabIndex = 0;
             this.dgvBandeja.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvBandeja_CellContentDoubleClick);
             // 
-            // ideee
-            // 
-            this.ideee.HeaderText = "ID";
-            this.ideee.MinimumWidth = 6;
-            this.ideee.Name = "ideee";
-            this.ideee.ReadOnly = true;
-            this.ideee.Width = 125;
-            // 
-            // title
-            // 
-            this.title.HeaderText = "Asunto";
-            this.title.MinimumWidth = 6;
-            this.title.Name = "title";
-            this.title.ReadOnly = true;
-            this.title.Width = 125;
-            // 
-            // cuerp
-            // 
-            this.cuerp.HeaderText = "Cuerpo";
-            this.cuerp.MinimumWidth = 6;
-            this.cuerp.Name = "cuerp";
-            this.cuerp.Width = 125;
-            // 
-            // remit
-            // 
-            this.remit.HeaderText = "Remitente";
-            this.remit.MinimumWidth = 6;
-            this.remit.Name = "remit";
-            this.remit.ReadOnly = true;
-            this.remit.Width = 125;
-            // 
-            // date
-            // 
-            this.date.HeaderText = "Fecha";
-            this.date.MinimumWidth = 6;
-            this.date.Name = "date";
-            this.date.ReadOnly = true;
-            this.date.Width = 125;
-            // 
             // tabPage5
             // 
             this.tabPage5.Controls.Add(this.btnComprar);
@@ -633,6 +594,45 @@ namespace ProyectoIntegradoVerde.Formularios
             this.dataGridView1.Size = new System.Drawing.Size(299, 150);
             this.dataGridView1.TabIndex = 0;
             // 
+            // ideee
+            // 
+            this.ideee.HeaderText = "ID";
+            this.ideee.MinimumWidth = 6;
+            this.ideee.Name = "ideee";
+            this.ideee.ReadOnly = true;
+            this.ideee.Width = 81;
+            // 
+            // title
+            // 
+            this.title.HeaderText = "Asunto";
+            this.title.MinimumWidth = 6;
+            this.title.Name = "title";
+            this.title.ReadOnly = true;
+            this.title.Width = 125;
+            // 
+            // cuerp
+            // 
+            this.cuerp.HeaderText = "Cuerpo";
+            this.cuerp.MinimumWidth = 6;
+            this.cuerp.Name = "cuerp";
+            this.cuerp.Width = 125;
+            // 
+            // remit
+            // 
+            this.remit.HeaderText = "Remitente";
+            this.remit.MinimumWidth = 6;
+            this.remit.Name = "remit";
+            this.remit.ReadOnly = true;
+            this.remit.Width = 125;
+            // 
+            // date
+            // 
+            this.date.HeaderText = "Fecha";
+            this.date.MinimumWidth = 6;
+            this.date.Name = "date";
+            this.date.ReadOnly = true;
+            this.date.Width = 125;
+            // 
             // FrmFuncionalidades
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -710,12 +710,12 @@ namespace ProyectoIntegradoVerde.Formularios
         private System.Windows.Forms.DataGridViewTextBoxColumn fechaReu;
         private System.Windows.Forms.Button btnCrearReunion;
         private System.Windows.Forms.Button btnActualizarReuniones;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label6;
         private System.Windows.Forms.DataGridViewTextBoxColumn ideee;
         private System.Windows.Forms.DataGridViewTextBoxColumn title;
         private System.Windows.Forms.DataGridViewTextBoxColumn cuerp;
         private System.Windows.Forms.DataGridViewTextBoxColumn remit;
         private System.Windows.Forms.DataGridViewTextBoxColumn date;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label6;
     }
 }
