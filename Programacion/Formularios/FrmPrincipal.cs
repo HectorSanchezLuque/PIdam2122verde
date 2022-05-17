@@ -125,12 +125,23 @@ namespace ProyectoIntegradoVerde.Formularios
         {
             lblAbreFormulario.Text = user.Nombre + "  /  " + user.Cargo + "  /  " + user.Nif;
             timer1.Enabled = true;
+            btnAdmin.Hide();
+            if (user.Cargo == "Administrador" || user.Cargo == "Jefe")
+            {
+                btnAdmin.Show();
+            }
         }
 
         private void timer1_Tick(object sender, EventArgs e)
         {
             lblHora.Text = DateTime.Now.ToString("hh:mm:ss");
             lblFecha.Text = DateTime.Now.ToLongDateString();
+        }
+
+        private void btnAdmin_Click(object sender, EventArgs e)
+        {
+            PanelAdmin pnlAd = new PanelAdmin();
+            pnlAd.ShowDialog();
         }
     }
 }

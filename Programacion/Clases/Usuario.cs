@@ -69,9 +69,9 @@ namespace ProyectoIntegradoVerde
             MySqlDataReader reader = comando.ExecuteReader();
             while (reader.Read())
             {
-                if ((reader.GetString(0) == user && reader.GetString(1) == pass) && (reader.GetString(2) != "Admin"))
+                if ((reader.GetString(0) == user && reader.GetString(1) == pass) && (reader.GetString(2) != "Administrador"))
                     return correct = 1;
-                else if ((reader.GetString(0) == user && reader.GetString(1) == pass) && (reader.GetString(2) == "Admin"))
+                else if ((reader.GetString(0) == user && reader.GetString(1) == pass) && (reader.GetString(2) == "Administrador"))
                     correct = 2;
             }
             reader.Close();
@@ -265,6 +265,14 @@ namespace ProyectoIntegradoVerde
             return existe;
         }
 
+        static public void DarAlta(string nif)
+        {
+            string consulta = "UPDATE usuarios SET borrado=0 WHERE nif='" + nif + "';";
+            MySqlCommand comando = new MySqlCommand(consulta, conexion.Conexion);
+            comando.ExecuteNonQuery();
+        }
+
+
         public static List<Usuario> BuscarCargos (string cargo)
         {
             Usuario usu = new Usuario();
@@ -306,6 +314,7 @@ namespace ProyectoIntegradoVerde
             }
             reader.Close();
             return lista;
+
         }
     }
 }
