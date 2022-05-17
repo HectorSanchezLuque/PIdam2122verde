@@ -113,9 +113,9 @@ namespace ProyectoIntegradoVerde.Formularios
             // 
             this.btnCerrarSesion.BackgroundImage = global::ProyectoIntegradoVerde.Properties.Resources.Exit;
             this.btnCerrarSesion.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnCerrarSesion.Location = new System.Drawing.Point(535, 538);
+            this.btnCerrarSesion.Location = new System.Drawing.Point(526, 538);
             this.btnCerrarSesion.Name = "btnCerrarSesion";
-            this.btnCerrarSesion.Size = new System.Drawing.Size(67, 72);
+            this.btnCerrarSesion.Size = new System.Drawing.Size(76, 72);
             this.btnCerrarSesion.TabIndex = 9;
             this.btnCerrarSesion.UseVisualStyleBackColor = true;
             this.btnCerrarSesion.Click += new System.EventHandler(this.btnCerrarSesion_Click);
@@ -162,7 +162,7 @@ namespace ProyectoIntegradoVerde.Formularios
             this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button1.Location = new System.Drawing.Point(12, 538);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(67, 73);
+            this.button1.Size = new System.Drawing.Size(74, 73);
             this.button1.TabIndex = 17;
             this.button1.UseVisualStyleBackColor = true;
             // 

@@ -48,7 +48,7 @@ namespace ProyectoIntegradoVerde.Formularios
 
         private void lblAbreFormulario_Click(object sender, EventArgs e)
         {
-            FrmDatos d = new FrmDatos();
+            FrmDatos d = new FrmDatos(user);
             d.ShowDialog();
         }
 
@@ -123,7 +123,7 @@ namespace ProyectoIntegradoVerde.Formularios
 
         private void FrmPrincipal_Load_1(object sender, EventArgs e)
         {
-            lblAbreFormulario.Text = user.Nif + "  /  " + user.Nombre + "  /  " + user.Cargo;
+            lblAbreFormulario.Text = user.Nombre + "  /  " + user.Cargo + "  /  " + user.Nif;
             timer1.Enabled = true;
         }
 

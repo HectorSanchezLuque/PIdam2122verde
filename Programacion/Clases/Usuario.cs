@@ -185,6 +185,9 @@ namespace ProyectoIntegradoVerde
                     usu.Puntos = reader.GetInt32(5);
                     usu.Correo = reader.GetString(6);
                     usu.Password = reader.GetString(7);
+                    MemoryStream ms = new MemoryStream((byte[])reader["foto"]);
+                    Bitmap bm = new Bitmap(ms);
+                    usu.Foto = ms.ToArray();
                 }
             }
             reader.Close();
