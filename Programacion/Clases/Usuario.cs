@@ -267,5 +267,48 @@ namespace ProyectoIntegradoVerde
             }
             return existe;
         }
+
+        public static List<Usuario> BuscarCargos (string cargo)
+        {
+            Usuario usu = new Usuario();
+            List<Usuario> lista = new List<Usuario>();
+            string consulta = String.Format("SELECT * FROM usuarios WHERE cargo = '{0}';", cargo); ;
+            MySqlCommand comando = new MySqlCommand(consulta, conexion.Conexion);
+            MySqlDataReader reader = comando.ExecuteReader();
+
+            if (reader.HasRows)   // En caso que se hallen registros en el objeto reader
+            {
+                // Recorremos el reader y cargamos la lista de usuarios.
+                while (reader.Read())
+                {
+                    usu.Id = reader.GetInt32(0);
+                    usu.Nif = reader.GetString(1);
+                    usu.Nombre = reader.GetString(2);
+                    usu.FechaNacimiento = reader.GetDateTime(3);
+                    usu.Cargo = reader.GetString(4);
+                    usu.Puntos = reader.GetInt32(5);
+                    usu.Correo = reader.GetString(6);
+                    usu.Password = reader.GetString(7);
+                    lista.Add(usu);
+                }
+            }
+            reader.Close();
+            return lista;
+        }
+
+        public static List<string> ListadoCargos()
+        {
+            List<string> lista = new List<string>();
+            string consulta = "SELECT DISTINCT cargo FROM usuarios;";
+            MySqlCommand comando = new MySqlCommand(consulta, conexion.Conexion);
+            MySqlDataReader reader = comando.ExecuteReader();
+            
+            while (reader.Read())
+            {
+                lista.Add(reader.GetString(0));
+            }
+            reader.Close();
+            return lista;
+        }
     }
 }
