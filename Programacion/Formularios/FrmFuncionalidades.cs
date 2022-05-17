@@ -68,6 +68,7 @@ namespace ProyectoIntegradoVerde.Formularios
 
         private void FrmFuncionalidades_Load(object sender, EventArgs e)
         {
+            lblPuntos.Text = user.Puntos.ToString();
             this.tabControl1.SelectTab(numPag);
             try
             {
@@ -94,10 +95,7 @@ namespace ProyectoIntegradoVerde.Formularios
             }
         }
 
-        private void tabPage1_Click(object sender, EventArgs e)
-        {
 
-        }
 
         private void dgvTareasSinAsignar_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
         {
@@ -201,10 +199,7 @@ namespace ProyectoIntegradoVerde.Formularios
             txtDest.Text = "";
         }
 
-        private void tabPage5_Click(object sender, EventArgs e)
-        {
-            lblPuntos.Text = Convert.ToString(user.Puntos);
-        }
+
 
         private void dgvTareasPendientes_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -221,6 +216,7 @@ namespace ProyectoIntegradoVerde.Formularios
                 RellenarDataGrid();
                 conexion.CerrarConexion();
                 MessageBox.Show("Tarea completada, puntos actuales: "+user.Puntos.ToString());
+                lblPuntos.Text = user.Puntos.ToString();
 
             }
               
@@ -230,8 +226,16 @@ namespace ProyectoIntegradoVerde.Formularios
         {
             if (dgvBandeja.Rows[e.RowIndex].Cells[2].Value != null)
             {
-                MessageBox.Show(dgvBandeja.Rows[e.RowIndex].Cells[2].Value.ToString(), "Cuerpo");
+                MessageBox.Show(dgvBandeja.Rows[e.RowIndex].Cells[2].Value.ToString(), "Cuerpo: ");
 
+            }
+        }
+
+        private void dgvReuniones_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (dgvReuniones.Rows[e.RowIndex].Cells[2].Value != null)
+            {
+                MessageBox.Show(dgvReuniones.Rows[e.RowIndex].Cells[2].Value.ToString(), "Descripcion: ");
             }
         }
     }

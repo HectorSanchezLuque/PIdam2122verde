@@ -50,11 +50,11 @@ namespace ProyectoIntegradoVerde.Formularios
             // 
             this.lblAbreFormulario.AutoSize = true;
             this.lblAbreFormulario.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Italic | System.Drawing.FontStyle.Underline))));
-            this.lblAbreFormulario.Location = new System.Drawing.Point(42, 15);
+            this.lblAbreFormulario.Location = new System.Drawing.Point(42, 17);
             this.lblAbreFormulario.Name = "lblAbreFormulario";
-            this.lblAbreFormulario.Size = new System.Drawing.Size(212, 18);
+            this.lblAbreFormulario.Size = new System.Drawing.Size(126, 18);
             this.lblAbreFormulario.TabIndex = 0;
-            this.lblAbreFormulario.Text = "Nombre apellido apellido cargo";
+            this.lblAbreFormulario.Text = "Nif Nombre cargo";
             this.lblAbreFormulario.Click += new System.EventHandler(this.lblAbreFormulario_Click);
             this.lblAbreFormulario.MouseEnter += new System.EventHandler(this.lblAbreFormulario_MouseEnter);
             this.lblAbreFormulario.MouseLeave += new System.EventHandler(this.lblAbreFormulario_MouseLeave);
@@ -62,7 +62,7 @@ namespace ProyectoIntegradoVerde.Formularios
             // btnTienda
             // 
             this.btnTienda.Image = global::ProyectoIntegradoVerde.Properties.Resources._3837963_shop_business_store_market_icon;
-            this.btnTienda.Location = new System.Drawing.Point(196, 438);
+            this.btnTienda.Location = new System.Drawing.Point(196, 453);
             this.btnTienda.Name = "btnTienda";
             this.btnTienda.Size = new System.Drawing.Size(213, 172);
             this.btnTienda.TabIndex = 14;
@@ -72,7 +72,7 @@ namespace ProyectoIntegradoVerde.Formularios
             // btnCorreo
             // 
             this.btnCorreo.Image = global::ProyectoIntegradoVerde.Properties.Resources._7208644_application_mail_email_message_icon;
-            this.btnCorreo.Location = new System.Drawing.Point(337, 252);
+            this.btnCorreo.Location = new System.Drawing.Point(337, 267);
             this.btnCorreo.Name = "btnCorreo";
             this.btnCorreo.Size = new System.Drawing.Size(213, 172);
             this.btnCorreo.TabIndex = 13;
@@ -82,7 +82,7 @@ namespace ProyectoIntegradoVerde.Formularios
             // btnReuniones
             // 
             this.btnReuniones.Image = global::ProyectoIntegradoVerde.Properties.Resources._2932353_group_people_team_hr_humans_icon;
-            this.btnReuniones.Location = new System.Drawing.Point(45, 252);
+            this.btnReuniones.Location = new System.Drawing.Point(45, 267);
             this.btnReuniones.Name = "btnReuniones";
             this.btnReuniones.Size = new System.Drawing.Size(213, 172);
             this.btnReuniones.TabIndex = 12;
@@ -92,7 +92,7 @@ namespace ProyectoIntegradoVerde.Formularios
             // btnCalendario
             // 
             this.btnCalendario.Image = global::ProyectoIntegradoVerde.Properties.Resources._8725528_calendar_alt_icon;
-            this.btnCalendario.Location = new System.Drawing.Point(337, 65);
+            this.btnCalendario.Location = new System.Drawing.Point(337, 80);
             this.btnCalendario.Name = "btnCalendario";
             this.btnCalendario.Size = new System.Drawing.Size(213, 172);
             this.btnCalendario.TabIndex = 11;
@@ -102,7 +102,7 @@ namespace ProyectoIntegradoVerde.Formularios
             // btnTareas
             // 
             this.btnTareas.Image = global::ProyectoIntegradoVerde.Properties.Resources._8396405_clipboard_note_document_report_paper_icon;
-            this.btnTareas.Location = new System.Drawing.Point(45, 65);
+            this.btnTareas.Location = new System.Drawing.Point(45, 80);
             this.btnTareas.Name = "btnTareas";
             this.btnTareas.Size = new System.Drawing.Size(213, 172);
             this.btnTareas.TabIndex = 10;
@@ -113,7 +113,7 @@ namespace ProyectoIntegradoVerde.Formularios
             // 
             this.btnCerrarSesion.BackgroundImage = global::ProyectoIntegradoVerde.Properties.Resources.Exit;
             this.btnCerrarSesion.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnCerrarSesion.Location = new System.Drawing.Point(535, 538);
+            this.btnCerrarSesion.Location = new System.Drawing.Point(535, 553);
             this.btnCerrarSesion.Name = "btnCerrarSesion";
             this.btnCerrarSesion.Size = new System.Drawing.Size(67, 72);
             this.btnCerrarSesion.TabIndex = 9;
@@ -123,7 +123,7 @@ namespace ProyectoIntegradoVerde.Formularios
             // ptbInfo
             // 
             this.ptbInfo.Image = global::ProyectoIntegradoVerde.Properties.Resources._299086_info_sign_icon;
-            this.ptbInfo.Location = new System.Drawing.Point(12, 12);
+            this.ptbInfo.Location = new System.Drawing.Point(12, 15);
             this.ptbInfo.Name = "ptbInfo";
             this.ptbInfo.Size = new System.Drawing.Size(24, 23);
             this.ptbInfo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -139,7 +139,7 @@ namespace ProyectoIntegradoVerde.Formularios
             this.lblHora.AutoSize = true;
             this.lblHora.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
             this.lblHora.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.lblHora.Location = new System.Drawing.Point(477, 4);
+            this.lblHora.Location = new System.Drawing.Point(477, 36);
             this.lblHora.Name = "lblHora";
             this.lblHora.Size = new System.Drawing.Size(73, 31);
             this.lblHora.TabIndex = 15;
@@ -148,11 +148,11 @@ namespace ProyectoIntegradoVerde.Formularios
             // lblFecha
             // 
             this.lblFecha.AutoSize = true;
-            this.lblFecha.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
+            this.lblFecha.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             this.lblFecha.ForeColor = System.Drawing.Color.MediumBlue;
-            this.lblFecha.Location = new System.Drawing.Point(411, 38);
+            this.lblFecha.Location = new System.Drawing.Point(383, 17);
             this.lblFecha.Name = "lblFecha";
-            this.lblFecha.Size = new System.Drawing.Size(47, 17);
+            this.lblFecha.Size = new System.Drawing.Size(49, 18);
             this.lblFecha.TabIndex = 16;
             this.lblFecha.Text = "Fecha";
             // 
@@ -166,6 +166,13 @@ namespace ProyectoIntegradoVerde.Formularios
             this.btnAdmin.TabIndex = 17;
             this.btnAdmin.UseVisualStyleBackColor = true;
             this.btnAdmin.Click += new System.EventHandler(this.btnAdmin_Click);
+            this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button1.Location = new System.Drawing.Point(12, 553);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(67, 73);
+            this.button1.TabIndex = 17;
+            this.button1.UseVisualStyleBackColor = true;
             // 
             // FrmPrincipal
             // 
