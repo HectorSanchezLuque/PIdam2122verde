@@ -210,12 +210,16 @@ namespace Programacion
 
         private void lblOlvidoCont_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            MessageBox.Show("Contacte con el servicio de Administrcion de su empresa");
+            Soporte sup = new Soporte();
+            sup.NumPag = 1;
+            sup.ShowDialog();
         }
 
         private void lblNotif_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            MessageBox.Show("Contacte o diríjase al adiministrador");
+            Soporte sup = new Soporte();
+            sup.NumPag = 0;
+            sup.ShowDialog();
         }
     }
 }
