@@ -106,9 +106,9 @@ namespace ProyectoIntegradoVerde.Formularios
             // btnCerrarSesion
             // 
             this.btnCerrarSesion.Image = global::ProyectoIntegradoVerde.Properties.Resources.Exit;
-            this.btnCerrarSesion.Location = new System.Drawing.Point(541, 624);
+            this.btnCerrarSesion.Location = new System.Drawing.Point(535, 613);
             this.btnCerrarSesion.Name = "btnCerrarSesion";
-            this.btnCerrarSesion.Size = new System.Drawing.Size(61, 62);
+            this.btnCerrarSesion.Size = new System.Drawing.Size(67, 73);
             this.btnCerrarSesion.TabIndex = 9;
             this.btnCerrarSesion.UseVisualStyleBackColor = true;
             this.btnCerrarSesion.Click += new System.EventHandler(this.btnCerrarSesion_Click);

@@ -188,9 +188,9 @@ namespace ProyectoIntegradoVerde.Formularios
 
         private void dgvBandeja_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (dgvBandeja.Rows[e.RowIndex].Cells[e.ColumnIndex].Value != null)
+            if (dgvBandeja.Rows[e.RowIndex].Cells[2].Value != null)
             {
-                MessageBox.Show(dgvBandeja.Rows[e.RowIndex].Cells[e.ColumnIndex].Value.ToString(), "Cuerpo");
+                MessageBox.Show(dgvBandeja.Rows[e.RowIndex].Cells[2].Value.ToString(), "Cuerpo");
 
             }
         }
@@ -205,6 +205,31 @@ namespace ProyectoIntegradoVerde.Formularios
             txtAsunto.Text = "";
             txtCuerpo.Text = "";
             txtDest.Text = "";
+        }
+
+        private void tabPage5_Click(object sender, EventArgs e)
+        {
+            lblPuntos.Text = Convert.ToString(user.Puntos);
+        }
+
+        private void dgvTareasPendientes_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            
+            if (dgvTareasPendientes.Rows[e.RowIndex].Cells[4].Value != null)
+            {
+                int puntos = Convert.ToInt32(dgvTareasPendientes.Rows[e.RowIndex].Cells[4].Value);
+                int id = Convert.ToInt32(dgvTareasPendientes.Rows[e.RowIndex].Cells[0].Value);
+
+                user.Puntos = user.Puntos + puntos;
+                conexion.AbrirConexion();
+                Tarea.EliminarTarea(id);
+                Tarea.AñadirPuntos(user);
+                RellenarDataGrid();
+                conexion.CerrarConexion();
+                MessageBox.Show("Tarea completada, puntos actuales: "+user.Puntos.ToString());
+
+            }
+              
         }
     }
 }

@@ -143,11 +143,11 @@ namespace ProyectoIntegradoVerde.Clases
         /// </summary>
         /// <param name="titulo">Nombre de la tarea a eliminar</param>
         /// <returns></returns>
-        public static int EliminarTarea(int titulo)
+        public static int EliminarTarea(int id)
         {
             int retorno;
            
-            string consulta = string.Format("DELETE FROM tarea WHERE titulo={0}", titulo);
+            string consulta = string.Format("DELETE FROM tarea WHERE id_tarea='{0}'", id);
             MySqlCommand comando = new MySqlCommand(consulta, conexion.Conexion);
             retorno = comando.ExecuteNonQuery();
             return retorno;
@@ -182,6 +182,19 @@ namespace ProyectoIntegradoVerde.Clases
             int retorno;
 
             string consulta = String.Format("UPDATE tarea SET asignado = true, usuarios_id = ({1}) WHERE id_tarea = ({0})", idTarea, id);
+
+            MySqlCommand comando = new MySqlCommand(consulta, conexion.Conexion);
+
+            retorno = comando.ExecuteNonQuery();
+
+            return retorno;
+        }
+
+        public static int AñadirPuntos(Usuario user)
+        {
+            int retorno;
+
+            string consulta = String.Format("UPDATE usuarios SET puntos = '{0}' Where id = '{1}'",user.Puntos,user.Id);
 
             MySqlCommand comando = new MySqlCommand(consulta, conexion.Conexion);
 
