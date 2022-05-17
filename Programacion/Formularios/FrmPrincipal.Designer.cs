@@ -30,6 +30,7 @@ namespace ProyectoIntegradoVerde.Formularios
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmPrincipal));
             this.lblAbreFormulario = new System.Windows.Forms.Label();
             this.btnTienda = new System.Windows.Forms.Button();
             this.btnCorreo = new System.Windows.Forms.Button();
@@ -41,6 +42,7 @@ namespace ProyectoIntegradoVerde.Formularios
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.lblHora = new System.Windows.Forms.Label();
             this.lblFecha = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.ptbInfo)).BeginInit();
             this.SuspendLayout();
             // 
@@ -109,10 +111,11 @@ namespace ProyectoIntegradoVerde.Formularios
             // 
             // btnCerrarSesion
             // 
-            this.btnCerrarSesion.Image = global::ProyectoIntegradoVerde.Properties.Resources.Exit;
-            this.btnCerrarSesion.Location = new System.Drawing.Point(535, 537);
+            this.btnCerrarSesion.BackgroundImage = global::ProyectoIntegradoVerde.Properties.Resources.Exit;
+            this.btnCerrarSesion.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnCerrarSesion.Location = new System.Drawing.Point(535, 538);
             this.btnCerrarSesion.Name = "btnCerrarSesion";
-            this.btnCerrarSesion.Size = new System.Drawing.Size(67, 73);
+            this.btnCerrarSesion.Size = new System.Drawing.Size(67, 72);
             this.btnCerrarSesion.TabIndex = 9;
             this.btnCerrarSesion.UseVisualStyleBackColor = true;
             this.btnCerrarSesion.Click += new System.EventHandler(this.btnCerrarSesion_Click);
@@ -153,11 +156,22 @@ namespace ProyectoIntegradoVerde.Formularios
             this.lblFecha.TabIndex = 16;
             this.lblFecha.Text = "Fecha";
             // 
+            // button1
+            // 
+            this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button1.Location = new System.Drawing.Point(12, 538);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(67, 73);
+            this.button1.TabIndex = 17;
+            this.button1.UseVisualStyleBackColor = true;
+            // 
             // FrmPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(614, 634);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.lblFecha);
             this.Controls.Add(this.lblHora);
             this.Controls.Add(this.btnTienda);
@@ -190,5 +204,6 @@ namespace ProyectoIntegradoVerde.Formularios
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Label lblHora;
         private System.Windows.Forms.Label lblFecha;
+        private System.Windows.Forms.Button button1;
     }
 }
