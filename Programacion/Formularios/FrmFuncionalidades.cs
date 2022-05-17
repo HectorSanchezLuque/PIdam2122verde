@@ -186,14 +186,7 @@ namespace ProyectoIntegradoVerde.Formularios
             }
         }
 
-        private void dgvBandeja_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            if (dgvBandeja.Rows[e.RowIndex].Cells[2].Value != null)
-            {
-                MessageBox.Show(dgvBandeja.Rows[e.RowIndex].Cells[2].Value.ToString(), "Cuerpo");
 
-            }
-        }
 
         private void btnCrearReunion_Click(object sender, EventArgs e)
         {
@@ -230,6 +223,15 @@ namespace ProyectoIntegradoVerde.Formularios
 
             }
               
+        }
+
+        private void dgvBandeja_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (dgvBandeja.Rows[e.RowIndex].Cells[2].Value != null)
+            {
+                MessageBox.Show(dgvBandeja.Rows[e.RowIndex].Cells[2].Value.ToString(), "Cuerpo");
+
+            }
         }
     }
 }
