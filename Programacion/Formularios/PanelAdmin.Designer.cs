@@ -51,6 +51,8 @@
             this.txtContrasena = new System.Windows.Forms.TextBox();
             this.btnCargar = new System.Windows.Forms.Button();
             this.dateNacimiento = new System.Windows.Forms.DateTimePicker();
+            this.label9 = new System.Windows.Forms.Label();
+            this.txtOldID = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUsuarios)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureFoto)).BeginInit();
             this.SuspendLayout();
@@ -264,11 +266,30 @@
             this.dateNacimiento.Size = new System.Drawing.Size(155, 22);
             this.dateNacimiento.TabIndex = 23;
             // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(400, 547);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(160, 16);
+            this.label9.TabIndex = 24;
+            this.label9.Text = "ID (Antes del cambio):";
+            // 
+            // txtOldID
+            // 
+            this.txtOldID.Location = new System.Drawing.Point(566, 544);
+            this.txtOldID.Name = "txtOldID";
+            this.txtOldID.Size = new System.Drawing.Size(100, 22);
+            this.txtOldID.TabIndex = 25;
+            // 
             // PanelAdmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(932, 583);
+            this.Controls.Add(this.txtOldID);
+            this.Controls.Add(this.label9);
             this.Controls.Add(this.dateNacimiento);
             this.Controls.Add(this.btnCargar);
             this.Controls.Add(this.txtContrasena);
@@ -326,5 +347,7 @@
         private System.Windows.Forms.TextBox txtContrasena;
         private System.Windows.Forms.Button btnCargar;
         private System.Windows.Forms.DateTimePicker dateNacimiento;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.TextBox txtOldID;
     }
 }
