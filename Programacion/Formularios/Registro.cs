@@ -91,7 +91,20 @@ namespace ProyectoIntegradoVerde
             {
 
                 Usuario user = new Usuario(txtNifRegistro.Text, txtNombreRegistro.Text, dtpFNRegistro.Value, txtPasswordRegistro.Text, txtEmailRegistro.Text, txtCargo.Text, pbProfPicRegistro.Image);
-                
+
+                try
+                {
+                    //proceso de agregar usuario
+                    //user.AgregarUsuario();
+
+
+                }
+                catch
+                {
+                    MessageBox.Show("Error al registrar");
+                }
+
+
 
             }
             
