@@ -225,5 +225,8 @@
   <ItemGroup>
     <None Include="Resources\spFlag.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Exit.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

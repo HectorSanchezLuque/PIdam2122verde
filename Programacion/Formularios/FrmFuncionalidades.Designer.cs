@@ -615,7 +615,7 @@ namespace ProyectoIntegradoVerde.Formularios
             this.Controls.Add(this.tabControl1);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "FrmFuncionalidades";
-            this.Text = "FrmFuncionalidades";
+            this.Text = "Funcionalidades";
             this.Load += new System.EventHandler(this.FrmFuncionalidades_Load);
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);

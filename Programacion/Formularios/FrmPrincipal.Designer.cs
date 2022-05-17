@@ -137,7 +137,7 @@ namespace ProyectoIntegradoVerde.Formularios
             this.Controls.Add(this.ptbInfo);
             this.Controls.Add(this.lblAbreFormulario);
             this.Name = "FrmPrincipal";
-            this.Text = "FrmPrincipal";
+            this.Text = "Menu";
             this.Load += new System.EventHandler(this.FrmPrincipal_Load_1);
             ((System.ComponentModel.ISupportInitialize)(this.ptbInfo)).EndInit();
             this.ResumeLayout(false);
