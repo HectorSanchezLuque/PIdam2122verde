@@ -59,6 +59,7 @@ namespace ProyectoIntegradoVerde.Formularios
             this.descReu = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.fechaReu = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.label6 = new System.Windows.Forms.Label();
             this.btnLimpiar = new System.Windows.Forms.Button();
             this.btnEnviar = new System.Windows.Forms.Button();
             this.txtCuerpo = new System.Windows.Forms.TextBox();
@@ -80,7 +81,6 @@ namespace ProyectoIntegradoVerde.Formularios
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.label6 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTareasPendientes)).BeginInit();
@@ -135,14 +135,15 @@ namespace ProyectoIntegradoVerde.Formularios
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(486, 454);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(240, 17);
+            this.label3.Size = new System.Drawing.Size(227, 16);
             this.label3.TabIndex = 7;
             this.label3.Text = "Doble click para completar una tarea";
             // 
             // btnActualizar
             // 
+            this.btnActualizar.BackgroundImage = global::ProyectoIntegradoVerde.Properties.Resources._134221_refresh_reload_repeat_update_arrow_icon;
+            this.btnActualizar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnActualizar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.btnActualizar.Image = global::ProyectoIntegradoVerde.Properties.Resources._134221_refresh_reload_repeat_update_arrow_icon;
             this.btnActualizar.Location = new System.Drawing.Point(783, 428);
             this.btnActualizar.Name = "btnActualizar";
             this.btnActualizar.Size = new System.Drawing.Size(65, 66);
@@ -156,7 +157,7 @@ namespace ProyectoIntegradoVerde.Formularios
             this.lblDobleClick.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDobleClick.Location = new System.Drawing.Point(486, 216);
             this.lblDobleClick.Name = "lblDobleClick";
-            this.lblDobleClick.Size = new System.Drawing.Size(237, 17);
+            this.lblDobleClick.Size = new System.Drawing.Size(223, 16);
             this.lblDobleClick.TabIndex = 4;
             this.lblDobleClick.Text = "Doble click para asignarte una tarea";
             // 
@@ -363,6 +364,7 @@ namespace ProyectoIntegradoVerde.Formularios
             this.dgvReuniones.RowHeadersWidth = 51;
             this.dgvReuniones.Size = new System.Drawing.Size(837, 408);
             this.dgvReuniones.TabIndex = 0;
+            this.dgvReuniones.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvReuniones_CellContentDoubleClick);
             // 
             // idreu
             // 
@@ -416,9 +418,20 @@ namespace ProyectoIntegradoVerde.Formularios
             this.tabPage4.Text = "Correo";
             this.tabPage4.UseVisualStyleBackColor = true;
             // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(493, 211);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(355, 17);
+            this.label6.Size = new System.Drawing.Size(339, 16);
+            this.label6.TabIndex = 11;
+            this.label6.Text = "Doble click para leer el cuerpo del correo seleccionado";
+            // 
             // btnLimpiar
             // 
-            this.btnLimpiar.Location = new System.Drawing.Point(577, 449);
+            this.btnLimpiar.Location = new System.Drawing.Point(577, 456);
             this.btnLimpiar.Name = "btnLimpiar";
             this.btnLimpiar.Size = new System.Drawing.Size(135, 42);
             this.btnLimpiar.TabIndex = 10;
@@ -428,7 +441,7 @@ namespace ProyectoIntegradoVerde.Formularios
             // 
             // btnEnviar
             // 
-            this.btnEnviar.Location = new System.Drawing.Point(718, 449);
+            this.btnEnviar.Location = new System.Drawing.Point(718, 456);
             this.btnEnviar.Name = "btnEnviar";
             this.btnEnviar.Size = new System.Drawing.Size(135, 42);
             this.btnEnviar.TabIndex = 9;
@@ -438,7 +451,7 @@ namespace ProyectoIntegradoVerde.Formularios
             // 
             // txtCuerpo
             // 
-            this.txtCuerpo.Location = new System.Drawing.Point(7, 267);
+            this.txtCuerpo.Location = new System.Drawing.Point(7, 274);
             this.txtCuerpo.Multiline = true;
             this.txtCuerpo.Name = "txtCuerpo";
             this.txtCuerpo.Size = new System.Drawing.Size(846, 176);
@@ -446,14 +459,14 @@ namespace ProyectoIntegradoVerde.Formularios
             // 
             // txtDest
             // 
-            this.txtDest.Location = new System.Drawing.Point(128, 213);
+            this.txtDest.Location = new System.Drawing.Point(162, 213);
             this.txtDest.Name = "txtDest";
             this.txtDest.Size = new System.Drawing.Size(305, 22);
             this.txtDest.TabIndex = 6;
             // 
             // txtAsunto
             // 
-            this.txtAsunto.Location = new System.Drawing.Point(94, 242);
+            this.txtAsunto.Location = new System.Drawing.Point(128, 242);
             this.txtAsunto.Name = "txtAsunto";
             this.txtAsunto.Size = new System.Drawing.Size(339, 22);
             this.txtAsunto.TabIndex = 5;
@@ -464,7 +477,7 @@ namespace ProyectoIntegradoVerde.Formularios
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(7, 240);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(81, 24);
+            this.label5.Size = new System.Drawing.Size(78, 22);
             this.label5.TabIndex = 3;
             this.label5.Text = "Asunto:";
             // 
@@ -474,7 +487,7 @@ namespace ProyectoIntegradoVerde.Formularios
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(7, 211);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(125, 24);
+            this.label4.Size = new System.Drawing.Size(124, 22);
             this.label4.TabIndex = 2;
             this.label4.Text = "Destinatario:";
             // 
@@ -623,21 +636,11 @@ namespace ProyectoIntegradoVerde.Formularios
             this.dataGridView1.Size = new System.Drawing.Size(299, 150);
             this.dataGridView1.TabIndex = 0;
             // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(493, 211);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(355, 17);
-            this.label6.TabIndex = 11;
-            this.label6.Text = "Doble click para leer el cuerpo del correo seleccionado";
-            // 
             // FrmFuncionalidades
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(865, 532);
+            this.ClientSize = new System.Drawing.Size(865, 539);
             this.Controls.Add(this.tabControl1);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "FrmFuncionalidades";

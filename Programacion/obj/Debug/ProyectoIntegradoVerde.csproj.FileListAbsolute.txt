@@ -269,5 +269,10 @@ C:\Users\Alvaro\Desktop\proy\PIdam2122verde\Programacion\obj\Debug\ProyectoInteg
 C:\Users\Alvaro\Desktop\proy\PIdam2122verde\Programacion\obj\Debug\ProyectoIntegradoVerde.exe
 C:\Users\Alvaro\Desktop\proy\PIdam2122verde\Programacion\obj\Debug\ProyectoIntegradoVerde.pdb
 C:\Users\alvar\Desktop\proyecto\PIdam2122verde\Programacion\obj\Debug\ProyectoIntegradoVerde.Formularios.CrearReunion.resources
+C:\Users\Akayu\Desktop\ProyectoIntegrado\Programacion\obj\Debug\ProyectoIntegradoVerde.Formularios.CrearReunion.resources
+C:\Users\Akayu\Desktop\ProyectoIntegrado\Programacion\obj\Debug\ProyectoIntegradoVerde.Formularios.Soporte.resources
+C:\Users\hesalu\Desktop\PI\Programacion\obj\Debug\ProyectoIntegradoVerde.Formularios.Soporte.resources
+>>>>>>> 51c9c8bd392b224618670e700624f4c7ca15be75
 C:\Users\jacaar\Documents\PIdam2122verde\Programacion\obj\Debug\ProyectoIntegradoVerde.Formularios.CrearReunion.resources
->>>>>>> 96f484b20c5cb7453e87d9dd40a7931e9a2f56f6
+C:\Users\jacaar\Documents\PIdam2122verde\Programacion\obj\Debug\ProyectoIntegradoVerde.Formularios.Soporte.resources
+C:\Users\alvar\Desktop\proyecto\PIdam2122verde\Programacion\obj\Debug\ProyectoIntegradoVerde.Formularios.Soporte.resources

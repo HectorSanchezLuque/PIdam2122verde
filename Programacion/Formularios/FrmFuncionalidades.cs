@@ -13,7 +13,7 @@ namespace ProyectoIntegradoVerde.Formularios
         public int NumPag { get => numPag; set => numPag = value; }
         public Usuario User { get => user; set => user = value; }
 
-
+        
 
 
         public void RellenarDataGrid()
@@ -190,7 +190,8 @@ namespace ProyectoIntegradoVerde.Formularios
 
         private void btnCrearReunion_Click(object sender, EventArgs e)
         {
-
+            CrearReunion reu = new CrearReunion(user);
+            reu.ShowDialog();
         }
 
         private void btnLimpiar_Click(object sender, EventArgs e)
@@ -229,8 +230,16 @@ namespace ProyectoIntegradoVerde.Formularios
         {
             if (dgvBandeja.Rows[e.RowIndex].Cells[2].Value != null)
             {
-                MessageBox.Show(dgvBandeja.Rows[e.RowIndex].Cells[2].Value.ToString(), "Cuerpo");
+                MessageBox.Show(dgvBandeja.Rows[e.RowIndex].Cells[2].Value.ToString(), "Cuerpo: ");
 
+            }
+        }
+
+        private void dgvReuniones_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (dgvReuniones.Rows[e.RowIndex].Cells[2].Value != null)
+            {
+                MessageBox.Show(dgvReuniones.Rows[e.RowIndex].Cells[2].Value.ToString(), "Descripcion: ");
             }
         }
     }
