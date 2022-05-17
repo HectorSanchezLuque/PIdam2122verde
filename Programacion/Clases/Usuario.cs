@@ -261,5 +261,12 @@ namespace ProyectoIntegradoVerde
             }
             return existe;
         }
+        static public void DarAlta(string nif)
+        {
+            string consulta = "UPDATE usuarios SET borrado=0 WHERE nif='" + nif + "';";
+            MySqlCommand comando = new MySqlCommand(consulta, conexion.Conexion);
+            comando.ExecuteNonQuery();
+            
+        }
     }
 }
