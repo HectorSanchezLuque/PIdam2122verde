@@ -69,9 +69,9 @@ namespace ProyectoIntegradoVerde
             MySqlDataReader reader = comando.ExecuteReader();
             while (reader.Read())
             {
-                if ((reader.GetString(0) == user && reader.GetString(1) == pass) && (reader.GetString(2) != "Admin"))
+                if ((reader.GetString(0) == user && reader.GetString(1) == pass) && (reader.GetString(2) != "Administrador"))
                     return correct = 1;
-                else if ((reader.GetString(0) == user && reader.GetString(1) == pass) && (reader.GetString(2) == "Admin"))
+                else if ((reader.GetString(0) == user && reader.GetString(1) == pass) && (reader.GetString(2) == "Administrador"))
                     correct = 2;
             }
             reader.Close();

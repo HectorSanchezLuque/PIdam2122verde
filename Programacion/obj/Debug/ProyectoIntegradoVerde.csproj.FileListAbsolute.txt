@@ -228,3 +228,4 @@ C:\Users\hesalu\Desktop\PI\Programacion\obj\Debug\ProyectoIntegradoVerde.Formula
 C:\Users\Akayu\Desktop\ProyectoIntegrado\Programacion\obj\Debug\ProyectoIntegradoVerde.Formularios.CrearReunion.resources
 C:\Users\Akayu\Desktop\ProyectoIntegrado\Programacion\obj\Debug\ProyectoIntegradoVerde.Formularios.Soporte.resources
 C:\Users\hesalu\Desktop\PI\Programacion\obj\Debug\ProyectoIntegradoVerde.Formularios.Soporte.resources
+C:\Users\Akayu\Desktop\ProyectoIntegrado\Programacion\obj\Debug\ProyectoIntegradoVerde.Formularios.PanelAdmin.resources
