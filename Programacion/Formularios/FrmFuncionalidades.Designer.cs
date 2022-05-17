@@ -429,7 +429,7 @@ namespace ProyectoIntegradoVerde.Formularios
             // 
             // btnLimpiar
             // 
-            this.btnLimpiar.Location = new System.Drawing.Point(577, 456);
+            this.btnLimpiar.Location = new System.Drawing.Point(576, 456);
             this.btnLimpiar.Name = "btnLimpiar";
             this.btnLimpiar.Size = new System.Drawing.Size(135, 42);
             this.btnLimpiar.TabIndex = 10;
