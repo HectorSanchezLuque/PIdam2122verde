@@ -22,10 +22,10 @@ namespace ProyectoIntegradoVerde
         private int puntos;
         private string correo;
         private string password;
-        private Image foto;
+        private byte[] foto;
 
         //  Constructor con foto
-         public Usuario(string niff,string nom, DateTime nacimiento, string puesto, string email, string passwd, Image fot )
+         public Usuario(string niff,string nom, DateTime nacimiento, string puesto, string email, string passwd, byte[] fot )
         {
            
             nif = niff;
@@ -35,6 +35,8 @@ namespace ProyectoIntegradoVerde
             correo = email;
             password = passwd;
             foto = fot;
+            puntos = 0;
+            
         }
         // Constructor vacío
         public Usuario() { }
@@ -48,7 +50,7 @@ namespace ProyectoIntegradoVerde
         public int Puntos { get => puntos; set => puntos = value; }
         public string Correo { get => correo; set => correo = value; }
         public string Password { get => password; set => password = value; }
-        public Image Foto { get { return foto; } set { foto = value; } }
+        public byte [] Foto { get { return foto; } set { foto = value; } }
 
 
         // Metodos
@@ -80,26 +82,23 @@ namespace ProyectoIntegradoVerde
         /// <summary>
         /// Agregar usuario a la base de datos.
         /// </summary>
-        /// <param name="usu"></param>
+        /// <param></param>
         /// <returns></returns>
-        static public int AgregarUsuario(Usuario usu) // Investigar
+         public int AgregarUsuario() // Investigar
         {
             int retorno;
-
-            // Preparación de la imagen
-            MemoryStream ms = new MemoryStream();
-            usu.Foto.Save(ms, ImageFormat.Jpeg);
-            byte[] imgArr = ms.ToArray();
+            
 
             // Imp: se puede cambiar la configuración regional del ordenador para que el signo
             // decimal sea el . y el signo de millares la , (MySQL está en formato USA)
             // o se añade en program.cs la siguiente linea:
-            string consulta = String.Format("INSERT INTO usuarios (id,nif,nombre,fecha_nac,cargo,puntos,correo,pswd,imagen) VALUES " +
-                "('{0}','{1}','{2}','{3}','{4}','{5}','{6}','{7}','{8}',@imagen)", usu.id, usu.nif, usu.nombre, usu.fechaNacimiento,
-                usu.cargo, usu.puntos, usu.correo, usu.password);
+            string consulta = String.Format("INSERT INTO usuarios (nif,nombre,fecha_nac,cargo,puntos,correo,pswd,foto) VALUES " +
+                "('{0}','{1}','{2}','{3}','{4}','{5}','{6}',@imagen)", this.nif, this.nombre, this.fechaNacimiento.ToString("yyyy-MM-dd"),
+                this.cargo, this.puntos, this.correo, this.password);
 
             MySqlCommand comando = new MySqlCommand(consulta, conexion.Conexion);
-            comando.Parameters.AddWithValue("imagen", imgArr);
+            comando.Parameters.AddWithValue("imagen", this.Foto);
+            
             retorno = comando.ExecuteNonQuery();
 
             return retorno;
@@ -153,16 +152,13 @@ namespace ProyectoIntegradoVerde
             int retorno;
 
           
-            MemoryStream ms = new MemoryStream();
-            usu.Foto.Save(ms, ImageFormat.Jpeg);
-            byte[] imgArr = ms.ToArray();
 
             string consulta = string.Format("UPDATE usuarios SET id = '{1}',nif = '{2}',nombre = '{3}' ,fecha_nac = '{4}',cargo = '{5}',puntos = '{6}',correo = '{7}',pswd = '{8}',imagen=@imagen WHERE id={6}", usu.id, usu.nif, usu.nombre, usu.fechaNacimiento,
                 usu.cargo, usu.puntos, usu.correo, usu.password);
      
 
             MySqlCommand comando = new MySqlCommand(consulta, conexion.Conexion);
-            comando.Parameters.AddWithValue("imagen", imgArr);
+            comando.Parameters.AddWithValue("imagen", this.Foto);
             retorno = comando.ExecuteNonQuery();
 
        

@@ -52,6 +52,7 @@ namespace Programacion
                                 }
                                 else
                                 {
+
                                     FrmPrincipal princ = new FrmPrincipal(luz, user, lang);
                                     this.Hide();
                                     princ.Show();
@@ -177,6 +178,7 @@ namespace Programacion
                             {
                                 if (user.Cargo == "Administrador" || user.Cargo == "Jefe")
                                 {
+                                    conexion.CerrarConexion();
                                     Registro reg = new Registro();
                                     reg.ShowDialog();
                                 }

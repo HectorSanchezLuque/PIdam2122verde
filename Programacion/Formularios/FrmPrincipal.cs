@@ -22,9 +22,9 @@ namespace ProyectoIntegradoVerde.Formularios
         private Usuario user;
 
         FrmFuncionalidades func = new FrmFuncionalidades();
-        
 
-        public FrmPrincipal(bool l, Usuario us,bool leng)
+
+        public FrmPrincipal(bool l, Usuario us, bool leng)
 
 
         {
@@ -34,10 +34,10 @@ namespace ProyectoIntegradoVerde.Formularios
             lang = leng;
         }
 
-        
+
         private void FrmPrincipal_Load(object sender, EventArgs e)
         {
-            
+
         }
 
         private void lblAbreFormulario_MouseEnter(object sender, EventArgs e)
@@ -110,7 +110,7 @@ namespace ProyectoIntegradoVerde.Formularios
 
         private void btnCorreo_Click(object sender, EventArgs e)
         {
-            
+
             FrmFuncionalidades func = new FrmFuncionalidades();
             func.User = user;
             func.NumPag = 3;
@@ -127,7 +127,7 @@ namespace ProyectoIntegradoVerde.Formularios
 
         private void FrmPrincipal_Load_1(object sender, EventArgs e)
         {
-
+            lblAbreFormulario.Text = user.Nif + "  /  " + user.Nombre + "  /  " + user.Cargo;
         }
     }
 }
