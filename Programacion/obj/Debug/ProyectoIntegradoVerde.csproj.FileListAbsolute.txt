@@ -268,4 +268,8 @@ C:\Users\Alvaro\Desktop\proy\PIdam2122verde\Programacion\obj\Debug\EN\ProyectoIn
 C:\Users\Alvaro\Desktop\proy\PIdam2122verde\Programacion\obj\Debug\ProyectoIntegradoVerde.csproj.CopyComplete
 C:\Users\Alvaro\Desktop\proy\PIdam2122verde\Programacion\obj\Debug\ProyectoIntegradoVerde.exe
 C:\Users\Alvaro\Desktop\proy\PIdam2122verde\Programacion\obj\Debug\ProyectoIntegradoVerde.pdb
+<<<<<<< HEAD
 C:\Users\alvar\Desktop\proyecto\PIdam2122verde\Programacion\obj\Debug\ProyectoIntegradoVerde.Formularios.CrearReunion.resources
+=======
+C:\Users\jacaar\Documents\PIdam2122verde\Programacion\obj\Debug\ProyectoIntegradoVerde.Formularios.CrearReunion.resources
+>>>>>>> 96f484b20c5cb7453e87d9dd40a7931e9a2f56f6
