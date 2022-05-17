@@ -230,8 +230,16 @@ namespace ProyectoIntegradoVerde.Formularios
         {
             if (dgvBandeja.Rows[e.RowIndex].Cells[2].Value != null)
             {
-                MessageBox.Show(dgvBandeja.Rows[e.RowIndex].Cells[2].Value.ToString(), "Cuerpo");
+                MessageBox.Show(dgvBandeja.Rows[e.RowIndex].Cells[2].Value.ToString(), "Cuerpo: ");
 
+            }
+        }
+
+        private void dgvReuniones_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (dgvReuniones.Rows[e.RowIndex].Cells[2].Value != null)
+            {
+                MessageBox.Show(dgvReuniones.Rows[e.RowIndex].Cells[2].Value.ToString(), "Descripcion: ");
             }
         }
     }
