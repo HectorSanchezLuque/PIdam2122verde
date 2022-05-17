@@ -90,7 +90,7 @@
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(66, 8);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(437, 16);
+            this.label1.Size = new System.Drawing.Size(460, 17);
             this.label1.TabIndex = 0;
             this.label1.Text = "Por favor, describa el error de la manera más precisa posible:";
             // 
@@ -112,11 +112,11 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(25, 201);
+            this.label3.Location = new System.Drawing.Point(45, 199);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(514, 16);
+            this.label3.Size = new System.Drawing.Size(483, 17);
             this.label3.TabIndex = 3;
-            this.label3.Text = "Un administrador contactara con usted via SMS con su nueva contraseña.";
+            this.label3.Text = "Un administrador contactara con usted con su nueva contraseña.";
             // 
             // btnSolMail
             // 
@@ -141,7 +141,7 @@
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(99, 74);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(357, 16);
+            this.label2.Size = new System.Drawing.Size(378, 17);
             this.label2.TabIndex = 0;
             this.label2.Text = "Inserte el correo electrónico asociado a su cuenta:";
             // 

@@ -12,14 +12,19 @@ namespace ProyectoIntegradoVerde.Formularios
 {
     public partial class FrmDatos : Form
     {
-        public FrmDatos()
+        private Usuario user;
+        public FrmDatos(Usuario us)
         {
             InitializeComponent();
+            user = us;
         }
 
         private void FrmDatos_Load(object sender, EventArgs e)
         {
-
+            lblNomUser.Text = user.Nombre;
+            lblCodigo.Text = user.Id.ToString("D4");
+            /*ptbFoto.Image = user.Foto;*/
+            
         }
     }
 }

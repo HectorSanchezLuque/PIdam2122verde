@@ -69,9 +69,9 @@ namespace ProyectoIntegradoVerde
             MySqlDataReader reader = comando.ExecuteReader();
             while (reader.Read())
             {
-                if ((reader.GetString(0) == user && reader.GetString(1) == pass) && (reader.GetString(2) != "Admin"))
+                if ((reader.GetString(0) == user && reader.GetString(1) == pass) && (reader.GetString(2) != "Administrador"))
                     return correct = 1;
-                else if ((reader.GetString(0) == user && reader.GetString(1) == pass) && (reader.GetString(2) == "Admin"))
+                else if ((reader.GetString(0) == user && reader.GetString(1) == pass) && (reader.GetString(2) == "Administrador"))
                     correct = 2;
             }
             reader.Close();
@@ -185,6 +185,9 @@ namespace ProyectoIntegradoVerde
                     usu.Puntos = reader.GetInt32(5);
                     usu.Correo = reader.GetString(6);
                     usu.Password = reader.GetString(7);
+                    MemoryStream ms = new MemoryStream((byte[])reader["foto"]);
+                    Bitmap bm = new Bitmap(ms);
+                    usu.Foto = ms.ToArray();
                 }
             }
             reader.Close();
