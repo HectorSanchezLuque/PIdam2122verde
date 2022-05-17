@@ -35,6 +35,8 @@ namespace ProyectoIntegradoVerde
             correo = email;
             password = passwd;
             foto = fot;
+            puntos = 0;
+            
         }
         // Constructor vacío
         public Usuario() { }
@@ -80,23 +82,23 @@ namespace ProyectoIntegradoVerde
         /// <summary>
         /// Agregar usuario a la base de datos.
         /// </summary>
-        /// <param name="usu"></param>
+        /// <param></param>
         /// <returns></returns>
-        static public int AgregarUsuario(Usuario usu) // Investigar
+         public int AgregarUsuario() // Investigar
         {
             int retorno;
 
             // Preparación de la imagen
             MemoryStream ms = new MemoryStream();
-            usu.Foto.Save(ms, ImageFormat.Jpeg);
+            this.foto.Save(ms, ImageFormat.Jpeg);
             byte[] imgArr = ms.ToArray();
 
             // Imp: se puede cambiar la configuración regional del ordenador para que el signo
             // decimal sea el . y el signo de millares la , (MySQL está en formato USA)
             // o se añade en program.cs la siguiente linea:
-            string consulta = String.Format("INSERT INTO usuarios (id,nif,nombre,fecha_nac,cargo,puntos,correo,pswd,imagen) VALUES " +
-                "('{0}','{1}','{2}','{3}','{4}','{5}','{6}','{7}','{8}',@imagen)", usu.id, usu.nif, usu.nombre, usu.fechaNacimiento,
-                usu.cargo, usu.puntos, usu.correo, usu.password);
+            string consulta = String.Format("INSERT INTO usuarios (nif,nombre,fecha_nac,cargo,puntos,correo,pswd,imagen) VALUES " +
+                "('{0}','{1}','{2}','{3}','{4}','{5}','{6}',@imagen)", this.nif, this.nombre, this.fechaNacimiento,
+                this.cargo, this.puntos, this.correo, this.password);
 
             MySqlCommand comando = new MySqlCommand(consulta, conexion.Conexion);
             comando.Parameters.AddWithValue("imagen", imgArr);
