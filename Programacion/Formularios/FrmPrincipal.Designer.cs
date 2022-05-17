@@ -160,19 +160,12 @@ namespace ProyectoIntegradoVerde.Formularios
             // 
             this.btnAdmin.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnAdmin.BackgroundImage")));
             this.btnAdmin.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnAdmin.Location = new System.Drawing.Point(12, 538);
+            this.btnAdmin.Location = new System.Drawing.Point(12, 549);
             this.btnAdmin.Name = "btnAdmin";
             this.btnAdmin.Size = new System.Drawing.Size(67, 73);
             this.btnAdmin.TabIndex = 17;
             this.btnAdmin.UseVisualStyleBackColor = true;
             this.btnAdmin.Click += new System.EventHandler(this.btnAdmin_Click);
-            this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button1.Location = new System.Drawing.Point(12, 553);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(67, 73);
-            this.button1.TabIndex = 17;
-            this.button1.UseVisualStyleBackColor = true;
             // 
             // FrmPrincipal
             // 
