@@ -113,7 +113,7 @@ namespace ProyectoIntegradoVerde.Formularios
             // 
             this.btnCerrarSesion.BackgroundImage = global::ProyectoIntegradoVerde.Properties.Resources.Exit;
             this.btnCerrarSesion.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnCerrarSesion.Location = new System.Drawing.Point(535, 553);
+            this.btnCerrarSesion.Location = new System.Drawing.Point(535, 572);
             this.btnCerrarSesion.Name = "btnCerrarSesion";
             this.btnCerrarSesion.Size = new System.Drawing.Size(67, 72);
             this.btnCerrarSesion.TabIndex = 9;
@@ -160,7 +160,7 @@ namespace ProyectoIntegradoVerde.Formularios
             // 
             this.btnAdmin.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnAdmin.BackgroundImage")));
             this.btnAdmin.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnAdmin.Location = new System.Drawing.Point(12, 549);
+            this.btnAdmin.Location = new System.Drawing.Point(12, 568);
             this.btnAdmin.Name = "btnAdmin";
             this.btnAdmin.Size = new System.Drawing.Size(67, 73);
             this.btnAdmin.TabIndex = 17;
@@ -171,7 +171,7 @@ namespace ProyectoIntegradoVerde.Formularios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(614, 634);
+            this.ClientSize = new System.Drawing.Size(614, 654);
             this.Controls.Add(this.btnAdmin);
             this.Controls.Add(this.lblFecha);
             this.Controls.Add(this.lblHora);
