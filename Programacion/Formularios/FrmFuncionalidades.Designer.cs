@@ -418,7 +418,7 @@ namespace ProyectoIntegradoVerde.Formularios
             // 
             // btnLimpiar
             // 
-            this.btnLimpiar.Location = new System.Drawing.Point(577, 449);
+            this.btnLimpiar.Location = new System.Drawing.Point(577, 456);
             this.btnLimpiar.Name = "btnLimpiar";
             this.btnLimpiar.Size = new System.Drawing.Size(135, 42);
             this.btnLimpiar.TabIndex = 10;
@@ -428,7 +428,7 @@ namespace ProyectoIntegradoVerde.Formularios
             // 
             // btnEnviar
             // 
-            this.btnEnviar.Location = new System.Drawing.Point(718, 449);
+            this.btnEnviar.Location = new System.Drawing.Point(718, 456);
             this.btnEnviar.Name = "btnEnviar";
             this.btnEnviar.Size = new System.Drawing.Size(135, 42);
             this.btnEnviar.TabIndex = 9;
@@ -438,7 +438,7 @@ namespace ProyectoIntegradoVerde.Formularios
             // 
             // txtCuerpo
             // 
-            this.txtCuerpo.Location = new System.Drawing.Point(7, 267);
+            this.txtCuerpo.Location = new System.Drawing.Point(7, 274);
             this.txtCuerpo.Multiline = true;
             this.txtCuerpo.Name = "txtCuerpo";
             this.txtCuerpo.Size = new System.Drawing.Size(846, 176);
@@ -446,14 +446,14 @@ namespace ProyectoIntegradoVerde.Formularios
             // 
             // txtDest
             // 
-            this.txtDest.Location = new System.Drawing.Point(128, 213);
+            this.txtDest.Location = new System.Drawing.Point(162, 213);
             this.txtDest.Name = "txtDest";
             this.txtDest.Size = new System.Drawing.Size(305, 22);
             this.txtDest.TabIndex = 6;
             // 
             // txtAsunto
             // 
-            this.txtAsunto.Location = new System.Drawing.Point(94, 242);
+            this.txtAsunto.Location = new System.Drawing.Point(128, 242);
             this.txtAsunto.Name = "txtAsunto";
             this.txtAsunto.Size = new System.Drawing.Size(339, 22);
             this.txtAsunto.TabIndex = 5;
@@ -637,7 +637,7 @@ namespace ProyectoIntegradoVerde.Formularios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(865, 532);
+            this.ClientSize = new System.Drawing.Size(865, 539);
             this.Controls.Add(this.tabControl1);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "FrmFuncionalidades";
