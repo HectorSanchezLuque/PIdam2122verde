@@ -262,6 +262,14 @@ namespace ProyectoIntegradoVerde
             return existe;
         }
 
+        static public void DarAlta(string nif)
+        {
+            string consulta = "UPDATE usuarios SET borrado=0 WHERE nif='" + nif + "';";
+            MySqlCommand comando = new MySqlCommand(consulta, conexion.Conexion);
+            comando.ExecuteNonQuery();
+        }
+
+
         public static List<Usuario> BuscarCargos (string cargo)
         {
             Usuario usu = new Usuario();
@@ -303,6 +311,7 @@ namespace ProyectoIntegradoVerde
             }
             reader.Close();
             return lista;
+
         }
     }
 }

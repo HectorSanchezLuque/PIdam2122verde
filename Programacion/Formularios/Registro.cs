@@ -100,7 +100,16 @@ namespace ProyectoIntegradoVerde
                         {
                             
                             // si esta borrado
-                            MessageBox.Show("Existe un usuario con ese nif quieres darlo de alta?", "Nif ya registrado", MessageBoxButtons.YesNo);
+                            DialogResult resp = MessageBox.Show("Existe un usuario con ese nif quieres darlo de alta?", "Nif ya registrado", MessageBoxButtons.YesNo);
+                            if (resp == DialogResult.Yes)
+                            {
+                                conexion.Conexion.Close();
+                                conexion.Conexion.Open();
+                                Usuario.DarAlta(txtNifRegistro.Text);
+                                
+                                MessageBox.Show("Usuario dado de alta");
+                                
+                            }
                         }
                         else
                         {
