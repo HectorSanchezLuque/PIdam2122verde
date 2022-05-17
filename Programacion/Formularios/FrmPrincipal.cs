@@ -35,10 +35,6 @@ namespace ProyectoIntegradoVerde.Formularios
         }
 
 
-        private void FrmPrincipal_Load(object sender, EventArgs e)
-        {
-
-        }
 
         private void lblAbreFormulario_MouseEnter(object sender, EventArgs e)
         {
@@ -128,6 +124,13 @@ namespace ProyectoIntegradoVerde.Formularios
         private void FrmPrincipal_Load_1(object sender, EventArgs e)
         {
             lblAbreFormulario.Text = user.Nif + "  /  " + user.Nombre + "  /  " + user.Cargo;
+            timer1.Enabled = true;
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            lblHora.Text = DateTime.Now.ToString("hh:mm:ss");
+            lblFecha.Text = DateTime.Now.ToLongDateString();
         }
     }
 }

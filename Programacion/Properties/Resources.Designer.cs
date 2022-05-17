@@ -63,6 +63,16 @@ namespace ProyectoIntegradoVerde.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _134221_refresh_reload_repeat_update_arrow_icon {
+            get {
+                object obj = ResourceManager.GetObject("134221_refresh_reload_repeat_update_arrow_icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap _1814117_gear_options_preferences_setting_icon {
             get {
                 object obj = ResourceManager.GetObject("1814117_gear_options_preferences_setting_icon", resourceCulture);

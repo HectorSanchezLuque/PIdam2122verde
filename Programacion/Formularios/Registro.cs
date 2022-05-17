@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using ProyectoIntegradoVerde.Formularios;
+using System.IO;
 
 namespace ProyectoIntegradoVerde
 {
@@ -82,32 +83,68 @@ namespace ProyectoIntegradoVerde
 
         private void Registro_Load(object sender, EventArgs e)
         {
-
+            txtPasswordRegistro.UseSystemPasswordChar = true;
         }
 
         private void btnRegistrarseRegistro_Click(object sender, EventArgs e)
         {
             if (comprDatos())
             {
-
-                Usuario user = new Usuario(txtNifRegistro.Text, txtNombreRegistro.Text, dtpFNRegistro.Value, txtPasswordRegistro.Text, txtEmailRegistro.Text, txtCargo.Text, pbProfPicRegistro.Image);
-
                 try
                 {
-                    //proceso de agregar usuario
-                    //user.AgregarUsuario();
+                    if (conexion.Conexion != null)
+                    {
+                        conexion.Conexion.Open();
 
+                        if (Usuario.ComprobarBorrado("nif", txtNifRegistro.Text))
+                        {
+                            
+                            // si esta borrado
+                            MessageBox.Show("Existe un usuario con ese nif quieres darlo de alta?", "Nif ya registrado", MessageBoxButtons.YesNo);
+                        }
+                        else
+                        {
+                            conexion.Conexion.Close();
+                            conexion.Conexion.Open();
+                            //guardar imagen
+                            MemoryStream ms = new MemoryStream();
+                            pbProfPicRegistro.Image.Save(ms, pbProfPicRegistro.Image.RawFormat);
+                            byte[] img = ms.ToArray();
+                            
 
+                            Usuario user = new Usuario(txtNifRegistro.Text, txtNombreRegistro.Text, dtpFNRegistro.Value.Date, txtPasswordRegistro.Text, txtEmailRegistro.Text, txtCargo.Text, img);
+                            user.AgregarUsuario();
+
+                        }
+                    }
                 }
-                catch
+                catch (Exception ex)
                 {
-                    MessageBox.Show("Error al registrar");
+                    MessageBox.Show("Error en la operacion: "+ex.Message);
                 }
-
-
-
+                finally
+                {
+                    conexion.Conexion.Close();
+                }
             }
             
+        }
+
+        private void chkShowReg_CheckedChanged(object sender, EventArgs e)
+        {
+            if (chkShowReg.Checked)
+            {
+                txtPasswordRegistro.UseSystemPasswordChar = false;
+            }
+            else
+            {
+                txtPasswordRegistro.UseSystemPasswordChar = true;
+            }
+        }
+
+        private void txtNifRegistro_TextChanged(object sender, EventArgs e)
+        {
+            txtNifRegistro.Text = txtNifRegistro.Text.ToUpper();
         }
     }
 }

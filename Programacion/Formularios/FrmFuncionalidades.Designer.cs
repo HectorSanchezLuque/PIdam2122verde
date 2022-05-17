@@ -31,6 +31,7 @@ namespace ProyectoIntegradoVerde.Formularios
         {
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.label3 = new System.Windows.Forms.Label();
             this.btnActualizar = new System.Windows.Forms.Button();
             this.lblDobleClick = new System.Windows.Forms.Label();
             this.lblInfo2 = new System.Windows.Forms.Label();
@@ -66,6 +67,11 @@ namespace ProyectoIntegradoVerde.Formularios
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.dgvBandeja = new System.Windows.Forms.DataGridView();
+            this.ideee = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.title = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cuerp = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.remit = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.date = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabPage5 = new System.Windows.Forms.TabPage();
             this.btnComprar = new System.Windows.Forms.Button();
             this.lblPuntos = new System.Windows.Forms.Label();
@@ -74,11 +80,7 @@ namespace ProyectoIntegradoVerde.Formularios
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.ideee = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.title = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cuerp = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.remit = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.date = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label6 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTareasPendientes)).BeginInit();
@@ -110,6 +112,7 @@ namespace ProyectoIntegradoVerde.Formularios
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.label3);
             this.tabPage1.Controls.Add(this.btnActualizar);
             this.tabPage1.Controls.Add(this.lblDobleClick);
             this.tabPage1.Controls.Add(this.lblInfo2);
@@ -126,14 +129,24 @@ namespace ProyectoIntegradoVerde.Formularios
             this.tabPage1.UseVisualStyleBackColor = true;
             this.tabPage1.Click += new System.EventHandler(this.tabPage1_Click);
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(486, 454);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(240, 17);
+            this.label3.TabIndex = 7;
+            this.label3.Text = "Doble click para completar una tarea";
+            // 
             // btnActualizar
             // 
             this.btnActualizar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.btnActualizar.Location = new System.Drawing.Point(739, 321);
+            this.btnActualizar.Image = global::ProyectoIntegradoVerde.Properties.Resources._134221_refresh_reload_repeat_update_arrow_icon;
+            this.btnActualizar.Location = new System.Drawing.Point(783, 428);
             this.btnActualizar.Name = "btnActualizar";
-            this.btnActualizar.Size = new System.Drawing.Size(109, 29);
+            this.btnActualizar.Size = new System.Drawing.Size(65, 66);
             this.btnActualizar.TabIndex = 5;
-            this.btnActualizar.Text = "Actualizar";
             this.btnActualizar.UseVisualStyleBackColor = true;
             this.btnActualizar.Click += new System.EventHandler(this.btnActualizar_Click);
             // 
@@ -151,7 +164,7 @@ namespace ProyectoIntegradoVerde.Formularios
             // 
             this.lblInfo2.AutoSize = true;
             this.lblInfo2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.lblInfo2.Location = new System.Drawing.Point(333, 280);
+            this.lblInfo2.Location = new System.Drawing.Point(333, 255);
             this.lblInfo2.Name = "lblInfo2";
             this.lblInfo2.Size = new System.Drawing.Size(147, 20);
             this.lblInfo2.TabIndex = 3;
@@ -176,13 +189,14 @@ namespace ProyectoIntegradoVerde.Formularios
             this.F_Publicacion,
             this.F_limite,
             this.puntosasignados});
-            this.dgvTareasPendientes.Location = new System.Drawing.Point(129, 321);
+            this.dgvTareasPendientes.Location = new System.Drawing.Point(129, 296);
             this.dgvTareasPendientes.Name = "dgvTareasPendientes";
             this.dgvTareasPendientes.ReadOnly = true;
             this.dgvTareasPendientes.RowHeadersWidth = 51;
             this.dgvTareasPendientes.RowTemplate.Height = 24;
             this.dgvTareasPendientes.Size = new System.Drawing.Size(580, 150);
             this.dgvTareasPendientes.TabIndex = 1;
+            this.dgvTareasPendientes.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvTareasPendientes_CellContentDoubleClick);
             // 
             // Tid
             // 
@@ -384,6 +398,7 @@ namespace ProyectoIntegradoVerde.Formularios
             // 
             // tabPage4
             // 
+            this.tabPage4.Controls.Add(this.label6);
             this.tabPage4.Controls.Add(this.btnLimpiar);
             this.tabPage4.Controls.Add(this.btnEnviar);
             this.tabPage4.Controls.Add(this.txtCuerpo);
@@ -403,7 +418,7 @@ namespace ProyectoIntegradoVerde.Formularios
             // 
             // btnLimpiar
             // 
-            this.btnLimpiar.Location = new System.Drawing.Point(577, 449);
+            this.btnLimpiar.Location = new System.Drawing.Point(577, 456);
             this.btnLimpiar.Name = "btnLimpiar";
             this.btnLimpiar.Size = new System.Drawing.Size(135, 42);
             this.btnLimpiar.TabIndex = 10;
@@ -413,7 +428,7 @@ namespace ProyectoIntegradoVerde.Formularios
             // 
             // btnEnviar
             // 
-            this.btnEnviar.Location = new System.Drawing.Point(718, 449);
+            this.btnEnviar.Location = new System.Drawing.Point(718, 456);
             this.btnEnviar.Name = "btnEnviar";
             this.btnEnviar.Size = new System.Drawing.Size(135, 42);
             this.btnEnviar.TabIndex = 9;
@@ -423,7 +438,7 @@ namespace ProyectoIntegradoVerde.Formularios
             // 
             // txtCuerpo
             // 
-            this.txtCuerpo.Location = new System.Drawing.Point(7, 267);
+            this.txtCuerpo.Location = new System.Drawing.Point(7, 274);
             this.txtCuerpo.Multiline = true;
             this.txtCuerpo.Name = "txtCuerpo";
             this.txtCuerpo.Size = new System.Drawing.Size(846, 176);
@@ -431,14 +446,14 @@ namespace ProyectoIntegradoVerde.Formularios
             // 
             // txtDest
             // 
-            this.txtDest.Location = new System.Drawing.Point(128, 213);
+            this.txtDest.Location = new System.Drawing.Point(162, 213);
             this.txtDest.Name = "txtDest";
             this.txtDest.Size = new System.Drawing.Size(305, 22);
             this.txtDest.TabIndex = 6;
             // 
             // txtAsunto
             // 
-            this.txtAsunto.Location = new System.Drawing.Point(94, 242);
+            this.txtAsunto.Location = new System.Drawing.Point(128, 242);
             this.txtAsunto.Name = "txtAsunto";
             this.txtAsunto.Size = new System.Drawing.Size(339, 22);
             this.txtAsunto.TabIndex = 5;
@@ -478,7 +493,46 @@ namespace ProyectoIntegradoVerde.Formularios
             this.dgvBandeja.RowTemplate.Height = 24;
             this.dgvBandeja.Size = new System.Drawing.Size(846, 195);
             this.dgvBandeja.TabIndex = 0;
-            this.dgvBandeja.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvBandeja_CellClick);
+            this.dgvBandeja.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvBandeja_CellContentDoubleClick);
+            // 
+            // ideee
+            // 
+            this.ideee.HeaderText = "ID";
+            this.ideee.MinimumWidth = 6;
+            this.ideee.Name = "ideee";
+            this.ideee.ReadOnly = true;
+            this.ideee.Width = 125;
+            // 
+            // title
+            // 
+            this.title.HeaderText = "Asunto";
+            this.title.MinimumWidth = 6;
+            this.title.Name = "title";
+            this.title.ReadOnly = true;
+            this.title.Width = 125;
+            // 
+            // cuerp
+            // 
+            this.cuerp.HeaderText = "Cuerpo";
+            this.cuerp.MinimumWidth = 6;
+            this.cuerp.Name = "cuerp";
+            this.cuerp.Width = 125;
+            // 
+            // remit
+            // 
+            this.remit.HeaderText = "Remitente";
+            this.remit.MinimumWidth = 6;
+            this.remit.Name = "remit";
+            this.remit.ReadOnly = true;
+            this.remit.Width = 125;
+            // 
+            // date
+            // 
+            this.date.HeaderText = "Fecha";
+            this.date.MinimumWidth = 6;
+            this.date.Name = "date";
+            this.date.ReadOnly = true;
+            this.date.Width = 125;
             // 
             // tabPage5
             // 
@@ -494,6 +548,7 @@ namespace ProyectoIntegradoVerde.Formularios
             this.tabPage5.TabIndex = 4;
             this.tabPage5.Text = "Tienda";
             this.tabPage5.UseVisualStyleBackColor = true;
+            this.tabPage5.Click += new System.EventHandler(this.tabPage5_Click);
             // 
             // btnComprar
             // 
@@ -568,54 +623,25 @@ namespace ProyectoIntegradoVerde.Formularios
             this.dataGridView1.Size = new System.Drawing.Size(299, 150);
             this.dataGridView1.TabIndex = 0;
             // 
-            // ideee
+            // label6
             // 
-            this.ideee.HeaderText = "ID";
-            this.ideee.MinimumWidth = 6;
-            this.ideee.Name = "ideee";
-            this.ideee.ReadOnly = true;
-            this.ideee.Width = 125;
-            // 
-            // title
-            // 
-            this.title.HeaderText = "Asunto";
-            this.title.MinimumWidth = 6;
-            this.title.Name = "title";
-            this.title.ReadOnly = true;
-            this.title.Width = 125;
-            // 
-            // cuerp
-            // 
-            this.cuerp.HeaderText = "Cuerpo";
-            this.cuerp.MinimumWidth = 6;
-            this.cuerp.Name = "cuerp";
-            this.cuerp.Width = 125;
-            // 
-            // remit
-            // 
-            this.remit.HeaderText = "Remitente";
-            this.remit.MinimumWidth = 6;
-            this.remit.Name = "remit";
-            this.remit.ReadOnly = true;
-            this.remit.Width = 125;
-            // 
-            // date
-            // 
-            this.date.HeaderText = "Fecha";
-            this.date.MinimumWidth = 6;
-            this.date.Name = "date";
-            this.date.ReadOnly = true;
-            this.date.Width = 125;
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(493, 211);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(355, 17);
+            this.label6.TabIndex = 11;
+            this.label6.Text = "Doble click para leer el cuerpo del correo seleccionado";
             // 
             // FrmFuncionalidades
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(865, 532);
+            this.ClientSize = new System.Drawing.Size(865, 539);
             this.Controls.Add(this.tabControl1);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "FrmFuncionalidades";
-            this.Text = "FrmFuncionalidades";
+            this.Text = "Funcionalidades";
             this.Load += new System.EventHandler(this.FrmFuncionalidades_Load);
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
@@ -689,5 +715,7 @@ namespace ProyectoIntegradoVerde.Formularios
         private System.Windows.Forms.DataGridViewTextBoxColumn cuerp;
         private System.Windows.Forms.DataGridViewTextBoxColumn remit;
         private System.Windows.Forms.DataGridViewTextBoxColumn date;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label6;
     }
 }
