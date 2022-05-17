@@ -282,9 +282,11 @@ namespace ProyectoIntegradoVerde
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtNifRegistro.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNifRegistro.Location = new System.Drawing.Point(177, 247);
+            this.txtNifRegistro.MaxLength = 9;
             this.txtNifRegistro.Name = "txtNifRegistro";
             this.txtNifRegistro.Size = new System.Drawing.Size(464, 38);
             this.txtNifRegistro.TabIndex = 45;
+            this.txtNifRegistro.TextChanged += new System.EventHandler(this.txtNifRegistro_TextChanged);
             // 
             // lblNifRegistro
             // 
@@ -314,6 +316,7 @@ namespace ProyectoIntegradoVerde
             this.chkShowReg.TabIndex = 42;
             this.chkShowReg.Text = "Mostrar contraseña";
             this.chkShowReg.UseVisualStyleBackColor = true;
+            this.chkShowReg.CheckedChanged += new System.EventHandler(this.chkShowReg_CheckedChanged);
             // 
             // errorProvider1
             // 
