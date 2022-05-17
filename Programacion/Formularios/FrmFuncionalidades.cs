@@ -13,7 +13,7 @@ namespace ProyectoIntegradoVerde.Formularios
         public int NumPag { get => numPag; set => numPag = value; }
         public Usuario User { get => user; set => user = value; }
 
-
+        
 
 
         public void RellenarDataGrid()
@@ -190,7 +190,8 @@ namespace ProyectoIntegradoVerde.Formularios
 
         private void btnCrearReunion_Click(object sender, EventArgs e)
         {
-
+            CrearReunion reu = new CrearReunion(user);
+            reu.ShowDialog();
         }
 
         private void btnLimpiar_Click(object sender, EventArgs e)
