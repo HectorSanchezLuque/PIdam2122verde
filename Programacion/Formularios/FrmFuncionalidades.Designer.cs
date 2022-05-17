@@ -59,6 +59,7 @@ namespace ProyectoIntegradoVerde.Formularios
             this.descReu = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.fechaReu = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.label6 = new System.Windows.Forms.Label();
             this.btnLimpiar = new System.Windows.Forms.Button();
             this.btnEnviar = new System.Windows.Forms.Button();
             this.txtCuerpo = new System.Windows.Forms.TextBox();
@@ -80,7 +81,6 @@ namespace ProyectoIntegradoVerde.Formularios
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.label6 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTareasPendientes)).BeginInit();
@@ -363,6 +363,7 @@ namespace ProyectoIntegradoVerde.Formularios
             this.dgvReuniones.RowHeadersWidth = 51;
             this.dgvReuniones.Size = new System.Drawing.Size(837, 408);
             this.dgvReuniones.TabIndex = 0;
+            this.dgvReuniones.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvReuniones_CellContentDoubleClick);
             // 
             // idreu
             // 
@@ -415,6 +416,16 @@ namespace ProyectoIntegradoVerde.Formularios
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "Correo";
             this.tabPage4.UseVisualStyleBackColor = true;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(493, 211);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(355, 17);
+            this.label6.TabIndex = 11;
+            this.label6.Text = "Doble click para leer el cuerpo del correo seleccionado";
             // 
             // btnLimpiar
             // 
@@ -622,16 +633,6 @@ namespace ProyectoIntegradoVerde.Formularios
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.Size = new System.Drawing.Size(299, 150);
             this.dataGridView1.TabIndex = 0;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(493, 211);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(355, 17);
-            this.label6.TabIndex = 11;
-            this.label6.Text = "Doble click para leer el cuerpo del correo seleccionado";
             // 
             // FrmFuncionalidades
             // 
