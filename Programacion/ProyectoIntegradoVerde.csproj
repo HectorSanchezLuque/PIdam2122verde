@@ -194,6 +194,7 @@
     <EmbeddedResource Include="RecursosLocalizables\StringRecursos.EN.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>StringRecursos.EN.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="RecursosLocalizables\StringRecursos.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -248,6 +249,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\134221_refresh_reload_repeat_update_arrow_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\R %281%29.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

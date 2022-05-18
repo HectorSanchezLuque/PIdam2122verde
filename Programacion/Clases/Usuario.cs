@@ -23,9 +23,10 @@ namespace ProyectoIntegradoVerde
         private string correo;
         private string password;
         private byte[] foto;
+        private int borrado;
 
         //  Constructor con foto
-         public Usuario(string niff,string nom, DateTime nacimiento, string puesto, string email, string passwd, byte[] fot )
+         public Usuario(string niff,string nom, DateTime nacimiento, string puesto, string email, string passwd, byte[] fot , int bor)
         {
            
             nif = niff;
@@ -36,6 +37,7 @@ namespace ProyectoIntegradoVerde
             password = passwd;
             foto = fot;
             puntos = 0;
+            borrado = bor;
             
         }
         // Constructor vacío
@@ -51,10 +53,12 @@ namespace ProyectoIntegradoVerde
         public string Correo { get => correo; set => correo = value; }
         public string Password { get => password; set => password = value; }
         public byte [] Foto { get { return foto; } set { foto = value; } }
+        public int Borrado { get => borrado; set => borrado = value; }
 
 
         // Metodos
 
+        /* NO SE USA
         /// <summary>
         /// Comprueba si un usuario ha introducido su nombre y contraseña, también comprueba si el usuario es administrador.
         /// </summary>
@@ -78,16 +82,17 @@ namespace ProyectoIntegradoVerde
             comando.ExecuteNonQuery();
             return correct;
         }
+        */
 
         /// <summary>
         /// Agregar usuario a la base de datos.
         /// </summary>
         /// <param></param>
         /// <returns></returns>
-         public int AgregarUsuario() // Investigar
+        public int AgregarUsuario() // Investigar
         {
             int retorno;
-            
+
 
             // Imp: se puede cambiar la configuración regional del ordenador para que el signo
             // decimal sea el . y el signo de millares la , (MySQL está en formato USA)
@@ -98,7 +103,7 @@ namespace ProyectoIntegradoVerde
 
             MySqlCommand comando = new MySqlCommand(consulta, conexion.Conexion);
             comando.Parameters.AddWithValue("imagen", this.Foto);
-            
+
             retorno = comando.ExecuteNonQuery();
 
             return retorno;
@@ -134,7 +139,7 @@ namespace ProyectoIntegradoVerde
         /// <returns></returns>
         public static int EliminaUsuario(int nif)
         {
-            int retorno;   
+            int retorno;
             // Eliminamos definitivamente el usuario de la tabla usuario.
             string consulta = string.Format("DELETE FROM usuarios WHERE nif={0}", nif);
             MySqlCommand comando = new MySqlCommand(consulta, conexion.Conexion);
@@ -151,17 +156,17 @@ namespace ProyectoIntegradoVerde
 
             int retorno;
 
-          
+
 
             string consulta = string.Format("UPDATE usuarios SET id = '{1}',nif = '{2}',nombre = '{3}' ,fecha_nac = '{4}',cargo = '{5}',puntos = '{6}',correo = '{7}',pswd = '{8}',imagen=@imagen WHERE id={6}", usu.id, usu.nif, usu.nombre, usu.fechaNacimiento,
                 usu.cargo, usu.puntos, usu.correo, usu.password);
-     
+
 
             MySqlCommand comando = new MySqlCommand(consulta, conexion.Conexion);
             comando.Parameters.AddWithValue("imagen", this.Foto);
             retorno = comando.ExecuteNonQuery();
 
-       
+
             return retorno;
         }
 
@@ -185,17 +190,6 @@ namespace ProyectoIntegradoVerde
                     usu.Puntos = reader.GetInt32(5);
                     usu.Correo = reader.GetString(6);
                     usu.Password = reader.GetString(7);
-                    if (reader.IsDBNull(8))
-                    {
-                        usu.Foto = null;
-                    }
-                    else
-                    {
-
-                        MemoryStream ms = new MemoryStream((byte[])reader["foto"]);
-                        Bitmap bm = new Bitmap(ms);
-                        usu.Foto = ms.ToArray();
-                    }
                 }
             }
             reader.Close();
@@ -242,7 +236,7 @@ namespace ProyectoIntegradoVerde
                     return false;
                 }
             }
-            
+
         }
 
         /// <summary>
@@ -253,11 +247,11 @@ namespace ProyectoIntegradoVerde
         /// <param name="campoDato">Campo de la BdD</param>
         /// <param name="valorDato">Valor del dato</param>
         /// <returns>True si está borrado, False si no está borrado.</returns>
-        static public bool ComprobarBorrado(string campoDato,string valorDato)
+        static public bool ComprobarBorrado(string campoDato, string valorDato)
         {
             bool existe = false;
 
-            string verificador = "SELECT borrado FROM usuarios WHERE "+campoDato+"='" + valorDato + "';";
+            string verificador = "SELECT borrado FROM usuarios WHERE " + campoDato + "='" + valorDato + "';";
 
             MySqlCommand verif = new MySqlCommand(verificador, conexion.Conexion);
             MySqlDataReader reader = verif.ExecuteReader();
@@ -270,6 +264,7 @@ namespace ProyectoIntegradoVerde
                 }
                 else existe = false;
             }
+            reader.Close();
             return existe;
         }
 
@@ -281,7 +276,7 @@ namespace ProyectoIntegradoVerde
         }
 
 
-        public static List<Usuario> BuscarCargos (string cargo)
+        public static List<Usuario> BuscarCargos(string cargo)
         {
             Usuario usu = new Usuario();
             List<Usuario> lista = new List<Usuario>();
@@ -315,7 +310,7 @@ namespace ProyectoIntegradoVerde
             string consulta = "SELECT DISTINCT cargo FROM usuarios;";
             MySqlCommand comando = new MySqlCommand(consulta, conexion.Conexion);
             MySqlDataReader reader = comando.ExecuteReader();
-            
+
             while (reader.Read())
             {
                 lista.Add(reader.GetString(0));
@@ -323,6 +318,69 @@ namespace ProyectoIntegradoVerde
             reader.Close();
             return lista;
 
+        }
+
+        public static List<Usuario> ListadoUsuarios()
+        {
+            List<Usuario> usuarios = new List<Usuario>();
+
+            string consulta = "SELECT * FROM usuarios;";
+            MySqlCommand comando = new MySqlCommand(consulta, conexion.Conexion);
+            MySqlDataReader reader = comando.ExecuteReader();
+
+            while (reader.Read())
+            {
+                Usuario us = new Usuario();
+                us.Id = reader.GetInt32(0);
+                us.Nif = reader.GetString(1);
+                us.Nombre = reader.GetString(2);
+                us.FechaNacimiento = reader.GetDateTime(3);
+                us.Cargo = reader.GetString(4);
+                us.Puntos = reader.GetInt32(5);
+                us.Correo = reader.GetString(6);
+                us.Password = reader.GetString(7);
+                us.foto = null; //No se que tipo de Get es
+                us.Borrado = reader.GetInt32(9);
+
+                usuarios.Add(us);
+            }
+            reader.Close();
+            return usuarios;
+        public static Bitmap BuscarFoto(string nif)
+        {
+            string consulta = "SELECT foto FROM usuarios WHERE nif='" + nif + "';";
+            MySqlCommand comando = new MySqlCommand(consulta, conexion.Conexion);
+            MySqlDataReader reader = comando.ExecuteReader();
+            if (reader.HasRows)   // En caso que se hallen registros en el objeto reader
+            {
+                while (reader.Read())
+                {
+                    if (reader.IsDBNull(0))
+                    {
+                        return null;
+                    }
+                    else
+                    {
+                        MemoryStream ms = new MemoryStream((byte[])reader["foto"]);
+                        Bitmap bm = new Bitmap(ms);
+                        reader.Close();
+                        return bm;
+                    }
+                }
+                reader.Close();
+                return null;
+            }
+            reader.Close();
+            return null;
+        }
+
+        public static void ActualizarFoto(string nif, byte[] foto)
+        {
+            string consulta = "UPDATE usuarios SET foto=@foto WHERE nif='" + nif + "';";
+            MySqlCommand comando = new MySqlCommand(consulta, conexion.Conexion);
+            comando.Parameters.Add("@foto", MySqlDbType.Blob);
+            comando.Parameters["@foto"].Value = foto;
+            comando.ExecuteNonQuery();
         }
     }
 }
