@@ -132,6 +132,33 @@
   <data name="passwd" xml:space="preserve">
     <value>Password</value>
   </data>
+  <data name="regBtnClose" xml:space="preserve">
+    <value>Close</value>
+  </data>
+  <data name="regBtnReg" xml:space="preserve">
+    <value>Register</value>
+  </data>
+  <data name="regCargar" xml:space="preserve">
+    <value>Load</value>
+  </data>
+  <data name="regCargo" xml:space="preserve">
+    <value>Position:</value>
+  </data>
+  <data name="regClave" xml:space="preserve">
+    <value>Password:</value>
+  </data>
+  <data name="regMostContra" xml:space="preserve">
+    <value>Show password</value>
+  </data>
+  <data name="regNaci" xml:space="preserve">
+    <value>Birth:</value>
+  </data>
+  <data name="regNombre" xml:space="preserve">
+    <value>Name:</value>
+  </data>
+  <data name="regTitle" xml:space="preserve">
+    <value>User register</value>
+  </data>
   <data name="regUsu" xml:space="preserve">
     <value>Register User</value>
   </data>
