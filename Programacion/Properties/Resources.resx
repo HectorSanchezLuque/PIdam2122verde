@@ -118,14 +118,11 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="Exit" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Exit.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="3837963_shop_business_store_market_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\3837963_shop_business_store_market_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="8725528_calendar_alt_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\8725528_calendar_alt_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="3837963_shop_business_store_market_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\3837963_shop_business_store_market_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="299086_info_sign_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\299086_info_sign_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -133,14 +130,11 @@
   <data name="spFlag" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\spFlag.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="8396405_clipboard_note_document_report_paper_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\8396405_clipboard_note_document_report_paper_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Exit" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Exit.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="1814117_gear_options_preferences_setting_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\1814117_gear_options_preferences_setting_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="134221_refresh_reload_repeat_update_arrow_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\134221_refresh_reload_repeat_update_arrow_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="5094667_chat_communication_message_talk_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\5094667_chat_communication_message_talk_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -148,13 +142,16 @@
   <data name="engFlag" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\engFlag.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="7208644_application_mail_email_message_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\7208644_application_mail_email_message_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="2932353_group_people_team_hr_humans_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\2932353_group_people_team_hr_humans_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="R (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\R (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="7208644_application_mail_email_message_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\7208644_application_mail_email_message_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="8396405_clipboard_note_document_report_paper_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\8396405_clipboard_note_document_report_paper_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="134221_refresh_reload_repeat_update_arrow_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\134221_refresh_reload_repeat_update_arrow_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

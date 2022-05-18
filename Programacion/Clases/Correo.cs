@@ -17,14 +17,13 @@ namespace ProyectoIntegradoVerde.Clases
         private string recipiente;
         private string remitente;
         private string fecha;
-        private int usuario_id;
 
         // Constructor vacio
 
         public Correo() { }
 
         // Constructor
-        public Correo(int id, string asunto, string cuerpo, string recipiente, string remitente, string fecha, int usuario_id)
+        public Correo(int id, string asunto, string cuerpo, string recipiente, string remitente, string fecha)
         {
             this.id = id;
             this.asunto = asunto;
@@ -32,7 +31,6 @@ namespace ProyectoIntegradoVerde.Clases
             this.recipiente = recipiente;
             this.remitente = remitente;
             this.fecha = fecha;
-            this.usuario_id = usuario_id;
         }
 
 
@@ -43,7 +41,6 @@ namespace ProyectoIntegradoVerde.Clases
         public string Recipiente { get => recipiente; set => recipiente = value; }
         public string Remitente { get => remitente; set => remitente = value; }
         public string Fecha { get => fecha; set => fecha = value; }
-        public int Usuario_id { get => usuario_id; set => usuario_id = value; }
 
         // Metodos
 
@@ -58,7 +55,7 @@ namespace ProyectoIntegradoVerde.Clases
             int retorno;
 
                 string consulta = String.Format("INSERT INTO Correos (idCorreo,asunto,cuerpo,recipiente,remitente,fecha,usuarios_id) VALUES " +
-                    "('{0}','{1}','{2}','{3}','{4}','{5}','{6}');", cor.id, cor.asunto, cor.cuerpo, cor.recipiente, cor.remitente, cor.fecha,cor.Usuario_id );
+                    "('{0}','{1}','{2}','{3}','{4}','{5}');", cor.id, cor.asunto, cor.cuerpo, cor.recipiente, cor.remitente, cor.fecha);
 
                 MySqlCommand comando = new MySqlCommand(consulta, conexion.Conexion);
                 retorno = comando.ExecuteNonQuery();
@@ -148,9 +145,12 @@ namespace ProyectoIntegradoVerde.Clases
                     co.recipiente = reader.GetString(3);
                     co.remitente = reader.GetString(4);
                     co.fecha = reader.GetString(5);
-                    co.usuario_id = reader.GetInt32(6);
                     bandeja.Add(co);
+<<<<<<< HEAD
                 }
+=======
+                }                
+>>>>>>> 1ed9594a1abb50fb8bf02ed18015aa1fa5bbaa36
             }
             reader.Close();
             return bandeja;

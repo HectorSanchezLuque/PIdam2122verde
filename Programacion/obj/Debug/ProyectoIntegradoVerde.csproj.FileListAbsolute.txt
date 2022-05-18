@@ -278,6 +278,7 @@ C:\Users\Alvaro\Desktop\proy\PIdam2122verde\Programacion\bin\Debug\System.Runtim
 C:\Users\Alvaro\Desktop\proy\PIdam2122verde\Programacion\obj\Debug\EN\ProyectoIntegradoVerde.resources.dll
 C:\Users\Alvaro\Desktop\proy\PIdam2122verde\Programacion\obj\Debug\ProyectoIntegradoVerde.csproj.CopyComplete
 C:\Users\hesalu\Desktop\PI\Programacion\obj\Debug\ProyectoIntegradoVerde.Formularios.PanelAdmin.resources
+<<<<<<< HEAD
 C:\Users\alvar\Desktop\proyecto\PIdam2122verde\Programacion\obj\Debug\ProyectoIntegradoVerde.Formularios.CrearReunion.resources
 C:\Users\alvar\Desktop\proyecto\PIdam2122verde\Programacion\obj\Debug\ProyectoIntegradoVerde.Formularios.PanelAdmin.resources
 C:\Users\alvar\Desktop\proyecto\PIdam2122verde\Programacion\obj\Debug\ProyectoIntegradoVerde.Formularios.Soporte.resources
@@ -327,3 +328,5 @@ C:\Users\hesalu\Desktop\PI 2\Programacion\bin\Debug\System.Numerics.Vectors.xml
 C:\Users\hesalu\Desktop\PI 2\Programacion\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
 C:\Users\hesalu\Desktop\PI 2\Programacion\obj\Debug\EN\ProyectoIntegradoVerde.resources.dll
 C:\Users\hesalu\Desktop\PI 2\Programacion\obj\Debug\ProyectoIntegradoVerde.csproj.CopyComplete
+=======
+>>>>>>> 1ed9594a1abb50fb8bf02ed18015aa1fa5bbaa36
