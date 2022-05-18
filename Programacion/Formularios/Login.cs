@@ -179,7 +179,7 @@ namespace Programacion
                                 if (user.Cargo == "Administrador" || user.Cargo == "Jefe")
                                 {
                                     conexion.CerrarConexion();
-                                    Registro reg = new Registro();
+                                    Registro reg = new Registro(luz,lang);
                                     reg.ShowDialog();
                                 }
                                 else
@@ -228,5 +228,6 @@ namespace Programacion
         {
 
         }
+        
     }
 }

@@ -106,6 +106,87 @@ namespace ProyectoIntegradoVerde.RecursosLocalizables {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a Cerrar.
+        /// </summary>
+        internal static string regBtnClose {
+            get {
+                return ResourceManager.GetString("regBtnClose", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Registrar.
+        /// </summary>
+        internal static string regBtnReg {
+            get {
+                return ResourceManager.GetString("regBtnReg", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Cargar.
+        /// </summary>
+        internal static string regCargar {
+            get {
+                return ResourceManager.GetString("regCargar", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Cargo:.
+        /// </summary>
+        internal static string regCargo {
+            get {
+                return ResourceManager.GetString("regCargo", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Contraseña:.
+        /// </summary>
+        internal static string regClave {
+            get {
+                return ResourceManager.GetString("regClave", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Mostrar contraseña.
+        /// </summary>
+        internal static string regMostContra {
+            get {
+                return ResourceManager.GetString("regMostContra", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Fecha:.
+        /// </summary>
+        internal static string regNaci {
+            get {
+                return ResourceManager.GetString("regNaci", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Nombre:.
+        /// </summary>
+        internal static string regNombre {
+            get {
+                return ResourceManager.GetString("regNombre", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Registro de usuario.
+        /// </summary>
+        internal static string regTitle {
+            get {
+                return ResourceManager.GetString("regTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a Resgistrar Usuario.
         /// </summary>
         internal static string regUsu {

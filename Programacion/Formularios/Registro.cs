@@ -9,11 +9,18 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using ProyectoIntegradoVerde.Formularios;
 using System.IO;
+using System.Globalization;
+using System.Threading;
+using ProyectoIntegradoVerde.RecursosLocalizables;
+using ProyectoIntegradoVerde.Properties;
 
 namespace ProyectoIntegradoVerde
 {
+    
     public partial class Registro : Form
     {
+        bool luz;
+        bool lang;
 
         private  bool comprDatos()
         {
@@ -57,11 +64,15 @@ namespace ProyectoIntegradoVerde
             return comp;
 
         }
-        public Registro()
+        public Registro(bool lu, bool lan)
         {
             InitializeComponent();
-        }
+            luz = lu;
+            lang = lan;
+            
 
+
+        }
         private void btnCargarRegistro_Click(object sender, EventArgs e)
         {
             OpenFileDialog openFileDialog1 = new OpenFileDialog();
@@ -84,6 +95,8 @@ namespace ProyectoIntegradoVerde
         private void Registro_Load(object sender, EventArgs e)
         {
             txtPasswordRegistro.UseSystemPasswordChar = true;
+            luzForm();
+            formLang();
         }
 
         private void btnRegistrarseRegistro_Click(object sender, EventArgs e)
@@ -154,6 +167,90 @@ namespace ProyectoIntegradoVerde
         private void txtNifRegistro_TextChanged(object sender, EventArgs e)
         {
             txtNifRegistro.Text = txtNifRegistro.Text.ToUpper();
+        }
+        private void luzForm()
+        {
+
+            if (luz)
+            {
+
+                luz = true;
+                this.BackColor = Color.FromArgb(255, 255, 255);
+                lblCargo.ForeColor = Color.FromArgb(0, 0, 122);
+                lblEmailRegistro.ForeColor = Color.FromArgb(0, 0, 122);
+                lblFNacRegistro.ForeColor = Color.FromArgb(0, 0, 122);
+                lblNifRegistro.ForeColor = Color.FromArgb(0, 0, 122);
+                lblNombreRegistro.ForeColor = Color.FromArgb(0, 0, 122);
+                lblPasswordRegistro.ForeColor = Color.FromArgb(0, 0, 122);
+                lblRegistro.ForeColor = Color.FromArgb(0, 0, 122);
+                chkShowReg.ForeColor = Color.FromArgb(0, 0, 122);
+
+
+
+
+
+
+            }
+            else
+            {
+
+                luz = false;
+                this.BackColor = Color.FromArgb(0, 0, 122);
+                lblCargo.ForeColor = Color.FromArgb(255, 255, 255);
+                lblEmailRegistro.ForeColor = Color.FromArgb(255, 255, 255);
+                lblFNacRegistro.ForeColor = Color.FromArgb(255, 255, 255);
+                lblNifRegistro.ForeColor = Color.FromArgb(255, 255, 255);
+                lblNombreRegistro.ForeColor = Color.FromArgb(255, 255, 255);
+                lblPasswordRegistro.ForeColor = Color.FromArgb(255, 255, 255);
+                lblRegistro.ForeColor = Color.FromArgb(255, 255, 255);
+                chkShowReg.ForeColor = Color.FromArgb(255, 255, 255);
+
+
+
+
+            }
+
+        }
+
+        private void formLang()
+        {
+            if (!lang)
+            {
+                
+                Thread.CurrentThread.CurrentUICulture = new CultureInfo("");
+                lang = false;
+
+            }
+            else
+            {
+                
+                Thread.CurrentThread.CurrentUICulture = new CultureInfo("EN");
+                lang = true;
+
+
+            }
+
+            AplicarIdioma();
+        }
+
+        private void AplicarIdioma()
+        {
+
+            lblCargo.Text = StringRecursos.regCargo;
+            lblFNacRegistro.Text = StringRecursos.regNaci;
+            lblNombreRegistro.Text = StringRecursos.regNombre;
+            lblPasswordRegistro.Text = StringRecursos.regClave;
+            lblRegistro.Text = StringRecursos.regTitle;
+            btnCargarRegistro.Text = StringRecursos.regCargar;
+            btnClos.Text = StringRecursos.regBtnClose;
+            btnRegistrarseRegistro.Text = StringRecursos.regBtnReg;
+            chkShowReg.Text = StringRecursos.regMostContra;
+
+
+
+
+
+
         }
     }
 }
