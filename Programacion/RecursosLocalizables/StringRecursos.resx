@@ -162,4 +162,19 @@
   <data name="regUsu" xml:space="preserve">
     <value>Resgistrar Usuario</value>
   </data>
+  <data name="sopbtnEnviar" xml:space="preserve">
+    <value>Enviar</value>
+  </data>
+  <data name="sopBtnENvin2" xml:space="preserve">
+    <value>Un administrador contactara con usted con su nueva contraseña.</value>
+  </data>
+  <data name="sopbtnEnvInf1" xml:space="preserve">
+    <value>Enviar informe</value>
+  </data>
+  <data name="sopTitle" xml:space="preserve">
+    <value>Por favor, describa el error de la manera más precisa posible:</value>
+  </data>
+  <data name="sopTitle2" xml:space="preserve">
+    <value>Inserte el correo electrónico asociado a su cuenta:</value>
+  </data>
 </root>
