@@ -23,7 +23,7 @@ namespace ProyectoIntegradoVerde.Formularios
         {
             lblNomUser.Text = user.Nombre;
             lblCodigo.Text = user.Id.ToString("D4");
-            /*ptbFoto.Image = user.Foto;*/
+            ptbFoto.Image = Usuario.BuscarFoto(user.Nif);
             
         }
     }

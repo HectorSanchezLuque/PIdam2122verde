@@ -324,5 +324,15 @@ namespace ProyectoIntegradoVerde
             return lista;
 
         }
+
+        public static Bitmap BuscarFoto(string nif)
+        {
+            string consulta = "SELECT foto FROM usuarios WHERE nif='" + nif + "';";
+            MySqlCommand comando = new MySqlCommand(consulta, conexion.Conexion);
+            MySqlDataReader reader = comando.ExecuteReader();
+            MemoryStream ms = new MemoryStream((byte[])reader["foto"]);
+            Bitmap bm = new Bitmap(ms);
+            return bm;
+        }
     }
 }
