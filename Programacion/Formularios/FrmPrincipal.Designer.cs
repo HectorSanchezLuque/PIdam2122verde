@@ -79,7 +79,7 @@ namespace ProyectoIntegradoVerde.Formularios
             this.lblFecha.AutoSize = true;
             this.lblFecha.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             this.lblFecha.ForeColor = System.Drawing.Color.MediumBlue;
-            this.lblFecha.Location = new System.Drawing.Point(383, 17);
+            this.lblFecha.Location = new System.Drawing.Point(480, 15);
             this.lblFecha.Name = "lblFecha";
             this.lblFecha.Size = new System.Drawing.Size(49, 18);
             this.lblFecha.TabIndex = 16;

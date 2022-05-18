@@ -134,9 +134,9 @@ namespace ProyectoIntegradoVerde
                             byte[] img = ms.ToArray();
                             
 
-                            Usuario user = new Usuario(txtNifRegistro.Text, txtNombreRegistro.Text, dtpFNRegistro.Value.Date, txtPasswordRegistro.Text, txtEmailRegistro.Text, txtCargo.Text, img);
+                            Usuario user = new Usuario(txtNifRegistro.Text, txtNombreRegistro.Text, dtpFNRegistro.Value.Date, txtCargo.Text, txtEmailRegistro.Text, txtPasswordRegistro.Text, img);
                             user.AgregarUsuario();
-
+                            MessageBox.Show("Usuario registrado");
                         }
                     }
                 }

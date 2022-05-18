@@ -17,7 +17,7 @@ namespace ProyectoIntegradoVerde.Formularios
     public partial class FrmPrincipal : Form
     {
 
-        private bool luz;
+        bool luz;
         bool lang;
         private Usuario user;
 
@@ -39,11 +39,17 @@ namespace ProyectoIntegradoVerde.Formularios
         private void lblAbreFormulario_MouseEnter(object sender, EventArgs e)
         {
             lblAbreFormulario.ForeColor = Color.Blue;
+            
         }
 
         private void lblAbreFormulario_MouseLeave(object sender, EventArgs e)
         {
-            lblAbreFormulario.ForeColor = Color.Black;
+            if (luz)
+            {
+                lblAbreFormulario.ForeColor = Color.Black;
+            }
+            else
+            lblAbreFormulario.ForeColor = Color.FromArgb(255, 255, 255);
         }
 
         private void lblAbreFormulario_Click(object sender, EventArgs e)
@@ -130,12 +136,13 @@ namespace ProyectoIntegradoVerde.Formularios
             {
                 btnAdmin.Show();
             }
+            luzForm();
         }
 
         private void timer1_Tick(object sender, EventArgs e)
         {
             lblHora.Text = DateTime.Now.ToString("hh:mm:ss");
-            lblFecha.Text = DateTime.Now.ToLongDateString();
+            lblFecha.Text = DateTime.Now.ToString("d");
         }
 
         private void btnAdmin_Click(object sender, EventArgs e)
@@ -143,5 +150,48 @@ namespace ProyectoIntegradoVerde.Formularios
             PanelAdmin pnlAd = new PanelAdmin();
             pnlAd.ShowDialog();
         }
+
+        private void luzForm()
+        {
+
+            if (luz)
+            {
+
+                luz = true;
+                this.BackColor = Color.FromArgb(255, 255, 255);
+                lblAbreFormulario.ForeColor = Color.Black;
+                lblHora.ForeColor = Color.FromArgb(0, 0, 122);
+                lblFecha.ForeColor = Color.FromArgb(0, 0, 122);
+                btnAdmin.ForeColor = Color.FromArgb(0, 0, 122);
+                btnCerrarSesion.ForeColor = Color.FromArgb(0, 0, 122);
+                btnCalendario.ForeColor = Color.FromArgb(0, 0, 122);
+                btnCorreo.ForeColor = Color.FromArgb(0, 0, 122);
+                btnReuniones.ForeColor = Color.FromArgb(0, 0, 122);
+                btnTareas.ForeColor = Color.FromArgb(0, 0, 122);
+                btnTienda.ForeColor = Color.FromArgb(0, 0, 122);
+
+            }
+            else
+            {
+
+                luz = false;
+                this.BackColor = Color.FromArgb(0, 0, 122);
+                lblAbreFormulario.ForeColor = Color.FromArgb(255, 255, 255);
+                lblHora.ForeColor = Color.FromArgb(255, 255, 255);
+                lblFecha.ForeColor = Color.FromArgb(255, 255, 255);
+                btnAdmin.ForeColor = Color.FromArgb(255, 255, 255);
+                btnCerrarSesion.ForeColor = Color.FromArgb(255, 255, 255);
+                btnCalendario.ForeColor = Color.FromArgb(255, 255, 255);
+                btnCorreo.ForeColor = Color.FromArgb(255, 255, 255);
+                btnReuniones.ForeColor = Color.FromArgb(255, 255, 255);
+                btnTareas.ForeColor = Color.FromArgb(255, 255, 255);
+                btnTienda.ForeColor = Color.FromArgb(255, 255, 255);
+
+            }
+
+
+            
+        }
+
     }
 }

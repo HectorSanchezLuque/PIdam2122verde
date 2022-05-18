@@ -8,18 +8,26 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Globalization;
+using System.Threading;
+using ProyectoIntegradoVerde.RecursosLocalizables;
 
 namespace ProyectoIntegradoVerde.Formularios
 {
     public partial class Soporte : Form
     {
+        bool luz;
+        bool lang;
         private int numPag;
 
         public int NumPag { get => numPag; set => numPag = value; }
 
-        public Soporte()
+        public Soporte(bool lu , bool lan)
         {
+            
             InitializeComponent();
+            luz = lu;
+            lang = lan;
         }
 
         private void btnInforme_Click(object sender, EventArgs e)
@@ -92,6 +100,74 @@ namespace ProyectoIntegradoVerde.Formularios
         private void Soporte_Load(object sender, EventArgs e)
         {
             this.tabSoporte.SelectTab(numPag);
+            formLang();
+            luzForm();
+        }
+
+        private void luzForm()
+        {
+            if (luz)
+            {
+                luz = false;
+                this.BackColor = Color.FromArgb(255, 255, 255);
+                lblMess.ForeColor = Color.FromArgb(0, 0, 122);
+                lblrecup.ForeColor = Color.FromArgb(0, 0, 122);
+                lbltitle.ForeColor = Color.FromArgb(0, 0, 122);
+                tabPague1.ForeColor = Color.FromArgb(255, 255, 255);
+                tabPage2.ForeColor = Color.FromArgb(255, 255, 255);
+                tabSoporte.ForeColor = Color.FromArgb(255, 255, 255);
+
+            }
+            else
+            {
+
+                luz = true;
+                this.BackColor = Color.FromArgb(0, 0, 122);
+                lblMess.ForeColor = Color.FromArgb(255, 255, 255);
+                lblrecup.ForeColor = Color.FromArgb(255, 255, 255);
+                lbltitle.ForeColor = Color.FromArgb(255, 255, 255);
+                tabPague1.ForeColor = Color.FromArgb(0, 0, 122);
+                tabPage2.ForeColor = Color.FromArgb(0, 0, 122);
+                tabSoporte.ForeColor = Color.FromArgb(0, 0, 122);
+            }
+        }
+
+        private void tabPage1_Click(object sender, EventArgs e)
+        {
+
+        }
+        private void formLang()
+        {
+            if (!lang)
+            {
+
+                Thread.CurrentThread.CurrentUICulture = new CultureInfo("");
+                lang = false;
+
+            }
+            else
+            {
+
+                Thread.CurrentThread.CurrentUICulture = new CultureInfo("EN");
+                lang = true;
+
+
+            }
+
+            AplicarIdioma();
+        }
+        private void AplicarIdioma()
+        {
+
+            //lblCargo.Text = StringRecursos.regCargo;
+            lbltitle.Text = StringRecursos.sopTitle;
+            btnInforme.Text = StringRecursos.sopbtnEnvInf1;
+            lblrecup.Text = StringRecursos.sopTitle2;
+            btnSolMail.Text = StringRecursos.sopbtnEnviar;
+            lblMess.Text = StringRecursos.sopBtnENvin2;
+            
+
+
         }
     }
 }
