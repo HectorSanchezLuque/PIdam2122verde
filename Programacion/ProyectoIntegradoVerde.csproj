@@ -194,6 +194,7 @@
     <EmbeddedResource Include="RecursosLocalizables\StringRecursos.EN.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>StringRecursos.EN.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="RecursosLocalizables\StringRecursos.resx">
       <Generator>ResXFileCodeGenerator</Generator>
