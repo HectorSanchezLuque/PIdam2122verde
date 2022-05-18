@@ -9,6 +9,10 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using ProyectoIntegradoVerde.Formularios;
 using System.IO;
+using System.Globalization;
+using System.Threading;
+using ProyectoIntegradoVerde.RecursosLocalizables;
+using ProyectoIntegradoVerde.Properties;
 
 namespace ProyectoIntegradoVerde
 {
@@ -92,6 +96,7 @@ namespace ProyectoIntegradoVerde
         {
             txtPasswordRegistro.UseSystemPasswordChar = true;
             luzForm();
+            formLang();
         }
 
         private void btnRegistrarseRegistro_Click(object sender, EventArgs e)
@@ -207,5 +212,45 @@ namespace ProyectoIntegradoVerde
 
         }
 
+        private void formLang()
+        {
+            if (!lang)
+            {
+                
+                Thread.CurrentThread.CurrentUICulture = new CultureInfo("");
+                lang = false;
+
+            }
+            else
+            {
+                
+                Thread.CurrentThread.CurrentUICulture = new CultureInfo("EN");
+                lang = true;
+
+
+            }
+
+            AplicarIdioma();
+        }
+
+        private void AplicarIdioma()
+        {
+
+            lblCargo.Text = StringRecursos.regCargo;
+            lblFNacRegistro.Text = StringRecursos.regNaci;
+            lblNombreRegistro.Text = StringRecursos.regNombre;
+            lblPasswordRegistro.Text = StringRecursos.regClave;
+            lblRegistro.Text = StringRecursos.regTitle;
+            btnCargarRegistro.Text = StringRecursos.regCargar;
+            btnClos.Text = StringRecursos.regBtnClose;
+            btnRegistrarseRegistro.Text = StringRecursos.regBtnReg;
+            chkShowReg.Text = StringRecursos.regMostContra;
+
+
+
+
+
+
+        }
     }
 }
