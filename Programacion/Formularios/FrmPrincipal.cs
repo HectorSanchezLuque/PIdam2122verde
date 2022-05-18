@@ -22,9 +22,9 @@ namespace ProyectoIntegradoVerde.Formularios
         private Usuario user;
 
         FrmFuncionalidades func = new FrmFuncionalidades();
-        
 
-        public FrmPrincipal(bool l, Usuario us,bool leng)
+
+        public FrmPrincipal(bool l, Usuario us, bool leng)
 
 
         {
@@ -34,11 +34,7 @@ namespace ProyectoIntegradoVerde.Formularios
             lang = leng;
         }
 
-        
-        private void FrmPrincipal_Load(object sender, EventArgs e)
-        {
-            
-        }
+
 
         private void lblAbreFormulario_MouseEnter(object sender, EventArgs e)
         {
@@ -52,7 +48,7 @@ namespace ProyectoIntegradoVerde.Formularios
 
         private void lblAbreFormulario_Click(object sender, EventArgs e)
         {
-            FrmDatos d = new FrmDatos();
+            FrmDatos d = new FrmDatos(user);
             d.ShowDialog();
         }
 
@@ -110,7 +106,7 @@ namespace ProyectoIntegradoVerde.Formularios
 
         private void btnCorreo_Click(object sender, EventArgs e)
         {
-            
+
             FrmFuncionalidades func = new FrmFuncionalidades();
             func.User = user;
             func.NumPag = 3;
@@ -127,7 +123,25 @@ namespace ProyectoIntegradoVerde.Formularios
 
         private void FrmPrincipal_Load_1(object sender, EventArgs e)
         {
+            lblAbreFormulario.Text = user.Nombre + "  /  " + user.Cargo + "  /  " + user.Nif;
+            timer1.Enabled = true;
+            btnAdmin.Hide();
+            if (user.Cargo == "Administrador" || user.Cargo == "Jefe")
+            {
+                btnAdmin.Show();
+            }
+        }
 
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            lblHora.Text = DateTime.Now.ToString("hh:mm:ss");
+            lblFecha.Text = DateTime.Now.ToLongDateString();
+        }
+
+        private void btnAdmin_Click(object sender, EventArgs e)
+        {
+            PanelAdmin pnlAd = new PanelAdmin();
+            pnlAd.ShowDialog();
         }
     }
 }

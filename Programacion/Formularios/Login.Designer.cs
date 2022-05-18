@@ -88,6 +88,7 @@
             // 
             // btnIniSesion
             // 
+            this.btnIniSesion.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnIniSesion.Location = new System.Drawing.Point(269, 334);
             this.btnIniSesion.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnIniSesion.Name = "btnIniSesion";
@@ -179,10 +180,8 @@
             // 
             // Login
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.AutoSize = true;
-            this.ClientSize = new System.Drawing.Size(478, 481);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
+            this.ClientSize = new System.Drawing.Size(478, 453);
             this.Controls.Add(this.lblNotif);
             this.Controls.Add(this.pcbLuz);
             this.Controls.Add(this.lblLang);
@@ -201,6 +200,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Inicio de sesión";
             this.Load += new System.EventHandler(this.Login_Load);
+            this.SizeChanged += new System.EventHandler(this.Login_SizeChanged);
             ((System.ComponentModel.ISupportInitialize)(this.pcbLuz)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picFlag)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picLight)).EndInit();

@@ -13,7 +13,7 @@ namespace ProyectoIntegradoVerde.Formularios
         public int NumPag { get => numPag; set => numPag = value; }
         public Usuario User { get => user; set => user = value; }
 
-
+        
 
 
         public void RellenarDataGrid()
@@ -47,7 +47,7 @@ namespace ProyectoIntegradoVerde.Formularios
             correos = Correo.Bandeja(user.Correo);
             for (int i = 0; i < correos.Count; i++)
             {
-                dgvBandeja.Rows.Add(correos[i].Id, correos[i].Asunto, correos[i].Cuerpo, correos[i].Recipiente, correos[i].Remitente, correos[i].Fecha);
+                dgvBandeja.Rows.Add(correos[i].Id, correos[i].Asunto, correos[i].Cuerpo, correos[i].Remitente, correos[i].Fecha);
             }
 
             // Reuniones
@@ -68,6 +68,7 @@ namespace ProyectoIntegradoVerde.Formularios
 
         private void FrmFuncionalidades_Load(object sender, EventArgs e)
         {
+            lblPuntos.Text = user.Puntos.ToString();
             this.tabControl1.SelectTab(numPag);
             try
             {
@@ -94,10 +95,7 @@ namespace ProyectoIntegradoVerde.Formularios
             }
         }
 
-        private void tabPage1_Click(object sender, EventArgs e)
-        {
 
-        }
 
         private void dgvTareasSinAsignar_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
         {
@@ -180,21 +178,65 @@ namespace ProyectoIntegradoVerde.Formularios
                 Correo.AgregarCorreo(cor);
                 conexion.CerrarConexion();
                 MessageBox.Show("Correo enviado con éxito.");
+                txtAsunto.Text = "";
+                txtCuerpo.Text = "";
+                txtDest.Text = "";
             }
         }
 
-        private void dgvBandeja_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            if (dgvBandeja.Rows[e.RowIndex].Cells[e.ColumnIndex].Value != null)
-            {
-                MessageBox.Show(dgvBandeja.Rows[e.RowIndex].Cells[e.ColumnIndex].Value.ToString(), "Cuerpo");
 
-            }
-        }
 
         private void btnCrearReunion_Click(object sender, EventArgs e)
         {
+            CrearReunion reu = new CrearReunion(user);
+            reu.ShowDialog();
+        }
 
+        private void btnLimpiar_Click(object sender, EventArgs e)
+        {
+            txtAsunto.Text = "";
+            txtCuerpo.Text = "";
+            txtDest.Text = "";
+        }
+
+
+
+        private void dgvTareasPendientes_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            
+            if (dgvTareasPendientes.Rows[e.RowIndex].Cells[4].Value != null)
+            {
+                int puntos = Convert.ToInt32(dgvTareasPendientes.Rows[e.RowIndex].Cells[4].Value);
+                int id = Convert.ToInt32(dgvTareasPendientes.Rows[e.RowIndex].Cells[0].Value);
+
+                user.Puntos = user.Puntos + puntos;
+                conexion.AbrirConexion();
+                Tarea.EliminarTarea(id);
+                Tarea.AñadirPuntos(user);
+                RellenarDataGrid();
+                conexion.CerrarConexion();
+                MessageBox.Show("Tarea completada, puntos actuales: "+user.Puntos.ToString());
+                lblPuntos.Text = user.Puntos.ToString();
+
+            }
+              
+        }
+
+        private void dgvBandeja_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (dgvBandeja.Rows[e.RowIndex].Cells[2].Value != null)
+            {
+                MessageBox.Show(dgvBandeja.Rows[e.RowIndex].Cells[2].Value.ToString(), "Cuerpo: ");
+
+            }
+        }
+
+        private void dgvReuniones_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (dgvReuniones.Rows[e.RowIndex].Cells[2].Value != null)
+            {
+                MessageBox.Show(dgvReuniones.Rows[e.RowIndex].Cells[2].Value.ToString(), "Descripcion: ");
+            }
         }
     }
 }

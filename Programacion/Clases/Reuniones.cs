@@ -67,5 +67,33 @@ namespace ProyectoIntegradoVerde.Clases
             reader.Close();
             return reunions;
         }
+
+        public static void CReunion(string cargo, string desc, DateTime f, DateTime h, string n, Usuario user)
+        {
+            List<Usuario> lista = Usuario.BuscarCargos(cargo);
+            int retorno;
+
+            string consulta = String.Format("INSERT INTO reuniones (descripcion,fecha,hora,nombre) VALUES " +
+                "('{0}','{1}','{2}','{3}')", desc, f.ToString("yyyy-MM-dd"), h.ToString("t"), n);
+
+            MySqlCommand comando = new MySqlCommand(consulta, conexion.Conexion);
+            retorno = comando.ExecuteNonQuery();
+
+            if (user.Cargo != cargo)
+            {
+                string consulta2 = String.Format("INSERT INTO usuarios_has_reuniones (usuarios_id,reuniones_id) VALUES " +
+                "('{0}',(SELECT MAX(id) FROM reuniones))", user.Id);
+                MySqlCommand comando2 = new MySqlCommand(consulta2, conexion.Conexion);
+                retorno = comando2.ExecuteNonQuery();
+            }
+
+            for (int i = 0; i < lista.Count; i++)
+            {
+                string consulta3 = String.Format("INSERT INTO usuarios_has_reuniones (usuarios_id,reuniones_id) VALUES " +
+                    "('{0}',(SELECT MAX(id) FROM reuniones))", lista[i].Id);
+                MySqlCommand comando3 = new MySqlCommand(consulta3, conexion.Conexion);
+                retorno = comando3.ExecuteNonQuery();
+            }
+        }
     }
 }

@@ -125,11 +125,23 @@
     <Compile Include="Formularios\Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\PanelAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\PanelAdmin.Designer.cs">
+      <DependentUpon>PanelAdmin.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\Registro.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Formularios\Registro.Designer.cs">
       <DependentUpon>Registro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Soporte.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Soporte.Designer.cs">
+      <DependentUpon>Soporte.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -160,8 +172,14 @@
     <EmbeddedResource Include="Formularios\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\PanelAdmin.resx">
+      <DependentUpon>PanelAdmin.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Registro.resx">
       <DependentUpon>Registro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Soporte.resx">
+      <DependentUpon>Soporte.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -224,6 +242,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\spFlag.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Exit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\134221_refresh_reload_repeat_update_arrow_icon.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
