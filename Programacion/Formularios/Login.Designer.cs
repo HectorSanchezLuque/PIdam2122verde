@@ -50,7 +50,7 @@
             // 
             this.lblPsw.AutoSize = true;
             this.lblPsw.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPsw.Location = new System.Drawing.Point(37, 265);
+            this.lblPsw.Location = new System.Drawing.Point(29, 266);
             this.lblPsw.Name = "lblPsw";
             this.lblPsw.Size = new System.Drawing.Size(136, 29);
             this.lblPsw.TabIndex = 1;
@@ -58,7 +58,7 @@
             // 
             // txtNif
             // 
-            this.txtNif.Location = new System.Drawing.Point(179, 242);
+            this.txtNif.Location = new System.Drawing.Point(154, 242);
             this.txtNif.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtNif.MaxLength = 9;
             this.txtNif.Name = "txtNif";
@@ -69,7 +69,7 @@
             // txtPassword
             // 
             this.txtPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPassword.Location = new System.Drawing.Point(179, 268);
+            this.txtPassword.Location = new System.Drawing.Point(154, 268);
             this.txtPassword.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.PasswordChar = '*';
@@ -80,7 +80,7 @@
             // 
             this.lblNIF.AutoSize = true;
             this.lblNIF.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNIF.Location = new System.Drawing.Point(121, 236);
+            this.lblNIF.Location = new System.Drawing.Point(96, 239);
             this.lblNIF.Name = "lblNIF";
             this.lblNIF.Size = new System.Drawing.Size(52, 29);
             this.lblNIF.TabIndex = 4;
@@ -170,7 +170,7 @@
             // picLight
             // 
             this.picLight.Image = ((System.Drawing.Image)(resources.GetObject("picLight.Image")));
-            this.picLight.Location = new System.Drawing.Point(160, 41);
+            this.picLight.Location = new System.Drawing.Point(155, 42);
             this.picLight.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.picLight.Name = "picLight";
             this.picLight.Size = new System.Drawing.Size(176, 167);
