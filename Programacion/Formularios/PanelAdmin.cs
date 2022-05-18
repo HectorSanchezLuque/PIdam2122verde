@@ -40,10 +40,10 @@ namespace ProyectoIntegradoVerde.Formularios
                 txtPuntos.Text = dgvUsuarios.Rows[e.RowIndex].Cells[5].Value.ToString();
                 txtCorreo.Text = dgvUsuarios.Rows[e.RowIndex].Cells[6].Value.ToString();
                 txtContrasena.Text = dgvUsuarios.Rows[e.RowIndex].Cells[7].Value.ToString();
-                if (dgvUsuarios.Rows[e.RowIndex].Cells[8].Value == 0)
+                /*if (dgvUsuarios.Rows[e.RowIndex].Cells[8].Value == 0)
                 {
                     checkDeshab.Checked = true;
-                } else { checkDeshab.Checked = false;}
+                } else { checkDeshab.Checked = false;}*/
 
             }
         }
@@ -55,13 +55,13 @@ namespace ProyectoIntegradoVerde.Formularios
             {
                 List<Usuario> list = new List<Usuario>();
                 conexion.AbrirConexion();
-                list = Usuario.ListadoUsuarios();
+               /* list = Usuario.ListadoUsuarios();*/
                 conexion.CerrarConexion();
 
-                for (int i = 0; i < list.Count; i++)
+                /*for (int i = 0; i < list.Count; i++)
                 {
                     dgvUsuarios.Rows.Add(list[i].Id, list[i].Nif, list[i].Nombre, list[i].FechaNacimiento.ToString("dd-MM-yyyy"), list[i].Cargo, list[i].Puntos, list[i].Correo, list[i].Password, list[i].Foto, list[i].Borrado);
-                }
+                }*/
             }
         }
     }

@@ -151,8 +151,8 @@ namespace ProyectoIntegradoVerde.Clases
                     co.usuario_id = reader.GetInt32(6);
                     bandeja.Add(co);
                 }
-                reader.Close();
             }
+            reader.Close();
             return bandeja;
         }
         public static List<String> CorreosAdmin()
