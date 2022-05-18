@@ -23,9 +23,10 @@ namespace ProyectoIntegradoVerde
         private string correo;
         private string password;
         private byte[] foto;
+        private int borrado;
 
         //  Constructor con foto
-         public Usuario(string niff,string nom, DateTime nacimiento, string puesto, string email, string passwd, byte[] fot )
+         public Usuario(string niff,string nom, DateTime nacimiento, string puesto, string email, string passwd, byte[] fot , int bor)
         {
            
             nif = niff;
@@ -36,6 +37,7 @@ namespace ProyectoIntegradoVerde
             password = passwd;
             foto = fot;
             puntos = 0;
+            borrado = bor;
             
         }
         // Constructor vacío
@@ -51,10 +53,12 @@ namespace ProyectoIntegradoVerde
         public string Correo { get => correo; set => correo = value; }
         public string Password { get => password; set => password = value; }
         public byte [] Foto { get { return foto; } set { foto = value; } }
+        public int Borrado { get => borrado; set => borrado = value; }
 
 
         // Metodos
 
+        /* NO SE USA
         /// <summary>
         /// Comprueba si un usuario ha introducido su nombre y contraseña, también comprueba si el usuario es administrador.
         /// </summary>
@@ -78,13 +82,14 @@ namespace ProyectoIntegradoVerde
             comando.ExecuteNonQuery();
             return correct;
         }
+        */
 
         /// <summary>
         /// Agregar usuario a la base de datos.
         /// </summary>
         /// <param></param>
         /// <returns></returns>
-         public int AgregarUsuario() // Investigar
+        public int AgregarUsuario() // Investigar
         {
             int retorno;
             
@@ -323,6 +328,34 @@ namespace ProyectoIntegradoVerde
             reader.Close();
             return lista;
 
+        }
+
+        public static List<Usuario> ListadoUsuarios()
+        {
+            List<Usuario> usuarios = new List<Usuario>();
+
+            string consulta = "SELECT * FROM usuarios;";
+            MySqlCommand comando = new MySqlCommand(consulta, conexion.Conexion);
+            MySqlDataReader reader = comando.ExecuteReader();
+
+            while (reader.Read())
+            {
+                Usuario us = new Usuario();
+                us.Id = reader.GetInt32(0);
+                us.Nif = reader.GetString(1);
+                us.Nombre = reader.GetString(2);
+                us.FechaNacimiento = reader.GetDateTime(3);
+                us.Cargo = reader.GetString(4);
+                us.Puntos = reader.GetInt32(5);
+                us.Correo = reader.GetString(6);
+                us.Password = reader.GetString(7);
+                us.foto = null; //No se que tipo de Get es
+                us.Borrado = reader.GetInt32(9);
+
+                usuarios.Add(us);
+            }
+            reader.Close();
+            return usuarios;
         }
     }
 }
