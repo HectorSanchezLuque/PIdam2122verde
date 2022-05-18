@@ -113,9 +113,6 @@ namespace ProyectoIntegradoVerde.Formularios
             // 
             this.btnCerrarSesion.BackgroundImage = global::ProyectoIntegradoVerde.Properties.Resources.Exit;
             this.btnCerrarSesion.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-
-            this.btnCerrarSesion.Location = new System.Drawing.Point(526, 538);
-
             this.btnCerrarSesion.Location = new System.Drawing.Point(535, 572);
             this.btnCerrarSesion.Name = "btnCerrarSesion";
             this.btnCerrarSesion.Size = new System.Drawing.Size(76, 72);

@@ -59,6 +59,15 @@ namespace ProyectoIntegradoVerde.Formularios
                 string f = list3[i].Fecha.ToString("dd-MM-yyyy") + " // " + list3[i].Hora.ToString("HH:mm");
                 dgvReuniones.Rows.Add(list3[i].Id, list3[i].Nombre, list3[i].Descripcion, f);
             }
+            
+
+            //Productos
+            List<Tienda> list4 = new List<Tienda>();
+            list4 = Tienda.Catalogo();
+            for (int i = 0; i < list4.Count; i++)
+            {
+                dgvProductos.Rows.Add(list4[i].Id_prod, list4[i].Nombre, list4[i].Coste, list4[i].Descripcion);
+            }
             conexion.CerrarConexion();
         }
         public FrmFuncionalidades()
@@ -238,6 +247,25 @@ namespace ProyectoIntegradoVerde.Formularios
                 MessageBox.Show(dgvReuniones.Rows[e.RowIndex].Cells[2].Value.ToString(), "Descripcion: ");
             }
         }
+
+        private void dgvProductos_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (dgvProductos.Rows[e.RowIndex].Cells[3].Value != null)
+            {
+                string nombre = dgvProductos.Rows[e.RowIndex].Cells[1].Value.ToString();
+                string p_prod = dgvProductos.Rows[e.RowIndex].Cells[3].Value.ToString();
+                int p_produ = Convert.ToInt32(p_prod);
+
+                if (user.Puntos >= p_produ)
+                {
+
+                    user.Puntos = user.Puntos - p_produ;
+                }
+               
+               
+            }
+        }
+
     }
 }
 
