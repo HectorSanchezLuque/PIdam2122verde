@@ -55,7 +55,6 @@ namespace ProyectoIntegradoVerde.Formularios
                     informe.Recipiente = correos[i];
                     informe.Remitente = "Usuario";
                     informe.Fecha = sqlFormattedDate;
-                    informe.Usuario_id = 9;
 
                     conexion.AbrirConexion();
                     Correo.AgregarCorreo(informe);
@@ -87,7 +86,6 @@ namespace ProyectoIntegradoVerde.Formularios
                     solicitud.Recipiente = correos[i];
                     solicitud.Remitente = txtSolMail.Text;
                     solicitud.Fecha = sqlFormattedDate;
-                    solicitud.Usuario_id = 9;
                     conexion.AbrirConexion();
                     Correo.AgregarCorreo(solicitud);
                     conexion.CerrarConexion();

@@ -63,8 +63,8 @@ namespace ProyectoIntegradoVerde.Clases
                     }
                     
                 }
+                reader.Close();
             }
-            reader.Close();
             return reunions;
         }
 

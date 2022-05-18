@@ -171,7 +171,6 @@ namespace ProyectoIntegradoVerde.Formularios
                 cor.Recipiente = txtDest.Text;
                 cor.Remitente = user.Correo;
                 cor.Fecha = sqlFormattedDate;
-                cor.Usuario_id = user.Id;
 
 
                 conexion.AbrirConexion();
