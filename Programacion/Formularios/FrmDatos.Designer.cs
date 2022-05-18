@@ -157,7 +157,6 @@ namespace ProyectoIntegradoVerde.Formularios
             // 
             // ptbFoto
             // 
-            this.ptbFoto.Image = global::ProyectoIntegradoVerde.Properties.Resources.R__1_;
             this.ptbFoto.Location = new System.Drawing.Point(351, 144);
             this.ptbFoto.Name = "ptbFoto";
             this.ptbFoto.Size = new System.Drawing.Size(289, 263);

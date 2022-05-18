@@ -32,10 +32,6 @@ namespace ProyectoIntegradoVerde.Formularios
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmPrincipal));
             this.lblAbreFormulario = new System.Windows.Forms.Label();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.lblHora = new System.Windows.Forms.Label();
-            this.lblFecha = new System.Windows.Forms.Label();
-            this.btnAdmin = new System.Windows.Forms.Button();
             this.btnTienda = new System.Windows.Forms.Button();
             this.btnCorreo = new System.Windows.Forms.Button();
             this.btnReuniones = new System.Windows.Forms.Button();
@@ -43,6 +39,10 @@ namespace ProyectoIntegradoVerde.Formularios
             this.btnTareas = new System.Windows.Forms.Button();
             this.btnCerrarSesion = new System.Windows.Forms.Button();
             this.ptbInfo = new System.Windows.Forms.PictureBox();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.lblHora = new System.Windows.Forms.Label();
+            this.lblFecha = new System.Windows.Forms.Label();
+            this.btnAdmin = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.ptbInfo)).BeginInit();
             this.SuspendLayout();
             // 
@@ -58,43 +58,6 @@ namespace ProyectoIntegradoVerde.Formularios
             this.lblAbreFormulario.Click += new System.EventHandler(this.lblAbreFormulario_Click);
             this.lblAbreFormulario.MouseEnter += new System.EventHandler(this.lblAbreFormulario_MouseEnter);
             this.lblAbreFormulario.MouseLeave += new System.EventHandler(this.lblAbreFormulario_MouseLeave);
-            // 
-            // timer1
-            // 
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
-            // 
-            // lblHora
-            // 
-            this.lblHora.AutoSize = true;
-            this.lblHora.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.lblHora.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.lblHora.Location = new System.Drawing.Point(477, 36);
-            this.lblHora.Name = "lblHora";
-            this.lblHora.Size = new System.Drawing.Size(73, 31);
-            this.lblHora.TabIndex = 15;
-            this.lblHora.Text = "Hora";
-            // 
-            // lblFecha
-            // 
-            this.lblFecha.AutoSize = true;
-            this.lblFecha.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.lblFecha.ForeColor = System.Drawing.Color.MediumBlue;
-            this.lblFecha.Location = new System.Drawing.Point(383, 17);
-            this.lblFecha.Name = "lblFecha";
-            this.lblFecha.Size = new System.Drawing.Size(49, 18);
-            this.lblFecha.TabIndex = 16;
-            this.lblFecha.Text = "Fecha";
-            // 
-            // btnAdmin
-            // 
-            this.btnAdmin.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnAdmin.BackgroundImage")));
-            this.btnAdmin.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnAdmin.Location = new System.Drawing.Point(12, 568);
-            this.btnAdmin.Name = "btnAdmin";
-            this.btnAdmin.Size = new System.Drawing.Size(67, 73);
-            this.btnAdmin.TabIndex = 17;
-            this.btnAdmin.UseVisualStyleBackColor = true;
-            this.btnAdmin.Click += new System.EventHandler(this.btnAdmin_Click);
             // 
             // btnTienda
             // 
@@ -150,6 +113,9 @@ namespace ProyectoIntegradoVerde.Formularios
             // 
             this.btnCerrarSesion.BackgroundImage = global::ProyectoIntegradoVerde.Properties.Resources.Exit;
             this.btnCerrarSesion.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+
+            this.btnCerrarSesion.Location = new System.Drawing.Point(526, 538);
+
             this.btnCerrarSesion.Location = new System.Drawing.Point(535, 572);
             this.btnCerrarSesion.Name = "btnCerrarSesion";
             this.btnCerrarSesion.Size = new System.Drawing.Size(76, 72);
@@ -167,11 +133,48 @@ namespace ProyectoIntegradoVerde.Formularios
             this.ptbInfo.TabIndex = 1;
             this.ptbInfo.TabStop = false;
             // 
+            // timer1
+            // 
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // lblHora
+            // 
+            this.lblHora.AutoSize = true;
+            this.lblHora.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
+            this.lblHora.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            this.lblHora.Location = new System.Drawing.Point(477, 36);
+            this.lblHora.Name = "lblHora";
+            this.lblHora.Size = new System.Drawing.Size(73, 31);
+            this.lblHora.TabIndex = 15;
+            this.lblHora.Text = "Hora";
+            // 
+            // lblFecha
+            // 
+            this.lblFecha.AutoSize = true;
+            this.lblFecha.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.lblFecha.ForeColor = System.Drawing.Color.MediumBlue;
+            this.lblFecha.Location = new System.Drawing.Point(383, 17);
+            this.lblFecha.Name = "lblFecha";
+            this.lblFecha.Size = new System.Drawing.Size(49, 18);
+            this.lblFecha.TabIndex = 16;
+            this.lblFecha.Text = "Fecha";
+            // 
+            // btnAdmin
+            // 
+            this.btnAdmin.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnAdmin.BackgroundImage")));
+            this.btnAdmin.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnAdmin.Location = new System.Drawing.Point(12, 568);
+            this.btnAdmin.Name = "btnAdmin";
+            this.btnAdmin.Size = new System.Drawing.Size(67, 73);
+            this.btnAdmin.TabIndex = 17;
+            this.btnAdmin.UseVisualStyleBackColor = true;
+            this.btnAdmin.Click += new System.EventHandler(this.btnAdmin_Click);
+            // 
             // FrmPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(631, 654);
+            this.ClientSize = new System.Drawing.Size(614, 654);
             this.Controls.Add(this.btnAdmin);
             this.Controls.Add(this.lblFecha);
             this.Controls.Add(this.lblHora);
@@ -184,7 +187,7 @@ namespace ProyectoIntegradoVerde.Formularios
             this.Controls.Add(this.ptbInfo);
             this.Controls.Add(this.lblAbreFormulario);
             this.Name = "FrmPrincipal";
-            this.Text = "Menú";
+            this.Text = "Menu";
             this.Load += new System.EventHandler(this.FrmPrincipal_Load_1);
             ((System.ComponentModel.ISupportInitialize)(this.ptbInfo)).EndInit();
             this.ResumeLayout(false);

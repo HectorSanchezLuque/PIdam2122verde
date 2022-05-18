@@ -146,9 +146,9 @@ namespace ProyectoIntegradoVerde.Clases
                     co.remitente = reader.GetString(4);
                     co.fecha = reader.GetString(5);
                     bandeja.Add(co);
-                }
-                reader.Close();
+                }                
             }
+            reader.Close();
             return bandeja;
         }
         public static List<String> CorreosAdmin()

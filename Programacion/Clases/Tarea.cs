@@ -203,18 +203,6 @@ namespace ProyectoIntegradoVerde.Clases
             return retorno;
         }
 
-        public static int SelecCodigo(string cod)
-        {
-            int retorno;
-
-            string consulta = String.Format("Select Codigo from tienda Where Codigo = '{0}'",cod);
-
-            MySqlCommand comando = new MySqlCommand(consulta, conexion.Conexion);
-
-            retorno = comando.ExecuteNonQuery();
-
-            return retorno;
-        }
 
 
     }

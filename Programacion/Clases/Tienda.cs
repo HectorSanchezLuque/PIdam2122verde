@@ -18,7 +18,7 @@ namespace ProyectoIntegradoVerde.Clases
         private string descripcion;
 
         //Constructor completo
-        public Tienda(int id, string nom, int cost, string desc)
+        public Tienda(int id ,string nom, int cost, string desc)
         {
             id_prod = id;
             nombre = nom;
@@ -38,7 +38,7 @@ namespace ProyectoIntegradoVerde.Clases
         //Metodos
 
 
-        static public int AgregarProducto(Tienda prod)
+        static public int AgregarProducto( Tienda prod)
         {
             int retorno;
 
@@ -59,13 +59,13 @@ namespace ProyectoIntegradoVerde.Clases
             MySqlCommand comando = new MySqlCommand(consulta, conexion.Conexion);
             MySqlDataReader reader = comando.ExecuteReader();
             if (reader.HasRows)
-            {
-                reader.Close();
+            { 
+                reader.Close();  
                 return true;
             }
             else
             {
-                reader.Close();
+                reader.Close(); 
                 return false;
             }
         }
@@ -80,41 +80,6 @@ namespace ProyectoIntegradoVerde.Clases
             return retorno;
         }
 
-        public static List<Tienda> Catalogo()
-        {
-            List<Tienda> productos = new List<Tienda>();
-            string consulta = String.Format("SELECT * from tienda");
-            MySqlCommand comando = new MySqlCommand(consulta, conexion.Conexion);
-            MySqlDataReader reader = comando.ExecuteReader();
-            if (reader.HasRows)
-            {
-                while (reader.Read())
-                {
-                    Tienda prod = new Tienda();
-                    prod.Id_prod = reader.GetInt32(0);
-                    prod.Nombre = reader.GetString(1);
-                    prod.Coste = reader.GetInt32(2);
-                    prod.Descripcion = reader.GetString(3);
-                    productos.Add(prod);
-                }
-                reader.Close();
-            }
-            return productos;
-        }
-
-        public static int RestarPuntos(Usuario user)
-        {
-            int retorno;
-
-            string consulta = String.Format("UPDATE usuarios SET puntos = '{0}' Where id = '{1}'", user.Puntos);
-
-            MySqlCommand comando = new MySqlCommand(consulta, conexion.Conexion);
-
-            retorno = comando.ExecuteNonQuery();
-
-            return retorno;
-        }
-
 
     }
-}
+    }
