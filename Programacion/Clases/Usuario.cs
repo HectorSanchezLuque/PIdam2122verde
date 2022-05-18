@@ -23,12 +23,11 @@ namespace ProyectoIntegradoVerde
         private string correo;
         private string password;
         private byte[] foto;
-        private int borrado;
 
         //  Constructor con foto
-         public Usuario(string niff,string nom, DateTime nacimiento, string puesto, string email, string passwd, byte[] fot , int bor)
+        public Usuario(string niff, string nom, DateTime nacimiento, string puesto, string email, string passwd, byte[] fot)
         {
-           
+
             nif = niff;
             nombre = nom;
             fechaNacimiento = nacimiento;
@@ -37,14 +36,13 @@ namespace ProyectoIntegradoVerde
             password = passwd;
             foto = fot;
             puntos = 0;
-            borrado = bor;
-            
+
         }
         // Constructor vacío
         public Usuario() { }
 
         // Getters y Setters
-        public int Id { get => id; set  => id = value; }
+        public int Id { get => id; set => id = value; }
         public string Nif { get => nif; set => nif = value; }
         public string Nombre { get => nombre; set => nombre = value; }
         public DateTime FechaNacimiento { get => fechaNacimiento; set => fechaNacimiento = value; }
@@ -52,13 +50,11 @@ namespace ProyectoIntegradoVerde
         public int Puntos { get => puntos; set => puntos = value; }
         public string Correo { get => correo; set => correo = value; }
         public string Password { get => password; set => password = value; }
-        public byte [] Foto { get { return foto; } set { foto = value; } }
-        public int Borrado { get => borrado; set => borrado = value; }
+        public byte[] Foto { get { return foto; } set { foto = value; } }
 
 
         // Metodos
 
-        /* NO SE USA
         /// <summary>
         /// Comprueba si un usuario ha introducido su nombre y contraseña, también comprueba si el usuario es administrador.
         /// </summary>
@@ -82,7 +78,6 @@ namespace ProyectoIntegradoVerde
             comando.ExecuteNonQuery();
             return correct;
         }
-        */
 
         /// <summary>
         /// Agregar usuario a la base de datos.
@@ -320,32 +315,6 @@ namespace ProyectoIntegradoVerde
 
         }
 
-        public static List<Usuario> ListadoUsuarios()
-        {
-            List<Usuario> usuarios = new List<Usuario>();
-
-            string consulta = "SELECT * FROM usuarios;";
-            MySqlCommand comando = new MySqlCommand(consulta, conexion.Conexion);
-            MySqlDataReader reader = comando.ExecuteReader();
-
-            while (reader.Read())
-            {
-                Usuario us = new Usuario();
-                us.Id = reader.GetInt32(0);
-                us.Nif = reader.GetString(1);
-                us.Nombre = reader.GetString(2);
-                us.FechaNacimiento = reader.GetDateTime(3);
-                us.Cargo = reader.GetString(4);
-                us.Puntos = reader.GetInt32(5);
-                us.Correo = reader.GetString(6);
-                us.Password = reader.GetString(7);
-                us.foto = null; //No se que tipo de Get es
-                us.Borrado = reader.GetInt32(9);
-
-                usuarios.Add(us);
-            }
-            reader.Close();
-            return usuarios;
         public static Bitmap BuscarFoto(string nif)
         {
             string consulta = "SELECT foto FROM usuarios WHERE nif='" + nif + "';";

@@ -132,8 +132,9 @@ namespace ProyectoIntegradoVerde
                             MemoryStream ms = new MemoryStream();
                             pbProfPicRegistro.Image.Save(ms, pbProfPicRegistro.Image.RawFormat);
                             byte[] img = ms.ToArray();
+                            
 
-                            Usuario user = new Usuario(txtNifRegistro.Text, txtNombreRegistro.Text, dtpFNRegistro.Value.Date, txtPasswordRegistro.Text, txtEmailRegistro.Text, txtCargo.Text, img, 0);
+                            Usuario user = new Usuario(txtNifRegistro.Text, txtNombreRegistro.Text, dtpFNRegistro.Value.Date, txtPasswordRegistro.Text, txtEmailRegistro.Text, txtCargo.Text, img);
                             user.AgregarUsuario();
 
                         }
