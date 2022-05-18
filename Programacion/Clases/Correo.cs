@@ -146,11 +146,7 @@ namespace ProyectoIntegradoVerde.Clases
                     co.remitente = reader.GetString(4);
                     co.fecha = reader.GetString(5);
                     bandeja.Add(co);
-<<<<<<< HEAD
-                }
-=======
                 }                
->>>>>>> 1ed9594a1abb50fb8bf02ed18015aa1fa5bbaa36
             }
             reader.Close();
             return bandeja;
