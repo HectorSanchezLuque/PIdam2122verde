@@ -40,11 +40,11 @@ namespace ProyectoIntegradoVerde.Formularios
                 txtPuntos.Text = dgvUsuarios.Rows[e.RowIndex].Cells[5].Value.ToString();
                 txtCorreo.Text = dgvUsuarios.Rows[e.RowIndex].Cells[6].Value.ToString();
                 txtContrasena.Text = dgvUsuarios.Rows[e.RowIndex].Cells[7].Value.ToString();
-                /*if (dgvUsuarios.Rows[e.RowIndex].Cells[8].Value == 0)
+               /* if (dgvUsuarios.Rows[e.RowIndex].Cells[8].Value == 0)
                 {
                     checkDeshab.Checked = true;
-                } else { checkDeshab.Checked = false;}*/
-
+                } else { checkDeshab.Checked = false;}
+               */
             }
         }
 
