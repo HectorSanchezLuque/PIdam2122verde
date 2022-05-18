@@ -160,7 +160,7 @@ namespace ProyectoIntegradoVerde.Formularios
             this.ptbFoto.Image = global::ProyectoIntegradoVerde.Properties.Resources.R__1_;
             this.ptbFoto.Location = new System.Drawing.Point(351, 144);
             this.ptbFoto.Name = "ptbFoto";
-            this.ptbFoto.Size = new System.Drawing.Size(277, 263);
+            this.ptbFoto.Size = new System.Drawing.Size(289, 263);
             this.ptbFoto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.ptbFoto.TabIndex = 5;
             this.ptbFoto.TabStop = false;
