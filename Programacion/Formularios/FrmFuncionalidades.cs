@@ -12,12 +12,8 @@ namespace ProyectoIntegradoVerde.Formularios
         bool lang;
         bool luz;
         
-        
-
         public int NumPag { get => numPag; set => numPag = value; }
         public Usuario User { get => user; set => user = value; }
-        public bool Lang { get { return lang; } set { lang = value; } }
-        public bool Luz { get { return luz; } set { luz = value; } }
 
 
 
@@ -282,6 +278,14 @@ namespace ProyectoIntegradoVerde.Formularios
             AgregarTarea tar = new AgregarTarea(user, luz, lang);
             tar.ShowDialog();
         }
+
+        private void tabPage1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+
+        
     }
 }
 

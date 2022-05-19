@@ -113,10 +113,6 @@ namespace ProyectoIntegradoVerde.Formularios
                 lblAgregarT.ForeColor = Color.FromArgb(0, 0, 122);
                 lblFLimite.ForeColor = Color.FromArgb(255, 255, 255);
 
-
-
-
-
             }
             else
             {

@@ -189,6 +189,51 @@
   <data name="dat_lblPuntos" xml:space="preserve">
     <value>Points</value>
   </data>
+  <data name="fun_btnActualizarReuniones" xml:space="preserve">
+    <value>Actualizar</value>
+  </data>
+  <data name="fun_btnCrearReunion" xml:space="preserve">
+    <value>Crear Reunión</value>
+  </data>
+  <data name="fun_btnCrearTarea" xml:space="preserve">
+    <value>Create task</value>
+  </data>
+  <data name="fun_btnEnviar" xml:space="preserve">
+    <value>Enviar</value>
+  </data>
+  <data name="fun_btnLimpiar" xml:space="preserve">
+    <value>Limpiar campos</value>
+  </data>
+  <data name="fun_lblAsunt" xml:space="preserve">
+    <value>Asunto:</value>
+  </data>
+  <data name="fun_lblComProd" xml:space="preserve">
+    <value>Doble click para comprar un producto</value>
+  </data>
+  <data name="fun_lblDestin" xml:space="preserve">
+    <value>Destinatario:</value>
+  </data>
+  <data name="fun_lblDispo" xml:space="preserve">
+    <value>Puntos disponibles:</value>
+  </data>
+  <data name="fun_lblDobleClick" xml:space="preserve">
+    <value>Doble click para asignarte una tarea</value>
+  </data>
+  <data name="fun_lblDobleClick2" xml:space="preserve">
+    <value>Doble click para completar una tarea</value>
+  </data>
+  <data name="fun_lblEmail" xml:space="preserve">
+    <value>Doble click para leer el cuerpo del correo seleccionado</value>
+  </data>
+  <data name="fun_lblInfo1" xml:space="preserve">
+    <value>Available tasks</value>
+  </data>
+  <data name="fun_lblInfo2" xml:space="preserve">
+    <value>Pending tasks</value>
+  </data>
+  <data name="fun_title" xml:space="preserve">
+    <value>Features</value>
+  </data>
   <data name="lang" xml:space="preserve">
     <value>ENG</value>
   </data>
