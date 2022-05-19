@@ -120,6 +120,30 @@
   <data name="contOlv" xml:space="preserve">
     <value>¿Has olvidado tu contraseña?</value>
   </data>
+  <data name="crun_btnCrearReunion" xml:space="preserve">
+    <value>Crear Reunión</value>
+  </data>
+  <data name="crun_lblCargos" xml:space="preserve">
+    <value>Cargos asociados:</value>
+  </data>
+  <data name="crun_lblCrearReunion" xml:space="preserve">
+    <value>Creación de Reunión</value>
+  </data>
+  <data name="crun_lblFechaReunion" xml:space="preserve">
+    <value>Fecha de la Reunión</value>
+  </data>
+  <data name="crun_lblHoraReunion" xml:space="preserve">
+    <value>Hora de la Reunión</value>
+  </data>
+  <data name="crun_lblRDesc" xml:space="preserve">
+    <value>Descripción:</value>
+  </data>
+  <data name="crun_lblRNombre" xml:space="preserve">
+    <value>Nombre:</value>
+  </data>
+  <data name="crun_title" xml:space="preserve">
+    <value>CrearReunion</value>
+  </data>
   <data name="dat_btnCerrar" xml:space="preserve">
     <value>Salir</value>
   </data>

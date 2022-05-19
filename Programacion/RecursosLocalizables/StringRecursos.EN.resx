@@ -120,6 +120,30 @@
   <data name="contOlv" xml:space="preserve">
     <value>forgotten password?</value>
   </data>
+  <data name="crun_btnCrearReunion" xml:space="preserve">
+    <value>Create Meeting</value>
+  </data>
+  <data name="crun_lblCargos" xml:space="preserve">
+    <value>Associated Charges:</value>
+  </data>
+  <data name="crun_lblCrearReunion" xml:space="preserve">
+    <value>Meeting Creation</value>
+  </data>
+  <data name="crun_lblFechaReunion" xml:space="preserve">
+    <value>Meeting date</value>
+  </data>
+  <data name="crun_lblHoraReunion" xml:space="preserve">
+    <value>Meeting Time</value>
+  </data>
+  <data name="crun_lblRDesc" xml:space="preserve">
+    <value>Description:</value>
+  </data>
+  <data name="crun_lblRNombre" xml:space="preserve">
+    <value>Name:</value>
+  </data>
+  <data name="crun_title" xml:space="preserve">
+    <value>MeetingCreation</value>
+  </data>
   <data name="dat_btnCerrar" xml:space="preserve">
     <value>Exit</value>
   </data>

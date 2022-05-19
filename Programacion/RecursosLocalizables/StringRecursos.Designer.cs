@@ -70,6 +70,78 @@ namespace ProyectoIntegradoVerde.RecursosLocalizables {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a Crear Reunión.
+        /// </summary>
+        internal static string crun_btnCrearReunion {
+            get {
+                return ResourceManager.GetString("crun_btnCrearReunion", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Cargos asociados:.
+        /// </summary>
+        internal static string crun_lblCargos {
+            get {
+                return ResourceManager.GetString("crun_lblCargos", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Creación de Reunión.
+        /// </summary>
+        internal static string crun_lblCrearReunion {
+            get {
+                return ResourceManager.GetString("crun_lblCrearReunion", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Fecha de la Reunión.
+        /// </summary>
+        internal static string crun_lblFechaReunion {
+            get {
+                return ResourceManager.GetString("crun_lblFechaReunion", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Hora de la Reunión.
+        /// </summary>
+        internal static string crun_lblHoraReunion {
+            get {
+                return ResourceManager.GetString("crun_lblHoraReunion", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Descripción:.
+        /// </summary>
+        internal static string crun_lblRDesc {
+            get {
+                return ResourceManager.GetString("crun_lblRDesc", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Nombre:.
+        /// </summary>
+        internal static string crun_lblRNombre {
+            get {
+                return ResourceManager.GetString("crun_lblRNombre", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a CrearReunion.
+        /// </summary>
+        internal static string crun_title {
+            get {
+                return ResourceManager.GetString("crun_title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a Salir.
         /// </summary>
         internal static string dat_btnCerrar {
