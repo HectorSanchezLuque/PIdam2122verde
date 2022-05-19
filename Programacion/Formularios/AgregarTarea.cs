@@ -52,13 +52,11 @@ namespace ProyectoIntegradoVerde.Formularios
 
         }
 
-<<<<<<< HEAD
         private void btnCerrar_Click(object sender, EventArgs e)
         {
             this.Close();
             this.Dispose();
         }
-=======
         private void AgregarTarea_Load(object sender, EventArgs e)
         {
             
@@ -66,6 +64,6 @@ namespace ProyectoIntegradoVerde.Formularios
         
         
             
->>>>>>> origin/src
+
     }
 }
