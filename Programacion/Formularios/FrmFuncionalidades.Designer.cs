@@ -315,7 +315,7 @@ namespace ProyectoIntegradoVerde.Formularios
             // cldCalendario
             // 
             this.cldCalendario.CalendarDimensions = new System.Drawing.Size(2, 1);
-            this.cldCalendario.Location = new System.Drawing.Point(209, 12);
+            this.cldCalendario.Location = new System.Drawing.Point(219, 11);
             this.cldCalendario.Name = "cldCalendario";
             this.cldCalendario.TabIndex = 0;
             // 
@@ -364,6 +364,7 @@ namespace ProyectoIntegradoVerde.Formularios
             this.dgvReuniones.Location = new System.Drawing.Point(12, 11);
             this.dgvReuniones.Margin = new System.Windows.Forms.Padding(4);
             this.dgvReuniones.Name = "dgvReuniones";
+            this.dgvReuniones.ReadOnly = true;
             this.dgvReuniones.RowHeadersWidth = 51;
             this.dgvReuniones.Size = new System.Drawing.Size(837, 408);
             this.dgvReuniones.TabIndex = 0;
@@ -503,6 +504,7 @@ namespace ProyectoIntegradoVerde.Formularios
             this.date});
             this.dgvBandeja.Location = new System.Drawing.Point(7, 5);
             this.dgvBandeja.Name = "dgvBandeja";
+            this.dgvBandeja.ReadOnly = true;
             this.dgvBandeja.RowHeadersWidth = 51;
             this.dgvBandeja.RowTemplate.Height = 24;
             this.dgvBandeja.Size = new System.Drawing.Size(846, 195);
@@ -605,6 +607,7 @@ namespace ProyectoIntegradoVerde.Formularios
             this.dgvProductos.Location = new System.Drawing.Point(7, 6);
             this.dgvProductos.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dgvProductos.Name = "dgvProductos";
+            this.dgvProductos.ReadOnly = true;
             this.dgvProductos.RowHeadersWidth = 51;
             this.dgvProductos.RowTemplate.Height = 24;
             this.dgvProductos.Size = new System.Drawing.Size(841, 420);
