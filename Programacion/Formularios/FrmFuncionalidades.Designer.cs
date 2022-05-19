@@ -31,6 +31,7 @@ namespace ProyectoIntegradoVerde.Formularios
         {
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.btnCrearTarea = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.btnActualizar = new System.Windows.Forms.Button();
             this.lblDobleClick = new System.Windows.Forms.Label();
@@ -74,17 +75,17 @@ namespace ProyectoIntegradoVerde.Formularios
             this.remit = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.date = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabPage5 = new System.Windows.Forms.TabPage();
-            this.btnComprar = new System.Windows.Forms.Button();
+            this.label7 = new System.Windows.Forms.Label();
             this.lblPuntos = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.dgvProductos = new System.Windows.Forms.DataGridView();
-            this.label1 = new System.Windows.Forms.Label();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.coste = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label1 = new System.Windows.Forms.Label();
+            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTareasPendientes)).BeginInit();
@@ -116,6 +117,7 @@ namespace ProyectoIntegradoVerde.Formularios
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.btnCrearTarea);
             this.tabPage1.Controls.Add(this.label3);
             this.tabPage1.Controls.Add(this.btnActualizar);
             this.tabPage1.Controls.Add(this.lblDobleClick);
@@ -131,6 +133,16 @@ namespace ProyectoIntegradoVerde.Formularios
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Tareas";
             this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // btnCrearTarea
+            // 
+            this.btnCrearTarea.Location = new System.Drawing.Point(160, 229);
+            this.btnCrearTarea.Name = "btnCrearTarea";
+            this.btnCrearTarea.Size = new System.Drawing.Size(98, 35);
+            this.btnCrearTarea.TabIndex = 8;
+            this.btnCrearTarea.Text = "Crear Tarea";
+            this.btnCrearTarea.UseVisualStyleBackColor = true;
+            this.btnCrearTarea.Click += new System.EventHandler(this.btnCrearTarea_Click);
             // 
             // label3
             // 
@@ -315,7 +327,7 @@ namespace ProyectoIntegradoVerde.Formularios
             // cldCalendario
             // 
             this.cldCalendario.CalendarDimensions = new System.Drawing.Size(2, 1);
-            this.cldCalendario.Location = new System.Drawing.Point(209, 12);
+            this.cldCalendario.Location = new System.Drawing.Point(219, 11);
             this.cldCalendario.Name = "cldCalendario";
             this.cldCalendario.TabIndex = 0;
             // 
@@ -364,10 +376,10 @@ namespace ProyectoIntegradoVerde.Formularios
             this.dgvReuniones.Location = new System.Drawing.Point(12, 11);
             this.dgvReuniones.Margin = new System.Windows.Forms.Padding(4);
             this.dgvReuniones.Name = "dgvReuniones";
+            this.dgvReuniones.ReadOnly = true;
             this.dgvReuniones.RowHeadersWidth = 51;
             this.dgvReuniones.Size = new System.Drawing.Size(837, 408);
             this.dgvReuniones.TabIndex = 0;
-            this.dgvReuniones.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvReuniones_CellContentDoubleClick);
             // 
             // idreu
             // 
@@ -504,6 +516,7 @@ namespace ProyectoIntegradoVerde.Formularios
             this.date});
             this.dgvBandeja.Location = new System.Drawing.Point(7, 5);
             this.dgvBandeja.Name = "dgvBandeja";
+            this.dgvBandeja.ReadOnly = true;
             this.dgvBandeja.RowHeadersWidth = 51;
             this.dgvBandeja.RowTemplate.Height = 24;
             this.dgvBandeja.Size = new System.Drawing.Size(846, 195);
@@ -531,6 +544,7 @@ namespace ProyectoIntegradoVerde.Formularios
             this.cuerp.HeaderText = "Cuerpo";
             this.cuerp.MinimumWidth = 6;
             this.cuerp.Name = "cuerp";
+            this.cuerp.ReadOnly = true;
             this.cuerp.Width = 125;
             // 
             // remit
@@ -551,7 +565,7 @@ namespace ProyectoIntegradoVerde.Formularios
             // 
             // tabPage5
             // 
-            this.tabPage5.Controls.Add(this.btnComprar);
+            this.tabPage5.Controls.Add(this.label7);
             this.tabPage5.Controls.Add(this.lblPuntos);
             this.tabPage5.Controls.Add(this.label2);
             this.tabPage5.Controls.Add(this.dgvProductos);
@@ -564,16 +578,15 @@ namespace ProyectoIntegradoVerde.Formularios
             this.tabPage5.Text = "Tienda";
             this.tabPage5.UseVisualStyleBackColor = true;
             // 
-            // btnComprar
+            // label7
             // 
-            this.btnComprar.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnComprar.Location = new System.Drawing.Point(699, 448);
-            this.btnComprar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnComprar.Name = "btnComprar";
-            this.btnComprar.Size = new System.Drawing.Size(149, 41);
-            this.btnComprar.TabIndex = 3;
-            this.btnComprar.Text = "Comprar";
-            this.btnComprar.UseVisualStyleBackColor = true;
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(603, 428);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(245, 17);
+            this.label7.TabIndex = 12;
+            this.label7.Text = "Doble click para comprar un producto";
             // 
             // lblPuntos
             // 
@@ -606,10 +619,44 @@ namespace ProyectoIntegradoVerde.Formularios
             this.dgvProductos.Location = new System.Drawing.Point(7, 6);
             this.dgvProductos.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dgvProductos.Name = "dgvProductos";
+            this.dgvProductos.ReadOnly = true;
             this.dgvProductos.RowHeadersWidth = 51;
             this.dgvProductos.RowTemplate.Height = 24;
             this.dgvProductos.Size = new System.Drawing.Size(841, 420);
             this.dgvProductos.TabIndex = 0;
+            this.dgvProductos.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvProductos_CellContentDoubleClick);
+            // 
+            // id
+            // 
+            this.id.HeaderText = "Id";
+            this.id.MinimumWidth = 6;
+            this.id.Name = "id";
+            this.id.ReadOnly = true;
+            this.id.Width = 125;
+            // 
+            // nombre
+            // 
+            this.nombre.HeaderText = "Nombre";
+            this.nombre.MinimumWidth = 6;
+            this.nombre.Name = "nombre";
+            this.nombre.ReadOnly = true;
+            this.nombre.Width = 125;
+            // 
+            // coste
+            // 
+            this.coste.HeaderText = "Coste";
+            this.coste.MinimumWidth = 6;
+            this.coste.Name = "coste";
+            this.coste.ReadOnly = true;
+            this.coste.Width = 125;
+            // 
+            // codigo
+            // 
+            this.codigo.HeaderText = "Codigo";
+            this.codigo.MinimumWidth = 6;
+            this.codigo.Name = "codigo";
+            this.codigo.ReadOnly = true;
+            this.codigo.Width = 125;
             // 
             // label1
             // 
@@ -641,34 +688,6 @@ namespace ProyectoIntegradoVerde.Formularios
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.Size = new System.Drawing.Size(299, 150);
             this.dataGridView1.TabIndex = 0;
-            // 
-            // id
-            // 
-            this.id.HeaderText = "Id";
-            this.id.MinimumWidth = 6;
-            this.id.Name = "id";
-            this.id.Width = 125;
-            // 
-            // nombre
-            // 
-            this.nombre.HeaderText = "Nombre";
-            this.nombre.MinimumWidth = 6;
-            this.nombre.Name = "nombre";
-            this.nombre.Width = 125;
-            // 
-            // coste
-            // 
-            this.coste.HeaderText = "Coste";
-            this.coste.MinimumWidth = 6;
-            this.coste.Name = "coste";
-            this.coste.Width = 125;
-            // 
-            // codigo
-            // 
-            this.codigo.HeaderText = "Codigo";
-            this.codigo.MinimumWidth = 6;
-            this.codigo.Name = "codigo";
-            this.codigo.Width = 125;
             // 
             // FrmFuncionalidades
             // 
@@ -714,7 +733,6 @@ namespace ProyectoIntegradoVerde.Formularios
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.MonthCalendar cldCalendario;
-        private System.Windows.Forms.Button btnComprar;
         private System.Windows.Forms.Label lblPuntos;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.DataGridView dgvProductos;
@@ -758,5 +776,7 @@ namespace ProyectoIntegradoVerde.Formularios
         private System.Windows.Forms.DataGridViewTextBoxColumn nombre;
         private System.Windows.Forms.DataGridViewTextBoxColumn coste;
         private System.Windows.Forms.DataGridViewTextBoxColumn codigo;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Button btnCrearTarea;
     }
 }

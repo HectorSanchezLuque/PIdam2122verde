@@ -103,7 +103,7 @@
             this.lblOlvidoCont.AutoSize = true;
             this.lblOlvidoCont.Location = new System.Drawing.Point(201, 299);
             this.lblOlvidoCont.Name = "lblOlvidoCont";
-            this.lblOlvidoCont.Size = new System.Drawing.Size(185, 16);
+            this.lblOlvidoCont.Size = new System.Drawing.Size(197, 17);
             this.lblOlvidoCont.TabIndex = 7;
             this.lblOlvidoCont.TabStop = true;
             this.lblOlvidoCont.Text = "¿Has olvidado tu contraseña?";
@@ -126,7 +126,7 @@
             this.lblLang.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblLang.Location = new System.Drawing.Point(63, 23);
             this.lblLang.Name = "lblLang";
-            this.lblLang.Size = new System.Drawing.Size(37, 16);
+            this.lblLang.Size = new System.Drawing.Size(38, 17);
             this.lblLang.TabIndex = 10;
             this.lblLang.Text = "ESP";
             // 
@@ -136,7 +136,7 @@
             this.lblNotif.Location = new System.Drawing.Point(283, 423);
             this.lblNotif.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblNotif.Name = "lblNotif";
-            this.lblNotif.Size = new System.Drawing.Size(172, 16);
+            this.lblNotif.Size = new System.Drawing.Size(186, 17);
             this.lblNotif.TabIndex = 12;
             this.lblNotif.TabStop = true;
             this.lblNotif.Text = "Notificar a un administrador.";
@@ -181,6 +181,7 @@
             // Login
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
+            this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ClientSize = new System.Drawing.Size(478, 453);
             this.Controls.Add(this.lblNotif);
             this.Controls.Add(this.pcbLuz);

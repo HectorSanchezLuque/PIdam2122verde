@@ -76,6 +76,7 @@ namespace ProyectoIntegradoVerde.Formularios
 
         private void FrmFuncionalidades_Load(object sender, EventArgs e)
         {
+            this.dgvProductos.Columns["codigo"].Visible = false;
             lblPuntos.Text = user.Puntos.ToString();
             this.tabControl1.SelectTab(numPag);
             try
@@ -238,12 +239,37 @@ namespace ProyectoIntegradoVerde.Formularios
             }
         }
 
-        private void dgvReuniones_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
+       
+
+        private void dgvProductos_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (dgvReuniones.Rows[e.RowIndex].Cells[2].Value != null)
+
+                string p_prod = dgvProductos.Rows[e.RowIndex].Cells[2].Value.ToString();
+                string cod = dgvProductos.Rows[e.RowIndex].Cells[3].Value.ToString();
+                int p_produ = Convert.ToInt32(p_prod);
+
+
+            if (user.Puntos >= p_produ)
             {
-                MessageBox.Show(dgvReuniones.Rows[e.RowIndex].Cells[2].Value.ToString(), "Descripcion: ");
+                conexion.AbrirConexion();
+                user.Puntos = user.Puntos - p_produ;
+                lblPuntos.Text = User.Puntos.ToString();
+                Tienda.RestarPuntos(user.Id, user.Puntos);
+                ;
+                MessageBox.Show(cod, "Codigo :", MessageBoxButtons.OK, MessageBoxIcon.Information); ;
+                conexion.CerrarConexion();
             }
+            else
+                MessageBox.Show("Puntos insuficientes");
+
+
+            
+        }
+
+        private void btnCrearTarea_Click(object sender, EventArgs e)
+        {
+            AgregarTarea tar = new AgregarTarea(user);
+            tar.ShowDialog();
         }
     }
 }
