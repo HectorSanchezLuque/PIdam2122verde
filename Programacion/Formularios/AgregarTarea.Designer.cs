@@ -184,6 +184,7 @@
             this.Controls.Add(this.lblAgregarT);
             this.Name = "AgregarTarea";
             this.Text = "Agregar Tarea";
+            this.Load += new System.EventHandler(this.AgregarTarea_Load);
             ((System.ComponentModel.ISupportInitialize)(this.nudPuntos)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

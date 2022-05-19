@@ -13,11 +13,16 @@ namespace ProyectoIntegradoVerde.Formularios
 {
     public partial class AgregarTarea : Form
     {
+        bool luz;
+        bool lang;
         Usuario user;
-        public AgregarTarea(Usuario us)
+        public AgregarTarea(Usuario us,bool lu,bool la)
         {
+            
             InitializeComponent();
             user = us;
+            luz = lu;
+            lang = la;
         }
 
         private void btnEnviar_Click(object sender, EventArgs e)
@@ -46,5 +51,13 @@ namespace ProyectoIntegradoVerde.Formularios
             }
 
         }
+
+        private void AgregarTarea_Load(object sender, EventArgs e)
+        {
+            
+        }
+        
+        
+            
     }
 }

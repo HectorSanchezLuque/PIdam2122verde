@@ -61,6 +61,24 @@ namespace ProyectoIntegradoVerde.RecursosLocalizables {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a a.
+        /// </summary>
+        internal static string adTar_ {
+            get {
+                return ResourceManager.GetString("adTar_", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Agregar Tarea.
+        /// </summary>
+        internal static string adTar_title {
+            get {
+                return ResourceManager.GetString("adTar_title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a ¿Has olvidado tu contraseña?.
         /// </summary>
         internal static string contOlv {
