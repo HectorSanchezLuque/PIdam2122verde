@@ -258,6 +258,7 @@
             this.pictureFoto.Location = new System.Drawing.Point(730, 271);
             this.pictureFoto.Name = "pictureFoto";
             this.pictureFoto.Size = new System.Drawing.Size(190, 190);
+            this.pictureFoto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureFoto.TabIndex = 11;
             this.pictureFoto.TabStop = false;
             // 
@@ -285,7 +286,6 @@
             // 
             // checkDeshab
             // 
-            this.checkDeshab.AutoCheck = false;
             this.checkDeshab.AutoSize = true;
             this.checkDeshab.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.checkDeshab.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -354,6 +354,7 @@
             this.btnCargar.TabIndex = 22;
             this.btnCargar.Text = "Cargar imagen";
             this.btnCargar.UseVisualStyleBackColor = true;
+            this.btnCargar.Click += new System.EventHandler(this.btnCargar_Click);
             // 
             // dateNacimiento
             // 
@@ -362,6 +363,7 @@
             this.dateNacimiento.Name = "dateNacimiento";
             this.dateNacimiento.Size = new System.Drawing.Size(155, 22);
             this.dateNacimiento.TabIndex = 23;
+            this.dateNacimiento.Value = new System.DateTime(2022, 5, 19, 0, 0, 0, 0);
             // 
             // label9
             // 
@@ -372,6 +374,7 @@
             this.label9.Size = new System.Drawing.Size(160, 16);
             this.label9.TabIndex = 24;
             this.label9.Text = "ID (Antes del cambio):";
+            this.label9.Visible = false;
             // 
             // txtOldID
             // 
@@ -379,6 +382,7 @@
             this.txtOldID.Name = "txtOldID";
             this.txtOldID.Size = new System.Drawing.Size(100, 22);
             this.txtOldID.TabIndex = 25;
+            this.txtOldID.Visible = false;
             // 
             // btnCerrar
             // 
@@ -459,6 +463,7 @@
         private System.Windows.Forms.DateTimePicker dateNacimiento;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox txtOldID;
+        private System.Windows.Forms.Button btnCerrar;
         private System.Windows.Forms.DataGridViewTextBoxColumn colID;
         private System.Windows.Forms.DataGridViewTextBoxColumn colNIF;
         private System.Windows.Forms.DataGridViewTextBoxColumn colNombre;
@@ -468,6 +473,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn colCorreo;
         private System.Windows.Forms.DataGridViewTextBoxColumn colPassword;
         private System.Windows.Forms.DataGridViewTextBoxColumn colBorrado;
-        private System.Windows.Forms.Button btnCerrar;
     }
 }

@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -18,6 +19,24 @@ namespace ProyectoIntegradoVerde.Formularios
             InitializeComponent();
         }
 
+        private void RecargarDGV()
+        {
+            
+            dgvUsuarios.Rows.Clear();
+            if (conexion.Conexion != null)
+            {
+                List<Usuario> list = new List<Usuario>();
+                conexion.AbrirConexion();
+                list = Usuario.ListadoUsuarios();
+                conexion.CerrarConexion();
+
+                for (int i = 0; i < list.Count; i++)
+                {
+                   dgvUsuarios.Rows.Add(list[i].Id, list[i].Nif, list[i].Nombre, list[i].FechaNacimiento.ToString("dd-MM-yyyy"), list[i].Cargo, list[i].Puntos, list[i].Correo, list[i].Password, list[i].Borrado.ToString(),list[i].Foto);
+                }
+            }
+        }
+
         private void dgvUsuarios_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             if (dgvUsuarios.Rows[e.RowIndex].Cells[4].Value != null)
@@ -30,6 +49,7 @@ namespace ProyectoIntegradoVerde.Formularios
                 txtPuntos.Clear();
                 txtCorreo.Clear();
                 txtContrasena.Clear();
+                pictureFoto.Image = null;
                 checkDeshab.Checked = false;
 
                 txtID.Text = dgvUsuarios.Rows[e.RowIndex].Cells[0].Value.ToString();
@@ -41,7 +61,22 @@ namespace ProyectoIntegradoVerde.Formularios
                 txtCorreo.Text = dgvUsuarios.Rows[e.RowIndex].Cells[6].Value.ToString();
                 txtContrasena.Text = dgvUsuarios.Rows[e.RowIndex].Cells[7].Value.ToString();
                 txtOldID.Text = dgvUsuarios.Rows[e.RowIndex].Cells[0].Value.ToString();
-                if (dgvUsuarios.Rows[e.RowIndex].Cells[8].Value.ToString() == "1")
+                label9.Text = dgvUsuarios.Rows[e.RowIndex].Cells[1].Value.ToString();
+                if (conexion.Conexion != null)
+                {
+                    conexion.AbrirConexion();
+                    if (Usuario.BuscarFoto(dgvUsuarios.Rows[e.RowIndex].Cells[1].Value.ToString()) == null)
+                    {
+
+                    }
+                    else
+                    {
+                        pictureFoto.Image = Usuario.BuscarFoto(dgvUsuarios.Rows[e.RowIndex].Cells[1].Value.ToString());
+                    }
+                    conexion.CerrarConexion();
+                }
+
+                    if (dgvUsuarios.Rows[e.RowIndex].Cells[8].Value.ToString() == "1")
                 {
                     checkDeshab.Checked = true;
                 }
@@ -52,19 +87,7 @@ namespace ProyectoIntegradoVerde.Formularios
 
         private void PanelAdmin_Load(object sender, EventArgs e)
         {
-            dgvUsuarios.Rows.Clear();
-            if (conexion.Conexion != null)
-            {
-                List<Usuario> list = new List<Usuario>();
-                conexion.AbrirConexion();
-                list = Usuario.ListadoUsuarios();
-                conexion.CerrarConexion();
-
-                for (int i = 0; i < list.Count; i++)
-                {
-                    dgvUsuarios.Rows.Add(list[i].Id, list[i].Nif, list[i].Nombre, list[i].FechaNacimiento.ToString("dd-MM-yyyy"), list[i].Cargo, list[i].Puntos, list[i].Correo, list[i].Password, list[i].Borrado.ToString());
-                }
-            }
+            RecargarDGV();
         }
 
         private void btnCerrar_Click(object sender, EventArgs e)
@@ -74,31 +97,51 @@ namespace ProyectoIntegradoVerde.Formularios
 
         private void btnModificar_Click(object sender, EventArgs e)
         {
-            Usuario usu = new Usuario();
-            usu.Id = Convert.ToInt32(txtID.Text);
-            usu.Nif= txtNIF.Text;
-            usu.Nombre = txtNombre.Text;
-            usu.FechaNacimiento = Convert.ToDateTime(dateNacimiento.Text);
-            usu.Cargo = txtCargo.Text;
-            usu.Puntos = Convert.ToInt32(txtPuntos.Text);
-            usu.Correo = txtCorreo.Text;
-            usu.Password = txtContrasena.Text;
-            usu.Borrado = Convert.ToInt32(checkDeshab.Checked);
-            usu.Foto = null;
-
-            if (conexion.Conexion != null)
+            try
             {
-                conexion.AbrirConexion();
-                Usuario.ActualizaUsuario(usu, Convert.ToInt32(txtOldID.Text));
-                conexion.CerrarConexion();
+                Usuario usu = new Usuario();
+                usu.Id = Convert.ToInt32(label9.Text);
+                usu.Nif = txtNIF.Text;
+                usu.Nombre = txtNombre.Text;
+                usu.FechaNacimiento = Convert.ToDateTime(dateNacimiento.Text);
+                usu.Cargo = txtCargo.Text;
+                usu.Puntos = Convert.ToInt32(txtPuntos.Text);
+                usu.Correo = txtCorreo.Text;
+                usu.Password = txtContrasena.Text;
+                if (checkDeshab.Checked == true)
+                {
+                    usu.Borrado = 1;
+                }
+                else
+                {
+                    usu.Borrado = 0;
+                }
+
+                MemoryStream ms = new MemoryStream();
+                pictureFoto.Image.Save(ms, pictureFoto.Image.RawFormat);
+                byte[] img = ms.ToArray();
+
+                usu.Foto = img;
+
+                if (conexion.Conexion != null)
+                {
+                    conexion.AbrirConexion();
+                    Usuario.ActualizaUsuario(usu, Convert.ToInt32(label9.Text));
+                    conexion.CerrarConexion();
+                }
+
+                RecargarDGV();
+
+                MessageBox.Show("Usuario modificado con éxito.");
+            } catch (Exception ex)
+            {
+                MessageBox.Show("Uno de los campos está vacio o incorrectamente introducido.");
             }
-            dgvUsuarios.Refresh();
-            MessageBox.Show("Usuario modificado con éxito.");
         }
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
-            {
+            try{ 
                 Usuario usu = new Usuario();
                 usu.Id = Convert.ToInt32(txtID.Text);
                 usu.Nif = txtNIF.Text;
@@ -108,8 +151,20 @@ namespace ProyectoIntegradoVerde.Formularios
                 usu.Puntos = Convert.ToInt32(txtPuntos.Text);
                 usu.Correo = txtCorreo.Text;
                 usu.Password = txtContrasena.Text;
-                usu.Borrado = Convert.ToInt32(checkDeshab.Checked);
-                usu.Foto = null;
+                if (checkDeshab.Checked == true)
+                {
+                    usu.Borrado = 1;
+                }
+                else
+                {
+                    usu.Borrado = 0;
+                }
+
+                MemoryStream ms = new MemoryStream();
+                pictureFoto.Image.Save(ms, pictureFoto.Image.RawFormat);
+                byte[] img = ms.ToArray();
+
+                usu.Foto = img;
 
                 if (conexion.Conexion != null)
                 {
@@ -117,9 +172,27 @@ namespace ProyectoIntegradoVerde.Formularios
                     usu.AgregarUsuario();
                     conexion.CerrarConexion();
                 }
-                dgvUsuarios.Refresh();
+                RecargarDGV();
                 MessageBox.Show("Usuario agregado con éxito.");
+            } catch (Exception ex)
+            {
+                MessageBox.Show("Uno de los campos está vacio o incorrectamente introducido.");
             }
+        }
+
+        private void btnCargar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                OpenFileDialog openFileDialog1 = new OpenFileDialog();
+                openFileDialog1.Filter = "Archivos de imagen|*.jpg";
+                openFileDialog1.Title = "Seleccione una imagen";
+                if (openFileDialog1.ShowDialog() == DialogResult.OK)
+                {
+
+                    pictureFoto.Image = Image.FromFile(openFileDialog1.FileName);
+                }
+            } catch (Exception ex) { MessageBox.Show("Ha habido un problema al cargar la imágen, vuelvalo a intentarlo o seleccione una distinta."); }
         }
     }
 }
