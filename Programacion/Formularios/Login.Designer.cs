@@ -52,7 +52,7 @@
             // 
             this.lblPsw.AutoSize = true;
             this.lblPsw.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPsw.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.lblPsw.ForeColor = System.Drawing.Color.RoyalBlue;
             this.lblPsw.Location = new System.Drawing.Point(46, 312);
             this.lblPsw.Name = "lblPsw";
             this.lblPsw.Size = new System.Drawing.Size(106, 24);
@@ -83,7 +83,7 @@
             // 
             this.lblNIF.AutoSize = true;
             this.lblNIF.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNIF.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.lblNIF.ForeColor = System.Drawing.Color.RoyalBlue;
             this.lblNIF.Location = new System.Drawing.Point(109, 286);
             this.lblNIF.Name = "lblNIF";
             this.lblNIF.Size = new System.Drawing.Size(40, 24);
@@ -94,7 +94,7 @@
             // 
             this.btnIniSesion.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnIniSesion.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btnIniSesion.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.btnIniSesion.ForeColor = System.Drawing.Color.RoyalBlue;
             this.btnIniSesion.Location = new System.Drawing.Point(269, 381);
             this.btnIniSesion.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnIniSesion.Name = "btnIniSesion";
@@ -107,6 +107,7 @@
             // lblOlvidoCont
             // 
             this.lblOlvidoCont.AutoSize = true;
+            this.lblOlvidoCont.LinkColor = System.Drawing.Color.RoyalBlue;
             this.lblOlvidoCont.Location = new System.Drawing.Point(181, 346);
             this.lblOlvidoCont.Name = "lblOlvidoCont";
             this.lblOlvidoCont.Size = new System.Drawing.Size(149, 13);
@@ -118,7 +119,7 @@
             // btnRegistro
             // 
             this.btnRegistro.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnRegistro.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.btnRegistro.ForeColor = System.Drawing.Color.RoyalBlue;
             this.btnRegistro.Location = new System.Drawing.Point(127, 381);
             this.btnRegistro.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnRegistro.Name = "btnRegistro";
@@ -132,6 +133,7 @@
             // 
             this.lblLang.AutoSize = true;
             this.lblLang.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLang.ForeColor = System.Drawing.Color.DodgerBlue;
             this.lblLang.Location = new System.Drawing.Point(63, 64);
             this.lblLang.Name = "lblLang";
             this.lblLang.Size = new System.Drawing.Size(31, 13);
@@ -141,6 +143,7 @@
             // lblNotif
             // 
             this.lblNotif.AutoSize = true;
+            this.lblNotif.LinkColor = System.Drawing.Color.CornflowerBlue;
             this.lblNotif.Location = new System.Drawing.Point(333, 468);
             this.lblNotif.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblNotif.Name = "lblNotif";
@@ -188,7 +191,7 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.SystemColors.Highlight;
+            this.panel1.BackColor = System.Drawing.Color.RoyalBlue;
             this.panel1.Location = new System.Drawing.Point(-10, 490);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(514, 44);
@@ -196,7 +199,7 @@
             // 
             // panel2
             // 
-            this.panel2.BackColor = System.Drawing.SystemColors.Highlight;
+            this.panel2.BackColor = System.Drawing.Color.RoyalBlue;
             this.panel2.Location = new System.Drawing.Point(-10, 0);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(526, 44);
