@@ -55,7 +55,7 @@ namespace ProyectoIntegradoVerde.Formularios
             list4 = Tienda.Catalogo();
             for (int i = 0; i < list4.Count; i++)
             {
-                dgvProductos.Rows.Add(list4[i].Id_prod, list4[i].Nombre, list4[i].Coste, list4[i].Descripcion);
+                dgvProductos.Rows.Add(list4[i].Id_prod, list4[i].Nombre, list4[i].Coste, list4[i].Descripcion, list4[i].Codigo);
             }
 
             // Reuniones
@@ -245,7 +245,7 @@ namespace ProyectoIntegradoVerde.Formularios
         {
 
                 string p_prod = dgvProductos.Rows[e.RowIndex].Cells[2].Value.ToString();
-                string cod = dgvProductos.Rows[e.RowIndex].Cells[3].Value.ToString();
+                string cod = dgvProductos.Rows[e.RowIndex].Cells[4].Value.ToString();
                 int p_produ = Convert.ToInt32(p_prod);
 
 
