@@ -54,7 +54,7 @@ namespace ProyectoIntegradoVerde.Formularios
 
         private void lblAbreFormulario_Click(object sender, EventArgs e)
         {
-            FrmDatos d = new FrmDatos(user);
+            FrmDatos d = new FrmDatos(user,luz,lang);
             d.ShowDialog();
         }
 
