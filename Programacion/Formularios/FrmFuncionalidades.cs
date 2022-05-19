@@ -265,6 +265,12 @@ namespace ProyectoIntegradoVerde.Formularios
 
             
         }
+
+        private void btnCrearTarea_Click(object sender, EventArgs e)
+        {
+            AgregarTarea tar = new AgregarTarea(user);
+            tar.ShowDialog();
+        }
     }
 }
 

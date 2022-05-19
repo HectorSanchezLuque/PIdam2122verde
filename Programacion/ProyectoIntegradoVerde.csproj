@@ -95,6 +95,12 @@
     <Compile Include="Clases\Reuniones.cs" />
     <Compile Include="Clases\Tarea.cs" />
     <Compile Include="Clases\Tienda.cs" />
+    <Compile Include="Formularios\AgregarTarea.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\AgregarTarea.Designer.cs">
+      <DependentUpon>AgregarTarea.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\CrearReunion.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -156,6 +162,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>StringRecursos.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Formularios\AgregarTarea.resx">
+      <DependentUpon>AgregarTarea.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formularios\CrearReunion.resx">
       <DependentUpon>CrearReunion.cs</DependentUpon>
     </EmbeddedResource>

@@ -31,6 +31,7 @@ namespace ProyectoIntegradoVerde.Formularios
         {
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.btnCrearTarea = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.btnActualizar = new System.Windows.Forms.Button();
             this.lblDobleClick = new System.Windows.Forms.Label();
@@ -116,6 +117,7 @@ namespace ProyectoIntegradoVerde.Formularios
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.btnCrearTarea);
             this.tabPage1.Controls.Add(this.label3);
             this.tabPage1.Controls.Add(this.btnActualizar);
             this.tabPage1.Controls.Add(this.lblDobleClick);
@@ -132,13 +134,23 @@ namespace ProyectoIntegradoVerde.Formularios
             this.tabPage1.Text = "Tareas";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
+            // btnCrearTarea
+            // 
+            this.btnCrearTarea.Location = new System.Drawing.Point(160, 229);
+            this.btnCrearTarea.Name = "btnCrearTarea";
+            this.btnCrearTarea.Size = new System.Drawing.Size(98, 35);
+            this.btnCrearTarea.TabIndex = 8;
+            this.btnCrearTarea.Text = "Crear Tarea";
+            this.btnCrearTarea.UseVisualStyleBackColor = true;
+            this.btnCrearTarea.Click += new System.EventHandler(this.btnCrearTarea_Click);
+            // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(486, 454);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(240, 17);
+            this.label3.Size = new System.Drawing.Size(227, 16);
             this.label3.TabIndex = 7;
             this.label3.Text = "Doble click para completar una tarea";
             // 
@@ -160,7 +172,7 @@ namespace ProyectoIntegradoVerde.Formularios
             this.lblDobleClick.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDobleClick.Location = new System.Drawing.Point(486, 216);
             this.lblDobleClick.Name = "lblDobleClick";
-            this.lblDobleClick.Size = new System.Drawing.Size(237, 17);
+            this.lblDobleClick.Size = new System.Drawing.Size(223, 16);
             this.lblDobleClick.TabIndex = 4;
             this.lblDobleClick.Text = "Doble click para asignarte una tarea";
             // 
@@ -427,7 +439,7 @@ namespace ProyectoIntegradoVerde.Formularios
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(493, 211);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(355, 17);
+            this.label6.Size = new System.Drawing.Size(339, 16);
             this.label6.TabIndex = 11;
             this.label6.Text = "Doble click para leer el cuerpo del correo seleccionado";
             // 
@@ -479,7 +491,7 @@ namespace ProyectoIntegradoVerde.Formularios
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(7, 240);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(81, 24);
+            this.label5.Size = new System.Drawing.Size(78, 22);
             this.label5.TabIndex = 3;
             this.label5.Text = "Asunto:";
             // 
@@ -489,7 +501,7 @@ namespace ProyectoIntegradoVerde.Formularios
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(7, 211);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(125, 24);
+            this.label4.Size = new System.Drawing.Size(124, 22);
             this.label4.TabIndex = 2;
             this.label4.Text = "Destinatario:";
             // 
@@ -602,6 +614,34 @@ namespace ProyectoIntegradoVerde.Formularios
             this.dgvProductos.Size = new System.Drawing.Size(841, 420);
             this.dgvProductos.TabIndex = 0;
             this.dgvProductos.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvProductos_CellContentDoubleClick);
+            // 
+            // id
+            // 
+            this.id.HeaderText = "Id";
+            this.id.MinimumWidth = 6;
+            this.id.Name = "id";
+            this.id.Width = 125;
+            // 
+            // nombre
+            // 
+            this.nombre.HeaderText = "Nombre";
+            this.nombre.MinimumWidth = 6;
+            this.nombre.Name = "nombre";
+            this.nombre.Width = 125;
+            // 
+            // coste
+            // 
+            this.coste.HeaderText = "Coste";
+            this.coste.MinimumWidth = 6;
+            this.coste.Name = "coste";
+            this.coste.Width = 125;
+            // 
+            // codigo
+            // 
+            this.codigo.HeaderText = "Codigo";
+            this.codigo.MinimumWidth = 6;
+            this.codigo.Name = "codigo";
+            this.codigo.Width = 125;
             // 
             // label1
             // 
@@ -760,5 +800,6 @@ namespace ProyectoIntegradoVerde.Formularios
         private System.Windows.Forms.DataGridViewTextBoxColumn coste;
         private System.Windows.Forms.DataGridViewTextBoxColumn codigo;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Button btnCrearTarea;
     }
 }
