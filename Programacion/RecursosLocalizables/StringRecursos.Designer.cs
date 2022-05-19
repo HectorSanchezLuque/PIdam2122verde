@@ -61,11 +61,65 @@ namespace ProyectoIntegradoVerde.RecursosLocalizables {
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a .
+        ///   Busca una cadena traducida similar a Cerrar.
+        /// </summary>
+        internal static string adTar_btnCerrar {
+            get {
+                return ResourceManager.GetString("adTar_btnCerrar", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Enviar.
+        /// </summary>
+        internal static string adTar_btnEnviar {
+            get {
+                return ResourceManager.GetString("adTar_btnEnviar", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Agregar Tarea.
         /// </summary>
         internal static string adTar_lblAgregarT {
             get {
                 return ResourceManager.GetString("adTar_lblAgregarT", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Descripción:.
+        /// </summary>
+        internal static string adTar_lblDesc {
+            get {
+                return ResourceManager.GetString("adTar_lblDesc", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Fecha Límite:.
+        /// </summary>
+        internal static string adTar_lblFLimite {
+            get {
+                return ResourceManager.GetString("adTar_lblFLimite", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Punto:.
+        /// </summary>
+        internal static string adTar_lblPuntos {
+            get {
+                return ResourceManager.GetString("adTar_lblPuntos", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Título:.
+        /// </summary>
+        internal static string adTar_lblTitulo {
+            get {
+                return ResourceManager.GetString("adTar_lblTitulo", resourceCulture);
             }
         }
         

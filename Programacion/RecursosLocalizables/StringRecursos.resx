@@ -117,8 +117,26 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="adTar_btnCerrar" xml:space="preserve">
+    <value>Cerrar</value>
+  </data>
+  <data name="adTar_btnEnviar" xml:space="preserve">
+    <value>Enviar</value>
+  </data>
   <data name="adTar_lblAgregarT" xml:space="preserve">
-    <value />
+    <value>Agregar Tarea</value>
+  </data>
+  <data name="adTar_lblDesc" xml:space="preserve">
+    <value>Descripción:</value>
+  </data>
+  <data name="adTar_lblFLimite" xml:space="preserve">
+    <value>Fecha Límite:</value>
+  </data>
+  <data name="adTar_lblPuntos" xml:space="preserve">
+    <value>Punto:</value>
+  </data>
+  <data name="adTar_lblTitulo" xml:space="preserve">
+    <value>Título:</value>
   </data>
   <data name="adTar_title" xml:space="preserve">
     <value>Agregar Tarea</value>
