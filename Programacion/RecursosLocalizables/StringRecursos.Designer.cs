@@ -61,11 +61,11 @@ namespace ProyectoIntegradoVerde.RecursosLocalizables {
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a a.
+        ///   Busca una cadena traducida similar a .
         /// </summary>
-        internal static string adTar_ {
+        internal static string adTar_lblAgregarT {
             get {
-                return ResourceManager.GetString("adTar_", resourceCulture);
+                return ResourceManager.GetString("adTar_lblAgregarT", resourceCulture);
             }
         }
         

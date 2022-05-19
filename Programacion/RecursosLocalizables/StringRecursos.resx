@@ -117,8 +117,8 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="adTar_" xml:space="preserve">
-    <value>a</value>
+  <data name="adTar_lblAgregarT" xml:space="preserve">
+    <value />
   </data>
   <data name="adTar_title" xml:space="preserve">
     <value>Agregar Tarea</value>
