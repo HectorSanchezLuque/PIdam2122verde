@@ -169,6 +169,7 @@ namespace ProyectoIntegradoVerde.Formularios
                 btnReuniones.ForeColor = Color.FromArgb(0, 0, 122);
                 btnTareas.ForeColor = Color.FromArgb(0, 0, 122);
                 btnTienda.ForeColor = Color.FromArgb(0, 0, 122);
+                
 
             }
             else

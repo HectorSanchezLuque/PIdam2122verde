@@ -120,6 +120,27 @@
   <data name="contOlv" xml:space="preserve">
     <value>forgotten password?</value>
   </data>
+  <data name="dat_btnCerrar" xml:space="preserve">
+    <value>Exit</value>
+  </data>
+  <data name="dat_lblCargo" xml:space="preserve">
+    <value>Position</value>
+  </data>
+  <data name="dat_lblCode" xml:space="preserve">
+    <value>Employee Code</value>
+  </data>
+  <data name="dat_lblDetalles" xml:space="preserve">
+    <value>User Details</value>
+  </data>
+  <data name="dat_lblNif" xml:space="preserve">
+    <value>Identification number</value>
+  </data>
+  <data name="dat_lblNombre" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="dat_lblPuntos" xml:space="preserve">
+    <value>Points</value>
+  </data>
   <data name="lang" xml:space="preserve">
     <value>ENG</value>
   </data>
@@ -176,5 +197,17 @@
   </data>
   <data name="sopTitle2" xml:space="preserve">
     <value>Insert the email associated with your account:</value>
+  </data>
+  <data name="sop_tapcontrol1" xml:space="preserve">
+    <value>Notify Error</value>
+  </data>
+  <data name="sop_tapcontrol2" xml:space="preserve">
+    <value>Recover password</value>
+  </data>
+  <data name="sop_title" xml:space="preserve">
+    <value>Support</value>
+  </data>
+  <data name="String1" xml:space="preserve">
+    <value>a</value>
   </data>
 </root>

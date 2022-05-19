@@ -70,6 +70,69 @@ namespace ProyectoIntegradoVerde.RecursosLocalizables {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a Salir.
+        /// </summary>
+        internal static string dat_btnCerrar {
+            get {
+                return ResourceManager.GetString("dat_btnCerrar", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Cargo.
+        /// </summary>
+        internal static string dat_lblCargo {
+            get {
+                return ResourceManager.GetString("dat_lblCargo", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Código de empleado.
+        /// </summary>
+        internal static string dat_lblCode {
+            get {
+                return ResourceManager.GetString("dat_lblCode", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Detalles del Usuario.
+        /// </summary>
+        internal static string dat_lblDetalles {
+            get {
+                return ResourceManager.GetString("dat_lblDetalles", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Número de Identificacion.
+        /// </summary>
+        internal static string dat_lblNif {
+            get {
+                return ResourceManager.GetString("dat_lblNif", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Nombre.
+        /// </summary>
+        internal static string dat_lblNombre {
+            get {
+                return ResourceManager.GetString("dat_lblNombre", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Puntos.
+        /// </summary>
+        internal static string dat_lblPuntos {
+            get {
+                return ResourceManager.GetString("dat_lblPuntos", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a ESP.
         /// </summary>
         internal static string lang {
@@ -192,6 +255,33 @@ namespace ProyectoIntegradoVerde.RecursosLocalizables {
         internal static string regUsu {
             get {
                 return ResourceManager.GetString("regUsu", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Notificar Error.
+        /// </summary>
+        internal static string sop_tapcontrol1 {
+            get {
+                return ResourceManager.GetString("sop_tapcontrol1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Recuperar contraseña.
+        /// </summary>
+        internal static string sop_tapcontrol2 {
+            get {
+                return ResourceManager.GetString("sop_tapcontrol2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Soporte.
+        /// </summary>
+        internal static string sop_title {
+            get {
+                return ResourceManager.GetString("sop_title", resourceCulture);
             }
         }
         

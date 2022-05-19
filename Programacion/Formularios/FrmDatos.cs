@@ -47,6 +47,7 @@ namespace ProyectoIntegradoVerde.Formularios
             }
             conexion.CerrarConexion();
             luzForm();
+            formLang();
         }
 
         private void ptbFoto_DoubleClick(object sender, EventArgs e)
@@ -90,8 +91,9 @@ namespace ProyectoIntegradoVerde.Formularios
                 lblCargo2.ForeColor = Color.FromArgb(0, 0, 122);
                 lblNif2.ForeColor = Color.FromArgb(0, 0, 122);
                 lblPuntos2.ForeColor = Color.FromArgb(0, 0, 122);
-                
-
+                lblDetalles.ForeColor = Color.FromArgb(0, 0, 122);
+                lblNombre.ForeColor = Color.FromArgb(0, 0, 122);
+                lblCode.ForeColor = Color.FromArgb(255, 255, 255);
 
 
 
@@ -111,15 +113,45 @@ namespace ProyectoIntegradoVerde.Formularios
                 lblCargo2.ForeColor = Color.FromArgb(255, 255, 255);
                 lblNif2.ForeColor = Color.FromArgb(255, 255, 255);
                 lblPuntos2.ForeColor = Color.FromArgb(255, 255, 255);
-                
+                lblDetalles.ForeColor = Color.FromArgb(255, 255, 255);
+                lblNombre.ForeColor = Color.FromArgb(255, 255, 255);
+                lblCode.ForeColor = Color.FromArgb(255, 255, 255);
 
+            }
+            
 
+        }
+        private void AplicarIdioma()
+        {
 
+            lblCargo.Text = StringRecursos.dat_lblCargo;
+            lblNif.Text = StringRecursos.dat_lblNif;
+            lblPuntos.Text = StringRecursos.dat_lblPuntos;
+            lblCode.Text = StringRecursos.dat_lblCode;
+            lblNombre.Text = StringRecursos.dat_lblNombre;
+            lblDetalles.Text = StringRecursos.dat_lblDetalles;
+            btnCerrar.Text = StringRecursos.dat_btnCerrar;
+            
+        }
+        private void formLang()
+        {
+            if (!lang)
+            {
+
+                Thread.CurrentThread.CurrentUICulture = new CultureInfo("");
+                lang = false;
+
+            }
+            else
+            {
+
+                Thread.CurrentThread.CurrentUICulture = new CultureInfo("EN");
+                lang = true;
 
 
             }
 
+            AplicarIdioma();
         }
-
     }
 }
