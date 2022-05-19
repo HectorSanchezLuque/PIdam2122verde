@@ -151,19 +151,19 @@ namespace ProyectoIntegradoVerde
         /// </summary>
         /// <param name="usu"> datos del usuario a modificar</param>
         /// <returns></returns>
-        public int ActualizaUsuario(Usuario usu)
+        public static int ActualizaUsuario(Usuario usu, int ID)
         {
 
             int retorno;
 
           
 
-            string consulta = string.Format("UPDATE usuarios SET id = '{1}',nif = '{2}',nombre = '{3}' ,fecha_nac = '{4}',cargo = '{5}',puntos = '{6}',correo = '{7}',pswd = '{8}',imagen=@imagen WHERE id={6}", usu.id, usu.nif, usu.nombre, usu.fechaNacimiento,
-                usu.cargo, usu.puntos, usu.correo, usu.password);
+            string consulta = string.Format("UPDATE usuarios SET id = '{0}',nif = '{1}',nombre = '{2}' ,fecha_nac = '{3}',cargo = '{4}',puntos = '{5}',correo = '{6}',pswd = '{7}',foto=@imagen WHERE id={8}", usu.id, usu.nif, usu.nombre, usu.fechaNacimiento.ToString("yyyy-MM-dd"),
+                usu.cargo, usu.puntos, usu.correo, usu.password, ID);
      
 
             MySqlCommand comando = new MySqlCommand(consulta, conexion.Conexion);
-            comando.Parameters.AddWithValue("imagen", this.Foto);
+            comando.Parameters.AddWithValue("imagen", usu.Foto);
             retorno = comando.ExecuteNonQuery();
 
        
