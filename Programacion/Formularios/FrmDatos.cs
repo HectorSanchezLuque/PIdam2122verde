@@ -80,7 +80,6 @@ namespace ProyectoIntegradoVerde.Formularios
 
             if (luz)
             {
-
                 luz = true;
                 this.BackColor = Color.FromArgb(255, 255, 255);
                 lblCargo.ForeColor = Color.FromArgb(0, 0, 122);
@@ -91,18 +90,16 @@ namespace ProyectoIntegradoVerde.Formularios
                 lblCargo2.ForeColor = Color.FromArgb(0, 0, 122);
                 lblNif2.ForeColor = Color.FromArgb(0, 0, 122);
                 lblPuntos2.ForeColor = Color.FromArgb(0, 0, 122);
+
                 lblDetalles.ForeColor = Color.FromArgb(0, 0, 122);
                 lblNombre.ForeColor = Color.FromArgb(0, 0, 122);
                 lblCode.ForeColor = Color.FromArgb(255, 255, 255);
 
 
 
-
-
             }
             else
             {
-
                 luz = false;
                 this.BackColor = Color.FromArgb(0, 0, 122);
                 lblCargo.ForeColor = Color.FromArgb(255, 255, 255);
@@ -152,6 +149,8 @@ namespace ProyectoIntegradoVerde.Formularios
             }
 
             AplicarIdioma();
+          
         }
+        
     }
 }

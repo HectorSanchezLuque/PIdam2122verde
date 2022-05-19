@@ -101,24 +101,11 @@ namespace ProyectoIntegradoVerde.Clases
             return productos;
         }
 
-        public static int RestarPuntos(Usuario user)
+        public static int RestarPuntos(int id, int Punt)
         {
             int retorno;
 
-            string consulta = String.Format("UPDATE usuarios SET puntos = '{0}' Where id = '{1}'", user.Puntos);
-
-            MySqlCommand comando = new MySqlCommand(consulta, conexion.Conexion);
-
-            retorno = comando.ExecuteNonQuery();
-
-            return retorno;
-        }
-
-        public static int SelecCodigo(string cod)
-        {
-            int retorno;
-
-            string consulta = String.Format("Select Codigo from tienda Where Codigo = '{0}'", cod);
+            string consulta = String.Format("UPDATE usuarios SET puntos = '{0}' Where id = '{1}'", Punt,id);
 
             MySqlCommand comando = new MySqlCommand(consulta, conexion.Conexion);
 

@@ -139,7 +139,7 @@ namespace ProyectoIntegradoVerde.Formularios
             this.lblHora.AutoSize = true;
             this.lblHora.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
             this.lblHora.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.lblHora.Location = new System.Drawing.Point(477, 36);
+            this.lblHora.Location = new System.Drawing.Point(468, 37);
             this.lblHora.Name = "lblHora";
             this.lblHora.Size = new System.Drawing.Size(73, 31);
             this.lblHora.TabIndex = 15;

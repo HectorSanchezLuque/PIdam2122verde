@@ -61,6 +61,7 @@ namespace ProyectoIntegradoVerde.Formularios
             Environment.Exit(1);
             FrmFuncionalidades func = new FrmFuncionalidades(luz,lang);
             func.ShowDialog();
+
         }
 
         private void btnTareas_Click(object sender, EventArgs e)
@@ -73,7 +74,7 @@ namespace ProyectoIntegradoVerde.Formularios
                     func.User = user;
                     func.NumPag = 0;
 
-                    func.Show();
+                    func.ShowDialog();
                 }
                 else
                 {
