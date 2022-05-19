@@ -50,6 +50,14 @@ namespace ProyectoIntegradoVerde.Formularios
                 dgvBandeja.Rows.Add(correos[i].Id, correos[i].Asunto, correos[i].Cuerpo, correos[i].Remitente, correos[i].Fecha);
             }
 
+            //Productos
+            List<Tienda> list4 = new List<Tienda>();
+            list4 = Tienda.Catalogo();
+            for (int i = 0; i < list4.Count; i++)
+            {
+                dgvProductos.Rows.Add(list4[i].Id_prod, list4[i].Nombre, list4[i].Coste, list4[i].Descripcion);
+            }
+
             // Reuniones
 
             List<Reuniones> list3 = new List<Reuniones>();

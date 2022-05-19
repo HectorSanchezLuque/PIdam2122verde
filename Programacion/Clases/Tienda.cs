@@ -79,7 +79,53 @@ namespace ProyectoIntegradoVerde.Clases
             retorno = comando.ExecuteNonQuery();
             return retorno;
         }
+        public static List<Tienda> Catalogo()
+        {
+            List<Tienda> productos = new List<Tienda>();
+            string consulta = String.Format("SELECT * from tienda");
+            MySqlCommand comando = new MySqlCommand(consulta, conexion.Conexion);
+            MySqlDataReader reader = comando.ExecuteReader();
+            if (reader.HasRows)
+            {
+                while (reader.Read())
+                {
+                    Tienda prod = new Tienda();
+                    prod.Id_prod = reader.GetInt32(0);
+                    prod.Nombre = reader.GetString(1);
+                    prod.Coste = reader.GetInt32(2);
+                    prod.Descripcion = reader.GetString(3);
+                    productos.Add(prod);
+                }
+                reader.Close();
+            }
+            return productos;
+        }
 
+        public static int RestarPuntos(Usuario user)
+        {
+            int retorno;
+
+            string consulta = String.Format("UPDATE usuarios SET puntos = '{0}' Where id = '{1}'", user.Puntos);
+
+            MySqlCommand comando = new MySqlCommand(consulta, conexion.Conexion);
+
+            retorno = comando.ExecuteNonQuery();
+
+            return retorno;
+        }
+
+        public static int SelecCodigo(string cod)
+        {
+            int retorno;
+
+            string consulta = String.Format("Select Codigo from tienda Where Codigo = '{0}'", cod);
+
+            MySqlCommand comando = new MySqlCommand(consulta, conexion.Conexion);
+
+            retorno = comando.ExecuteNonQuery();
+
+            return retorno;
+        }
 
     }
-    }
+}
