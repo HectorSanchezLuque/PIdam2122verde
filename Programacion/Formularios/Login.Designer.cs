@@ -141,7 +141,7 @@
             // lblNotif
             // 
             this.lblNotif.AutoSize = true;
-            this.lblNotif.Location = new System.Drawing.Point(288, 468);
+            this.lblNotif.Location = new System.Drawing.Point(333, 468);
             this.lblNotif.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblNotif.Name = "lblNotif";
             this.lblNotif.Size = new System.Drawing.Size(138, 13);
