@@ -245,6 +245,12 @@ namespace ProyectoIntegradoVerde.Formularios
                 MessageBox.Show(dgvReuniones.Rows[e.RowIndex].Cells[2].Value.ToString(), "Descripcion: ");
             }
         }
+
+        private void btnCrearTarea_Click(object sender, EventArgs e)
+        {
+            AgregarTarea tar = new AgregarTarea(user);
+            tar.ShowDialog();
+        }
     }
 }
 

@@ -328,3 +328,4 @@ C:\Users\hesalu\Desktop\PI 2\Programacion\bin\Debug\System.Runtime.CompilerServi
 C:\Users\hesalu\Desktop\PI 2\Programacion\obj\Debug\EN\ProyectoIntegradoVerde.resources.dll
 C:\Users\hesalu\Desktop\PI 2\Programacion\obj\Debug\ProyectoIntegradoVerde.csproj.CopyComplete
 >>>>>>> 1ed9594a1abb50fb8bf02ed18015aa1fa5bbaa36
+C:\Users\hesalu\Desktop\PI 2\Programacion\obj\Debug\ProyectoIntegradoVerde.Formularios.AgregarTarea.resources

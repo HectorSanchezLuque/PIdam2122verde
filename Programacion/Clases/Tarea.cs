@@ -105,8 +105,8 @@ namespace ProyectoIntegradoVerde.Clases
         {
             int retorno;
 
-            string consulta = String.Format("INSERT INTO tarea (titulo,descripcion,puntos,asignado,finalizado) VALUES " +
-                "('{0}','{1}','{2}','{3}','{4}','{5}')", tar.titulo, tar.descripcion, tar.puntos, tar.asignado, tar.finalizado);
+            string consulta = String.Format("INSERT INTO tarea (titulo,descripcion,puntos,asignado,finalizado, fecha_publicacion, fecha_limite) VALUES " +
+                "('{0}','{1}','{2}', 0, 0, '{3}','{4}')", tar.Titulo, tar.Descripcion, tar.Puntos, tar.FPublicacion.ToString("yyyy-MM-dd"), tar.FLimite.ToString("yyyy-MM-dd"));
 
             MySqlCommand comando = new MySqlCommand(consulta, conexion.Conexion);
             retorno = comando.ExecuteNonQuery();
