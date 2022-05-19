@@ -61,11 +61,164 @@ namespace ProyectoIntegradoVerde.RecursosLocalizables {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a .
+        /// </summary>
+        internal static string adTar_lblAgregarT {
+            get {
+                return ResourceManager.GetString("adTar_lblAgregarT", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Agregar Tarea.
+        /// </summary>
+        internal static string adTar_title {
+            get {
+                return ResourceManager.GetString("adTar_title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a ¿Has olvidado tu contraseña?.
         /// </summary>
         internal static string contOlv {
             get {
                 return ResourceManager.GetString("contOlv", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Crear Reunión.
+        /// </summary>
+        internal static string crun_btnCrearReunion {
+            get {
+                return ResourceManager.GetString("crun_btnCrearReunion", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Cargos asociados:.
+        /// </summary>
+        internal static string crun_lblCargos {
+            get {
+                return ResourceManager.GetString("crun_lblCargos", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Creación de Reunión.
+        /// </summary>
+        internal static string crun_lblCrearReunion {
+            get {
+                return ResourceManager.GetString("crun_lblCrearReunion", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Fecha de la Reunión.
+        /// </summary>
+        internal static string crun_lblFechaReunion {
+            get {
+                return ResourceManager.GetString("crun_lblFechaReunion", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Hora de la Reunión.
+        /// </summary>
+        internal static string crun_lblHoraReunion {
+            get {
+                return ResourceManager.GetString("crun_lblHoraReunion", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Descripción:.
+        /// </summary>
+        internal static string crun_lblRDesc {
+            get {
+                return ResourceManager.GetString("crun_lblRDesc", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Nombre:.
+        /// </summary>
+        internal static string crun_lblRNombre {
+            get {
+                return ResourceManager.GetString("crun_lblRNombre", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a CrearReunion.
+        /// </summary>
+        internal static string crun_title {
+            get {
+                return ResourceManager.GetString("crun_title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Salir.
+        /// </summary>
+        internal static string dat_btnCerrar {
+            get {
+                return ResourceManager.GetString("dat_btnCerrar", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Cargo.
+        /// </summary>
+        internal static string dat_lblCargo {
+            get {
+                return ResourceManager.GetString("dat_lblCargo", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Código de empleado.
+        /// </summary>
+        internal static string dat_lblCode {
+            get {
+                return ResourceManager.GetString("dat_lblCode", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Detalles del Usuario.
+        /// </summary>
+        internal static string dat_lblDetalles {
+            get {
+                return ResourceManager.GetString("dat_lblDetalles", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Número de Identificacion.
+        /// </summary>
+        internal static string dat_lblNif {
+            get {
+                return ResourceManager.GetString("dat_lblNif", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Nombre.
+        /// </summary>
+        internal static string dat_lblNombre {
+            get {
+                return ResourceManager.GetString("dat_lblNombre", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Puntos.
+        /// </summary>
+        internal static string dat_lblPuntos {
+            get {
+                return ResourceManager.GetString("dat_lblPuntos", resourceCulture);
             }
         }
         
@@ -192,6 +345,33 @@ namespace ProyectoIntegradoVerde.RecursosLocalizables {
         internal static string regUsu {
             get {
                 return ResourceManager.GetString("regUsu", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Notificar Error.
+        /// </summary>
+        internal static string sop_tapcontrol1 {
+            get {
+                return ResourceManager.GetString("sop_tapcontrol1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Recuperar contraseña.
+        /// </summary>
+        internal static string sop_tapcontrol2 {
+            get {
+                return ResourceManager.GetString("sop_tapcontrol2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Soporte.
+        /// </summary>
+        internal static string sop_title {
+            get {
+                return ResourceManager.GetString("sop_title", resourceCulture);
             }
         }
         

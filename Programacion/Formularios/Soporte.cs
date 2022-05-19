@@ -163,8 +163,9 @@ namespace ProyectoIntegradoVerde.Formularios
             lblrecup.Text = StringRecursos.sopTitle2;
             btnSolMail.Text = StringRecursos.sopbtnEnviar;
             lblMess.Text = StringRecursos.sopBtnENvin2;
-            
-
+            tabSoporte.TabPages[0].Text = StringRecursos.sop_tapcontrol1;
+            tabSoporte.TabPages[1].Text = StringRecursos.sop_tapcontrol2;
+            this.Text = StringRecursos.sop_title;
 
         }
     }

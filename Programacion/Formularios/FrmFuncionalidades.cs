@@ -9,11 +9,18 @@ namespace ProyectoIntegradoVerde.Formularios
     {
         private Usuario user;
         private int numPag;
+        bool lang;
+        bool luz;
+        
+        
 
         public int NumPag { get => numPag; set => numPag = value; }
         public Usuario User { get => user; set => user = value; }
+        public bool Lang { get { return lang; } set { lang = value; } }
+        public bool Luz { get { return luz; } set { luz = value; } }
 
-        
+
+
 
 
         public void RellenarDataGrid()
@@ -55,7 +62,7 @@ namespace ProyectoIntegradoVerde.Formularios
             list4 = Tienda.Catalogo();
             for (int i = 0; i < list4.Count; i++)
             {
-                dgvProductos.Rows.Add(list4[i].Id_prod, list4[i].Nombre, list4[i].Coste, list4[i].Descripcion);
+                dgvProductos.Rows.Add(list4[i].Id_prod, list4[i].Nombre, list4[i].Coste, list4[i].Descripcion, list4[i].Codigo);
             }
 
             // Reuniones
@@ -69,9 +76,13 @@ namespace ProyectoIntegradoVerde.Formularios
             }
             conexion.CerrarConexion();
         }
-        public FrmFuncionalidades()
+        public FrmFuncionalidades(bool lu, bool lan )
         {
+            
             InitializeComponent();
+            luz = lu;
+            lang = lan;
+
         }
 
         private void FrmFuncionalidades_Load(object sender, EventArgs e)
@@ -196,7 +207,7 @@ namespace ProyectoIntegradoVerde.Formularios
 
         private void btnCrearReunion_Click(object sender, EventArgs e)
         {
-            CrearReunion reu = new CrearReunion(user);
+            CrearReunion reu = new CrearReunion(user,luz,lang);
             reu.ShowDialog();
         }
 
@@ -245,7 +256,7 @@ namespace ProyectoIntegradoVerde.Formularios
         {
 
                 string p_prod = dgvProductos.Rows[e.RowIndex].Cells[2].Value.ToString();
-                string cod = dgvProductos.Rows[e.RowIndex].Cells[3].Value.ToString();
+                string cod = dgvProductos.Rows[e.RowIndex].Cells[4].Value.ToString();
                 int p_produ = Convert.ToInt32(p_prod);
 
 
@@ -268,7 +279,7 @@ namespace ProyectoIntegradoVerde.Formularios
 
         private void btnCrearTarea_Click(object sender, EventArgs e)
         {
-            AgregarTarea tar = new AgregarTarea(user);
+            AgregarTarea tar = new AgregarTarea(user, luz, lang);
             tar.ShowDialog();
         }
     }

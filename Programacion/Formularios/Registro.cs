@@ -248,11 +248,6 @@ namespace ProyectoIntegradoVerde
             btnRegistrarseRegistro.Text = StringRecursos.regBtnReg;
             chkShowReg.Text = StringRecursos.regMostContra;
 
-
-
-
-
-
         }
     }
 }

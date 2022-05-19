@@ -119,6 +119,7 @@
             0,
             0});
             this.nudPuntos.Name = "nudPuntos";
+            this.nudPuntos.ReadOnly = true;
             this.nudPuntos.Size = new System.Drawing.Size(101, 26);
             this.nudPuntos.TabIndex = 8;
             this.nudPuntos.Value = new decimal(new int[] {
@@ -165,6 +166,7 @@
             this.btnCerrar.TabIndex = 12;
             this.btnCerrar.Text = "Cerrar";
             this.btnCerrar.UseVisualStyleBackColor = true;
+            this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
             // 
             // AgregarTarea
             // 
@@ -184,6 +186,7 @@
             this.Controls.Add(this.lblAgregarT);
             this.Name = "AgregarTarea";
             this.Text = "Agregar Tarea";
+            this.Load += new System.EventHandler(this.AgregarTarea_Load);
             ((System.ComponentModel.ISupportInitialize)(this.nudPuntos)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
