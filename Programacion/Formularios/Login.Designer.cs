@@ -41,6 +41,8 @@
             this.pcbLuz = new System.Windows.Forms.PictureBox();
             this.picFlag = new System.Windows.Forms.PictureBox();
             this.picLight = new System.Windows.Forms.PictureBox();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.pcbLuz)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picFlag)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picLight)).BeginInit();
@@ -50,7 +52,8 @@
             // 
             this.lblPsw.AutoSize = true;
             this.lblPsw.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPsw.Location = new System.Drawing.Point(29, 266);
+            this.lblPsw.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            this.lblPsw.Location = new System.Drawing.Point(46, 312);
             this.lblPsw.Name = "lblPsw";
             this.lblPsw.Size = new System.Drawing.Size(136, 29);
             this.lblPsw.TabIndex = 1;
@@ -58,7 +61,7 @@
             // 
             // txtNif
             // 
-            this.txtNif.Location = new System.Drawing.Point(154, 242);
+            this.txtNif.Location = new System.Drawing.Point(154, 289);
             this.txtNif.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtNif.MaxLength = 9;
             this.txtNif.Name = "txtNif";
@@ -69,7 +72,7 @@
             // txtPassword
             // 
             this.txtPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPassword.Location = new System.Drawing.Point(154, 268);
+            this.txtPassword.Location = new System.Drawing.Point(154, 315);
             this.txtPassword.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.PasswordChar = '*';
@@ -80,7 +83,8 @@
             // 
             this.lblNIF.AutoSize = true;
             this.lblNIF.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNIF.Location = new System.Drawing.Point(96, 239);
+            this.lblNIF.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            this.lblNIF.Location = new System.Drawing.Point(102, 286);
             this.lblNIF.Name = "lblNIF";
             this.lblNIF.Size = new System.Drawing.Size(52, 29);
             this.lblNIF.TabIndex = 4;
@@ -88,20 +92,22 @@
             // 
             // btnIniSesion
             // 
+            this.btnIniSesion.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnIniSesion.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btnIniSesion.Location = new System.Drawing.Point(269, 334);
+            this.btnIniSesion.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            this.btnIniSesion.Location = new System.Drawing.Point(269, 381);
             this.btnIniSesion.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnIniSesion.Name = "btnIniSesion";
             this.btnIniSesion.Size = new System.Drawing.Size(105, 44);
             this.btnIniSesion.TabIndex = 6;
             this.btnIniSesion.Text = "Iniciar sesión";
-            this.btnIniSesion.UseVisualStyleBackColor = true;
+            this.btnIniSesion.UseVisualStyleBackColor = false;
             this.btnIniSesion.Click += new System.EventHandler(this.btnIniSesion_Click);
             // 
             // lblOlvidoCont
             // 
             this.lblOlvidoCont.AutoSize = true;
-            this.lblOlvidoCont.Location = new System.Drawing.Point(201, 299);
+            this.lblOlvidoCont.Location = new System.Drawing.Point(181, 346);
             this.lblOlvidoCont.Name = "lblOlvidoCont";
             this.lblOlvidoCont.Size = new System.Drawing.Size(197, 17);
             this.lblOlvidoCont.TabIndex = 7;
@@ -111,20 +117,22 @@
             // 
             // btnRegistro
             // 
-            this.btnRegistro.Location = new System.Drawing.Point(127, 334);
+            this.btnRegistro.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnRegistro.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            this.btnRegistro.Location = new System.Drawing.Point(127, 381);
             this.btnRegistro.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnRegistro.Name = "btnRegistro";
             this.btnRegistro.Size = new System.Drawing.Size(105, 44);
             this.btnRegistro.TabIndex = 8;
             this.btnRegistro.Text = "Registrar usuario";
-            this.btnRegistro.UseVisualStyleBackColor = true;
+            this.btnRegistro.UseVisualStyleBackColor = false;
             this.btnRegistro.Click += new System.EventHandler(this.btnRegistro_Click);
             // 
             // lblLang
             // 
             this.lblLang.AutoSize = true;
             this.lblLang.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLang.Location = new System.Drawing.Point(63, 23);
+            this.lblLang.Location = new System.Drawing.Point(63, 64);
             this.lblLang.Name = "lblLang";
             this.lblLang.Size = new System.Drawing.Size(38, 17);
             this.lblLang.TabIndex = 10;
@@ -133,7 +141,7 @@
             // lblNotif
             // 
             this.lblNotif.AutoSize = true;
-            this.lblNotif.Location = new System.Drawing.Point(283, 423);
+            this.lblNotif.Location = new System.Drawing.Point(288, 468);
             this.lblNotif.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblNotif.Name = "lblNotif";
             this.lblNotif.Size = new System.Drawing.Size(186, 17);
@@ -146,10 +154,10 @@
             // 
             this.pcbLuz.Image = ((System.Drawing.Image)(resources.GetObject("pcbLuz.Image")));
             this.pcbLuz.InitialImage = ((System.Drawing.Image)(resources.GetObject("pcbLuz.InitialImage")));
-            this.pcbLuz.Location = new System.Drawing.Point(420, 11);
+            this.pcbLuz.Location = new System.Drawing.Point(442, 51);
             this.pcbLuz.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pcbLuz.Name = "pcbLuz";
-            this.pcbLuz.Size = new System.Drawing.Size(43, 57);
+            this.pcbLuz.Size = new System.Drawing.Size(24, 30);
             this.pcbLuz.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pcbLuz.TabIndex = 11;
             this.pcbLuz.TabStop = false;
@@ -158,7 +166,7 @@
             // picFlag
             // 
             this.picFlag.Image = global::ProyectoIntegradoVerde.Properties.Resources.spFlag;
-            this.picFlag.Location = new System.Drawing.Point(12, 12);
+            this.picFlag.Location = new System.Drawing.Point(12, 51);
             this.picFlag.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.picFlag.Name = "picFlag";
             this.picFlag.Size = new System.Drawing.Size(45, 27);
@@ -170,7 +178,7 @@
             // picLight
             // 
             this.picLight.Image = ((System.Drawing.Image)(resources.GetObject("picLight.Image")));
-            this.picLight.Location = new System.Drawing.Point(155, 42);
+            this.picLight.Location = new System.Drawing.Point(165, 89);
             this.picLight.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.picLight.Name = "picLight";
             this.picLight.Size = new System.Drawing.Size(176, 167);
@@ -178,11 +186,29 @@
             this.picLight.TabIndex = 5;
             this.picLight.TabStop = false;
             // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.panel1.Location = new System.Drawing.Point(-10, 490);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(514, 44);
+            this.panel1.TabIndex = 13;
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.panel2.Location = new System.Drawing.Point(-10, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(526, 44);
+            this.panel2.TabIndex = 14;
+            // 
             // Login
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.ClientSize = new System.Drawing.Size(478, 453);
+            this.ClientSize = new System.Drawing.Size(478, 534);
+            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.lblNotif);
             this.Controls.Add(this.pcbLuz);
             this.Controls.Add(this.lblLang);
@@ -200,7 +226,6 @@
             this.Name = "Login";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Inicio de sesión";
-            this.Load += new System.EventHandler(this.Login_Load);
             this.SizeChanged += new System.EventHandler(this.Login_SizeChanged);
             ((System.ComponentModel.ISupportInitialize)(this.pcbLuz)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picFlag)).EndInit();
@@ -223,6 +248,8 @@
         private System.Windows.Forms.Label lblLang;
         private System.Windows.Forms.PictureBox pcbLuz;
         private System.Windows.Forms.LinkLabel lblNotif;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panel2;
     }
 }
 

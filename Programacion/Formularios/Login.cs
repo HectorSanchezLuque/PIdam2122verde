@@ -84,10 +84,7 @@ namespace Programacion
             }
         }
 
-        private void Login_Load(object sender, EventArgs e)
-        {
-
-        }
+  
 
         private void txtNif_TextChanged(object sender, EventArgs e)
         {
@@ -228,6 +225,7 @@ namespace Programacion
         {
 
         }
-        
+
+
     }
 }
