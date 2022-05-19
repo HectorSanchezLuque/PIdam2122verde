@@ -65,7 +65,7 @@ namespace ProyectoIntegradoVerde.Formularios
         {
             
         }
-<<<<<<< HEAD
+
         private void AplicarIdioma()
         {
 
@@ -141,11 +141,6 @@ namespace ProyectoIntegradoVerde.Formularios
             }
 
         }
-=======
-        
-        
-            
->>>>>>> 384d5b21473f19ef6ccaabc416ad7b15d54e3ed5
 
     }
 }
