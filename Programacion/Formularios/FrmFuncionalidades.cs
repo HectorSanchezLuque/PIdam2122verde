@@ -9,11 +9,18 @@ namespace ProyectoIntegradoVerde.Formularios
     {
         private Usuario user;
         private int numPag;
+        bool lang;
+        bool luz;
+        
+        
 
         public int NumPag { get => numPag; set => numPag = value; }
         public Usuario User { get => user; set => user = value; }
+        public bool Lang { get { return lang; } set { lang = value; } }
+        public bool Luz { get { return luz; } set { luz = value; } }
 
-        
+
+
 
 
         public void RellenarDataGrid()
@@ -69,9 +76,13 @@ namespace ProyectoIntegradoVerde.Formularios
             }
             conexion.CerrarConexion();
         }
-        public FrmFuncionalidades()
+        public FrmFuncionalidades(bool lu, bool lan )
         {
+            
             InitializeComponent();
+            luz = lu;
+            lang = lan;
+
         }
 
         private void FrmFuncionalidades_Load(object sender, EventArgs e)
@@ -196,7 +207,7 @@ namespace ProyectoIntegradoVerde.Formularios
 
         private void btnCrearReunion_Click(object sender, EventArgs e)
         {
-            CrearReunion reu = new CrearReunion(user);
+            CrearReunion reu = new CrearReunion(user,luz,lang);
             reu.ShowDialog();
         }
 

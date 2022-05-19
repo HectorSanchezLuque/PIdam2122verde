@@ -120,6 +120,51 @@
   <data name="contOlv" xml:space="preserve">
     <value>forgotten password?</value>
   </data>
+  <data name="crun_btnCrearReunion" xml:space="preserve">
+    <value>Create Meeting</value>
+  </data>
+  <data name="crun_lblCargos" xml:space="preserve">
+    <value>Associated Charges:</value>
+  </data>
+  <data name="crun_lblCrearReunion" xml:space="preserve">
+    <value>Meeting Creation</value>
+  </data>
+  <data name="crun_lblFechaReunion" xml:space="preserve">
+    <value>Meeting date</value>
+  </data>
+  <data name="crun_lblHoraReunion" xml:space="preserve">
+    <value>Meeting Time</value>
+  </data>
+  <data name="crun_lblRDesc" xml:space="preserve">
+    <value>Description:</value>
+  </data>
+  <data name="crun_lblRNombre" xml:space="preserve">
+    <value>Name:</value>
+  </data>
+  <data name="crun_title" xml:space="preserve">
+    <value>MeetingCreation</value>
+  </data>
+  <data name="dat_btnCerrar" xml:space="preserve">
+    <value>Exit</value>
+  </data>
+  <data name="dat_lblCargo" xml:space="preserve">
+    <value>Position</value>
+  </data>
+  <data name="dat_lblCode" xml:space="preserve">
+    <value>Employee Code</value>
+  </data>
+  <data name="dat_lblDetalles" xml:space="preserve">
+    <value>User Details</value>
+  </data>
+  <data name="dat_lblNif" xml:space="preserve">
+    <value>Identification number</value>
+  </data>
+  <data name="dat_lblNombre" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="dat_lblPuntos" xml:space="preserve">
+    <value>Points</value>
+  </data>
   <data name="lang" xml:space="preserve">
     <value>ENG</value>
   </data>
@@ -176,5 +221,17 @@
   </data>
   <data name="sopTitle2" xml:space="preserve">
     <value>Insert the email associated with your account:</value>
+  </data>
+  <data name="sop_tapcontrol1" xml:space="preserve">
+    <value>Notify Error</value>
+  </data>
+  <data name="sop_tapcontrol2" xml:space="preserve">
+    <value>Recover password</value>
+  </data>
+  <data name="sop_title" xml:space="preserve">
+    <value>Support</value>
+  </data>
+  <data name="String1" xml:space="preserve">
+    <value>a</value>
   </data>
 </root>
