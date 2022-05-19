@@ -256,7 +256,7 @@ namespace ProyectoIntegradoVerde.Formularios
                 lblPuntos.Text = User.Puntos.ToString();
                 Tienda.RestarPuntos(user.Id, user.Puntos);
                 ;
-                MessageBox.Show(cod, "Codigo");
+                MessageBox.Show(cod, "Codigo :", MessageBoxButtons.OK, MessageBoxIcon.Information); ;
                 conexion.CerrarConexion();
             }
             else

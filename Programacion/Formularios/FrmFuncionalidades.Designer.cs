@@ -75,17 +75,17 @@ namespace ProyectoIntegradoVerde.Formularios
             this.remit = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.date = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabPage5 = new System.Windows.Forms.TabPage();
+            this.label7 = new System.Windows.Forms.Label();
             this.lblPuntos = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.dgvProductos = new System.Windows.Forms.DataGridView();
-            this.label1 = new System.Windows.Forms.Label();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.coste = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.label7 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTareasPendientes)).BeginInit();
@@ -150,7 +150,7 @@ namespace ProyectoIntegradoVerde.Formularios
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(486, 454);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(227, 16);
+            this.label3.Size = new System.Drawing.Size(240, 17);
             this.label3.TabIndex = 7;
             this.label3.Text = "Doble click para completar una tarea";
             // 
@@ -172,7 +172,7 @@ namespace ProyectoIntegradoVerde.Formularios
             this.lblDobleClick.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDobleClick.Location = new System.Drawing.Point(486, 216);
             this.lblDobleClick.Name = "lblDobleClick";
-            this.lblDobleClick.Size = new System.Drawing.Size(223, 16);
+            this.lblDobleClick.Size = new System.Drawing.Size(237, 17);
             this.lblDobleClick.TabIndex = 4;
             this.lblDobleClick.Text = "Doble click para asignarte una tarea";
             // 
@@ -439,7 +439,7 @@ namespace ProyectoIntegradoVerde.Formularios
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(493, 211);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(339, 16);
+            this.label6.Size = new System.Drawing.Size(355, 17);
             this.label6.TabIndex = 11;
             this.label6.Text = "Doble click para leer el cuerpo del correo seleccionado";
             // 
@@ -491,7 +491,7 @@ namespace ProyectoIntegradoVerde.Formularios
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(7, 240);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(78, 22);
+            this.label5.Size = new System.Drawing.Size(81, 24);
             this.label5.TabIndex = 3;
             this.label5.Text = "Asunto:";
             // 
@@ -501,7 +501,7 @@ namespace ProyectoIntegradoVerde.Formularios
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(7, 211);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(124, 22);
+            this.label4.Size = new System.Drawing.Size(125, 24);
             this.label4.TabIndex = 2;
             this.label4.Text = "Destinatario:";
             // 
@@ -544,6 +544,7 @@ namespace ProyectoIntegradoVerde.Formularios
             this.cuerp.HeaderText = "Cuerpo";
             this.cuerp.MinimumWidth = 6;
             this.cuerp.Name = "cuerp";
+            this.cuerp.ReadOnly = true;
             this.cuerp.Width = 125;
             // 
             // remit
@@ -576,6 +577,16 @@ namespace ProyectoIntegradoVerde.Formularios
             this.tabPage5.TabIndex = 4;
             this.tabPage5.Text = "Tienda";
             this.tabPage5.UseVisualStyleBackColor = true;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(603, 428);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(245, 17);
+            this.label7.TabIndex = 12;
+            this.label7.Text = "Doble click para comprar un producto";
             // 
             // lblPuntos
             // 
@@ -620,6 +631,7 @@ namespace ProyectoIntegradoVerde.Formularios
             this.id.HeaderText = "Id";
             this.id.MinimumWidth = 6;
             this.id.Name = "id";
+            this.id.ReadOnly = true;
             this.id.Width = 125;
             // 
             // nombre
@@ -627,6 +639,7 @@ namespace ProyectoIntegradoVerde.Formularios
             this.nombre.HeaderText = "Nombre";
             this.nombre.MinimumWidth = 6;
             this.nombre.Name = "nombre";
+            this.nombre.ReadOnly = true;
             this.nombre.Width = 125;
             // 
             // coste
@@ -634,6 +647,7 @@ namespace ProyectoIntegradoVerde.Formularios
             this.coste.HeaderText = "Coste";
             this.coste.MinimumWidth = 6;
             this.coste.Name = "coste";
+            this.coste.ReadOnly = true;
             this.coste.Width = 125;
             // 
             // codigo
@@ -641,6 +655,7 @@ namespace ProyectoIntegradoVerde.Formularios
             this.codigo.HeaderText = "Codigo";
             this.codigo.MinimumWidth = 6;
             this.codigo.Name = "codigo";
+            this.codigo.ReadOnly = true;
             this.codigo.Width = 125;
             // 
             // label1
@@ -673,44 +688,6 @@ namespace ProyectoIntegradoVerde.Formularios
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.Size = new System.Drawing.Size(299, 150);
             this.dataGridView1.TabIndex = 0;
-            // 
-            // id
-            // 
-            this.id.HeaderText = "Id";
-            this.id.MinimumWidth = 6;
-            this.id.Name = "id";
-            this.id.Width = 125;
-            // 
-            // nombre
-            // 
-            this.nombre.HeaderText = "Nombre";
-            this.nombre.MinimumWidth = 6;
-            this.nombre.Name = "nombre";
-            this.nombre.Width = 125;
-            // 
-            // coste
-            // 
-            this.coste.HeaderText = "Coste";
-            this.coste.MinimumWidth = 6;
-            this.coste.Name = "coste";
-            this.coste.Width = 125;
-            // 
-            // codigo
-            // 
-            this.codigo.HeaderText = "Codigo";
-            this.codigo.MinimumWidth = 6;
-            this.codigo.Name = "codigo";
-            this.codigo.Width = 125;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(603, 428);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(245, 17);
-            this.label7.TabIndex = 12;
-            this.label7.Text = "Doble click para comprar un producto";
             // 
             // FrmFuncionalidades
             // 

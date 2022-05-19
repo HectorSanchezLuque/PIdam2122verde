@@ -329,3 +329,4 @@ C:\Users\hesalu\Desktop\PI 2\Programacion\obj\Debug\EN\ProyectoIntegradoVerde.re
 C:\Users\hesalu\Desktop\PI 2\Programacion\obj\Debug\ProyectoIntegradoVerde.csproj.CopyComplete
 >>>>>>> 1ed9594a1abb50fb8bf02ed18015aa1fa5bbaa36
 C:\Users\hesalu\Desktop\PI 2\Programacion\obj\Debug\ProyectoIntegradoVerde.Formularios.AgregarTarea.resources
+C:\Users\jacaar\Documents\PIdam2122verde\Programacion\obj\Debug\ProyectoIntegradoVerde.Formularios.AgregarTarea.resources
