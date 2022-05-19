@@ -379,7 +379,6 @@ namespace ProyectoIntegradoVerde.Formularios
             this.dgvReuniones.RowHeadersWidth = 51;
             this.dgvReuniones.Size = new System.Drawing.Size(837, 408);
             this.dgvReuniones.TabIndex = 0;
-            this.dgvReuniones.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvReuniones_CellContentDoubleClick);
             // 
             // idreu
             // 
@@ -622,6 +621,7 @@ namespace ProyectoIntegradoVerde.Formularios
             this.dgvProductos.RowTemplate.Height = 24;
             this.dgvProductos.Size = new System.Drawing.Size(841, 420);
             this.dgvProductos.TabIndex = 0;
+            this.dgvProductos.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvProductos_CellContentDoubleClick);
             // 
             // id
             // 
