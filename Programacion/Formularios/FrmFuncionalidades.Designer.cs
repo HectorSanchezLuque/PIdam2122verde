@@ -74,7 +74,6 @@ namespace ProyectoIntegradoVerde.Formularios
             this.remit = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.date = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabPage5 = new System.Windows.Forms.TabPage();
-            this.btnComprar = new System.Windows.Forms.Button();
             this.lblPuntos = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.dgvProductos = new System.Windows.Forms.DataGridView();
@@ -85,6 +84,7 @@ namespace ProyectoIntegradoVerde.Formularios
             this.nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.coste = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label7 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTareasPendientes)).BeginInit();
@@ -552,7 +552,7 @@ namespace ProyectoIntegradoVerde.Formularios
             // 
             // tabPage5
             // 
-            this.tabPage5.Controls.Add(this.btnComprar);
+            this.tabPage5.Controls.Add(this.label7);
             this.tabPage5.Controls.Add(this.lblPuntos);
             this.tabPage5.Controls.Add(this.label2);
             this.tabPage5.Controls.Add(this.dgvProductos);
@@ -564,17 +564,6 @@ namespace ProyectoIntegradoVerde.Formularios
             this.tabPage5.TabIndex = 4;
             this.tabPage5.Text = "Tienda";
             this.tabPage5.UseVisualStyleBackColor = true;
-            // 
-            // btnComprar
-            // 
-            this.btnComprar.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnComprar.Location = new System.Drawing.Point(699, 448);
-            this.btnComprar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnComprar.Name = "btnComprar";
-            this.btnComprar.Size = new System.Drawing.Size(149, 41);
-            this.btnComprar.TabIndex = 3;
-            this.btnComprar.Text = "Comprar";
-            this.btnComprar.UseVisualStyleBackColor = true;
             // 
             // lblPuntos
             // 
@@ -673,6 +662,16 @@ namespace ProyectoIntegradoVerde.Formularios
             this.codigo.Name = "codigo";
             this.codigo.Width = 125;
             // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(603, 428);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(245, 17);
+            this.label7.TabIndex = 12;
+            this.label7.Text = "Doble click para comprar un producto";
+            // 
             // FrmFuncionalidades
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -717,7 +716,6 @@ namespace ProyectoIntegradoVerde.Formularios
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.MonthCalendar cldCalendario;
-        private System.Windows.Forms.Button btnComprar;
         private System.Windows.Forms.Label lblPuntos;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.DataGridView dgvProductos;
@@ -761,5 +759,6 @@ namespace ProyectoIntegradoVerde.Formularios
         private System.Windows.Forms.DataGridViewTextBoxColumn nombre;
         private System.Windows.Forms.DataGridViewTextBoxColumn coste;
         private System.Windows.Forms.DataGridViewTextBoxColumn codigo;
+        private System.Windows.Forms.Label label7;
     }
 }
