@@ -279,7 +279,7 @@ namespace ProyectoIntegradoVerde.Formularios
 
         private void btnCrearTarea_Click(object sender, EventArgs e)
         {
-            AgregarTarea tar = new AgregarTarea(user);
+            AgregarTarea tar = new AgregarTarea(user, luz, lang);
             tar.ShowDialog();
         }
     }
