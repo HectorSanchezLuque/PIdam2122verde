@@ -199,6 +199,8 @@ namespace ProyectoIntegradoVerde.Formularios
             // 
             // dgvTareasPendientes
             // 
+            this.dgvTareasPendientes.AllowUserToAddRows = false;
+            this.dgvTareasPendientes.AllowUserToDeleteRows = false;
             this.dgvTareasPendientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvTareasPendientes.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Tid,
@@ -257,6 +259,8 @@ namespace ProyectoIntegradoVerde.Formularios
             // 
             // dgvTareasSinAsignar
             // 
+            this.dgvTareasSinAsignar.AllowUserToAddRows = false;
+            this.dgvTareasSinAsignar.AllowUserToDeleteRows = false;
             this.dgvTareasSinAsignar.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvTareasSinAsignar.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Tareaid,
@@ -368,6 +372,8 @@ namespace ProyectoIntegradoVerde.Formularios
             // 
             // dgvReuniones
             // 
+            this.dgvReuniones.AllowUserToAddRows = false;
+            this.dgvReuniones.AllowUserToDeleteRows = false;
             this.dgvReuniones.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvReuniones.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.idreu,
@@ -508,6 +514,8 @@ namespace ProyectoIntegradoVerde.Formularios
             // 
             // dgvBandeja
             // 
+            this.dgvBandeja.AllowUserToAddRows = false;
+            this.dgvBandeja.AllowUserToDeleteRows = false;
             this.dgvBandeja.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvBandeja.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ideee,
@@ -611,6 +619,8 @@ namespace ProyectoIntegradoVerde.Formularios
             // 
             // dgvProductos
             // 
+            this.dgvProductos.AllowUserToAddRows = false;
+            this.dgvProductos.AllowUserToDeleteRows = false;
             this.dgvProductos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvProductos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.id,
