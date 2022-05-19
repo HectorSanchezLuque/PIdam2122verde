@@ -61,11 +61,65 @@ namespace ProyectoIntegradoVerde.RecursosLocalizables {
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a .
+        ///   Busca una cadena traducida similar a Cerrar.
+        /// </summary>
+        internal static string adTar_btnCerrar {
+            get {
+                return ResourceManager.GetString("adTar_btnCerrar", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Enviar.
+        /// </summary>
+        internal static string adTar_btnEnviar {
+            get {
+                return ResourceManager.GetString("adTar_btnEnviar", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Agregar Tarea.
         /// </summary>
         internal static string adTar_lblAgregarT {
             get {
                 return ResourceManager.GetString("adTar_lblAgregarT", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Descripción:.
+        /// </summary>
+        internal static string adTar_lblDesc {
+            get {
+                return ResourceManager.GetString("adTar_lblDesc", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Fecha Límite:.
+        /// </summary>
+        internal static string adTar_lblFLimite {
+            get {
+                return ResourceManager.GetString("adTar_lblFLimite", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Punto:.
+        /// </summary>
+        internal static string adTar_lblPuntos {
+            get {
+                return ResourceManager.GetString("adTar_lblPuntos", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Título:.
+        /// </summary>
+        internal static string adTar_lblTitulo {
+            get {
+                return ResourceManager.GetString("adTar_lblTitulo", resourceCulture);
             }
         }
         
@@ -219,6 +273,141 @@ namespace ProyectoIntegradoVerde.RecursosLocalizables {
         internal static string dat_lblPuntos {
             get {
                 return ResourceManager.GetString("dat_lblPuntos", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Actualizar.
+        /// </summary>
+        internal static string fun_btnActualizarReuniones {
+            get {
+                return ResourceManager.GetString("fun_btnActualizarReuniones", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Crear Reunión.
+        /// </summary>
+        internal static string fun_btnCrearReunion {
+            get {
+                return ResourceManager.GetString("fun_btnCrearReunion", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Crear tarea.
+        /// </summary>
+        internal static string fun_btnCrearTarea {
+            get {
+                return ResourceManager.GetString("fun_btnCrearTarea", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Enviar.
+        /// </summary>
+        internal static string fun_btnEnviar {
+            get {
+                return ResourceManager.GetString("fun_btnEnviar", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Limpiar campos.
+        /// </summary>
+        internal static string fun_btnLimpiar {
+            get {
+                return ResourceManager.GetString("fun_btnLimpiar", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Asunto:.
+        /// </summary>
+        internal static string fun_lblAsunt {
+            get {
+                return ResourceManager.GetString("fun_lblAsunt", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Doble click para comprar un producto.
+        /// </summary>
+        internal static string fun_lblComProd {
+            get {
+                return ResourceManager.GetString("fun_lblComProd", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Destinatario:.
+        /// </summary>
+        internal static string fun_lblDestin {
+            get {
+                return ResourceManager.GetString("fun_lblDestin", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Puntos disponibles:.
+        /// </summary>
+        internal static string fun_lblDispo {
+            get {
+                return ResourceManager.GetString("fun_lblDispo", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Doble click para asignarte una tarea.
+        /// </summary>
+        internal static string fun_lblDobleClick {
+            get {
+                return ResourceManager.GetString("fun_lblDobleClick", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Doble click para completar una tarea.
+        /// </summary>
+        internal static string fun_lblDobleClick2 {
+            get {
+                return ResourceManager.GetString("fun_lblDobleClick2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Doble click para leer el cuerpo del correo seleccionado.
+        /// </summary>
+        internal static string fun_lblEmail {
+            get {
+                return ResourceManager.GetString("fun_lblEmail", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Tareas disponibles.
+        /// </summary>
+        internal static string fun_lblInfo1 {
+            get {
+                return ResourceManager.GetString("fun_lblInfo1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Tareas pendientes.
+        /// </summary>
+        internal static string fun_lblInfo2 {
+            get {
+                return ResourceManager.GetString("fun_lblInfo2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Funcionalidades.
+        /// </summary>
+        internal static string fun_title {
+            get {
+                return ResourceManager.GetString("fun_title", resourceCulture);
             }
         }
         

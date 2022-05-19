@@ -8,7 +8,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using System.Threading;
+using ProyectoIntegradoVerde.RecursosLocalizables;
+using System.Globalization;
 namespace ProyectoIntegradoVerde.Formularios
 {
     public partial class AgregarTarea : Form
@@ -23,6 +25,8 @@ namespace ProyectoIntegradoVerde.Formularios
             user = us;
             luz = lu;
             lang = la;
+            luzForm();
+            formLang();
         }
 
         private void btnEnviar_Click(object sender, EventArgs e)
@@ -61,9 +65,82 @@ namespace ProyectoIntegradoVerde.Formularios
         {
             
         }
-        
-        
-            
+
+        private void AplicarIdioma()
+        {
+
+
+            this.Text = StringRecursos.adTar_title;
+            lblAgregarT.Text = StringRecursos.adTar_lblAgregarT;
+            lblTitulo.Text = StringRecursos.adTar_lblTitulo;
+            lblDesc.Text = StringRecursos.adTar_lblDesc;
+            lblPuntos.Text = StringRecursos.adTar_lblPuntos;
+            btnEnviar.Text = StringRecursos.adTar_btnEnviar;
+            btnCerrar.Text = StringRecursos.adTar_btnCerrar;
+
+
+        }
+        private void formLang()
+        {
+            if (!lang)
+            {
+
+                Thread.CurrentThread.CurrentUICulture = new CultureInfo("");
+                lang = false;
+
+            }
+            else
+            {
+
+                Thread.CurrentThread.CurrentUICulture = new CultureInfo("EN");
+                lang = true;
+
+
+            }
+
+            AplicarIdioma();
+        }
+
+        private void luzForm()
+        {
+
+            if (luz)
+            {
+
+                luz = true;
+                this.BackColor = Color.FromArgb(255, 255, 255);
+                lblTitulo.ForeColor = Color.FromArgb(0, 0, 122);
+                lblDesc.ForeColor = Color.FromArgb(0, 0, 122);
+                lblPuntos.ForeColor = Color.FromArgb(0, 0, 122);
+                txtTitulo.BackColor = Color.FromArgb(255, 255, 255);
+                txtDesc.BackColor = Color.FromArgb(255, 255, 255);
+                txtTitulo.ForeColor = Color.FromArgb(0, 0, 122);
+                txtDesc.ForeColor = Color.FromArgb(0, 0, 122);
+                lblAgregarT.ForeColor = Color.FromArgb(0, 0, 122);
+                lblFLimite.ForeColor = Color.FromArgb(255, 255, 255);
+
+            }
+            else
+            {
+
+                luz = false;
+                this.BackColor = Color.FromArgb(0, 0, 122);
+                lblTitulo.ForeColor = Color.FromArgb(255, 255, 255);
+                lblDesc.ForeColor = Color.FromArgb(255, 255, 255);
+                lblPuntos.ForeColor = Color.FromArgb(255, 255, 255);
+                txtTitulo.BackColor = Color.FromArgb(0, 0, 122);
+                txtDesc.BackColor = Color.FromArgb(0, 0, 122);
+                txtTitulo.ForeColor = Color.FromArgb(255, 255, 255);
+                txtDesc.ForeColor = Color.FromArgb(255, 255, 255);
+                lblAgregarT.ForeColor = Color.FromArgb(255, 255, 255);
+                lblFLimite.ForeColor = Color.FromArgb(255, 255, 255);
+
+
+
+
+            }
+
+        }
 
     }
 }

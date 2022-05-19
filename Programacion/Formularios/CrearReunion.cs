@@ -109,13 +109,6 @@ namespace ProyectoIntegradoVerde.Formularios
                 lblRDesc.ForeColor = Color.FromArgb(0, 0, 122);
                 lblRNombre.ForeColor = Color.FromArgb(0, 0, 122);
                 btnCrearReunion.ForeColor = Color.FromArgb(0, 0, 122);
-                
-
-
-
-
-
-
 
             }
             else
@@ -134,6 +127,8 @@ namespace ProyectoIntegradoVerde.Formularios
             }
 
         }
+
+        
 
 
 

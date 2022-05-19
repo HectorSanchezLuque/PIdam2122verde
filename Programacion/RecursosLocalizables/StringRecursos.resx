@@ -117,8 +117,26 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="adTar_btnCerrar" xml:space="preserve">
+    <value>Cerrar</value>
+  </data>
+  <data name="adTar_btnEnviar" xml:space="preserve">
+    <value>Enviar</value>
+  </data>
   <data name="adTar_lblAgregarT" xml:space="preserve">
-    <value />
+    <value>Agregar Tarea</value>
+  </data>
+  <data name="adTar_lblDesc" xml:space="preserve">
+    <value>Descripción:</value>
+  </data>
+  <data name="adTar_lblFLimite" xml:space="preserve">
+    <value>Fecha Límite:</value>
+  </data>
+  <data name="adTar_lblPuntos" xml:space="preserve">
+    <value>Punto:</value>
+  </data>
+  <data name="adTar_lblTitulo" xml:space="preserve">
+    <value>Título:</value>
   </data>
   <data name="adTar_title" xml:space="preserve">
     <value>Agregar Tarea</value>
@@ -170,6 +188,51 @@
   </data>
   <data name="dat_lblPuntos" xml:space="preserve">
     <value>Puntos</value>
+  </data>
+  <data name="fun_btnActualizarReuniones" xml:space="preserve">
+    <value>Actualizar</value>
+  </data>
+  <data name="fun_btnCrearReunion" xml:space="preserve">
+    <value>Crear Reunión</value>
+  </data>
+  <data name="fun_btnCrearTarea" xml:space="preserve">
+    <value>Crear tarea</value>
+  </data>
+  <data name="fun_btnEnviar" xml:space="preserve">
+    <value>Enviar</value>
+  </data>
+  <data name="fun_btnLimpiar" xml:space="preserve">
+    <value>Limpiar campos</value>
+  </data>
+  <data name="fun_lblAsunt" xml:space="preserve">
+    <value>Asunto:</value>
+  </data>
+  <data name="fun_lblComProd" xml:space="preserve">
+    <value>Doble click para comprar un producto</value>
+  </data>
+  <data name="fun_lblDestin" xml:space="preserve">
+    <value>Destinatario:</value>
+  </data>
+  <data name="fun_lblDispo" xml:space="preserve">
+    <value>Puntos disponibles:</value>
+  </data>
+  <data name="fun_lblDobleClick" xml:space="preserve">
+    <value>Doble click para asignarte una tarea</value>
+  </data>
+  <data name="fun_lblDobleClick2" xml:space="preserve">
+    <value>Doble click para completar una tarea</value>
+  </data>
+  <data name="fun_lblEmail" xml:space="preserve">
+    <value>Doble click para leer el cuerpo del correo seleccionado</value>
+  </data>
+  <data name="fun_lblInfo1" xml:space="preserve">
+    <value>Tareas disponibles</value>
+  </data>
+  <data name="fun_lblInfo2" xml:space="preserve">
+    <value>Tareas pendientes</value>
+  </data>
+  <data name="fun_title" xml:space="preserve">
+    <value>Funcionalidades</value>
   </data>
   <data name="lang" xml:space="preserve">
     <value>ESP</value>
