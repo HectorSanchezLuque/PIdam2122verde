@@ -53,6 +53,15 @@
             this.dateNacimiento = new System.Windows.Forms.DateTimePicker();
             this.label9 = new System.Windows.Forms.Label();
             this.txtOldID = new System.Windows.Forms.TextBox();
+            this.colID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colNIF = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colNombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colNacimiento = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colCargo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colPuntos = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colCorreo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colPassword = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colBorrado = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUsuarios)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureFoto)).BeginInit();
             this.SuspendLayout();
@@ -60,6 +69,16 @@
             // dgvUsuarios
             // 
             this.dgvUsuarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvUsuarios.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.colID,
+            this.colNIF,
+            this.colNombre,
+            this.colNacimiento,
+            this.colCargo,
+            this.colPuntos,
+            this.colCorreo,
+            this.colPassword,
+            this.colBorrado});
             this.dgvUsuarios.Location = new System.Drawing.Point(12, 12);
             this.dgvUsuarios.Name = "dgvUsuarios";
             this.dgvUsuarios.RowHeadersWidth = 51;
@@ -74,7 +93,7 @@
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(92, 296);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(28, 17);
+            this.label1.Size = new System.Drawing.Size(26, 16);
             this.label1.TabIndex = 1;
             this.label1.Text = "ID:";
             // 
@@ -84,7 +103,7 @@
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(52, 392);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(69, 17);
+            this.label2.Size = new System.Drawing.Size(66, 16);
             this.label2.TabIndex = 2;
             this.label2.Text = "Nombre:";
             // 
@@ -94,7 +113,7 @@
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(83, 341);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(37, 17);
+            this.label3.Size = new System.Drawing.Size(35, 16);
             this.label3.TabIndex = 3;
             this.label3.Text = "NIF:";
             // 
@@ -104,7 +123,7 @@
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(366, 296);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(56, 17);
+            this.label4.Size = new System.Drawing.Size(53, 16);
             this.label4.TabIndex = 4;
             this.label4.Text = "Cargo:";
             // 
@@ -114,7 +133,7 @@
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(361, 341);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(63, 17);
+            this.label5.Size = new System.Drawing.Size(58, 16);
             this.label5.TabIndex = 5;
             this.label5.Text = "Puntos:";
             // 
@@ -124,7 +143,7 @@
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(361, 392);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(62, 17);
+            this.label6.Size = new System.Drawing.Size(58, 16);
             this.label6.TabIndex = 6;
             this.label6.Text = "Correo:";
             // 
@@ -134,7 +153,7 @@
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.Location = new System.Drawing.Point(12, 445);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(112, 17);
+            this.label7.Size = new System.Drawing.Size(106, 16);
             this.label7.TabIndex = 7;
             this.label7.Text = "F. Nacimiento:";
             // 
@@ -144,7 +163,7 @@
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.Location = new System.Drawing.Point(329, 445);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(96, 17);
+            this.label8.Size = new System.Drawing.Size(90, 16);
             this.label8.TabIndex = 8;
             this.label8.Text = "Contraseña:";
             // 
@@ -154,7 +173,7 @@
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.Location = new System.Drawing.Point(682, 271);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(45, 17);
+            this.label10.Size = new System.Drawing.Size(42, 16);
             this.label10.TabIndex = 10;
             this.label10.Text = "Foto:";
             // 
@@ -194,7 +213,7 @@
             this.checkDeshab.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.checkDeshab.Location = new System.Drawing.Point(12, 515);
             this.checkDeshab.Name = "checkDeshab";
-            this.checkDeshab.Size = new System.Drawing.Size(134, 21);
+            this.checkDeshab.Size = new System.Drawing.Size(130, 20);
             this.checkDeshab.TabIndex = 14;
             this.checkDeshab.Text = "Deshabilitado:";
             this.checkDeshab.UseVisualStyleBackColor = true;
@@ -283,6 +302,69 @@
             this.txtOldID.Size = new System.Drawing.Size(100, 22);
             this.txtOldID.TabIndex = 25;
             // 
+            // colID
+            // 
+            this.colID.HeaderText = "id";
+            this.colID.MinimumWidth = 6;
+            this.colID.Name = "colID";
+            this.colID.Width = 125;
+            // 
+            // colNIF
+            // 
+            this.colNIF.HeaderText = "NIF";
+            this.colNIF.MinimumWidth = 6;
+            this.colNIF.Name = "colNIF";
+            this.colNIF.Width = 125;
+            // 
+            // colNombre
+            // 
+            this.colNombre.HeaderText = "Nombre";
+            this.colNombre.MinimumWidth = 6;
+            this.colNombre.Name = "colNombre";
+            this.colNombre.Width = 125;
+            // 
+            // colNacimiento
+            // 
+            this.colNacimiento.HeaderText = "F. Nacimiento";
+            this.colNacimiento.MinimumWidth = 6;
+            this.colNacimiento.Name = "colNacimiento";
+            this.colNacimiento.Width = 125;
+            // 
+            // colCargo
+            // 
+            this.colCargo.HeaderText = "Cargo";
+            this.colCargo.MinimumWidth = 6;
+            this.colCargo.Name = "colCargo";
+            this.colCargo.Width = 125;
+            // 
+            // colPuntos
+            // 
+            this.colPuntos.HeaderText = "Puntos";
+            this.colPuntos.MinimumWidth = 6;
+            this.colPuntos.Name = "colPuntos";
+            this.colPuntos.Width = 125;
+            // 
+            // colCorreo
+            // 
+            this.colCorreo.HeaderText = "Correo";
+            this.colCorreo.MinimumWidth = 6;
+            this.colCorreo.Name = "colCorreo";
+            this.colCorreo.Width = 125;
+            // 
+            // colPassword
+            // 
+            this.colPassword.HeaderText = "Contraseña";
+            this.colPassword.MinimumWidth = 6;
+            this.colPassword.Name = "colPassword";
+            this.colPassword.Width = 125;
+            // 
+            // colBorrado
+            // 
+            this.colBorrado.HeaderText = "Borrado";
+            this.colBorrado.MinimumWidth = 6;
+            this.colBorrado.Name = "colBorrado";
+            this.colBorrado.Width = 125;
+            // 
             // PanelAdmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -315,6 +397,7 @@
             this.Controls.Add(this.dgvUsuarios);
             this.Name = "PanelAdmin";
             this.Text = "Panel de administración";
+            this.Load += new System.EventHandler(this.PanelAdmin_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvUsuarios)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureFoto)).EndInit();
             this.ResumeLayout(false);
@@ -349,5 +432,14 @@
         private System.Windows.Forms.DateTimePicker dateNacimiento;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox txtOldID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colNIF;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colNombre;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colNacimiento;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colCargo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colPuntos;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colCorreo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colPassword;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colBorrado;
     }
 }

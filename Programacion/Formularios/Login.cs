@@ -212,14 +212,14 @@ namespace Programacion
 
         private void lblOlvidoCont_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            Soporte sup = new Soporte();
+            Soporte sup = new Soporte(luz,lang);
             sup.NumPag = 1;
             sup.ShowDialog();
         }
 
         private void lblNotif_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            Soporte sup = new Soporte();
+            Soporte sup = new Soporte(luz, lang);
             sup.NumPag = 0;
             sup.ShowDialog();
         }

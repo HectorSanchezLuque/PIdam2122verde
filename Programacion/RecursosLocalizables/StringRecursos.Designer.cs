@@ -194,5 +194,50 @@ namespace ProyectoIntegradoVerde.RecursosLocalizables {
                 return ResourceManager.GetString("regUsu", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Enviar.
+        /// </summary>
+        internal static string sopbtnEnviar {
+            get {
+                return ResourceManager.GetString("sopbtnEnviar", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Un administrador contactara con usted con su nueva contraseña..
+        /// </summary>
+        internal static string sopBtnENvin2 {
+            get {
+                return ResourceManager.GetString("sopBtnENvin2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Enviar informe.
+        /// </summary>
+        internal static string sopbtnEnvInf1 {
+            get {
+                return ResourceManager.GetString("sopbtnEnvInf1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Por favor, describa el error de la manera más precisa posible:.
+        /// </summary>
+        internal static string sopTitle {
+            get {
+                return ResourceManager.GetString("sopTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Inserte el correo electrónico asociado a su cuenta:.
+        /// </summary>
+        internal static string sopTitle2 {
+            get {
+                return ResourceManager.GetString("sopTitle2", resourceCulture);
+            }
+        }
     }
 }

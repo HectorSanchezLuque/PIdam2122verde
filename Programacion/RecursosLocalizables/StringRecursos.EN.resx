@@ -162,4 +162,19 @@
   <data name="regUsu" xml:space="preserve">
     <value>Register User</value>
   </data>
+  <data name="sopbtnEnviar" xml:space="preserve">
+    <value>Send</value>
+  </data>
+  <data name="sopBtnENvin2" xml:space="preserve">
+    <value>Un administrador contactara con usted con su nueva An administrator will contact you with your new password.</value>
+  </data>
+  <data name="sopbtnEnvInf1" xml:space="preserve">
+    <value>Send report</value>
+  </data>
+  <data name="sopTitle" xml:space="preserve">
+    <value>Please describe the error as precisely as possible:</value>
+  </data>
+  <data name="sopTitle2" xml:space="preserve">
+    <value>Insert the email associated with your account:</value>
+  </data>
 </root>

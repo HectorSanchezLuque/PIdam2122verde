@@ -29,23 +29,23 @@
         private void InitializeComponent()
         {
             this.tabSoporte = new System.Windows.Forms.TabControl();
-            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.tabPague1 = new System.Windows.Forms.TabPage();
             this.btnInforme = new System.Windows.Forms.Button();
             this.txtInforme = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lbltitle = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.label3 = new System.Windows.Forms.Label();
+            this.lblMess = new System.Windows.Forms.Label();
             this.btnSolMail = new System.Windows.Forms.Button();
             this.txtSolMail = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
+            this.lblrecup = new System.Windows.Forms.Label();
             this.tabSoporte.SuspendLayout();
-            this.tabPage1.SuspendLayout();
+            this.tabPague1.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabSoporte
             // 
-            this.tabSoporte.Controls.Add(this.tabPage1);
+            this.tabSoporte.Controls.Add(this.tabPague1);
             this.tabSoporte.Controls.Add(this.tabPage2);
             this.tabSoporte.Location = new System.Drawing.Point(0, 0);
             this.tabSoporte.Name = "tabSoporte";
@@ -53,18 +53,19 @@
             this.tabSoporte.Size = new System.Drawing.Size(576, 260);
             this.tabSoporte.TabIndex = 0;
             // 
-            // tabPage1
+            // tabPague1
             // 
-            this.tabPage1.Controls.Add(this.btnInforme);
-            this.tabPage1.Controls.Add(this.txtInforme);
-            this.tabPage1.Controls.Add(this.label1);
-            this.tabPage1.Location = new System.Drawing.Point(4, 25);
-            this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(568, 231);
-            this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "Notificar error";
-            this.tabPage1.UseVisualStyleBackColor = true;
+            this.tabPague1.Controls.Add(this.btnInforme);
+            this.tabPague1.Controls.Add(this.txtInforme);
+            this.tabPague1.Controls.Add(this.lbltitle);
+            this.tabPague1.Location = new System.Drawing.Point(4, 25);
+            this.tabPague1.Name = "tabPague1";
+            this.tabPague1.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPague1.Size = new System.Drawing.Size(568, 231);
+            this.tabPague1.TabIndex = 0;
+            this.tabPague1.Text = "Notificar error";
+            this.tabPague1.UseVisualStyleBackColor = true;
+            this.tabPague1.Click += new System.EventHandler(this.tabPage1_Click);
             // 
             // btnInforme
             // 
@@ -84,22 +85,22 @@
             this.txtInforme.Size = new System.Drawing.Size(562, 155);
             this.txtInforme.TabIndex = 1;
             // 
-            // label1
+            // lbltitle
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(66, 8);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(460, 17);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Por favor, describa el error de la manera más precisa posible:";
+            this.lbltitle.AutoSize = true;
+            this.lbltitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbltitle.Location = new System.Drawing.Point(66, 8);
+            this.lbltitle.Name = "lbltitle";
+            this.lbltitle.Size = new System.Drawing.Size(437, 16);
+            this.lbltitle.TabIndex = 0;
+            this.lbltitle.Text = "Por favor, describa el error de la manera más precisa posible:";
             // 
             // tabPage2
             // 
-            this.tabPage2.Controls.Add(this.label3);
+            this.tabPage2.Controls.Add(this.lblMess);
             this.tabPage2.Controls.Add(this.btnSolMail);
             this.tabPage2.Controls.Add(this.txtSolMail);
-            this.tabPage2.Controls.Add(this.label2);
+            this.tabPage2.Controls.Add(this.lblrecup);
             this.tabPage2.Location = new System.Drawing.Point(4, 25);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
@@ -108,15 +109,15 @@
             this.tabPage2.Text = "Recuperar contraseña";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
-            // label3
+            // lblMess
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(45, 199);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(483, 17);
-            this.label3.TabIndex = 3;
-            this.label3.Text = "Un administrador contactara con usted con su nueva contraseña.";
+            this.lblMess.AutoSize = true;
+            this.lblMess.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMess.Location = new System.Drawing.Point(45, 199);
+            this.lblMess.Name = "lblMess";
+            this.lblMess.Size = new System.Drawing.Size(453, 16);
+            this.lblMess.TabIndex = 3;
+            this.lblMess.Text = "Un administrador contactara con usted con su nueva contraseña.";
             // 
             // btnSolMail
             // 
@@ -135,15 +136,15 @@
             this.txtSolMail.Size = new System.Drawing.Size(354, 22);
             this.txtSolMail.TabIndex = 1;
             // 
-            // label2
+            // lblrecup
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(99, 74);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(378, 17);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "Inserte el correo electrónico asociado a su cuenta:";
+            this.lblrecup.AutoSize = true;
+            this.lblrecup.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblrecup.Location = new System.Drawing.Point(99, 74);
+            this.lblrecup.Name = "lblrecup";
+            this.lblrecup.Size = new System.Drawing.Size(357, 16);
+            this.lblrecup.TabIndex = 0;
+            this.lblrecup.Text = "Inserte el correo electrónico asociado a su cuenta:";
             // 
             // Soporte
             // 
@@ -155,8 +156,8 @@
             this.Text = "Soporte";
             this.Load += new System.EventHandler(this.Soporte_Load);
             this.tabSoporte.ResumeLayout(false);
-            this.tabPage1.ResumeLayout(false);
-            this.tabPage1.PerformLayout();
+            this.tabPague1.ResumeLayout(false);
+            this.tabPague1.PerformLayout();
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
             this.ResumeLayout(false);
@@ -166,14 +167,14 @@
         #endregion
 
         private System.Windows.Forms.TabControl tabSoporte;
-        private System.Windows.Forms.TabPage tabPage1;
+        private System.Windows.Forms.TabPage tabPague1;
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.Button btnInforme;
         private System.Windows.Forms.TextBox txtInforme;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label lbltitle;
+        private System.Windows.Forms.Label lblMess;
         private System.Windows.Forms.Button btnSolMail;
         private System.Windows.Forms.TextBox txtSolMail;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lblrecup;
     }
 }
