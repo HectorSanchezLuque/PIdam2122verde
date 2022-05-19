@@ -40,11 +40,13 @@ namespace ProyectoIntegradoVerde.Formularios
                 txtPuntos.Text = dgvUsuarios.Rows[e.RowIndex].Cells[5].Value.ToString();
                 txtCorreo.Text = dgvUsuarios.Rows[e.RowIndex].Cells[6].Value.ToString();
                 txtContrasena.Text = dgvUsuarios.Rows[e.RowIndex].Cells[7].Value.ToString();
-               /* if (dgvUsuarios.Rows[e.RowIndex].Cells[8].Value == 0)
+                txtOldID.Text = dgvUsuarios.Rows[e.RowIndex].Cells[0].Value.ToString();
+                if (dgvUsuarios.Rows[e.RowIndex].Cells[8].Value.ToString() == "1")
                 {
                     checkDeshab.Checked = true;
-                } else { checkDeshab.Checked = false;}
-               */
+                }
+                else { checkDeshab.Checked = false; }
+
             }
         }
 
@@ -55,13 +57,68 @@ namespace ProyectoIntegradoVerde.Formularios
             {
                 List<Usuario> list = new List<Usuario>();
                 conexion.AbrirConexion();
-               /* list = Usuario.ListadoUsuarios();*/
+                list = Usuario.ListadoUsuarios();
                 conexion.CerrarConexion();
 
-                /*for (int i = 0; i < list.Count; i++)
+                for (int i = 0; i < list.Count; i++)
                 {
-                    dgvUsuarios.Rows.Add(list[i].Id, list[i].Nif, list[i].Nombre, list[i].FechaNacimiento.ToString("dd-MM-yyyy"), list[i].Cargo, list[i].Puntos, list[i].Correo, list[i].Password, list[i].Foto, list[i].Borrado);
-                }*/
+                    dgvUsuarios.Rows.Add(list[i].Id, list[i].Nif, list[i].Nombre, list[i].FechaNacimiento.ToString("dd-MM-yyyy"), list[i].Cargo, list[i].Puntos, list[i].Correo, list[i].Password, list[i].Borrado.ToString());
+                }
+            }
+        }
+
+        private void btnCerrar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btnModificar_Click(object sender, EventArgs e)
+        {
+            Usuario usu = new Usuario();
+            usu.Id = Convert.ToInt32(txtID.Text);
+            usu.Nif= txtNIF.Text;
+            usu.Nombre = txtNombre.Text;
+            usu.FechaNacimiento = Convert.ToDateTime(dateNacimiento.Text);
+            usu.Cargo = txtCargo.Text;
+            usu.Puntos = Convert.ToInt32(txtPuntos.Text);
+            usu.Correo = txtCorreo.Text;
+            usu.Password = txtContrasena.Text;
+            usu.Borrado = Convert.ToInt32(checkDeshab.Checked);
+            usu.Foto = null;
+
+            if (conexion.Conexion != null)
+            {
+                conexion.AbrirConexion();
+                Usuario.ActualizaUsuario(usu, Convert.ToInt32(txtOldID.Text));
+                conexion.CerrarConexion();
+            }
+            dgvUsuarios.Refresh();
+            MessageBox.Show("Usuario modificado con éxito.");
+        }
+
+        private void btnAgregar_Click(object sender, EventArgs e)
+        {
+            {
+                Usuario usu = new Usuario();
+                usu.Id = Convert.ToInt32(txtID.Text);
+                usu.Nif = txtNIF.Text;
+                usu.Nombre = txtNombre.Text;
+                usu.FechaNacimiento = Convert.ToDateTime(dateNacimiento.Text);
+                usu.Cargo = txtCargo.Text;
+                usu.Puntos = Convert.ToInt32(txtPuntos.Text);
+                usu.Correo = txtCorreo.Text;
+                usu.Password = txtContrasena.Text;
+                usu.Borrado = Convert.ToInt32(checkDeshab.Checked);
+                usu.Foto = null;
+
+                if (conexion.Conexion != null)
+                {
+                    conexion.AbrirConexion();
+                    usu.AgregarUsuario();
+                    conexion.CerrarConexion();
+                }
+                dgvUsuarios.Refresh();
+                MessageBox.Show("Usuario agregado con éxito.");
             }
         }
     }

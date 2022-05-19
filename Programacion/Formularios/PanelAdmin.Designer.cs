@@ -29,6 +29,15 @@
         private void InitializeComponent()
         {
             this.dgvUsuarios = new System.Windows.Forms.DataGridView();
+            this.colID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colNIF = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colNombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colNacimiento = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colCargo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colPuntos = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colCorreo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colPassword = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colBorrado = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -53,21 +62,15 @@
             this.dateNacimiento = new System.Windows.Forms.DateTimePicker();
             this.label9 = new System.Windows.Forms.Label();
             this.txtOldID = new System.Windows.Forms.TextBox();
-            this.colID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colNIF = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colNombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colNacimiento = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colCargo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colPuntos = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colCorreo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colPassword = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colBorrado = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnCerrar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUsuarios)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureFoto)).BeginInit();
             this.SuspendLayout();
             // 
             // dgvUsuarios
             // 
+            this.dgvUsuarios.AllowUserToAddRows = false;
+            this.dgvUsuarios.AllowUserToDeleteRows = false;
             this.dgvUsuarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvUsuarios.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.colID,
@@ -81,11 +84,84 @@
             this.colBorrado});
             this.dgvUsuarios.Location = new System.Drawing.Point(12, 12);
             this.dgvUsuarios.Name = "dgvUsuarios";
+            this.dgvUsuarios.ReadOnly = true;
             this.dgvUsuarios.RowHeadersWidth = 51;
             this.dgvUsuarios.RowTemplate.Height = 24;
             this.dgvUsuarios.Size = new System.Drawing.Size(908, 249);
             this.dgvUsuarios.TabIndex = 0;
             this.dgvUsuarios.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvUsuarios_CellContentDoubleClick);
+            // 
+            // colID
+            // 
+            this.colID.HeaderText = "id";
+            this.colID.MinimumWidth = 6;
+            this.colID.Name = "colID";
+            this.colID.ReadOnly = true;
+            this.colID.Width = 125;
+            // 
+            // colNIF
+            // 
+            this.colNIF.HeaderText = "NIF";
+            this.colNIF.MinimumWidth = 6;
+            this.colNIF.Name = "colNIF";
+            this.colNIF.ReadOnly = true;
+            this.colNIF.Width = 125;
+            // 
+            // colNombre
+            // 
+            this.colNombre.HeaderText = "Nombre";
+            this.colNombre.MinimumWidth = 6;
+            this.colNombre.Name = "colNombre";
+            this.colNombre.ReadOnly = true;
+            this.colNombre.Width = 125;
+            // 
+            // colNacimiento
+            // 
+            this.colNacimiento.HeaderText = "F. Nacimiento";
+            this.colNacimiento.MinimumWidth = 6;
+            this.colNacimiento.Name = "colNacimiento";
+            this.colNacimiento.ReadOnly = true;
+            this.colNacimiento.Width = 125;
+            // 
+            // colCargo
+            // 
+            this.colCargo.HeaderText = "Cargo";
+            this.colCargo.MinimumWidth = 6;
+            this.colCargo.Name = "colCargo";
+            this.colCargo.ReadOnly = true;
+            this.colCargo.Width = 125;
+            // 
+            // colPuntos
+            // 
+            this.colPuntos.HeaderText = "Puntos";
+            this.colPuntos.MinimumWidth = 6;
+            this.colPuntos.Name = "colPuntos";
+            this.colPuntos.ReadOnly = true;
+            this.colPuntos.Width = 125;
+            // 
+            // colCorreo
+            // 
+            this.colCorreo.HeaderText = "Correo";
+            this.colCorreo.MinimumWidth = 6;
+            this.colCorreo.Name = "colCorreo";
+            this.colCorreo.ReadOnly = true;
+            this.colCorreo.Width = 125;
+            // 
+            // colPassword
+            // 
+            this.colPassword.HeaderText = "Contraseña";
+            this.colPassword.MinimumWidth = 6;
+            this.colPassword.Name = "colPassword";
+            this.colPassword.ReadOnly = true;
+            this.colPassword.Width = 125;
+            // 
+            // colBorrado
+            // 
+            this.colBorrado.HeaderText = "Borrado";
+            this.colBorrado.MinimumWidth = 6;
+            this.colBorrado.Name = "colBorrado";
+            this.colBorrado.ReadOnly = true;
+            this.colBorrado.Width = 125;
             // 
             // label1
             // 
@@ -194,6 +270,7 @@
             this.btnAgregar.TabIndex = 12;
             this.btnAgregar.Text = "Agregar";
             this.btnAgregar.UseVisualStyleBackColor = true;
+            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
             // btnModificar
             // 
@@ -204,6 +281,7 @@
             this.btnModificar.TabIndex = 13;
             this.btnModificar.Text = "Modificar";
             this.btnModificar.UseVisualStyleBackColor = true;
+            this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
             // 
             // checkDeshab
             // 
@@ -211,7 +289,7 @@
             this.checkDeshab.AutoSize = true;
             this.checkDeshab.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.checkDeshab.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkDeshab.Location = new System.Drawing.Point(12, 515);
+            this.checkDeshab.Location = new System.Drawing.Point(12, 495);
             this.checkDeshab.Name = "checkDeshab";
             this.checkDeshab.Size = new System.Drawing.Size(130, 20);
             this.checkDeshab.TabIndex = 14;
@@ -302,74 +380,23 @@
             this.txtOldID.Size = new System.Drawing.Size(100, 22);
             this.txtOldID.TabIndex = 25;
             // 
-            // colID
+            // btnCerrar
             // 
-            this.colID.HeaderText = "id";
-            this.colID.MinimumWidth = 6;
-            this.colID.Name = "colID";
-            this.colID.Width = 125;
-            // 
-            // colNIF
-            // 
-            this.colNIF.HeaderText = "NIF";
-            this.colNIF.MinimumWidth = 6;
-            this.colNIF.Name = "colNIF";
-            this.colNIF.Width = 125;
-            // 
-            // colNombre
-            // 
-            this.colNombre.HeaderText = "Nombre";
-            this.colNombre.MinimumWidth = 6;
-            this.colNombre.Name = "colNombre";
-            this.colNombre.Width = 125;
-            // 
-            // colNacimiento
-            // 
-            this.colNacimiento.HeaderText = "F. Nacimiento";
-            this.colNacimiento.MinimumWidth = 6;
-            this.colNacimiento.Name = "colNacimiento";
-            this.colNacimiento.Width = 125;
-            // 
-            // colCargo
-            // 
-            this.colCargo.HeaderText = "Cargo";
-            this.colCargo.MinimumWidth = 6;
-            this.colCargo.Name = "colCargo";
-            this.colCargo.Width = 125;
-            // 
-            // colPuntos
-            // 
-            this.colPuntos.HeaderText = "Puntos";
-            this.colPuntos.MinimumWidth = 6;
-            this.colPuntos.Name = "colPuntos";
-            this.colPuntos.Width = 125;
-            // 
-            // colCorreo
-            // 
-            this.colCorreo.HeaderText = "Correo";
-            this.colCorreo.MinimumWidth = 6;
-            this.colCorreo.Name = "colCorreo";
-            this.colCorreo.Width = 125;
-            // 
-            // colPassword
-            // 
-            this.colPassword.HeaderText = "Contraseña";
-            this.colPassword.MinimumWidth = 6;
-            this.colPassword.Name = "colPassword";
-            this.colPassword.Width = 125;
-            // 
-            // colBorrado
-            // 
-            this.colBorrado.HeaderText = "Borrado";
-            this.colBorrado.MinimumWidth = 6;
-            this.colBorrado.Name = "colBorrado";
-            this.colBorrado.Width = 125;
+            this.btnCerrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCerrar.Location = new System.Drawing.Point(12, 533);
+            this.btnCerrar.Name = "btnCerrar";
+            this.btnCerrar.Size = new System.Drawing.Size(96, 38);
+            this.btnCerrar.TabIndex = 27;
+            this.btnCerrar.Text = "Cerrar";
+            this.btnCerrar.UseVisualStyleBackColor = true;
+            this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
             // 
             // PanelAdmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(932, 583);
+            this.Controls.Add(this.btnCerrar);
             this.Controls.Add(this.txtOldID);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.dateNacimiento);
@@ -441,5 +468,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn colCorreo;
         private System.Windows.Forms.DataGridViewTextBoxColumn colPassword;
         private System.Windows.Forms.DataGridViewTextBoxColumn colBorrado;
+        private System.Windows.Forms.Button btnCerrar;
     }
 }
