@@ -56,10 +56,16 @@ namespace ProyectoIntegradoVerde.Formularios
 
         }
 
+        private void btnCerrar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            this.Dispose();
+        }
         private void AgregarTarea_Load(object sender, EventArgs e)
         {
             
         }
+<<<<<<< HEAD
         private void AplicarIdioma()
         {
 
@@ -135,6 +141,11 @@ namespace ProyectoIntegradoVerde.Formularios
             }
 
         }
+=======
+        
+        
+            
+>>>>>>> 384d5b21473f19ef6ccaabc416ad7b15d54e3ed5
 
     }
 }

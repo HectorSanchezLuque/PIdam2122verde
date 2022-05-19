@@ -84,10 +84,7 @@ namespace Programacion
             }
         }
 
-        private void Login_Load(object sender, EventArgs e)
-        {
-
-        }
+  
 
         private void txtNif_TextChanged(object sender, EventArgs e)
         {
@@ -107,6 +104,9 @@ namespace Programacion
                 lblPsw.ForeColor = Color.FromArgb(255, 255, 255);
                 lblNotif.LinkColor = Color.FromArgb(255, 255, 255);
                 lblOlvidoCont.LinkColor = Color.FromArgb(255, 255, 255);
+                panel1.BackColor = Color.FromArgb(255, 255, 255);
+                panel2.BackColor = Color.FromArgb(255, 255, 255);
+
 
 
             }
@@ -114,11 +114,13 @@ namespace Programacion
             {
                 luz = true;
                 this.BackColor = Color.FromArgb(255, 255, 255);
-                lblLang.ForeColor = Color.FromArgb(0, 0, 0);
-                lblNIF.ForeColor = Color.FromArgb(0, 0, 0);
-                lblPsw.ForeColor = Color.FromArgb(0, 0, 0);
+                lblLang.ForeColor = Color.RoyalBlue;
+                lblNIF.ForeColor = Color.RoyalBlue; ;
+                lblPsw.ForeColor = Color.RoyalBlue;
                 lblNotif.LinkColor = Color.FromArgb(0, 0, 204);
                 lblOlvidoCont.LinkColor = Color.FromArgb(0, 0, 204);
+                panel1.BackColor = Color.RoyalBlue;
+                panel2.BackColor = Color.RoyalBlue;
 
 
             }
@@ -228,6 +230,7 @@ namespace Programacion
         {
 
         }
-        
+
+
     }
 }

@@ -157,17 +157,7 @@ namespace ProyectoIntegradoVerde.Formularios
             {
 
                 luz = true;
-                this.BackColor = Color.FromArgb(255, 255, 255);
-                lblAbreFormulario.ForeColor = Color.Black;
-                lblHora.ForeColor = Color.FromArgb(0, 0, 122);
-                lblFecha.ForeColor = Color.FromArgb(0, 0, 122);
-                btnAdmin.ForeColor = Color.FromArgb(0, 0, 122);
-                btnCerrarSesion.ForeColor = Color.FromArgb(0, 0, 122);
-                btnCalendario.ForeColor = Color.FromArgb(0, 0, 122);
-                btnCorreo.ForeColor = Color.FromArgb(0, 0, 122);
-                btnReuniones.ForeColor = Color.FromArgb(0, 0, 122);
-                btnTareas.ForeColor = Color.FromArgb(0, 0, 122);
-                btnTienda.ForeColor = Color.FromArgb(0, 0, 122);
+               
                 
 
             }
@@ -177,7 +167,7 @@ namespace ProyectoIntegradoVerde.Formularios
                 luz = false;
                 this.BackColor = Color.FromArgb(0, 0, 122);
                 lblAbreFormulario.ForeColor = Color.FromArgb(255, 255, 255);
-                lblHora.ForeColor = Color.FromArgb(255, 255, 255);
+                lblHora.ForeColor = Color.FromArgb(0, 0, 122);
                 lblFecha.ForeColor = Color.FromArgb(255, 255, 255);
                 btnAdmin.ForeColor = Color.FromArgb(255, 255, 255);
                 btnCerrarSesion.ForeColor = Color.FromArgb(255, 255, 255);
@@ -186,6 +176,10 @@ namespace ProyectoIntegradoVerde.Formularios
                 btnReuniones.ForeColor = Color.FromArgb(255, 255, 255);
                 btnTareas.ForeColor = Color.FromArgb(255, 255, 255);
                 btnTienda.ForeColor = Color.FromArgb(255, 255, 255);
+                panel1.BackColor = Color.FromArgb(255, 255, 255);
+                lblAbreFormulario.BackColor = Color.FromArgb(255, 255, 255);
+                lblAbreFormulario.ForeColor = Color.FromArgb(0, 0, 122);
+                ptbInfo.BackColor = Color.FromArgb(255, 255, 255);
 
             }
 
