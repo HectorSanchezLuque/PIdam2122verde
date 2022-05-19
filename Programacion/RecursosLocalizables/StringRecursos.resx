@@ -117,8 +117,59 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="adTar_lblAgregarT" xml:space="preserve">
+    <value />
+  </data>
+  <data name="adTar_title" xml:space="preserve">
+    <value>Agregar Tarea</value>
+  </data>
   <data name="contOlv" xml:space="preserve">
     <value>¿Has olvidado tu contraseña?</value>
+  </data>
+  <data name="crun_btnCrearReunion" xml:space="preserve">
+    <value>Crear Reunión</value>
+  </data>
+  <data name="crun_lblCargos" xml:space="preserve">
+    <value>Cargos asociados:</value>
+  </data>
+  <data name="crun_lblCrearReunion" xml:space="preserve">
+    <value>Creación de Reunión</value>
+  </data>
+  <data name="crun_lblFechaReunion" xml:space="preserve">
+    <value>Fecha de la Reunión</value>
+  </data>
+  <data name="crun_lblHoraReunion" xml:space="preserve">
+    <value>Hora de la Reunión</value>
+  </data>
+  <data name="crun_lblRDesc" xml:space="preserve">
+    <value>Descripción:</value>
+  </data>
+  <data name="crun_lblRNombre" xml:space="preserve">
+    <value>Nombre:</value>
+  </data>
+  <data name="crun_title" xml:space="preserve">
+    <value>CrearReunion</value>
+  </data>
+  <data name="dat_btnCerrar" xml:space="preserve">
+    <value>Salir</value>
+  </data>
+  <data name="dat_lblCargo" xml:space="preserve">
+    <value>Cargo</value>
+  </data>
+  <data name="dat_lblCode" xml:space="preserve">
+    <value>Código de empleado</value>
+  </data>
+  <data name="dat_lblDetalles" xml:space="preserve">
+    <value>Detalles del Usuario</value>
+  </data>
+  <data name="dat_lblNif" xml:space="preserve">
+    <value>Número de Identificacion</value>
+  </data>
+  <data name="dat_lblNombre" xml:space="preserve">
+    <value>Nombre</value>
+  </data>
+  <data name="dat_lblPuntos" xml:space="preserve">
+    <value>Puntos</value>
   </data>
   <data name="lang" xml:space="preserve">
     <value>ESP</value>
@@ -176,5 +227,14 @@
   </data>
   <data name="sopTitle2" xml:space="preserve">
     <value>Inserte el correo electrónico asociado a su cuenta:</value>
+  </data>
+  <data name="sop_tapcontrol1" xml:space="preserve">
+    <value>Notificar Error</value>
+  </data>
+  <data name="sop_tapcontrol2" xml:space="preserve">
+    <value>Recuperar contraseña</value>
+  </data>
+  <data name="sop_title" xml:space="preserve">
+    <value>Soporte</value>
   </data>
 </root>

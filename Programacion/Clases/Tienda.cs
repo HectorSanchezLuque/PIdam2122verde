@@ -16,14 +16,16 @@ namespace ProyectoIntegradoVerde.Clases
         private string nombre;
         private int coste;
         private string descripcion;
+        private string codigo;
 
         //Constructor completo
-        public Tienda(int id ,string nom, int cost, string desc)
+        public Tienda(int id ,string nom, int cost, string desc,string cod)
         {
             id_prod = id;
             nombre = nom;
             coste = cost;
             descripcion = desc;
+            codigo = cod;
         }
 
         //Constructor vacio
@@ -34,6 +36,7 @@ namespace ProyectoIntegradoVerde.Clases
         public string Nombre { get => nombre; set => nombre = value; }
         public int Coste { get => coste; set => coste = value; }
         public string Descripcion { get => descripcion; set => descripcion = value; }
+        public string Codigo { get => codigo; set => codigo = value; }
 
         //Metodos
 
@@ -94,6 +97,7 @@ namespace ProyectoIntegradoVerde.Clases
                     prod.Nombre = reader.GetString(1);
                     prod.Coste = reader.GetInt32(2);
                     prod.Descripcion = reader.GetString(3);
+                    prod.Codigo = reader.GetString(4);
                     productos.Add(prod);
                 }
                 reader.Close();

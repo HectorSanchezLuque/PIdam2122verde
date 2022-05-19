@@ -21,8 +21,6 @@ namespace ProyectoIntegradoVerde.Formularios
         bool lang;
         private Usuario user;
 
-        FrmFuncionalidades func = new FrmFuncionalidades();
-
 
         public FrmPrincipal(bool l, Usuario us, bool leng)
 
@@ -57,10 +55,13 @@ namespace ProyectoIntegradoVerde.Formularios
             FrmDatos d = new FrmDatos(user,luz,lang);
             d.ShowDialog();
         }
-
+        
         private void btnCerrarSesion_Click(object sender, EventArgs e)
         {
             Environment.Exit(1);
+            FrmFuncionalidades func = new FrmFuncionalidades(luz,lang);
+            func.ShowDialog();
+
         }
 
         private void btnTareas_Click(object sender, EventArgs e)
@@ -69,7 +70,7 @@ namespace ProyectoIntegradoVerde.Formularios
             {
                 if (conexion.Conexion != null)
                 {
-                    FrmFuncionalidades func = new FrmFuncionalidades();
+                    FrmFuncionalidades func = new FrmFuncionalidades(luz, lang);
                     func.User = user;
                     func.NumPag = 0;
 
@@ -94,7 +95,7 @@ namespace ProyectoIntegradoVerde.Formularios
         private void btnCalendario_Click(object sender, EventArgs e)
         {
 
-            FrmFuncionalidades func = new FrmFuncionalidades();
+            FrmFuncionalidades func = new FrmFuncionalidades(luz, lang);
             func.User = user;
             func.NumPag = 1;
             func.ShowDialog();
@@ -102,7 +103,7 @@ namespace ProyectoIntegradoVerde.Formularios
 
         private void btnReuniones_Click(object sender, EventArgs e)
         {
-            FrmFuncionalidades func = new FrmFuncionalidades();
+            FrmFuncionalidades func = new FrmFuncionalidades(luz, lang);
             func.User = user;
             func.NumPag = 2;
             func.ShowDialog();
@@ -111,7 +112,7 @@ namespace ProyectoIntegradoVerde.Formularios
         private void btnCorreo_Click(object sender, EventArgs e)
         {
 
-            FrmFuncionalidades func = new FrmFuncionalidades();
+            FrmFuncionalidades func = new FrmFuncionalidades(luz, lang);
             func.User = user;
             func.NumPag = 3;
             func.ShowDialog();
@@ -119,7 +120,7 @@ namespace ProyectoIntegradoVerde.Formularios
 
         private void btnTienda_Click(object sender, EventArgs e)
         {
-            FrmFuncionalidades func = new FrmFuncionalidades();
+            FrmFuncionalidades func = new FrmFuncionalidades(luz, lang);
             func.User = user;
             func.NumPag = 4;
             func.ShowDialog();
@@ -167,6 +168,7 @@ namespace ProyectoIntegradoVerde.Formularios
                 btnReuniones.ForeColor = Color.FromArgb(0, 0, 122);
                 btnTareas.ForeColor = Color.FromArgb(0, 0, 122);
                 btnTienda.ForeColor = Color.FromArgb(0, 0, 122);
+                
 
             }
             else
