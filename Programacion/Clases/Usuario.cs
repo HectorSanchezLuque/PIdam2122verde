@@ -288,7 +288,7 @@ namespace ProyectoIntegradoVerde
 
         public static List<Usuario> BuscarCargos (string cargo)
         {
-            Usuario usu = new Usuario();
+            
             List<Usuario> lista = new List<Usuario>();
             string consulta = String.Format("SELECT * FROM usuarios WHERE cargo = '{0}';", cargo); ;
             MySqlCommand comando = new MySqlCommand(consulta, conexion.Conexion);
@@ -299,6 +299,7 @@ namespace ProyectoIntegradoVerde
                 // Recorremos el reader y cargamos la lista de usuarios.
                 while (reader.Read())
                 {
+                    Usuario usu = new Usuario();
                     usu.Id = reader.GetInt32(0);
                     usu.Nif = reader.GetString(1);
                     usu.Nombre = reader.GetString(2);
