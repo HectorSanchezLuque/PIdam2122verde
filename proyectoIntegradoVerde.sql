@@ -89,7 +89,8 @@ DEFAULT CHARACTER SET = latin1;
 CREATE TABLE IF NOT EXISTS `Proyecto_Integrado`.`usuarios_has_reuniones` (
   `usuarios_id` INT(3) NOT NULL,
   `reuniones_id` INT(3) NOT NULL,
-  PRIMARY KEY (`usuarios_id`, `reuniones_id`),
+  `id` INT(3) NOT NULL AUTO_INCREMENT,
+  PRIMARY KEY (`id`),
   INDEX `fk_usuarios_has_reuniones_reuniones1_idx` (`reuniones_id` ASC) VISIBLE,
   INDEX `fk_usuarios_has_reuniones_usuarios1_idx` (`usuarios_id` ASC) VISIBLE,
   CONSTRAINT `fk_usuarios_has_reuniones_reuniones1`
