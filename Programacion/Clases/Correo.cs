@@ -45,10 +45,10 @@ namespace ProyectoIntegradoVerde.Clases
         // Metodos
 
         /// <summary>
-        /// Agrega un correo a la base de datos
+        /// 
         /// </summary>
-        /// <param name="conexion"></param>
         /// <param name="cor"></param>
+        /// <param name="usuario"></param>
         /// <returns></returns>
         static public int AgregarCorreo(Correo cor, int usuario)
         {
