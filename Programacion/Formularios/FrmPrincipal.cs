@@ -40,7 +40,8 @@ namespace ProyectoIntegradoVerde.Formularios
 
         private void lblAbreFormulario_MouseLeave(object sender, EventArgs e)
         {
-                
+            if (!luz) { lblAbreFormulario.ForeColor = Color.Black; }
+            else
                 lblAbreFormulario.ForeColor = Color.White;
 
         }
@@ -166,6 +167,8 @@ namespace ProyectoIntegradoVerde.Formularios
                 btnTienda.ForeColor = Color.FromArgb(0, 0, 122);
                 panel1.BackColor = Color.FromArgb(0, 0, 122);
                 ptbInfo.BackColor = Color.FromArgb(0, 0, 122);
+                lblAbreFormulario.BackColor = Color.FromArgb(0, 0, 122);
+
 
 
 
@@ -186,11 +189,12 @@ namespace ProyectoIntegradoVerde.Formularios
                 btnTienda.ForeColor = Color.FromArgb(255, 255, 255);
                 panel1.BackColor = Color.FromArgb(255, 255, 255);
                 ptbInfo.BackColor = Color.FromArgb(255, 255, 255);
+                lblAbreFormulario.BackColor = Color.FromArgb(255, 255, 255);
 
             }
 
 
-            
+
         }
 
     }
