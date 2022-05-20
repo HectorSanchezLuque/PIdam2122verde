@@ -322,6 +322,51 @@ namespace ProyectoIntegradoVerde.RecursosLocalizables {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a ID.
+        /// </summary>
+        internal static string fun_dgv1_1 {
+            get {
+                return ResourceManager.GetString("fun_dgv1-1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Titulo.
+        /// </summary>
+        internal static string fun_dgv1_2 {
+            get {
+                return ResourceManager.GetString("fun_dgv1-2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a F.Publicación.
+        /// </summary>
+        internal static string fun_dgv1_3 {
+            get {
+                return ResourceManager.GetString("fun_dgv1-3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Puntos.
+        /// </summary>
+        internal static string fun_dgv1_4 {
+            get {
+                return ResourceManager.GetString("fun_dgv1-4", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a F.Límite.
+        /// </summary>
+        internal static string fun_dgv1_5 {
+            get {
+                return ResourceManager.GetString("fun_dgv1-5", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a Asunto:.
         /// </summary>
         internal static string fun_lblAsunt {

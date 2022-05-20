@@ -325,6 +325,21 @@ namespace ProyectoIntegradoVerde.Formularios
             btnCrearTarea.Text = StringRecursos.fun_btnCrearTarea;
             btnLimpiar.Text = StringRecursos.fun_btnLimpiar;
 
+            dgvTareasSinAsignar.Columns[0].HeaderText = StringRecursos.fun_dgv1_1;
+            dgvTareasSinAsignar.Columns[1].HeaderText = StringRecursos.fun_dgv1_2;
+            dgvTareasSinAsignar.Columns[2].HeaderText = StringRecursos.fun_dgv1_3;
+            dgvTareasSinAsignar.Columns[3].HeaderText = StringRecursos.fun_dgv1_5;
+            dgvTareasSinAsignar.Columns[4].HeaderText = StringRecursos.fun_dgv1_4;
+
+            dgvTareasPendientes.Columns[0].HeaderText = StringRecursos.fun_dgv1_1;
+            dgvTareasPendientes.Columns[1].HeaderText = StringRecursos.fun_dgv1_2;
+            dgvTareasPendientes.Columns[2].HeaderText = StringRecursos.fun_dgv1_3;
+            dgvTareasPendientes.Columns[3].HeaderText = StringRecursos.fun_dgv1_5;
+            dgvTareasPendientes.Columns[4].HeaderText = StringRecursos.fun_dgv1_4;
+
+
+
+
 
         }
         private void luzForm()
@@ -342,14 +357,6 @@ namespace ProyectoIntegradoVerde.Formularios
                 lblDispo.ForeColor = Color.FromArgb(0, 0, 122);
                 lblDobleClick.ForeColor = Color.FromArgb(0, 0, 122);
                 lblDobleClick2.ForeColor = Color.FromArgb(0, 0, 122);
-                lblInfo1.ForeColor = Color.FromArgb(0, 0, 122);
-                lblInfo2.ForeColor = Color.FromArgb(0, 0, 122);
-                btnActualizarReuniones.ForeColor = Color.FromArgb(0, 0, 122);
-                btnCrearReunion.ForeColor = Color.FromArgb(0, 0, 122);
-                btnCrearTarea.ForeColor = Color.FromArgb(0, 0, 122);
-                btnLimpiar.ForeColor = Color.FromArgb(0, 0, 122);
-                
-
 
             }
             else
@@ -364,13 +371,9 @@ namespace ProyectoIntegradoVerde.Formularios
                 lblDispo.ForeColor = Color.FromArgb(255, 255, 255);
                 lblDobleClick.ForeColor = Color.FromArgb(255, 255, 255);
                 lblDobleClick2.ForeColor = Color.FromArgb(255, 255, 255);
-                lblInfo1.ForeColor = Color.FromArgb(255, 255, 255);
-                lblInfo2.ForeColor = Color.FromArgb(255, 255, 255);
-                btnActualizarReuniones.ForeColor = Color.FromArgb(255, 255, 255);
-                btnCrearReunion.ForeColor = Color.FromArgb(255, 255, 255);
-                btnCrearTarea.ForeColor = Color.FromArgb(255, 255, 255);
-                btnLimpiar.ForeColor = Color.FromArgb(255, 255, 255);
-                
+
+
+
 
             }
 

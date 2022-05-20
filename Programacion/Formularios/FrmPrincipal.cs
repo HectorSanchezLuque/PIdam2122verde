@@ -40,8 +40,8 @@ namespace ProyectoIntegradoVerde.Formularios
 
         private void lblAbreFormulario_MouseLeave(object sender, EventArgs e)
         {
-
-                lblAbreFormulario.ForeColor = Color.Black;
+                
+                lblAbreFormulario.ForeColor = Color.White;
 
         }
 
@@ -131,6 +131,7 @@ namespace ProyectoIntegradoVerde.Formularios
                 btnAdmin.Show();
             }
             luzForm();
+         
         }
 
         private void timer1_Tick(object sender, EventArgs e)
@@ -151,17 +152,29 @@ namespace ProyectoIntegradoVerde.Formularios
             if (luz)
             {
 
-                luz = true;
-               
-                
+
+                this.BackColor = Color.FromArgb(255, 255, 255);
+                lblAbreFormulario.ForeColor = Color.White;
+                lblHora.ForeColor = Color.FromArgb(0, 0, 122);
+                lblFecha.ForeColor = Color.FromArgb(0, 0, 122);
+                btnAdmin.ForeColor = Color.FromArgb(0, 0, 122);
+                btnCerrarSesion.ForeColor = Color.FromArgb(0, 0, 122);
+                btnCalendario.ForeColor = Color.FromArgb(0, 0, 122);
+                btnCorreo.ForeColor = Color.FromArgb(0, 0, 122);
+                btnReuniones.ForeColor = Color.FromArgb(0, 0, 122);
+                btnTareas.ForeColor = Color.FromArgb(0, 0, 122);
+                btnTienda.ForeColor = Color.FromArgb(0, 0, 122);
+                panel1.BackColor = Color.FromArgb(0, 0, 122);
+                ptbInfo.BackColor = Color.FromArgb(0, 0, 122);
+
+
+
 
             }
             else
             {
-
-                luz = false;
                 this.BackColor = Color.FromArgb(0, 0, 122);
-                lblAbreFormulario.ForeColor = Color.FromArgb(255, 255, 255);
+                lblAbreFormulario.ForeColor = Color.Black;
                 lblHora.ForeColor = Color.FromArgb(0, 0, 122);
                 lblFecha.ForeColor = Color.FromArgb(255, 255, 255);
                 btnAdmin.ForeColor = Color.FromArgb(255, 255, 255);
@@ -172,8 +185,6 @@ namespace ProyectoIntegradoVerde.Formularios
                 btnTareas.ForeColor = Color.FromArgb(255, 255, 255);
                 btnTienda.ForeColor = Color.FromArgb(255, 255, 255);
                 panel1.BackColor = Color.FromArgb(255, 255, 255);
-                lblAbreFormulario.BackColor = Color.FromArgb(255, 255, 255);
-                lblAbreFormulario.ForeColor = Color.FromArgb(0, 0, 122);
                 ptbInfo.BackColor = Color.FromArgb(255, 255, 255);
 
             }
