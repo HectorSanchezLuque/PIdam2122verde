@@ -115,6 +115,11 @@ namespace ProyectoIntegradoVerde.Formularios
             {
                 conexion.CerrarConexion();
             }
+
+            if (user.Cargo != "Administrador")
+            {
+                btnCrearTarea.Visible = false;
+            }
         }
 
 
