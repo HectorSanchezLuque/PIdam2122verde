@@ -369,7 +369,7 @@ namespace ProyectoIntegradoVerde.Formularios
             if (luz)
             {
 
-              
+
                 this.BackColor = Color.FromArgb(255, 255, 255);
                 lblEmail.ForeColor = Color.FromArgb(0, 0, 122);
                 lblAsunt.ForeColor = Color.FromArgb(0, 0, 122);
@@ -379,12 +379,13 @@ namespace ProyectoIntegradoVerde.Formularios
                 lblDobleClick.ForeColor = Color.FromArgb(0, 0, 122);
                 lblDobleClick2.ForeColor = Color.FromArgb(0, 0, 122);
 
+
             }
             else
             {
 
                
-                this.BackColor = Color.FromArgb(0, 0, 122);
+                this.BackColor = Color.FromArgb(255, 255, 255);
                 lblEmail.ForeColor = Color.FromArgb(255, 255, 255);
                 lblAsunt.ForeColor = Color.FromArgb(255, 255, 255);
                 lblDestin.ForeColor = Color.FromArgb(255, 255, 255);
@@ -393,7 +394,21 @@ namespace ProyectoIntegradoVerde.Formularios
                 lblDobleClick.ForeColor = Color.FromArgb(255, 255, 255);
                 lblDobleClick2.ForeColor = Color.FromArgb(255, 255, 255);
 
-
+                lblInfo1.ForeColor = Color.FromArgb(255, 255, 255);
+                lblInfo2.ForeColor = Color.FromArgb(255, 255, 255);
+                btnActualizarReuniones.ForeColor = Color.FromArgb(255, 255, 255);
+                btnCrearReunion.ForeColor = Color.FromArgb(255, 255, 255);
+                btnCrearTarea.ForeColor = Color.FromArgb(255, 255, 255);
+                btnLimpiar.ForeColor = Color.FromArgb(255, 255, 255);
+                panel1.BackColor = Color.FromArgb(255, 255, 255);
+                panel2.BackColor = Color.FromArgb(255, 255, 255);
+                tabPage1.BackColor= Color.FromArgb(0, 0, 122);
+                tabPage2.BackColor = Color.FromArgb(0, 0, 122);
+                tabPage3.BackColor= Color.FromArgb(0, 0, 122);
+                tabPage4.BackColor = Color.FromArgb(0, 0, 122);
+                tabPage5.BackColor = Color.FromArgb(0, 0, 122);
+                lblPuntos.ForeColor = Color.FromArgb(255, 255, 255);
+               
 
 
             }
@@ -404,6 +419,7 @@ namespace ProyectoIntegradoVerde.Formularios
         {
 
         }
+
     }
 }
 
