@@ -23,8 +23,6 @@ namespace ProyectoIntegradoVerde.Formularios
 
 
         public FrmPrincipal(bool l, Usuario us, bool leng)
-
-
         {
             InitializeComponent();
             luz = l;
@@ -42,12 +40,9 @@ namespace ProyectoIntegradoVerde.Formularios
 
         private void lblAbreFormulario_MouseLeave(object sender, EventArgs e)
         {
-            if (luz)
-            {
+
                 lblAbreFormulario.ForeColor = Color.Black;
-            }
-            else
-            lblAbreFormulario.ForeColor = Color.FromArgb(255, 255, 255);
+
         }
 
         private void lblAbreFormulario_Click(object sender, EventArgs e)

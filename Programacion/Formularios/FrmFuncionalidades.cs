@@ -2,6 +2,12 @@
 using System;
 using System.Collections.Generic;
 using System.Windows.Forms;
+using System.Globalization;
+using System.Threading;
+using ProyectoIntegradoVerde.RecursosLocalizables;
+using System.Threading.Tasks;
+using System.IO;
+using System.Drawing;
 
 namespace ProyectoIntegradoVerde.Formularios
 {
@@ -14,8 +20,6 @@ namespace ProyectoIntegradoVerde.Formularios
         
         public int NumPag { get => numPag; set => numPag = value; }
         public Usuario User { get => user; set => user = value; }
-
-
 
 
 
@@ -78,6 +82,8 @@ namespace ProyectoIntegradoVerde.Formularios
             InitializeComponent();
             luz = lu;
             lang = lan;
+            luzForm();
+            formLang();
 
         }
 
@@ -283,9 +289,95 @@ namespace ProyectoIntegradoVerde.Formularios
         {
 
         }
+        private void formLang()
+        {
+            if (!lang)
+            {
+
+                Thread.CurrentThread.CurrentUICulture = new CultureInfo("");
+
+            }
+            else
+            {
+
+                Thread.CurrentThread.CurrentUICulture = new CultureInfo("EN");
 
 
-        
+            }
+
+            AplicarIdioma();
+        }
+
+        private void AplicarIdioma()
+        {
+
+            lblAsunt.Text = StringRecursos.fun_lblAsunt;
+            lblComProd.Text = StringRecursos.fun_lblComProd;
+            lblDestin.Text = StringRecursos.fun_lblDestin;
+            lblDispo.Text = StringRecursos.fun_lblDispo;
+            lblDobleClick.Text = StringRecursos.fun_lblDobleClick;
+            lblDobleClick2.Text = StringRecursos.fun_lblDobleClick2;
+            lblEmail.Text = StringRecursos.fun_lblEmail;
+            lblInfo1.Text = StringRecursos.fun_lblInfo1;
+            lblInfo2.Text = StringRecursos.fun_lblInfo2;
+            btnActualizarReuniones.Text = StringRecursos.fun_btnActualizarReuniones;
+            btnCrearReunion.Text = StringRecursos.fun_btnCrearReunion;
+            btnCrearTarea.Text = StringRecursos.fun_btnCrearTarea;
+            btnLimpiar.Text = StringRecursos.fun_btnLimpiar;
+
+
+        }
+        private void luzForm()
+        {
+
+            if (luz)
+            {
+
+              
+                this.BackColor = Color.FromArgb(255, 255, 255);
+                lblEmail.ForeColor = Color.FromArgb(0, 0, 122);
+                lblAsunt.ForeColor = Color.FromArgb(0, 0, 122);
+                lblDestin.ForeColor = Color.FromArgb(0, 0, 122);
+                lblComProd.ForeColor = Color.FromArgb(0, 0, 122);
+                lblDispo.ForeColor = Color.FromArgb(0, 0, 122);
+                lblDobleClick.ForeColor = Color.FromArgb(0, 0, 122);
+                lblDobleClick2.ForeColor = Color.FromArgb(0, 0, 122);
+                lblInfo1.ForeColor = Color.FromArgb(0, 0, 122);
+                lblInfo2.ForeColor = Color.FromArgb(0, 0, 122);
+                btnActualizarReuniones.ForeColor = Color.FromArgb(0, 0, 122);
+                btnCrearReunion.ForeColor = Color.FromArgb(0, 0, 122);
+                btnCrearTarea.ForeColor = Color.FromArgb(0, 0, 122);
+                btnLimpiar.ForeColor = Color.FromArgb(0, 0, 122);
+                
+
+
+            }
+            else
+            {
+
+               
+                this.BackColor = Color.FromArgb(0, 0, 122);
+                lblEmail.ForeColor = Color.FromArgb(255, 255, 255);
+                lblAsunt.ForeColor = Color.FromArgb(255, 255, 255);
+                lblDestin.ForeColor = Color.FromArgb(255, 255, 255);
+                lblComProd.ForeColor = Color.FromArgb(255, 255, 255);
+                lblDispo.ForeColor = Color.FromArgb(255, 255, 255);
+                lblDobleClick.ForeColor = Color.FromArgb(255, 255, 255);
+                lblDobleClick2.ForeColor = Color.FromArgb(255, 255, 255);
+                lblInfo1.ForeColor = Color.FromArgb(255, 255, 255);
+                lblInfo2.ForeColor = Color.FromArgb(255, 255, 255);
+                btnActualizarReuniones.ForeColor = Color.FromArgb(255, 255, 255);
+                btnCrearReunion.ForeColor = Color.FromArgb(255, 255, 255);
+                btnCrearTarea.ForeColor = Color.FromArgb(255, 255, 255);
+                btnLimpiar.ForeColor = Color.FromArgb(255, 255, 255);
+                
+
+            }
+
+        }
+
+
+
     }
 }
 

@@ -19,7 +19,7 @@ namespace ProyectoIntegradoVerde.Formularios
         bool luz;
         bool lang;
         private Usuario user;
-        public FrmDatos(Usuario us,bool lu,bool lan)
+        public FrmDatos(Usuario us, bool lu, bool lan)
         {
             InitializeComponent();
             user = us;
@@ -43,7 +43,7 @@ namespace ProyectoIntegradoVerde.Formularios
             else
             {
                 ptbFoto.Image = Usuario.BuscarFoto(user.Nif);
-                
+
             }
             conexion.CerrarConexion();
             luzForm();
@@ -59,7 +59,7 @@ namespace ProyectoIntegradoVerde.Formularios
             {
 
                 ptbFoto.Image = Image.FromFile(openFileDialog1.FileName);
-                
+
                 MemoryStream ms = new MemoryStream();
                 ptbFoto.Image.Save(ms, ptbFoto.Image.RawFormat);
                 byte[] img = ms.ToArray();
@@ -80,7 +80,6 @@ namespace ProyectoIntegradoVerde.Formularios
 
             if (luz)
             {
-                luz = true;
                 this.BackColor = Color.FromArgb(255, 255, 255);
                 lblCargo.ForeColor = Color.FromArgb(0, 0, 122);
                 lblNif.ForeColor = Color.FromArgb(0, 0, 122);
@@ -90,17 +89,16 @@ namespace ProyectoIntegradoVerde.Formularios
                 lblCargo2.ForeColor = Color.FromArgb(0, 0, 122);
                 lblNif2.ForeColor = Color.FromArgb(0, 0, 122);
                 lblPuntos2.ForeColor = Color.FromArgb(0, 0, 122);
-
                 lblDetalles.ForeColor = Color.FromArgb(0, 0, 122);
                 lblNombre.ForeColor = Color.FromArgb(0, 0, 122);
-                lblCode.ForeColor = Color.FromArgb(255, 255, 255);
+                lblCode.ForeColor = Color.FromArgb(0, 0, 122);
 
 
 
             }
             else
             {
-                luz = false;
+                
                 this.BackColor = Color.FromArgb(0, 0, 122);
                 lblCargo.ForeColor = Color.FromArgb(255, 255, 255);
                 lblNif.ForeColor = Color.FromArgb(255, 255, 255);
@@ -115,7 +113,7 @@ namespace ProyectoIntegradoVerde.Formularios
                 lblCode.ForeColor = Color.FromArgb(255, 255, 255);
 
             }
-            
+
 
         }
         private void AplicarIdioma()
@@ -128,13 +126,26 @@ namespace ProyectoIntegradoVerde.Formularios
             lblNombre.Text = StringRecursos.dat_lblNombre;
             lblDetalles.Text = StringRecursos.dat_lblDetalles;
             btnCerrar.Text = StringRecursos.dat_btnCerrar;
-            
+
         }
         private void formLang()
         {
             if (!lang)
             {
+                
+                Thread.CurrentThread.CurrentUICulture = new CultureInfo("");
+                
 
+            }
+            else
+            {
+             
+                Thread.CurrentThread.CurrentUICulture = new CultureInfo("EN");
+                
 
+            }
+
+            AplicarIdioma();
+        }
     }
 }

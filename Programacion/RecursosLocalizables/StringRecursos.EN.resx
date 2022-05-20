@@ -190,40 +190,40 @@
     <value>Points</value>
   </data>
   <data name="fun_btnActualizarReuniones" xml:space="preserve">
-    <value>Actualizar</value>
+    <value>Update</value>
   </data>
   <data name="fun_btnCrearReunion" xml:space="preserve">
-    <value>Crear Reunión</value>
+    <value>Create Meeting</value>
   </data>
   <data name="fun_btnCrearTarea" xml:space="preserve">
     <value>Create task</value>
   </data>
   <data name="fun_btnEnviar" xml:space="preserve">
-    <value>Enviar</value>
+    <value>Send</value>
   </data>
   <data name="fun_btnLimpiar" xml:space="preserve">
-    <value>Limpiar campos</value>
+    <value>Clean fields</value>
   </data>
   <data name="fun_lblAsunt" xml:space="preserve">
-    <value>Asunto:</value>
+    <value>Subject:</value>
   </data>
   <data name="fun_lblComProd" xml:space="preserve">
-    <value>Doble click para comprar un producto</value>
+    <value>Double click to buy a product</value>
   </data>
   <data name="fun_lblDestin" xml:space="preserve">
-    <value>Destinatario:</value>
+    <value>Address:</value>
   </data>
   <data name="fun_lblDispo" xml:space="preserve">
-    <value>Puntos disponibles:</value>
+    <value>Available Points:</value>
   </data>
   <data name="fun_lblDobleClick" xml:space="preserve">
-    <value>Doble click para asignarte una tarea</value>
+    <value>Double click to assign yourself a task</value>
   </data>
   <data name="fun_lblDobleClick2" xml:space="preserve">
-    <value>Doble click para completar una tarea</value>
+    <value>Double click to assign yourself a task</value>
   </data>
   <data name="fun_lblEmail" xml:space="preserve">
-    <value>Doble click para leer el cuerpo del correo seleccionado</value>
+    <value>Double click to read the body of the selected email</value>
   </data>
   <data name="fun_lblInfo1" xml:space="preserve">
     <value>Available tasks</value>

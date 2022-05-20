@@ -176,7 +176,7 @@ namespace ProyectoIntegradoVerde
             if (luz)
             {
 
-                luz = true;
+              
                 this.BackColor = Color.FromArgb(255, 255, 255);
                 lblCargo.ForeColor = Color.FromArgb(0, 0, 122);
                 lblEmailRegistro.ForeColor = Color.FromArgb(0, 0, 122);
@@ -196,7 +196,7 @@ namespace ProyectoIntegradoVerde
             else
             {
 
-                luz = false;
+                
                 this.BackColor = Color.FromArgb(0, 0, 122);
                 lblCargo.ForeColor = Color.FromArgb(255, 255, 255);
                 lblEmailRegistro.ForeColor = Color.FromArgb(255, 255, 255);

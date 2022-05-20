@@ -135,7 +135,7 @@ namespace ProyectoIntegradoVerde.Formularios
                 MessageBox.Show("Usuario modificado con éxito.");
             } catch (Exception ex)
             {
-                MessageBox.Show("Uno de los campos está vacio o incorrectamente introducido.");
+                MessageBox.Show("Uno de los campos está vacio o incorrectamente introducido."+ex);
             }
         }
 
@@ -176,7 +176,7 @@ namespace ProyectoIntegradoVerde.Formularios
                 MessageBox.Show("Usuario agregado con éxito.");
             } catch (Exception ex)
             {
-                MessageBox.Show("Uno de los campos está vacio o incorrectamente introducido.");
+                MessageBox.Show("Uno de los campos está vacio o incorrectamente introducido: " + ex.Message);
             }
         }
 
@@ -192,7 +192,7 @@ namespace ProyectoIntegradoVerde.Formularios
 
                     pictureFoto.Image = Image.FromFile(openFileDialog1.FileName);
                 }
-            } catch (Exception ex) { MessageBox.Show("Ha habido un problema al cargar la imágen, vuelvalo a intentarlo o seleccione una distinta."); }
+            } catch (Exception ex) { MessageBox.Show("Ha habido un problema al cargar la imágen, vuelvalo a intentarlo o seleccione una distinta:" + ex); }
         }
     }
 }

@@ -231,6 +231,9 @@ namespace Programacion
 
         }
 
+        private void Login_Load(object sender, EventArgs e)
+        {
 
+        }
     }
 }

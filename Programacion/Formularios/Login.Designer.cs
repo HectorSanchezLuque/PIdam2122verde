@@ -229,6 +229,7 @@
             this.Name = "Login";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Inicio de sesión";
+            this.Load += new System.EventHandler(this.Login_Load);
             this.SizeChanged += new System.EventHandler(this.Login_SizeChanged);
             ((System.ComponentModel.ISupportInitialize)(this.pcbLuz)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picFlag)).EndInit();
