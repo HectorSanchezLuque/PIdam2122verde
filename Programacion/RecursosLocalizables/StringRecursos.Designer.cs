@@ -322,6 +322,150 @@ namespace ProyectoIntegradoVerde.RecursosLocalizables {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a ID.
+        /// </summary>
+        internal static string fun_dgv1_1 {
+            get {
+                return ResourceManager.GetString("fun_dgv1-1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Titulo.
+        /// </summary>
+        internal static string fun_dgv1_2 {
+            get {
+                return ResourceManager.GetString("fun_dgv1-2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a F.Publicación.
+        /// </summary>
+        internal static string fun_dgv1_3 {
+            get {
+                return ResourceManager.GetString("fun_dgv1-3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Puntos.
+        /// </summary>
+        internal static string fun_dgv1_4 {
+            get {
+                return ResourceManager.GetString("fun_dgv1-4", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a F.Límite.
+        /// </summary>
+        internal static string fun_dgv1_5 {
+            get {
+                return ResourceManager.GetString("fun_dgv1-5", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Nombre.
+        /// </summary>
+        internal static string fun_dgv2_1 {
+            get {
+                return ResourceManager.GetString("fun_dgv2-1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Descripción.
+        /// </summary>
+        internal static string fun_dgv2_2 {
+            get {
+                return ResourceManager.GetString("fun_dgv2-2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Fecha.
+        /// </summary>
+        internal static string fun_dgv2_3 {
+            get {
+                return ResourceManager.GetString("fun_dgv2-3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Asunto.
+        /// </summary>
+        internal static string fun_dgv3_1 {
+            get {
+                return ResourceManager.GetString("fun_dgv3-1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a cuerpo.
+        /// </summary>
+        internal static string fun_dgv3_2 {
+            get {
+                return ResourceManager.GetString("fun_dgv3-2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Remitente.
+        /// </summary>
+        internal static string fun_dgv3_3 {
+            get {
+                return ResourceManager.GetString("fun_dgv3-3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Fecha.
+        /// </summary>
+        internal static string fun_dgv3_4 {
+            get {
+                return ResourceManager.GetString("fun_dgv3-4", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Nombre.
+        /// </summary>
+        internal static string fun_dgv4_1 {
+            get {
+                return ResourceManager.GetString("fun_dgv4-1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Coste.
+        /// </summary>
+        internal static string fun_dgv4_2 {
+            get {
+                return ResourceManager.GetString("fun_dgv4-2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Descripción.
+        /// </summary>
+        internal static string fun_dgv4_3 {
+            get {
+                return ResourceManager.GetString("fun_dgv4-3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Código.
+        /// </summary>
+        internal static string fun_dgv4_4 {
+            get {
+                return ResourceManager.GetString("fun_dgv4-4", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a Asunto:.
         /// </summary>
         internal static string fun_lblAsunt {
@@ -405,6 +549,60 @@ namespace ProyectoIntegradoVerde.RecursosLocalizables {
         /// <summary>
         ///   Busca una cadena traducida similar a Funcionalidades.
         /// </summary>
+        internal static string fun_prinTitle {
+            get {
+                return ResourceManager.GetString("fun_prinTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Tareas.
+        /// </summary>
+        internal static string fun_tc_1 {
+            get {
+                return ResourceManager.GetString("fun_tc-1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Calendario.
+        /// </summary>
+        internal static string fun_tc_2 {
+            get {
+                return ResourceManager.GetString("fun_tc-2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Reuniones.
+        /// </summary>
+        internal static string fun_tc_3 {
+            get {
+                return ResourceManager.GetString("fun_tc-3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Correo.
+        /// </summary>
+        internal static string fun_tc_4 {
+            get {
+                return ResourceManager.GetString("fun_tc-4", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Tienda.
+        /// </summary>
+        internal static string fun_tc_5 {
+            get {
+                return ResourceManager.GetString("fun_tc-5", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Funcionalidades.
+        /// </summary>
         internal static string fun_title {
             get {
                 return ResourceManager.GetString("fun_title", resourceCulture);
@@ -435,6 +633,195 @@ namespace ProyectoIntegradoVerde.RecursosLocalizables {
         internal static string notiAd {
             get {
                 return ResourceManager.GetString("notiAd", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Agregar.
+        /// </summary>
+        internal static string pan_adbtnAgregar {
+            get {
+                return ResourceManager.GetString("pan_adbtnAgregar", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Cargar imagen.
+        /// </summary>
+        internal static string pan_adbtnCargar {
+            get {
+                return ResourceManager.GetString("pan_adbtnCargar", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Cerrar.
+        /// </summary>
+        internal static string pan_adbtnCerrar {
+            get {
+                return ResourceManager.GetString("pan_adbtnCerrar", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Modificar.
+        /// </summary>
+        internal static string pan_adbtnModificar {
+            get {
+                return ResourceManager.GetString("pan_adbtnModificar", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Deshabilitado:.
+        /// </summary>
+        internal static string pan_adcheckDeshab {
+            get {
+                return ResourceManager.GetString("pan_adcheckDeshab", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Nombre.
+        /// </summary>
+        internal static string pan_addtg_1 {
+            get {
+                return ResourceManager.GetString("pan_addtg_1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a F.nacimiento.
+        /// </summary>
+        internal static string pan_addtg_2 {
+            get {
+                return ResourceManager.GetString("pan_addtg_2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Cargo.
+        /// </summary>
+        internal static string pan_addtg_3 {
+            get {
+                return ResourceManager.GetString("pan_addtg_3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Puntos.
+        /// </summary>
+        internal static string pan_addtg_4 {
+            get {
+                return ResourceManager.GetString("pan_addtg_4", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Correo.
+        /// </summary>
+        internal static string pan_addtg_5 {
+            get {
+                return ResourceManager.GetString("pan_addtg_5", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Contraseña.
+        /// </summary>
+        internal static string pan_addtg_6 {
+            get {
+                return ResourceManager.GetString("pan_addtg_6", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Borrado.
+        /// </summary>
+        internal static string pan_addtg_7 {
+            get {
+                return ResourceManager.GetString("pan_addtg_7", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Cargo:.
+        /// </summary>
+        internal static string pan_adlblCargo {
+            get {
+                return ResourceManager.GetString("pan_adlblCargo", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Correo:.
+        /// </summary>
+        internal static string pan_adlblCorr {
+            get {
+                return ResourceManager.GetString("pan_adlblCorr", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a F.Nacimiento.
+        /// </summary>
+        internal static string pan_adlblfech {
+            get {
+                return ResourceManager.GetString("pan_adlblfech", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Foto:.
+        /// </summary>
+        internal static string pan_adlblFoto {
+            get {
+                return ResourceManager.GetString("pan_adlblFoto", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a ID(Antes del cambio).
+        /// </summary>
+        internal static string pan_adlblIdAntes {
+            get {
+                return ResourceManager.GetString("pan_adlblIdAntes", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Nombre.
+        /// </summary>
+        internal static string pan_adlblNom {
+            get {
+                return ResourceManager.GetString("pan_adlblNom", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Contraseña.
+        /// </summary>
+        internal static string pan_adlblPassw {
+            get {
+                return ResourceManager.GetString("pan_adlblPassw", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Puntos:.
+        /// </summary>
+        internal static string pan_adlblPunt {
+            get {
+                return ResourceManager.GetString("pan_adlblPunt", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Panel de administración.
+        /// </summary>
+        internal static string pan_adTitulo {
+            get {
+                return ResourceManager.GetString("pan_adTitulo", resourceCulture);
             }
         }
         

@@ -50,12 +50,17 @@ namespace ProyectoIntegradoVerde.Clases
         /// <param name="conexion"></param>
         /// <param name="cor"></param>
         /// <returns></returns>
-        static public int AgregarCorreo(Correo cor)
+        static public int AgregarCorreo(Correo cor, int usuario)
         {
             int retorno;
 
+<<<<<<< HEAD
                 string consulta = String.Format("INSERT INTO Correos (idCorreo,asunto,cuerpo,recipiente,remitente,fecha) VALUES " +
                     "('{0}','{1}','{2}','{3}','{4}','{5}');", cor.id, cor.asunto, cor.cuerpo, cor.recipiente, cor.remitente, cor.fecha);
+=======
+                string consulta = String.Format("INSERT INTO Correos (idCorreo,asunto,cuerpo,recipiente,remitente,fecha,usuarios_id) VALUES " +
+                    "('{0}','{1}','{2}','{3}','{4}','{5}','{6}');", cor.id, cor.asunto, cor.cuerpo, cor.recipiente, cor.remitente, cor.fecha, usuario);
+>>>>>>> d7116075f6e2fc9bae0242c8bab04d5a4b75cace
 
                 MySqlCommand comando = new MySqlCommand(consulta, conexion.Conexion);
                 retorno = comando.ExecuteNonQuery();
