@@ -80,20 +80,7 @@ namespace ProyectoIntegradoVerde.Formularios
 
             if (luz)
             {
-                this.BackColor = Color.FromArgb(255, 255, 255);
-                lblCargo.ForeColor = Color.FromArgb(0, 0, 122);
-                lblNif.ForeColor = Color.FromArgb(0, 0, 122);
-                lblPuntos.ForeColor = Color.FromArgb(0, 0, 122);
-                lblNomUser.ForeColor = Color.FromArgb(0, 0, 122);
-                lblCodigo.ForeColor = Color.FromArgb(0, 0, 122);
-                lblCargo2.ForeColor = Color.FromArgb(0, 0, 122);
-                lblNif2.ForeColor = Color.FromArgb(0, 0, 122);
-                lblPuntos2.ForeColor = Color.FromArgb(0, 0, 122);
-                lblDetalles.ForeColor = Color.FromArgb(0, 0, 122);
-                lblNombre.ForeColor = Color.FromArgb(0, 0, 122);
-                lblCode.ForeColor = Color.FromArgb(0, 0, 122);
-
-
+                
 
             }
             else
@@ -111,6 +98,7 @@ namespace ProyectoIntegradoVerde.Formularios
                 lblDetalles.ForeColor = Color.FromArgb(255, 255, 255);
                 lblNombre.ForeColor = Color.FromArgb(255, 255, 255);
                 lblCode.ForeColor = Color.FromArgb(255, 255, 255);
+                panel1.BackColor = Color.FromArgb(255, 255, 255);
 
             }
 

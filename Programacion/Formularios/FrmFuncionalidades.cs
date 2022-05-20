@@ -334,20 +334,7 @@ namespace ProyectoIntegradoVerde.Formularios
             {
 
               
-                this.BackColor = Color.FromArgb(255, 255, 255);
-                lblEmail.ForeColor = Color.FromArgb(0, 0, 122);
-                lblAsunt.ForeColor = Color.FromArgb(0, 0, 122);
-                lblDestin.ForeColor = Color.FromArgb(0, 0, 122);
-                lblComProd.ForeColor = Color.FromArgb(0, 0, 122);
-                lblDispo.ForeColor = Color.FromArgb(0, 0, 122);
-                lblDobleClick.ForeColor = Color.FromArgb(0, 0, 122);
-                lblDobleClick2.ForeColor = Color.FromArgb(0, 0, 122);
-                lblInfo1.ForeColor = Color.FromArgb(0, 0, 122);
-                lblInfo2.ForeColor = Color.FromArgb(0, 0, 122);
-                btnActualizarReuniones.ForeColor = Color.FromArgb(0, 0, 122);
-                btnCrearReunion.ForeColor = Color.FromArgb(0, 0, 122);
-                btnCrearTarea.ForeColor = Color.FromArgb(0, 0, 122);
-                btnLimpiar.ForeColor = Color.FromArgb(0, 0, 122);
+               
                 
 
 
@@ -370,7 +357,11 @@ namespace ProyectoIntegradoVerde.Formularios
                 btnCrearReunion.ForeColor = Color.FromArgb(255, 255, 255);
                 btnCrearTarea.ForeColor = Color.FromArgb(255, 255, 255);
                 btnLimpiar.ForeColor = Color.FromArgb(255, 255, 255);
-                
+                panel1.ForeColor = Color.FromArgb(255, 255, 255);
+                panel2.ForeColor = Color.FromArgb(255, 255, 255);
+
+
+
 
             }
 
