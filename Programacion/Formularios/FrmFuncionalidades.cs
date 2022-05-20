@@ -337,7 +337,28 @@ namespace ProyectoIntegradoVerde.Formularios
             dgvTareasPendientes.Columns[3].HeaderText = StringRecursos.fun_dgv1_5;
             dgvTareasPendientes.Columns[4].HeaderText = StringRecursos.fun_dgv1_4;
 
+            dgvReuniones.Columns[1].HeaderText = StringRecursos.fun_dgv2_1;
+            dgvReuniones.Columns[2].HeaderText = StringRecursos.fun_dgv2_2;
+            dgvReuniones.Columns[3].HeaderText = StringRecursos.fun_dgv2_3;
 
+            dgvBandeja.Columns[1].HeaderText = StringRecursos.fun_dgv3_1;
+            dgvBandeja.Columns[2].HeaderText = StringRecursos.fun_dgv3_2;
+            dgvBandeja.Columns[3].HeaderText = StringRecursos.fun_dgv3_3;
+            dgvBandeja.Columns[4].HeaderText = StringRecursos.fun_dgv3_4;
+
+            dgvProductos.Columns[1].HeaderText = StringRecursos.fun_dgv4_1;
+            dgvProductos.Columns[2].HeaderText = StringRecursos.fun_dgv4_2;
+            dgvProductos.Columns[3].HeaderText = StringRecursos.fun_dgv4_3;
+            dgvProductos.Columns[4].HeaderText = StringRecursos.fun_dgv4_4;
+            
+
+            tabControl1.TabPages[0].Text = StringRecursos.fun_tc_1;
+            tabControl1.TabPages[1].Text = StringRecursos.fun_tc_2;
+            tabControl1.TabPages[2].Text = StringRecursos.fun_tc_3;
+            tabControl1.TabPages[3].Text = StringRecursos.fun_tc_4;
+            tabControl1.TabPages[4].Text = StringRecursos.fun_tc_5;
+
+            this.Text = StringRecursos.fun_prinTitle;
 
 
 
@@ -379,8 +400,10 @@ namespace ProyectoIntegradoVerde.Formularios
 
         }
 
+        private void dgvBandeja_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
 
-
+        }
     }
 }
 

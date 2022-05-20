@@ -219,6 +219,39 @@
   <data name="fun_dgv1-5" xml:space="preserve">
     <value>F.Limit</value>
   </data>
+  <data name="fun_dgv2-1" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="fun_dgv2-2" xml:space="preserve">
+    <value>Description</value>
+  </data>
+  <data name="fun_dgv2-3" xml:space="preserve">
+    <value>Date</value>
+  </data>
+  <data name="fun_dgv3-1" xml:space="preserve">
+    <value>Subject</value>
+  </data>
+  <data name="fun_dgv3-2" xml:space="preserve">
+    <value>Body</value>
+  </data>
+  <data name="fun_dgv3-3" xml:space="preserve">
+    <value>Sender</value>
+  </data>
+  <data name="fun_dgv3-4" xml:space="preserve">
+    <value>Date</value>
+  </data>
+  <data name="fun_dgv4-1" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="fun_dgv4-2" xml:space="preserve">
+    <value>Cost</value>
+  </data>
+  <data name="fun_dgv4-3" xml:space="preserve">
+    <value>Description</value>
+  </data>
+  <data name="fun_dgv4-4" xml:space="preserve">
+    <value>Codice</value>
+  </data>
   <data name="fun_lblAsunt" xml:space="preserve">
     <value>Subject:</value>
   </data>
@@ -245,6 +278,24 @@
   </data>
   <data name="fun_lblInfo2" xml:space="preserve">
     <value>Pending tasks</value>
+  </data>
+  <data name="fun_prinTitle" xml:space="preserve">
+    <value>Features</value>
+  </data>
+  <data name="fun_tc-1" xml:space="preserve">
+    <value>Task</value>
+  </data>
+  <data name="fun_tc-2" xml:space="preserve">
+    <value>Calendar</value>
+  </data>
+  <data name="fun_tc-3" xml:space="preserve">
+    <value>meetings</value>
+  </data>
+  <data name="fun_tc-4" xml:space="preserve">
+    <value>Mail</value>
+  </data>
+  <data name="fun_tc-5" xml:space="preserve">
+    <value>Shop</value>
   </data>
   <data name="fun_title" xml:space="preserve">
     <value>Features</value>

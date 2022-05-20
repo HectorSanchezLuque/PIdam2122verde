@@ -531,6 +531,7 @@ namespace ProyectoIntegradoVerde.Formularios
             this.dgvBandeja.RowTemplate.Height = 24;
             this.dgvBandeja.Size = new System.Drawing.Size(846, 195);
             this.dgvBandeja.TabIndex = 0;
+            this.dgvBandeja.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvBandeja_CellContentClick);
             this.dgvBandeja.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvBandeja_CellContentDoubleClick);
             // 
             // ideee

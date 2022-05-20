@@ -367,6 +367,105 @@ namespace ProyectoIntegradoVerde.RecursosLocalizables {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a Nombre.
+        /// </summary>
+        internal static string fun_dgv2_1 {
+            get {
+                return ResourceManager.GetString("fun_dgv2-1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Descripción.
+        /// </summary>
+        internal static string fun_dgv2_2 {
+            get {
+                return ResourceManager.GetString("fun_dgv2-2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Fecha.
+        /// </summary>
+        internal static string fun_dgv2_3 {
+            get {
+                return ResourceManager.GetString("fun_dgv2-3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Asunto.
+        /// </summary>
+        internal static string fun_dgv3_1 {
+            get {
+                return ResourceManager.GetString("fun_dgv3-1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a cuerpo.
+        /// </summary>
+        internal static string fun_dgv3_2 {
+            get {
+                return ResourceManager.GetString("fun_dgv3-2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Remitente.
+        /// </summary>
+        internal static string fun_dgv3_3 {
+            get {
+                return ResourceManager.GetString("fun_dgv3-3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Fecha.
+        /// </summary>
+        internal static string fun_dgv3_4 {
+            get {
+                return ResourceManager.GetString("fun_dgv3-4", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Nombre.
+        /// </summary>
+        internal static string fun_dgv4_1 {
+            get {
+                return ResourceManager.GetString("fun_dgv4-1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Coste.
+        /// </summary>
+        internal static string fun_dgv4_2 {
+            get {
+                return ResourceManager.GetString("fun_dgv4-2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Descripción.
+        /// </summary>
+        internal static string fun_dgv4_3 {
+            get {
+                return ResourceManager.GetString("fun_dgv4-3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Código.
+        /// </summary>
+        internal static string fun_dgv4_4 {
+            get {
+                return ResourceManager.GetString("fun_dgv4-4", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a Asunto:.
         /// </summary>
         internal static string fun_lblAsunt {
@@ -444,6 +543,60 @@ namespace ProyectoIntegradoVerde.RecursosLocalizables {
         internal static string fun_lblInfo2 {
             get {
                 return ResourceManager.GetString("fun_lblInfo2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Funcionalidades.
+        /// </summary>
+        internal static string fun_prinTitle {
+            get {
+                return ResourceManager.GetString("fun_prinTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Tareas.
+        /// </summary>
+        internal static string fun_tc_1 {
+            get {
+                return ResourceManager.GetString("fun_tc-1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Calendario.
+        /// </summary>
+        internal static string fun_tc_2 {
+            get {
+                return ResourceManager.GetString("fun_tc-2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Reuniones.
+        /// </summary>
+        internal static string fun_tc_3 {
+            get {
+                return ResourceManager.GetString("fun_tc-3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Correo.
+        /// </summary>
+        internal static string fun_tc_4 {
+            get {
+                return ResourceManager.GetString("fun_tc-4", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Tienda.
+        /// </summary>
+        internal static string fun_tc_5 {
+            get {
+                return ResourceManager.GetString("fun_tc-5", resourceCulture);
             }
         }
         
