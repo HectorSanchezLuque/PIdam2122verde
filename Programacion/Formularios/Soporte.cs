@@ -57,7 +57,7 @@ namespace ProyectoIntegradoVerde.Formularios
                     informe.Fecha = sqlFormattedDate;
 
                     conexion.AbrirConexion();
-                    Correo.AgregarCorreo(informe);
+                    Correo.AgregarCorreo(informe,0);
                     conexion.CerrarConexion();
                 }
             }
@@ -87,7 +87,7 @@ namespace ProyectoIntegradoVerde.Formularios
                     solicitud.Remitente = txtSolMail.Text;
                     solicitud.Fecha = sqlFormattedDate;
                     conexion.AbrirConexion();
-                    Correo.AgregarCorreo(solicitud);
+                    Correo.AgregarCorreo(solicitud,0);
                     conexion.CerrarConexion();
 
                 }
