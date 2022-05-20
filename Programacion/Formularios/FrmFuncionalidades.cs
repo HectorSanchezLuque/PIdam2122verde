@@ -201,7 +201,7 @@ namespace ProyectoIntegradoVerde.Formularios
 
 
                 conexion.AbrirConexion();
-                Correo.AgregarCorreo(cor);
+                Correo.AgregarCorreo(cor,user.Id);
                 conexion.CerrarConexion();
                 MessageBox.Show("Correo enviado con éxito.");
                 txtAsunto.Text = "";
