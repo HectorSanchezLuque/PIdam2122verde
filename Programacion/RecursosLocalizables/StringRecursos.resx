@@ -309,6 +309,69 @@
   <data name="notiAd" xml:space="preserve">
     <value>Notificar a un administrador.</value>
   </data>
+  <data name="pan_adbtnAgregar" xml:space="preserve">
+    <value>Agregar</value>
+  </data>
+  <data name="pan_adbtnCargar" xml:space="preserve">
+    <value>Cargar imagen</value>
+  </data>
+  <data name="pan_adbtnCerrar" xml:space="preserve">
+    <value>Cerrar</value>
+  </data>
+  <data name="pan_adbtnModificar" xml:space="preserve">
+    <value>Modificar</value>
+  </data>
+  <data name="pan_adcheckDeshab" xml:space="preserve">
+    <value>Deshabilitado:</value>
+  </data>
+  <data name="pan_addtg_1" xml:space="preserve">
+    <value>Nombre</value>
+  </data>
+  <data name="pan_addtg_2" xml:space="preserve">
+    <value>F.nacimiento</value>
+  </data>
+  <data name="pan_addtg_3" xml:space="preserve">
+    <value>Cargo</value>
+  </data>
+  <data name="pan_addtg_4" xml:space="preserve">
+    <value>Puntos</value>
+  </data>
+  <data name="pan_addtg_5" xml:space="preserve">
+    <value>Correo</value>
+  </data>
+  <data name="pan_addtg_6" xml:space="preserve">
+    <value>Contraseña</value>
+  </data>
+  <data name="pan_addtg_7" xml:space="preserve">
+    <value>Borrado</value>
+  </data>
+  <data name="pan_adlblCargo" xml:space="preserve">
+    <value>Cargo:</value>
+  </data>
+  <data name="pan_adlblCorr" xml:space="preserve">
+    <value>Correo:</value>
+  </data>
+  <data name="pan_adlblfech" xml:space="preserve">
+    <value>F.Nacimiento</value>
+  </data>
+  <data name="pan_adlblFoto" xml:space="preserve">
+    <value>Foto:</value>
+  </data>
+  <data name="pan_adlblIdAntes" xml:space="preserve">
+    <value>ID(Antes del cambio)</value>
+  </data>
+  <data name="pan_adlblNom" xml:space="preserve">
+    <value>Nombre</value>
+  </data>
+  <data name="pan_adlblPassw" xml:space="preserve">
+    <value>Contraseña</value>
+  </data>
+  <data name="pan_adlblPunt" xml:space="preserve">
+    <value>Puntos:</value>
+  </data>
+  <data name="pan_adTitulo" xml:space="preserve">
+    <value>Panel de administración</value>
+  </data>
   <data name="passwd" xml:space="preserve">
     <value>Contraseña</value>
   </data>

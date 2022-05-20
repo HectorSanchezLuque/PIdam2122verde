@@ -142,7 +142,7 @@ namespace ProyectoIntegradoVerde.Formularios
 
         private void btnAdmin_Click(object sender, EventArgs e)
         {
-            PanelAdmin pnlAd = new PanelAdmin();
+            PanelAdmin pnlAd = new PanelAdmin(luz, lang);
             pnlAd.ShowDialog();
         }
 

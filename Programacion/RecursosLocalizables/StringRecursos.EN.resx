@@ -309,6 +309,69 @@
   <data name="notiAd" xml:space="preserve">
     <value>Notify an administrator.</value>
   </data>
+  <data name="pan_adbtnAgregar" xml:space="preserve">
+    <value>Add</value>
+  </data>
+  <data name="pan_adbtnCargar" xml:space="preserve">
+    <value>Load imagen:</value>
+  </data>
+  <data name="pan_adbtnCerrar" xml:space="preserve">
+    <value>Close</value>
+  </data>
+  <data name="pan_adbtnModificar" xml:space="preserve">
+    <value>Modify</value>
+  </data>
+  <data name="pan_adcheckDeshab" xml:space="preserve">
+    <value>Disabled:</value>
+  </data>
+  <data name="pan_addtg_1" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="pan_addtg_2" xml:space="preserve">
+    <value>D.birth</value>
+  </data>
+  <data name="pan_addtg_3" xml:space="preserve">
+    <value>Position:</value>
+  </data>
+  <data name="pan_addtg_4" xml:space="preserve">
+    <value>Points:</value>
+  </data>
+  <data name="pan_addtg_5" xml:space="preserve">
+    <value>Mail:</value>
+  </data>
+  <data name="pan_addtg_6" xml:space="preserve">
+    <value>Password</value>
+  </data>
+  <data name="pan_addtg_7" xml:space="preserve">
+    <value>Erased</value>
+  </data>
+  <data name="pan_adlblCargo" xml:space="preserve">
+    <value>Position:</value>
+  </data>
+  <data name="pan_adlblCorr" xml:space="preserve">
+    <value>Mail:</value>
+  </data>
+  <data name="pan_adlblfech" xml:space="preserve">
+    <value>D.birth</value>
+  </data>
+  <data name="pan_adlblFoto" xml:space="preserve">
+    <value>Photo:</value>
+  </data>
+  <data name="pan_adlblIdAntes" xml:space="preserve">
+    <value>ID(Before change)</value>
+  </data>
+  <data name="pan_adlblNom" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="pan_adlblPassw" xml:space="preserve">
+    <value>Password:</value>
+  </data>
+  <data name="pan_adlblPunt" xml:space="preserve">
+    <value>Points:</value>
+  </data>
+  <data name="pan_adTitulo" xml:space="preserve">
+    <value>Administration panel</value>
+  </data>
   <data name="passwd" xml:space="preserve">
     <value>Password</value>
   </data>

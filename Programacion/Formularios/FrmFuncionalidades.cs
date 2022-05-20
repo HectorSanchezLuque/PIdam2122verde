@@ -359,6 +359,8 @@ namespace ProyectoIntegradoVerde.Formularios
             tabControl1.TabPages[4].Text = StringRecursos.fun_tc_5;
 
             this.Text = StringRecursos.fun_prinTitle;
+            
+            
 
 
 
