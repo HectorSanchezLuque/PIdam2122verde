@@ -114,11 +114,11 @@ namespace ProyectoIntegradoVerde.Formularios
             this.tabControl1.Controls.Add(this.tabPage5);
             this.tabControl1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabControl1.ItemSize = new System.Drawing.Size(56, 24);
-            this.tabControl1.Location = new System.Drawing.Point(38, 0);
-            this.tabControl1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabControl1.Location = new System.Drawing.Point(38, 1);
+            this.tabControl1.Margin = new System.Windows.Forms.Padding(2);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(650, 449);
+            this.tabControl1.Size = new System.Drawing.Size(652, 449);
             this.tabControl1.TabIndex = 0;
             // 
             // tabPage1
@@ -132,10 +132,10 @@ namespace ProyectoIntegradoVerde.Formularios
             this.tabPage1.Controls.Add(this.dgvTareasPendientes);
             this.tabPage1.Controls.Add(this.dgvTareasSinAsignar);
             this.tabPage1.Location = new System.Drawing.Point(4, 28);
-            this.tabPage1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPage1.Margin = new System.Windows.Forms.Padding(2);
             this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.tabPage1.Size = new System.Drawing.Size(642, 417);
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(2);
+            this.tabPage1.Size = new System.Drawing.Size(644, 417);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Tareas";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -145,7 +145,7 @@ namespace ProyectoIntegradoVerde.Formularios
             // 
             this.btnCrearTarea.ForeColor = System.Drawing.Color.RoyalBlue;
             this.btnCrearTarea.Location = new System.Drawing.Point(120, 186);
-            this.btnCrearTarea.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnCrearTarea.Margin = new System.Windows.Forms.Padding(2);
             this.btnCrearTarea.Name = "btnCrearTarea";
             this.btnCrearTarea.Size = new System.Drawing.Size(74, 28);
             this.btnCrearTarea.TabIndex = 8;
@@ -171,7 +171,7 @@ namespace ProyectoIntegradoVerde.Formularios
             this.btnActualizar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnActualizar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.btnActualizar.Location = new System.Drawing.Point(583, 354);
-            this.btnActualizar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnActualizar.Margin = new System.Windows.Forms.Padding(2);
             this.btnActualizar.Name = "btnActualizar";
             this.btnActualizar.Size = new System.Drawing.Size(49, 54);
             this.btnActualizar.TabIndex = 5;
@@ -226,7 +226,7 @@ namespace ProyectoIntegradoVerde.Formularios
             this.F_limite,
             this.puntosasignados});
             this.dgvTareasPendientes.Location = new System.Drawing.Point(97, 240);
-            this.dgvTareasPendientes.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dgvTareasPendientes.Margin = new System.Windows.Forms.Padding(2);
             this.dgvTareasPendientes.Name = "dgvTareasPendientes";
             this.dgvTareasPendientes.ReadOnly = true;
             this.dgvTareasPendientes.RowHeadersWidth = 51;
@@ -287,7 +287,7 @@ namespace ProyectoIntegradoVerde.Formularios
             this.fecha_l,
             this.Puntos});
             this.dgvTareasSinAsignar.Location = new System.Drawing.Point(97, 44);
-            this.dgvTareasSinAsignar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dgvTareasSinAsignar.Margin = new System.Windows.Forms.Padding(2);
             this.dgvTareasSinAsignar.Name = "dgvTareasSinAsignar";
             this.dgvTareasSinAsignar.ReadOnly = true;
             this.dgvTareasSinAsignar.RowHeadersWidth = 51;
@@ -340,9 +340,9 @@ namespace ProyectoIntegradoVerde.Formularios
             // 
             this.tabPage2.Controls.Add(this.cldCalendario);
             this.tabPage2.Location = new System.Drawing.Point(4, 28);
-            this.tabPage2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPage2.Margin = new System.Windows.Forms.Padding(2);
             this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(2);
             this.tabPage2.Size = new System.Drawing.Size(642, 417);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Calendario";
@@ -351,7 +351,7 @@ namespace ProyectoIntegradoVerde.Formularios
             // cldCalendario
             // 
             this.cldCalendario.Location = new System.Drawing.Point(238, 83);
-            this.cldCalendario.Margin = new System.Windows.Forms.Padding(7, 7, 7, 7);
+            this.cldCalendario.Margin = new System.Windows.Forms.Padding(7);
             this.cldCalendario.Name = "cldCalendario";
             this.cldCalendario.TabIndex = 0;
             // 
@@ -361,9 +361,9 @@ namespace ProyectoIntegradoVerde.Formularios
             this.tabPage3.Controls.Add(this.btnCrearReunion);
             this.tabPage3.Controls.Add(this.btnActualizarReuniones);
             this.tabPage3.Location = new System.Drawing.Point(4, 28);
-            this.tabPage3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPage3.Margin = new System.Windows.Forms.Padding(2);
             this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPage3.Padding = new System.Windows.Forms.Padding(2);
             this.tabPage3.Size = new System.Drawing.Size(642, 417);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Reuniones";
@@ -422,7 +422,7 @@ namespace ProyectoIntegradoVerde.Formularios
             // 
             this.btnCrearReunion.ForeColor = System.Drawing.Color.RoyalBlue;
             this.btnCrearReunion.Location = new System.Drawing.Point(9, 356);
-            this.btnCrearReunion.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnCrearReunion.Margin = new System.Windows.Forms.Padding(2);
             this.btnCrearReunion.Name = "btnCrearReunion";
             this.btnCrearReunion.Size = new System.Drawing.Size(103, 39);
             this.btnCrearReunion.TabIndex = 2;
@@ -434,7 +434,7 @@ namespace ProyectoIntegradoVerde.Formularios
             // 
             this.btnActualizarReuniones.ForeColor = System.Drawing.Color.RoyalBlue;
             this.btnActualizarReuniones.Location = new System.Drawing.Point(536, 356);
-            this.btnActualizarReuniones.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnActualizarReuniones.Margin = new System.Windows.Forms.Padding(2);
             this.btnActualizarReuniones.Name = "btnActualizarReuniones";
             this.btnActualizarReuniones.Size = new System.Drawing.Size(101, 39);
             this.btnActualizarReuniones.TabIndex = 1;
@@ -454,9 +454,9 @@ namespace ProyectoIntegradoVerde.Formularios
             this.tabPage4.Controls.Add(this.lblDestin);
             this.tabPage4.Controls.Add(this.dgvBandeja);
             this.tabPage4.Location = new System.Drawing.Point(4, 28);
-            this.tabPage4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPage4.Margin = new System.Windows.Forms.Padding(2);
             this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPage4.Padding = new System.Windows.Forms.Padding(2);
             this.tabPage4.Size = new System.Drawing.Size(642, 417);
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "Correo";
@@ -478,7 +478,7 @@ namespace ProyectoIntegradoVerde.Formularios
             // 
             this.btnLimpiar.ForeColor = System.Drawing.Color.RoyalBlue;
             this.btnLimpiar.Location = new System.Drawing.Point(432, 375);
-            this.btnLimpiar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnLimpiar.Margin = new System.Windows.Forms.Padding(2);
             this.btnLimpiar.Name = "btnLimpiar";
             this.btnLimpiar.Size = new System.Drawing.Size(101, 34);
             this.btnLimpiar.TabIndex = 10;
@@ -490,7 +490,7 @@ namespace ProyectoIntegradoVerde.Formularios
             // 
             this.btnEnviar.ForeColor = System.Drawing.Color.RoyalBlue;
             this.btnEnviar.Location = new System.Drawing.Point(538, 375);
-            this.btnEnviar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnEnviar.Margin = new System.Windows.Forms.Padding(2);
             this.btnEnviar.Name = "btnEnviar";
             this.btnEnviar.Size = new System.Drawing.Size(101, 34);
             this.btnEnviar.TabIndex = 9;
@@ -501,7 +501,7 @@ namespace ProyectoIntegradoVerde.Formularios
             // txtCuerpo
             // 
             this.txtCuerpo.Location = new System.Drawing.Point(5, 223);
-            this.txtCuerpo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtCuerpo.Margin = new System.Windows.Forms.Padding(2);
             this.txtCuerpo.Multiline = true;
             this.txtCuerpo.Name = "txtCuerpo";
             this.txtCuerpo.Size = new System.Drawing.Size(636, 144);
@@ -510,7 +510,7 @@ namespace ProyectoIntegradoVerde.Formularios
             // txtDest
             // 
             this.txtDest.Location = new System.Drawing.Point(122, 173);
-            this.txtDest.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtDest.Margin = new System.Windows.Forms.Padding(2);
             this.txtDest.Name = "txtDest";
             this.txtDest.Size = new System.Drawing.Size(230, 19);
             this.txtDest.TabIndex = 6;
@@ -518,7 +518,7 @@ namespace ProyectoIntegradoVerde.Formularios
             // txtAsunto
             // 
             this.txtAsunto.Location = new System.Drawing.Point(96, 197);
-            this.txtAsunto.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtAsunto.Margin = new System.Windows.Forms.Padding(2);
             this.txtAsunto.Name = "txtAsunto";
             this.txtAsunto.Size = new System.Drawing.Size(255, 19);
             this.txtAsunto.TabIndex = 5;
@@ -559,7 +559,7 @@ namespace ProyectoIntegradoVerde.Formularios
             this.remit,
             this.date});
             this.dgvBandeja.Location = new System.Drawing.Point(5, 4);
-            this.dgvBandeja.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dgvBandeja.Margin = new System.Windows.Forms.Padding(2);
             this.dgvBandeja.Name = "dgvBandeja";
             this.dgvBandeja.ReadOnly = true;
             this.dgvBandeja.RowHeadersWidth = 51;
@@ -615,10 +615,10 @@ namespace ProyectoIntegradoVerde.Formularios
             this.tabPage5.Controls.Add(this.lblDispo);
             this.tabPage5.Controls.Add(this.dgvProductos);
             this.tabPage5.Location = new System.Drawing.Point(4, 28);
-            this.tabPage5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPage5.Margin = new System.Windows.Forms.Padding(2);
             this.tabPage5.Name = "tabPage5";
-            this.tabPage5.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.tabPage5.Size = new System.Drawing.Size(642, 417);
+            this.tabPage5.Padding = new System.Windows.Forms.Padding(2);
+            this.tabPage5.Size = new System.Drawing.Size(644, 417);
             this.tabPage5.TabIndex = 4;
             this.tabPage5.Text = "Tienda";
             this.tabPage5.UseVisualStyleBackColor = true;
@@ -640,7 +640,7 @@ namespace ProyectoIntegradoVerde.Formularios
             this.lblPuntos.AutoSize = true;
             this.lblPuntos.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPuntos.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.lblPuntos.Location = new System.Drawing.Point(75, 384);
+            this.lblPuntos.Location = new System.Drawing.Point(165, 384);
             this.lblPuntos.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblPuntos.Name = "lblPuntos";
             this.lblPuntos.Size = new System.Drawing.Size(65, 20);
@@ -655,9 +655,9 @@ namespace ProyectoIntegradoVerde.Formularios
             this.lblDispo.Location = new System.Drawing.Point(5, 384);
             this.lblDispo.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblDispo.Name = "lblDispo";
-            this.lblDispo.Size = new System.Drawing.Size(75, 20);
+            this.lblDispo.Size = new System.Drawing.Size(170, 20);
             this.lblDispo.TabIndex = 1;
-            this.lblDispo.Text = "Puntos: ";
+            this.lblDispo.Text = "Puntos disponibles: ";
             // 
             // dgvProductos
             // 
@@ -671,12 +671,12 @@ namespace ProyectoIntegradoVerde.Formularios
             this.Descripcion,
             this.codigo});
             this.dgvProductos.Location = new System.Drawing.Point(5, 5);
-            this.dgvProductos.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dgvProductos.Margin = new System.Windows.Forms.Padding(2);
             this.dgvProductos.Name = "dgvProductos";
             this.dgvProductos.ReadOnly = true;
             this.dgvProductos.RowHeadersWidth = 51;
             this.dgvProductos.RowTemplate.Height = 24;
-            this.dgvProductos.Size = new System.Drawing.Size(631, 341);
+            this.dgvProductos.Size = new System.Drawing.Size(632, 341);
             this.dgvProductos.TabIndex = 0;
             this.dgvProductos.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvProductos_CellContentDoubleClick);
             // 
@@ -755,7 +755,7 @@ namespace ProyectoIntegradoVerde.Formularios
             // 
             this.panel1.BackColor = System.Drawing.Color.RoyalBlue;
             this.panel1.Location = new System.Drawing.Point(-8, -2);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(42, 451);
             this.panel1.TabIndex = 10;
@@ -763,21 +763,21 @@ namespace ProyectoIntegradoVerde.Formularios
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.RoyalBlue;
-            this.panel2.Location = new System.Drawing.Point(683, -9);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel2.Location = new System.Drawing.Point(690, -9);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(41, 472);
+            this.panel2.Size = new System.Drawing.Size(46, 472);
             this.panel2.TabIndex = 11;
             // 
             // FrmFuncionalidades
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(723, 448);
+            this.ClientSize = new System.Drawing.Size(731, 448);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FrmFuncionalidades";
             this.Text = "Funcionalidades";
             this.Load += new System.EventHandler(this.FrmFuncionalidades_Load);

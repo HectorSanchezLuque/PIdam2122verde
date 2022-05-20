@@ -343,7 +343,7 @@ namespace ProyectoIntegradoVerde.Formularios
             {
 
                
-                this.BackColor = Color.FromArgb(0, 0, 122);
+                this.BackColor = Color.FromArgb(255, 255, 255);
                 lblEmail.ForeColor = Color.FromArgb(255, 255, 255);
                 lblAsunt.ForeColor = Color.FromArgb(255, 255, 255);
                 lblDestin.ForeColor = Color.FromArgb(255, 255, 255);
@@ -357,16 +357,19 @@ namespace ProyectoIntegradoVerde.Formularios
                 btnCrearReunion.ForeColor = Color.FromArgb(255, 255, 255);
                 btnCrearTarea.ForeColor = Color.FromArgb(255, 255, 255);
                 btnLimpiar.ForeColor = Color.FromArgb(255, 255, 255);
-                panel1.ForeColor = Color.FromArgb(255, 255, 255);
-                panel2.ForeColor = Color.FromArgb(255, 255, 255);
-
-
-
+                panel1.BackColor = Color.FromArgb(255, 255, 255);
+                panel2.BackColor = Color.FromArgb(255, 255, 255);
+                tabPage1.BackColor= Color.FromArgb(0, 0, 122);
+                tabPage2.BackColor = Color.FromArgb(0, 0, 122);
+                tabPage3.BackColor= Color.FromArgb(0, 0, 122);
+                tabPage4.BackColor = Color.FromArgb(0, 0, 122);
+                tabPage5.BackColor = Color.FromArgb(0, 0, 122);
+                lblPuntos.ForeColor = Color.FromArgb(255, 255, 255);
+               
 
             }
 
         }
-
 
 
     }

@@ -177,16 +177,7 @@ namespace ProyectoIntegradoVerde
             {
 
               
-                this.BackColor = Color.FromArgb(255, 255, 255);
-                lblCargo.ForeColor = Color.FromArgb(0, 0, 122);
-                lblEmailRegistro.ForeColor = Color.FromArgb(0, 0, 122);
-                lblFNacRegistro.ForeColor = Color.FromArgb(0, 0, 122);
-                lblNifRegistro.ForeColor = Color.FromArgb(0, 0, 122);
-                lblNombreRegistro.ForeColor = Color.FromArgb(0, 0, 122);
-                lblPasswordRegistro.ForeColor = Color.FromArgb(0, 0, 122);
-                lblRegistro.ForeColor = Color.FromArgb(0, 0, 122);
-                chkShowReg.ForeColor = Color.FromArgb(0, 0, 122);
-
+               
 
 
 
@@ -206,7 +197,8 @@ namespace ProyectoIntegradoVerde
                 lblPasswordRegistro.ForeColor = Color.FromArgb(255, 255, 255);
                 lblRegistro.ForeColor = Color.FromArgb(255, 255, 255);
                 chkShowReg.ForeColor = Color.FromArgb(255, 255, 255);
-
+                panel1.BackColor = Color.FromArgb(255, 255, 255);
+                panel2.BackColor = Color.FromArgb(255, 255, 255);
 
 
 
