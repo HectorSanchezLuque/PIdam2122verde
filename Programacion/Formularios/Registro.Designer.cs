@@ -51,6 +51,8 @@ namespace ProyectoIntegradoVerde
             this.lblNifRegistro = new System.Windows.Forms.Label();
             this.chkShowReg = new System.Windows.Forms.CheckBox();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.pbProfPicRegistro)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
@@ -63,10 +65,10 @@ namespace ProyectoIntegradoVerde
             this.dtpFNRegistro.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpFNRegistro.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpFNRegistro.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpFNRegistro.Location = new System.Drawing.Point(131, 254);
-            this.dtpFNRegistro.Margin = new System.Windows.Forms.Padding(2);
+            this.dtpFNRegistro.Location = new System.Drawing.Point(175, 313);
+            this.dtpFNRegistro.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dtpFNRegistro.Name = "dtpFNRegistro";
-            this.dtpFNRegistro.Size = new System.Drawing.Size(350, 26);
+            this.dtpFNRegistro.Size = new System.Drawing.Size(465, 30);
             this.dtpFNRegistro.TabIndex = 41;
             // 
             // lblFNacRegistro
@@ -75,12 +77,11 @@ namespace ProyectoIntegradoVerde
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lblFNacRegistro.AutoSize = true;
-            this.lblFNacRegistro.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFNacRegistro.ForeColor = System.Drawing.Color.Black;
-            this.lblFNacRegistro.Location = new System.Drawing.Point(49, 254);
-            this.lblFNacRegistro.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblFNacRegistro.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFNacRegistro.ForeColor = System.Drawing.Color.RoyalBlue;
+            this.lblFNacRegistro.Location = new System.Drawing.Point(65, 313);
             this.lblFNacRegistro.Name = "lblFNacRegistro";
-            this.lblFNacRegistro.Size = new System.Drawing.Size(78, 26);
+            this.lblFNacRegistro.Size = new System.Drawing.Size(90, 29);
             this.lblFNacRegistro.TabIndex = 40;
             this.lblFNacRegistro.Text = "Fecha:";
             // 
@@ -91,10 +92,10 @@ namespace ProyectoIntegradoVerde
             this.btnVolverRegistro.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnVolverRegistro.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnVolverRegistro.ForeColor = System.Drawing.Color.White;
-            this.btnVolverRegistro.Location = new System.Drawing.Point(649, 552);
-            this.btnVolverRegistro.Margin = new System.Windows.Forms.Padding(2);
+            this.btnVolverRegistro.Location = new System.Drawing.Point(865, 642);
+            this.btnVolverRegistro.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnVolverRegistro.Name = "btnVolverRegistro";
-            this.btnVolverRegistro.Size = new System.Drawing.Size(88, 32);
+            this.btnVolverRegistro.Size = new System.Drawing.Size(117, 39);
             this.btnVolverRegistro.TabIndex = 39;
             this.btnVolverRegistro.Text = "Return";
             this.btnVolverRegistro.UseVisualStyleBackColor = false;
@@ -103,12 +104,11 @@ namespace ProyectoIntegradoVerde
             // 
             this.lblFpRegistro.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lblFpRegistro.AutoSize = true;
-            this.lblFpRegistro.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFpRegistro.ForeColor = System.Drawing.Color.Black;
-            this.lblFpRegistro.Location = new System.Drawing.Point(534, 87);
-            this.lblFpRegistro.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblFpRegistro.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFpRegistro.ForeColor = System.Drawing.Color.RoyalBlue;
+            this.lblFpRegistro.Location = new System.Drawing.Point(722, 99);
             this.lblFpRegistro.Name = "lblFpRegistro";
-            this.lblFpRegistro.Size = new System.Drawing.Size(52, 15);
+            this.lblFpRegistro.Size = new System.Drawing.Size(68, 20);
             this.lblFpRegistro.TabIndex = 36;
             this.lblFpRegistro.Text = "Imagen:";
             // 
@@ -117,11 +117,12 @@ namespace ProyectoIntegradoVerde
             this.btnCargarRegistro.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.btnCargarRegistro.BackColor = System.Drawing.SystemColors.Control;
             this.btnCargarRegistro.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnCargarRegistro.ForeColor = System.Drawing.Color.Black;
-            this.btnCargarRegistro.Location = new System.Drawing.Point(675, 302);
-            this.btnCargarRegistro.Margin = new System.Windows.Forms.Padding(2);
+            this.btnCargarRegistro.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCargarRegistro.ForeColor = System.Drawing.Color.RoyalBlue;
+            this.btnCargarRegistro.Location = new System.Drawing.Point(890, 348);
+            this.btnCargarRegistro.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnCargarRegistro.Name = "btnCargarRegistro";
-            this.btnCargarRegistro.Size = new System.Drawing.Size(56, 23);
+            this.btnCargarRegistro.Size = new System.Drawing.Size(85, 32);
             this.btnCargarRegistro.TabIndex = 35;
             this.btnCargarRegistro.Text = "Cargar";
             this.btnCargarRegistro.UseVisualStyleBackColor = false;
@@ -130,10 +131,10 @@ namespace ProyectoIntegradoVerde
             // pbProfPicRegistro
             // 
             this.pbProfPicRegistro.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.pbProfPicRegistro.Location = new System.Drawing.Point(545, 106);
-            this.pbProfPicRegistro.Margin = new System.Windows.Forms.Padding(2);
+            this.pbProfPicRegistro.Location = new System.Drawing.Point(727, 112);
+            this.pbProfPicRegistro.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pbProfPicRegistro.Name = "pbProfPicRegistro";
-            this.pbProfPicRegistro.Size = new System.Drawing.Size(186, 186);
+            this.pbProfPicRegistro.Size = new System.Drawing.Size(248, 229);
             this.pbProfPicRegistro.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbProfPicRegistro.TabIndex = 34;
             this.pbProfPicRegistro.TabStop = false;
@@ -144,12 +145,12 @@ namespace ProyectoIntegradoVerde
             | System.Windows.Forms.AnchorStyles.Right)));
             this.btnRegistrarseRegistro.BackColor = System.Drawing.SystemColors.Control;
             this.btnRegistrarseRegistro.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnRegistrarseRegistro.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRegistrarseRegistro.ForeColor = System.Drawing.Color.Black;
-            this.btnRegistrarseRegistro.Location = new System.Drawing.Point(131, 419);
-            this.btnRegistrarseRegistro.Margin = new System.Windows.Forms.Padding(2);
+            this.btnRegistrarseRegistro.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRegistrarseRegistro.ForeColor = System.Drawing.Color.RoyalBlue;
+            this.btnRegistrarseRegistro.Location = new System.Drawing.Point(175, 516);
+            this.btnRegistrarseRegistro.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnRegistrarseRegistro.Name = "btnRegistrarseRegistro";
-            this.btnRegistrarseRegistro.Size = new System.Drawing.Size(350, 40);
+            this.btnRegistrarseRegistro.Size = new System.Drawing.Size(467, 49);
             this.btnRegistrarseRegistro.TabIndex = 33;
             this.btnRegistrarseRegistro.Text = "Registrar";
             this.btnRegistrarseRegistro.UseVisualStyleBackColor = false;
@@ -161,10 +162,10 @@ namespace ProyectoIntegradoVerde
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtPasswordRegistro.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPasswordRegistro.Location = new System.Drawing.Point(131, 346);
-            this.txtPasswordRegistro.Margin = new System.Windows.Forms.Padding(2);
+            this.txtPasswordRegistro.Location = new System.Drawing.Point(175, 426);
+            this.txtPasswordRegistro.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtPasswordRegistro.Name = "txtPasswordRegistro";
-            this.txtPasswordRegistro.Size = new System.Drawing.Size(349, 32);
+            this.txtPasswordRegistro.Size = new System.Drawing.Size(464, 38);
             this.txtPasswordRegistro.TabIndex = 32;
             // 
             // lblPasswordRegistro
@@ -173,12 +174,11 @@ namespace ProyectoIntegradoVerde
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lblPasswordRegistro.AutoSize = true;
-            this.lblPasswordRegistro.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPasswordRegistro.ForeColor = System.Drawing.Color.Black;
-            this.lblPasswordRegistro.Location = new System.Drawing.Point(3, 352);
-            this.lblPasswordRegistro.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblPasswordRegistro.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPasswordRegistro.ForeColor = System.Drawing.Color.RoyalBlue;
+            this.lblPasswordRegistro.Location = new System.Drawing.Point(4, 433);
             this.lblPasswordRegistro.Name = "lblPasswordRegistro";
-            this.lblPasswordRegistro.Size = new System.Drawing.Size(74, 26);
+            this.lblPasswordRegistro.Size = new System.Drawing.Size(85, 29);
             this.lblPasswordRegistro.TabIndex = 31;
             this.lblPasswordRegistro.Text = "Clave:";
             // 
@@ -188,10 +188,10 @@ namespace ProyectoIntegradoVerde
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtEmailRegistro.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEmailRegistro.Location = new System.Drawing.Point(131, 294);
-            this.txtEmailRegistro.Margin = new System.Windows.Forms.Padding(2);
+            this.txtEmailRegistro.Location = new System.Drawing.Point(175, 362);
+            this.txtEmailRegistro.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtEmailRegistro.Name = "txtEmailRegistro";
-            this.txtEmailRegistro.Size = new System.Drawing.Size(349, 32);
+            this.txtEmailRegistro.Size = new System.Drawing.Size(464, 38);
             this.txtEmailRegistro.TabIndex = 30;
             // 
             // lblEmailRegistro
@@ -200,12 +200,11 @@ namespace ProyectoIntegradoVerde
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lblEmailRegistro.AutoSize = true;
-            this.lblEmailRegistro.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEmailRegistro.ForeColor = System.Drawing.Color.Black;
-            this.lblEmailRegistro.Location = new System.Drawing.Point(53, 297);
-            this.lblEmailRegistro.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblEmailRegistro.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEmailRegistro.ForeColor = System.Drawing.Color.RoyalBlue;
+            this.lblEmailRegistro.Location = new System.Drawing.Point(71, 366);
             this.lblEmailRegistro.Name = "lblEmailRegistro";
-            this.lblEmailRegistro.Size = new System.Drawing.Size(81, 26);
+            this.lblEmailRegistro.Size = new System.Drawing.Size(93, 29);
             this.lblEmailRegistro.TabIndex = 29;
             this.lblEmailRegistro.Text = "E-mail:";
             // 
@@ -215,10 +214,10 @@ namespace ProyectoIntegradoVerde
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtCargo.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCargo.Location = new System.Drawing.Point(131, 153);
-            this.txtCargo.Margin = new System.Windows.Forms.Padding(2);
+            this.txtCargo.Location = new System.Drawing.Point(175, 188);
+            this.txtCargo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtCargo.Name = "txtCargo";
-            this.txtCargo.Size = new System.Drawing.Size(349, 32);
+            this.txtCargo.Size = new System.Drawing.Size(464, 38);
             this.txtCargo.TabIndex = 28;
             // 
             // lblCargo
@@ -227,12 +226,11 @@ namespace ProyectoIntegradoVerde
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lblCargo.AutoSize = true;
-            this.lblCargo.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCargo.ForeColor = System.Drawing.Color.Black;
-            this.lblCargo.Location = new System.Drawing.Point(35, 156);
-            this.lblCargo.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblCargo.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCargo.ForeColor = System.Drawing.Color.RoyalBlue;
+            this.lblCargo.Location = new System.Drawing.Point(47, 192);
             this.lblCargo.Name = "lblCargo";
-            this.lblCargo.Size = new System.Drawing.Size(77, 26);
+            this.lblCargo.Size = new System.Drawing.Size(88, 29);
             this.lblCargo.TabIndex = 27;
             this.lblCargo.Text = "Cargo:";
             // 
@@ -242,10 +240,10 @@ namespace ProyectoIntegradoVerde
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtNombreRegistro.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNombreRegistro.Location = new System.Drawing.Point(131, 103);
-            this.txtNombreRegistro.Margin = new System.Windows.Forms.Padding(2);
+            this.txtNombreRegistro.Location = new System.Drawing.Point(175, 127);
+            this.txtNombreRegistro.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtNombreRegistro.Name = "txtNombreRegistro";
-            this.txtNombreRegistro.Size = new System.Drawing.Size(349, 32);
+            this.txtNombreRegistro.Size = new System.Drawing.Size(464, 38);
             this.txtNombreRegistro.TabIndex = 26;
             // 
             // lblNombreRegistro
@@ -254,12 +252,11 @@ namespace ProyectoIntegradoVerde
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lblNombreRegistro.AutoSize = true;
-            this.lblNombreRegistro.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNombreRegistro.ForeColor = System.Drawing.Color.Black;
-            this.lblNombreRegistro.Location = new System.Drawing.Point(35, 106);
-            this.lblNombreRegistro.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblNombreRegistro.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNombreRegistro.ForeColor = System.Drawing.Color.RoyalBlue;
+            this.lblNombreRegistro.Location = new System.Drawing.Point(47, 130);
             this.lblNombreRegistro.Name = "lblNombreRegistro";
-            this.lblNombreRegistro.Size = new System.Drawing.Size(96, 26);
+            this.lblNombreRegistro.Size = new System.Drawing.Size(110, 29);
             this.lblNombreRegistro.TabIndex = 25;
             this.lblNombreRegistro.Text = "Nombre:";
             // 
@@ -267,12 +264,11 @@ namespace ProyectoIntegradoVerde
             // 
             this.lblRegistro.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblRegistro.AutoSize = true;
-            this.lblRegistro.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRegistro.ForeColor = System.Drawing.Color.Black;
-            this.lblRegistro.Location = new System.Drawing.Point(124, 7);
-            this.lblRegistro.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblRegistro.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRegistro.ForeColor = System.Drawing.Color.RoyalBlue;
+            this.lblRegistro.Location = new System.Drawing.Point(227, 65);
             this.lblRegistro.Name = "lblRegistro";
-            this.lblRegistro.Size = new System.Drawing.Size(449, 55);
+            this.lblRegistro.Size = new System.Drawing.Size(318, 39);
             this.lblRegistro.TabIndex = 24;
             this.lblRegistro.Text = "Registro de Usuario";
             // 
@@ -281,12 +277,12 @@ namespace ProyectoIntegradoVerde
             this.btnClos.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnClos.BackColor = System.Drawing.SystemColors.Control;
             this.btnClos.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnClos.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnClos.ForeColor = System.Drawing.Color.Black;
-            this.btnClos.Location = new System.Drawing.Point(643, 443);
-            this.btnClos.Margin = new System.Windows.Forms.Padding(2);
+            this.btnClos.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnClos.ForeColor = System.Drawing.Color.RoyalBlue;
+            this.btnClos.Location = new System.Drawing.Point(858, 489);
+            this.btnClos.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnClos.Name = "btnClos";
-            this.btnClos.Size = new System.Drawing.Size(88, 32);
+            this.btnClos.Size = new System.Drawing.Size(117, 39);
             this.btnClos.TabIndex = 43;
             this.btnClos.Text = "Cerrar";
             this.btnClos.UseVisualStyleBackColor = false;
@@ -298,11 +294,11 @@ namespace ProyectoIntegradoVerde
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtNifRegistro.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNifRegistro.Location = new System.Drawing.Point(133, 201);
-            this.txtNifRegistro.Margin = new System.Windows.Forms.Padding(2);
+            this.txtNifRegistro.Location = new System.Drawing.Point(177, 247);
+            this.txtNifRegistro.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtNifRegistro.MaxLength = 9;
             this.txtNifRegistro.Name = "txtNifRegistro";
-            this.txtNifRegistro.Size = new System.Drawing.Size(349, 32);
+            this.txtNifRegistro.Size = new System.Drawing.Size(464, 38);
             this.txtNifRegistro.TabIndex = 45;
             this.txtNifRegistro.TextChanged += new System.EventHandler(this.txtNifRegistro_TextChanged);
             // 
@@ -312,12 +308,11 @@ namespace ProyectoIntegradoVerde
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lblNifRegistro.AutoSize = true;
-            this.lblNifRegistro.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNifRegistro.ForeColor = System.Drawing.Color.Black;
-            this.lblNifRegistro.Location = new System.Drawing.Point(76, 203);
-            this.lblNifRegistro.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblNifRegistro.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNifRegistro.ForeColor = System.Drawing.Color.RoyalBlue;
+            this.lblNifRegistro.Location = new System.Drawing.Point(101, 250);
             this.lblNifRegistro.Name = "lblNifRegistro";
-            this.lblNifRegistro.Size = new System.Drawing.Size(45, 26);
+            this.lblNifRegistro.Size = new System.Drawing.Size(51, 29);
             this.lblNifRegistro.TabIndex = 44;
             this.lblNifRegistro.Text = "Nif:";
             // 
@@ -328,11 +323,11 @@ namespace ProyectoIntegradoVerde
             | System.Windows.Forms.AnchorStyles.Right)));
             this.chkShowReg.AutoSize = true;
             this.chkShowReg.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkShowReg.ForeColor = System.Drawing.Color.Black;
-            this.chkShowReg.Location = new System.Drawing.Point(131, 382);
-            this.chkShowReg.Margin = new System.Windows.Forms.Padding(2);
+            this.chkShowReg.ForeColor = System.Drawing.Color.RoyalBlue;
+            this.chkShowReg.Location = new System.Drawing.Point(175, 470);
+            this.chkShowReg.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.chkShowReg.Name = "chkShowReg";
-            this.chkShowReg.Size = new System.Drawing.Size(150, 21);
+            this.chkShowReg.Size = new System.Drawing.Size(177, 24);
             this.chkShowReg.TabIndex = 42;
             this.chkShowReg.Text = "Mostrar contraseña";
             this.chkShowReg.UseVisualStyleBackColor = true;
@@ -342,11 +337,29 @@ namespace ProyectoIntegradoVerde
             // 
             this.errorProvider1.ContainerControl = this;
             // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.RoyalBlue;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1034, 52);
+            this.panel1.TabIndex = 46;
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.RoyalBlue;
+            this.panel2.Location = new System.Drawing.Point(0, 581);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(1034, 52);
+            this.panel2.TabIndex = 47;
+            // 
             // Registro
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(771, 540);
+            this.ClientSize = new System.Drawing.Size(1028, 628);
+            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.txtNifRegistro);
             this.Controls.Add(this.lblNifRegistro);
             this.Controls.Add(this.btnClos);
@@ -367,7 +380,7 @@ namespace ProyectoIntegradoVerde
             this.Controls.Add(this.txtNombreRegistro);
             this.Controls.Add(this.lblNombreRegistro);
             this.Controls.Add(this.lblRegistro);
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Registro";
             this.Text = "Registro";
             this.Load += new System.EventHandler(this.Registro_Load);
@@ -400,5 +413,7 @@ namespace ProyectoIntegradoVerde
         private System.Windows.Forms.Label lblNifRegistro;
         private System.Windows.Forms.CheckBox chkShowReg;
         private System.Windows.Forms.ErrorProvider errorProvider1;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel panel1;
     }
 }
