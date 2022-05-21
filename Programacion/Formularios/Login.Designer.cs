@@ -157,10 +157,10 @@
             // 
             this.pcbLuz.Image = ((System.Drawing.Image)(resources.GetObject("pcbLuz.Image")));
             this.pcbLuz.InitialImage = ((System.Drawing.Image)(resources.GetObject("pcbLuz.InitialImage")));
-            this.pcbLuz.Location = new System.Drawing.Point(442, 51);
+            this.pcbLuz.Location = new System.Drawing.Point(438, 51);
             this.pcbLuz.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pcbLuz.Name = "pcbLuz";
-            this.pcbLuz.Size = new System.Drawing.Size(24, 30);
+            this.pcbLuz.Size = new System.Drawing.Size(28, 40);
             this.pcbLuz.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pcbLuz.TabIndex = 11;
             this.pcbLuz.TabStop = false;
