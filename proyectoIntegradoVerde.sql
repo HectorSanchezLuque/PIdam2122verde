@@ -2,7 +2,7 @@ SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0;
 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0;
 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION';
 
-CREATE SCHEMA IF NOT EXISTS `Proyecto_Integrado` DEFAULT CHARACTER SET latin1 ;
+CREATE DATABASE IF NOT EXISTS `Proyecto_Integrado` DEFAULT CHARACTER SET latin1 ;
 USE `Proyecto_Integrado` ;
 
 CREATE TABLE IF NOT EXISTS `Proyecto_Integrado`.`usuarios` (
@@ -29,7 +29,7 @@ CREATE TABLE IF NOT EXISTS `Proyecto_Integrado`.`Correos` (
   `fecha` DATETIME NOT NULL,
   `usuarios_id` INT(3) NOT NULL,
   PRIMARY KEY USING BTREE (`idCorreo`, `usuarios_id`),
-  INDEX `fk_Correos_usuarios1_idx` (`usuarios_id` ASC) VISIBLE,
+  INDEX `fk_Correos_usuarios1_idx` (`usuarios_id`),
   CONSTRAINT `fk_Correos_usuarios1`
     FOREIGN KEY (`usuarios_id`)
     REFERENCES `Proyecto_Integrado`.`usuarios` (`id`)
@@ -67,7 +67,7 @@ CREATE TABLE IF NOT EXISTS `Proyecto_Integrado`.`tarea` (
   `fecha_limite` DATE NOT NULL,
   `usuarios_id` INT(3) NULL DEFAULT NULL,
   PRIMARY KEY (`id_tarea`),
-  INDEX `fk_tarea_usuarios1_idx` (`usuarios_id` ASC) VISIBLE,
+  INDEX `fk_tarea_usuarios1_idx` (`usuarios_id`),
   CONSTRAINT `fk_tarea_usuarios1`
     FOREIGN KEY (`usuarios_id`)
     REFERENCES `Proyecto_Integrado`.`usuarios` (`id`)
@@ -91,8 +91,8 @@ CREATE TABLE IF NOT EXISTS `Proyecto_Integrado`.`usuarios_has_reuniones` (
   `reuniones_id` INT(3) NOT NULL,
   `id` INT(3) NOT NULL AUTO_INCREMENT,
   PRIMARY KEY (`id`),
-  INDEX `fk_usuarios_has_reuniones_reuniones1_idx` (`reuniones_id` ASC) VISIBLE,
-  INDEX `fk_usuarios_has_reuniones_usuarios1_idx` (`usuarios_id` ASC) VISIBLE,
+  INDEX `fk_usuarios_has_reuniones_reuniones1_idx` (`reuniones_id`),
+  INDEX `fk_usuarios_has_reuniones_usuarios1_idx` (`usuarios_id`),
   CONSTRAINT `fk_usuarios_has_reuniones_reuniones1`
     FOREIGN KEY (`reuniones_id`)
     REFERENCES `Proyecto_Integrado`.`reuniones` (`id`)
@@ -104,7 +104,9 @@ CREATE TABLE IF NOT EXISTS `Proyecto_Integrado`.`usuarios_has_reuniones` (
     ON DELETE CASCADE
     ON UPDATE NO ACTION)
 ENGINE = InnoDB
-DEFAULT CHARACTER SET = latin1;
+DEFAULT CHARACTER SET = LATIN1;
+
+INSERT INTO usuarios VALUES(null,'11111111H','Administrador','0001-01-01','Administrador',999999,'admin@admin.com','admin123',null,0);
 
 USE `Proyecto_Integrado`;
 
@@ -115,11 +117,16 @@ DEFINER=`admin`@`%`
 TRIGGER `Proyecto_Integrado`.`usuarios_after_insert`
 AFTER INSERT ON `Proyecto_Integrado`.`usuarios`
 FOR EACH ROW
-BEGIN
-
-INSERT INTO pi_log (fecha,accion) 
-VALUES (NOW(),CONCAT("Registro de usuario ", NEW.nif));
-
+BEGIN
+
+
+
+INSERT INTO pi_log (fecha,accion) 
+
+VALUES (NOW(),CONCAT("Registro de usuario ", NEW.nif));
+
+
+
 END$$
 
 USE `Proyecto_Integrado`$$
@@ -128,11 +135,16 @@ DEFINER=`admin`@`%`
 TRIGGER `Proyecto_Integrado`.`usuarios_after_update`
 AFTER UPDATE ON `Proyecto_Integrado`.`usuarios`
 FOR EACH ROW
-BEGIN
-
-INSERT INTO pi_log (fecha,accion) 
-VALUES (NOW(),CONCAT("Modificación del usuario: ", new.nif));
-
+BEGIN
+
+
+
+INSERT INTO pi_log (fecha,accion) 
+
+VALUES (NOW(),CONCAT("Modificación del usuario: ", new.nif));
+
+
+
 END$$
 
 USE `Proyecto_Integrado`$$
@@ -141,11 +153,16 @@ DEFINER=`admin`@`%`
 TRIGGER `Proyecto_Integrado`.`reuniones_after_insert`
 AFTER INSERT ON `Proyecto_Integrado`.`reuniones`
 FOR EACH ROW
-BEGIN
-
-INSERT INTO pi_log (fecha,accion) 
-VALUES (NOW(),CONCAT("Creacion de nueva reunion con titulo: ", NEW.nombre));
-
+BEGIN
+
+
+
+INSERT INTO pi_log (fecha,accion) 
+
+VALUES (NOW(),CONCAT("Creacion de nueva reunion con titulo: ", NEW.nombre));
+
+
+
 END$$
 
 USE `Proyecto_Integrado`$$
@@ -154,12 +171,18 @@ DEFINER=`admin`@`%`
 TRIGGER `Proyecto_Integrado`.`tarea_after_insert`
 AFTER INSERT ON `Proyecto_Integrado`.`tarea`
 FOR EACH ROW
-BEGIN
-
-INSERT INTO pi_log (fecha,accion) 
-VALUES (NOW(),CONCAT("Creacion de nueva tarea ", NEW.titulo));
-
-
+BEGIN
+
+
+
+INSERT INTO pi_log (fecha,accion) 
+
+VALUES (NOW(),CONCAT("Creacion de nueva tarea ", NEW.titulo));
+
+
+
+
+
 END$$
 
 
@@ -168,5 +191,3 @@ DELIMITER ;
 SET SQL_MODE=@OLD_SQL_MODE;
 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;
 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;
-
-INSERT INTO usuarios VALUES(null,'11111111H','Administrador','0001-01-01','Administrador',999999,'admin@admin.com','admin123',null,0);
