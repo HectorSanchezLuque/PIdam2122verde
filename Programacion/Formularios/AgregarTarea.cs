@@ -107,17 +107,7 @@ namespace ProyectoIntegradoVerde.Formularios
             if (luz)
             {
 
-                luz = true;
-                this.BackColor = Color.FromArgb(255, 255, 255);
-                lblTitulo.ForeColor = Color.FromArgb(0, 0, 122);
-                lblDesc.ForeColor = Color.FromArgb(0, 0, 122);
-                lblPuntos.ForeColor = Color.FromArgb(0, 0, 122);
-                txtTitulo.BackColor = Color.FromArgb(255, 255, 255);
-                txtDesc.BackColor = Color.FromArgb(255, 255, 255);
-                txtTitulo.ForeColor = Color.FromArgb(0, 0, 122);
-                txtDesc.ForeColor = Color.FromArgb(0, 0, 122);
-                lblAgregarT.ForeColor = Color.FromArgb(0, 0, 122);
-                lblFLimite.ForeColor = Color.FromArgb(255, 255, 255);
+               
 
             }
             else
@@ -134,6 +124,8 @@ namespace ProyectoIntegradoVerde.Formularios
                 txtDesc.ForeColor = Color.FromArgb(255, 255, 255);
                 lblAgregarT.ForeColor = Color.FromArgb(255, 255, 255);
                 lblFLimite.ForeColor = Color.FromArgb(255, 255, 255);
+                panel1.BackColor = Color.FromArgb(255, 255, 255);
+                panel2.BackColor = Color.FromArgb(255, 255, 255);
 
 
 

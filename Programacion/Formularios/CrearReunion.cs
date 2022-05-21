@@ -100,15 +100,7 @@ namespace ProyectoIntegradoVerde.Formularios
             if (luz)
             {
 
-                luz = true;
-                this.BackColor = Color.FromArgb(255, 255, 255);
-                lblCargos.ForeColor = Color.FromArgb(0, 0, 122);
-                lblCrearReunion.ForeColor = Color.FromArgb(0, 0, 122);
-                lblFechaReunion.ForeColor = Color.FromArgb(0, 0, 122);
-                lblHoraReunion.ForeColor = Color.FromArgb(0, 0, 122);
-                lblRDesc.ForeColor = Color.FromArgb(0, 0, 122);
-                lblRNombre.ForeColor = Color.FromArgb(0, 0, 122);
-                btnCrearReunion.ForeColor = Color.FromArgb(0, 0, 122);
+                
 
             }
             else
@@ -123,7 +115,11 @@ namespace ProyectoIntegradoVerde.Formularios
                 lblRDesc.ForeColor = Color.FromArgb(255, 255, 255);
                 lblRNombre.ForeColor = Color.FromArgb(255, 255, 255);
                 btnCrearReunion.ForeColor = Color.FromArgb(255, 255, 255);
-                
+                panel1.BackColor = Color.FromArgb(255, 255, 255);
+                panel2.BackColor = Color.FromArgb(255, 255, 255);
+
+
+
             }
 
         }

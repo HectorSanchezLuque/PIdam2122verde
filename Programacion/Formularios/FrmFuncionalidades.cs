@@ -115,6 +115,11 @@ namespace ProyectoIntegradoVerde.Formularios
             {
                 conexion.CerrarConexion();
             }
+
+            if (user.Cargo != "Administrador")
+            {
+                btnCrearTarea.Visible = false;
+            }
         }
 
 
@@ -196,7 +201,7 @@ namespace ProyectoIntegradoVerde.Formularios
 
 
                 conexion.AbrirConexion();
-                Correo.AgregarCorreo(cor);
+                Correo.AgregarCorreo(cor,user.Id);
                 conexion.CerrarConexion();
                 MessageBox.Show("Correo enviado con éxito.");
                 txtAsunto.Text = "";
@@ -325,6 +330,44 @@ namespace ProyectoIntegradoVerde.Formularios
             btnCrearTarea.Text = StringRecursos.fun_btnCrearTarea;
             btnLimpiar.Text = StringRecursos.fun_btnLimpiar;
 
+            dgvTareasSinAsignar.Columns[0].HeaderText = StringRecursos.fun_dgv1_1;
+            dgvTareasSinAsignar.Columns[1].HeaderText = StringRecursos.fun_dgv1_2;
+            dgvTareasSinAsignar.Columns[2].HeaderText = StringRecursos.fun_dgv1_3;
+            dgvTareasSinAsignar.Columns[3].HeaderText = StringRecursos.fun_dgv1_5;
+            dgvTareasSinAsignar.Columns[4].HeaderText = StringRecursos.fun_dgv1_4;
+
+            dgvTareasPendientes.Columns[0].HeaderText = StringRecursos.fun_dgv1_1;
+            dgvTareasPendientes.Columns[1].HeaderText = StringRecursos.fun_dgv1_2;
+            dgvTareasPendientes.Columns[2].HeaderText = StringRecursos.fun_dgv1_3;
+            dgvTareasPendientes.Columns[3].HeaderText = StringRecursos.fun_dgv1_5;
+            dgvTareasPendientes.Columns[4].HeaderText = StringRecursos.fun_dgv1_4;
+
+            dgvReuniones.Columns[1].HeaderText = StringRecursos.fun_dgv2_1;
+            dgvReuniones.Columns[2].HeaderText = StringRecursos.fun_dgv2_2;
+            dgvReuniones.Columns[3].HeaderText = StringRecursos.fun_dgv2_3;
+
+            dgvBandeja.Columns[1].HeaderText = StringRecursos.fun_dgv3_1;
+            dgvBandeja.Columns[2].HeaderText = StringRecursos.fun_dgv3_2;
+            dgvBandeja.Columns[3].HeaderText = StringRecursos.fun_dgv3_3;
+            dgvBandeja.Columns[4].HeaderText = StringRecursos.fun_dgv3_4;
+
+            dgvProductos.Columns[1].HeaderText = StringRecursos.fun_dgv4_1;
+            dgvProductos.Columns[2].HeaderText = StringRecursos.fun_dgv4_2;
+            dgvProductos.Columns[3].HeaderText = StringRecursos.fun_dgv4_3;
+            dgvProductos.Columns[4].HeaderText = StringRecursos.fun_dgv4_4;
+            
+
+            tabControl1.TabPages[0].Text = StringRecursos.fun_tc_1;
+            tabControl1.TabPages[1].Text = StringRecursos.fun_tc_2;
+            tabControl1.TabPages[2].Text = StringRecursos.fun_tc_3;
+            tabControl1.TabPages[3].Text = StringRecursos.fun_tc_4;
+            tabControl1.TabPages[4].Text = StringRecursos.fun_tc_5;
+
+            this.Text = StringRecursos.fun_prinTitle;
+            
+            
+
+
 
         }
         private void luzForm()
@@ -333,7 +376,7 @@ namespace ProyectoIntegradoVerde.Formularios
             if (luz)
             {
 
-              
+
                 this.BackColor = Color.FromArgb(255, 255, 255);
                 lblEmail.ForeColor = Color.FromArgb(0, 0, 122);
                 lblAsunt.ForeColor = Color.FromArgb(0, 0, 122);
@@ -342,13 +385,6 @@ namespace ProyectoIntegradoVerde.Formularios
                 lblDispo.ForeColor = Color.FromArgb(0, 0, 122);
                 lblDobleClick.ForeColor = Color.FromArgb(0, 0, 122);
                 lblDobleClick2.ForeColor = Color.FromArgb(0, 0, 122);
-                lblInfo1.ForeColor = Color.FromArgb(0, 0, 122);
-                lblInfo2.ForeColor = Color.FromArgb(0, 0, 122);
-                btnActualizarReuniones.ForeColor = Color.FromArgb(0, 0, 122);
-                btnCrearReunion.ForeColor = Color.FromArgb(0, 0, 122);
-                btnCrearTarea.ForeColor = Color.FromArgb(0, 0, 122);
-                btnLimpiar.ForeColor = Color.FromArgb(0, 0, 122);
-                
 
 
             }
@@ -356,7 +392,7 @@ namespace ProyectoIntegradoVerde.Formularios
             {
 
                
-                this.BackColor = Color.FromArgb(0, 0, 122);
+                this.BackColor = Color.FromArgb(255, 255, 255);
                 lblEmail.ForeColor = Color.FromArgb(255, 255, 255);
                 lblAsunt.ForeColor = Color.FromArgb(255, 255, 255);
                 lblDestin.ForeColor = Color.FromArgb(255, 255, 255);
@@ -364,19 +400,32 @@ namespace ProyectoIntegradoVerde.Formularios
                 lblDispo.ForeColor = Color.FromArgb(255, 255, 255);
                 lblDobleClick.ForeColor = Color.FromArgb(255, 255, 255);
                 lblDobleClick2.ForeColor = Color.FromArgb(255, 255, 255);
+
                 lblInfo1.ForeColor = Color.FromArgb(255, 255, 255);
                 lblInfo2.ForeColor = Color.FromArgb(255, 255, 255);
                 btnActualizarReuniones.ForeColor = Color.FromArgb(255, 255, 255);
                 btnCrearReunion.ForeColor = Color.FromArgb(255, 255, 255);
                 btnCrearTarea.ForeColor = Color.FromArgb(255, 255, 255);
                 btnLimpiar.ForeColor = Color.FromArgb(255, 255, 255);
-                
+                panel1.BackColor = Color.FromArgb(255, 255, 255);
+                panel2.BackColor = Color.FromArgb(255, 255, 255);
+                tabPage1.BackColor= Color.FromArgb(0, 0, 122);
+                tabPage2.BackColor = Color.FromArgb(0, 0, 122);
+                tabPage3.BackColor= Color.FromArgb(0, 0, 122);
+                tabPage4.BackColor = Color.FromArgb(0, 0, 122);
+                tabPage5.BackColor = Color.FromArgb(0, 0, 122);
+                lblPuntos.ForeColor = Color.FromArgb(255, 255, 255);
+               
+
 
             }
 
         }
 
+        private void dgvBandeja_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
 
+        }
 
     }
 }

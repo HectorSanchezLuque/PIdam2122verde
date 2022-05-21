@@ -45,16 +45,16 @@ namespace ProyectoIntegradoVerde.Clases
         // Metodos
 
         /// <summary>
-        /// Agrega un correo a la base de datos
+        /// 
         /// </summary>
-        /// <param name="conexion"></param>
         /// <param name="cor"></param>
+        /// <param name="usuario"></param>
         /// <returns></returns>
-        static public int AgregarCorreo(Correo cor)
+        static public int AgregarCorreo(Correo cor, int usuario)
         {
             int retorno;
 
-                string consulta = String.Format("INSERT INTO Correos (idCorreo,asunto,cuerpo,recipiente,remitente,fecha,usuarios_id) VALUES " +
+                string consulta = String.Format("INSERT INTO Correos (idCorreo,asunto,cuerpo,recipiente,remitente,fecha) VALUES " +
                     "('{0}','{1}','{2}','{3}','{4}','{5}');", cor.id, cor.asunto, cor.cuerpo, cor.recipiente, cor.remitente, cor.fecha);
 
                 MySqlCommand comando = new MySqlCommand(consulta, conexion.Conexion);
