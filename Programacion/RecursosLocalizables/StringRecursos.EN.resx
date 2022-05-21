@@ -211,7 +211,7 @@
     <value>Title</value>
   </data>
   <data name="fun_dgv1-3" xml:space="preserve">
-    <value>F.Publicación</value>
+    <value>F.Publication</value>
   </data>
   <data name="fun_dgv1-4" xml:space="preserve">
     <value>Points</value>
@@ -409,7 +409,7 @@
     <value>Send</value>
   </data>
   <data name="sopBtnENvin2" xml:space="preserve">
-    <value>Un administrador contactara con usted con su nueva An administrator will contact you with your new password.</value>
+    <value>An administrator will contact you with your new password.</value>
   </data>
   <data name="sopbtnEnvInf1" xml:space="preserve">
     <value>Send report</value>
