@@ -45,17 +45,17 @@ namespace ProyectoIntegradoVerde.Clases
         // Metodos
 
         /// <summary>
-        /// 
+        /// Envía el contenido del correo a la base de datos.
         /// </summary>
-        /// <param name="cor"></param>
-        /// <param name="usuario"></param>
+        /// <param name="cor">Objeto correo</param>
+        /// <param name="usuario">ID del usuario</param>
         /// <returns></returns>
         static public int AgregarCorreo(Correo cor, int usuario)
         {
             int retorno;
 
-                string consulta = String.Format("INSERT INTO Correos (idCorreo,asunto,cuerpo,recipiente,remitente,fecha) VALUES " +
-                    "('{0}','{1}','{2}','{3}','{4}','{5}');", cor.id, cor.asunto, cor.cuerpo, cor.recipiente, cor.remitente, cor.fecha);
+                string consulta = String.Format("INSERT INTO Correos (idCorreo,asunto,cuerpo,recipiente,remitente,fecha,usuarios_id) VALUES " +
+                    "('{0}','{1}','{2}','{3}','{4}','{5}','{6}');", cor.id, cor.asunto, cor.cuerpo, cor.recipiente, cor.remitente, cor.fecha,usuario);
 
                 MySqlCommand comando = new MySqlCommand(consulta, conexion.Conexion);
                 retorno = comando.ExecuteNonQuery();
@@ -151,6 +151,11 @@ namespace ProyectoIntegradoVerde.Clases
             reader.Close();
             return bandeja;
         }
+
+        /// <summary>
+        /// Crea una lista con todos los correos de los administradores.
+        /// </summary>
+        /// <returns>Lista con los correos.</returns>
         public static List<String> CorreosAdmin()
         {
             List<String> correoAdmin = new List<String>();

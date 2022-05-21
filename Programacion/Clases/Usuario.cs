@@ -170,6 +170,11 @@ namespace ProyectoIntegradoVerde
             return retorno;
         }
 
+        /// <summary>
+        /// Busca un usuario en la base de datos.
+        /// </summary>
+        /// <param name="nif">NIF del usuario.</param>
+        /// <returns>Usuario.</returns>
         public static Usuario BuscarUsuario(string nif)
         {
             Usuario usu = new Usuario();
@@ -278,6 +283,10 @@ namespace ProyectoIntegradoVerde
             return existe;
         }
 
+        /// <summary>
+        /// Vuelve a habilitar a un usuario previamente deshabilitado.
+        /// </summary>
+        /// <param name="nif">NIF del usuario.</param>
         static public void DarAlta(string nif)
         {
             string consulta = "UPDATE usuarios SET borrado=0 WHERE nif='" + nif + "';";
@@ -285,7 +294,11 @@ namespace ProyectoIntegradoVerde
             comando.ExecuteNonQuery();
         }
 
-
+        /// <summary>
+        /// Filtra a usuarios por cargo.
+        /// </summary>
+        /// <param name="cargo">Nombre del cargo.</param>
+        /// <returns>Lista con usuarios pertenecientes al cargo introducido.</returns>
         public static List<Usuario> BuscarCargos (string cargo)
         {
             
@@ -315,6 +328,10 @@ namespace ProyectoIntegradoVerde
             return lista;
         }
 
+        /// <summary>
+        /// Lista con todos los cargos existentes.
+        /// </summary>
+        /// <returns>Lista</returns>
         public static List<string> ListadoCargos()
         {
             List<string> lista = new List<string>();
@@ -331,6 +348,10 @@ namespace ProyectoIntegradoVerde
 
         }
 
+        /// <summary>
+        /// Listado total de usuarios.
+        /// </summary>
+        /// <returns>Lista con todos los usuarios</returns>
         public static List<Usuario> ListadoUsuarios()
         {
             List<Usuario> usuarios = new List<Usuario>();
@@ -350,7 +371,7 @@ namespace ProyectoIntegradoVerde
                 us.Puntos = reader.GetInt32(5);
                 us.Correo = reader.GetString(6);
                 us.Password = reader.GetString(7);
-                us.foto = null; //No se que tipo de Get es
+                us.foto = null; //Lo busca otro método a través de su NIF.
                 us.Borrado = reader.GetInt32(9);
 
                 usuarios.Add(us);
@@ -359,6 +380,11 @@ namespace ProyectoIntegradoVerde
             return usuarios;
         }
 
+        /// <summary>
+        /// Busca la foto de un usuario en la base de datos.
+        /// </summary>
+        /// <param name="nif">NIF del usuario.</param>
+        /// <returns>Bitmap de la imágen.</returns>
         public static Bitmap BuscarFoto(string nif)
         {
             string consulta = "SELECT foto FROM usuarios WHERE nif='" + nif +"';";
@@ -387,6 +413,11 @@ namespace ProyectoIntegradoVerde
             return null;
         }
 
+        /// <summary>
+        /// Actualiza la foto de un usuario.
+        /// </summary>
+        /// <param name="nif">NIF del usuario.</param>
+        /// <param name="foto">Array de bytes de la foto.</param>
         public static void ActualizarFoto(string nif, byte[] foto)
         {
             string consulta = "UPDATE usuarios SET foto=@foto WHERE nif='" + nif + "';";

@@ -40,7 +40,11 @@ namespace ProyectoIntegradoVerde.Clases
 
         //Metodos
 
-
+        /// <summary>
+        /// Agrega un producto a la base de datos.
+        /// </summary>
+        /// <param name="prod">Producto.</param>
+        /// <returns></returns>
         static public int AgregarProducto( Tienda prod)
         {
             int retorno;
@@ -54,6 +58,11 @@ namespace ProyectoIntegradoVerde.Clases
             return retorno;
         }
 
+        /// <summary>
+        /// Comprueba si ya existe el producto en la base de datos.
+        /// </summary>
+        /// <param name="nom">Nombre del producto.</param>
+        /// <returns></returns>
         public bool YaEsta(string nom)
         {
             string consulta = string.Format("SELECT * FROM tienda" +
@@ -73,6 +82,11 @@ namespace ProyectoIntegradoVerde.Clases
             }
         }
 
+        /// <summary>
+        /// Elimina un producto de la base de datos.
+        /// </summary>
+        /// <param name="nom">Nombre del producto.</param>
+        /// <returns></returns>
         public static int EliminarProducto(string nom)
         {
             int retorno;
@@ -82,6 +96,11 @@ namespace ProyectoIntegradoVerde.Clases
             retorno = comando.ExecuteNonQuery();
             return retorno;
         }
+
+        /// <summary>
+        /// Listado de productos disponibles para comprar.
+        /// </summary>
+        /// <returns></returns>
         public static List<Tienda> Catalogo()
         {
             List<Tienda> productos = new List<Tienda>();
@@ -105,6 +124,12 @@ namespace ProyectoIntegradoVerde.Clases
             return productos;
         }
 
+        /// <summary>
+        /// Resta puntos a un usuario.
+        /// </summary>
+        /// <param name="id">ID del usuario.</param>
+        /// <param name="Punt">Puntos a restar.</param>
+        /// <returns></returns>
         public static int RestarPuntos(int id, int Punt)
         {
             int retorno;

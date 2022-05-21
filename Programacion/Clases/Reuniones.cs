@@ -27,7 +27,11 @@ namespace ProyectoIntegradoVerde.Clases
 
         public Reuniones() { }
 
-
+        /// <summary>
+        /// Crea una lista con las reuniones asociadas a un usuario.
+        /// </summary>
+        /// <param name="id">ID del usuario.</param>
+        /// <returns></returns>
         public static List<Reuniones> ListadoReuniones(int id)
         {
             List<Reuniones> reunions = new List<Reuniones>();
@@ -68,6 +72,15 @@ namespace ProyectoIntegradoVerde.Clases
             return reunions;
         }
 
+        /// <summary>
+        /// Crea una reunión y la introduce en la base de datos.
+        /// </summary>
+        /// <param name="cargo">Cargo al que va dirigido la reunión.</param>
+        /// <param name="desc">Descripción de la reunión.</param>
+        /// <param name="f">Fecha.</param>
+        /// <param name="h">Hora.</param>
+        /// <param name="n">Nombre.</param>
+        /// <param name="user">Usuario.</param>
         public static void CReunion(string cargo, string desc, DateTime f, DateTime h, string n, Usuario user)
         {
             List<Usuario> lista = Usuario.BuscarCargos(cargo);
