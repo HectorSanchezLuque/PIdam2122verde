@@ -46,6 +46,10 @@ namespace ProyectoIntegradoVerde.Clases
 
         // Metodos
 
+        /// <summary>
+        /// Muestra todas las tareas disponibles.
+        /// </summary>
+        /// <returns>Lista con las tareas.</returns>
         public static List<Tarea> ListadoTareas()
         {
             List<Tarea> tareas = new List<Tarea>();
@@ -71,6 +75,11 @@ namespace ProyectoIntegradoVerde.Clases
             return tareas;
         }
 
+        /// <summary>
+        /// Muestra todas las tareas asignadas a un usuario.
+        /// </summary>
+        /// <param name="id">ID del usuario.</param>
+        /// <returns>Lista con las tareas asignadas.</returns>
         public static List<Tarea> ListadoTareasAsignadas(int id)
         {
             List<Tarea> tareas = new List<Tarea>();
@@ -96,10 +105,10 @@ namespace ProyectoIntegradoVerde.Clases
             return tareas;
         }
 
-        /// Agregar tarea a la base de datos.
+        /// <summary>
+        /// Agrega una tarea a la base de datos.
         /// </summary>
-        /// <param name="conexion"></param>
-        /// <param name="tar"></param>
+        /// <param name="tar">Tarea a agregar.</param>
         /// <returns></returns>
         static public int AgregarTarea(Tarea tar)
         {
@@ -141,7 +150,7 @@ namespace ProyectoIntegradoVerde.Clases
         /// <summary>
         /// Método para eliminar una tarea en la Base de Datos.
         /// </summary>
-        /// <param name="titulo">Nombre de la tarea a eliminar</param>
+        /// <param name="id">ID de la tarea a eliminar</param>
         /// <returns></returns>
         public static int EliminarTarea(int id)
         {
@@ -156,9 +165,6 @@ namespace ProyectoIntegradoVerde.Clases
         /// <summary>
         /// Método para actualizar Tarea
         /// </summary>
-
-        /// <param name="conexion">objeto conexion</param>
-        /// <param name="usu"> datos de la Tareaa modificar</param>
         /// <param name="tar"> datos de la Tareaa modificar</param>
         /// <returns></returns>
         public int ActualizaUsuario(Tarea tar)
@@ -176,7 +182,12 @@ namespace ProyectoIntegradoVerde.Clases
             return retorno;
         }
 
-
+        /// <summary>
+        /// Asigna una tarea a un usuario.
+        /// </summary>
+        /// <param name="idTarea">ID de la tarea.</param>
+        /// <param name="id">ID del usuario.</param>
+        /// <returns></returns>
         public static int AsignarTarea(string idTarea, int id) 
         {
             int retorno;
@@ -190,6 +201,11 @@ namespace ProyectoIntegradoVerde.Clases
             return retorno;
         }
 
+        /// <summary>
+        /// Suma puntos a un usuario.
+        /// </summary>
+        /// <param name="user">Usuario al que sumar puntos.</param>
+        /// <returns></returns>
         public static int AñadirPuntos(Usuario user)
         {
             int retorno;

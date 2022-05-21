@@ -45,10 +45,10 @@ namespace ProyectoIntegradoVerde.Clases
         // Metodos
 
         /// <summary>
-        /// 
+        /// Envía el contenido del correo a la base de datos.
         /// </summary>
-        /// <param name="cor"></param>
-        /// <param name="usuario"></param>
+        /// <param name="cor">Objeto correo</param>
+        /// <param name="usuario">ID del usuario</param>
         /// <returns></returns>
         static public int AgregarCorreo(Correo cor, int usuario)
         {
@@ -151,6 +151,11 @@ namespace ProyectoIntegradoVerde.Clases
             reader.Close();
             return bandeja;
         }
+
+        /// <summary>
+        /// Crea una lista con todos los correos de los administradores.
+        /// </summary>
+        /// <returns>Lista con los correos.</returns>
         public static List<String> CorreosAdmin()
         {
             List<String> correoAdmin = new List<String>();
