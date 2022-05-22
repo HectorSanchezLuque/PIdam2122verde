@@ -1,0 +1,432 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="adTar_btnCerrar" xml:space="preserve">
+    <value>Close</value>
+  </data>
+  <data name="adTar_btnEnviar" xml:space="preserve">
+    <value>Send</value>
+  </data>
+  <data name="adTar_lblAgregarT" xml:space="preserve">
+    <value>Add Task</value>
+  </data>
+  <data name="adTar_lblDesc" xml:space="preserve">
+    <value>Description:</value>
+  </data>
+  <data name="adTar_lblFLimite" xml:space="preserve">
+    <value>Deadline:</value>
+  </data>
+  <data name="adTar_lblPuntos" xml:space="preserve">
+    <value>Points:</value>
+  </data>
+  <data name="adTar_lblTitulo" xml:space="preserve">
+    <value>Title:</value>
+  </data>
+  <data name="adTar_title" xml:space="preserve">
+    <value>Add Task</value>
+  </data>
+  <data name="contOlv" xml:space="preserve">
+    <value>forgotten password?</value>
+  </data>
+  <data name="crun_btnCrearReunion" xml:space="preserve">
+    <value>Create Meeting</value>
+  </data>
+  <data name="crun_lblCargos" xml:space="preserve">
+    <value>Associated Charges:</value>
+  </data>
+  <data name="crun_lblCrearReunion" xml:space="preserve">
+    <value>Meeting Creation</value>
+  </data>
+  <data name="crun_lblFechaReunion" xml:space="preserve">
+    <value>Meeting date</value>
+  </data>
+  <data name="crun_lblHoraReunion" xml:space="preserve">
+    <value>Meeting Time</value>
+  </data>
+  <data name="crun_lblRDesc" xml:space="preserve">
+    <value>Description:</value>
+  </data>
+  <data name="crun_lblRNombre" xml:space="preserve">
+    <value>Name:</value>
+  </data>
+  <data name="crun_title" xml:space="preserve">
+    <value>MeetingCreation</value>
+  </data>
+  <data name="dat_btnCerrar" xml:space="preserve">
+    <value>Exit</value>
+  </data>
+  <data name="dat_lblCargo" xml:space="preserve">
+    <value>Position</value>
+  </data>
+  <data name="dat_lblCode" xml:space="preserve">
+    <value>Employee Code</value>
+  </data>
+  <data name="dat_lblDetalles" xml:space="preserve">
+    <value>User Details</value>
+  </data>
+  <data name="dat_lblNif" xml:space="preserve">
+    <value>Identification number</value>
+  </data>
+  <data name="dat_lblNombre" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="dat_lblPuntos" xml:space="preserve">
+    <value>Points</value>
+  </data>
+  <data name="fun_btnActualizarReuniones" xml:space="preserve">
+    <value>Update</value>
+  </data>
+  <data name="fun_btnCrearReunion" xml:space="preserve">
+    <value>Create Meeting</value>
+  </data>
+  <data name="fun_btnCrearTarea" xml:space="preserve">
+    <value>Create task</value>
+  </data>
+  <data name="fun_btnEnviar" xml:space="preserve">
+    <value>Send</value>
+  </data>
+  <data name="fun_btnLimpiar" xml:space="preserve">
+    <value>Clean fields</value>
+  </data>
+  <data name="fun_dgv1-1" xml:space="preserve">
+    <value>ID</value>
+  </data>
+  <data name="fun_dgv1-2" xml:space="preserve">
+    <value>Title</value>
+  </data>
+  <data name="fun_dgv1-3" xml:space="preserve">
+    <value>F.Publication</value>
+  </data>
+  <data name="fun_dgv1-4" xml:space="preserve">
+    <value>Points</value>
+  </data>
+  <data name="fun_dgv1-5" xml:space="preserve">
+    <value>F.Limit</value>
+  </data>
+  <data name="fun_dgv2-1" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="fun_dgv2-2" xml:space="preserve">
+    <value>Description</value>
+  </data>
+  <data name="fun_dgv2-3" xml:space="preserve">
+    <value>Date</value>
+  </data>
+  <data name="fun_dgv3-1" xml:space="preserve">
+    <value>Subject</value>
+  </data>
+  <data name="fun_dgv3-2" xml:space="preserve">
+    <value>Body</value>
+  </data>
+  <data name="fun_dgv3-3" xml:space="preserve">
+    <value>Sender</value>
+  </data>
+  <data name="fun_dgv3-4" xml:space="preserve">
+    <value>Date</value>
+  </data>
+  <data name="fun_dgv4-1" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="fun_dgv4-2" xml:space="preserve">
+    <value>Cost</value>
+  </data>
+  <data name="fun_dgv4-3" xml:space="preserve">
+    <value>Description</value>
+  </data>
+  <data name="fun_dgv4-4" xml:space="preserve">
+    <value>Codice</value>
+  </data>
+  <data name="fun_lblAsunt" xml:space="preserve">
+    <value>Subject:</value>
+  </data>
+  <data name="fun_lblComProd" xml:space="preserve">
+    <value>Double click to buy a product</value>
+  </data>
+  <data name="fun_lblDestin" xml:space="preserve">
+    <value>Address:</value>
+  </data>
+  <data name="fun_lblDispo" xml:space="preserve">
+    <value>Available Points:</value>
+  </data>
+  <data name="fun_lblDobleClick" xml:space="preserve">
+    <value>Double click to assign yourself a task</value>
+  </data>
+  <data name="fun_lblDobleClick2" xml:space="preserve">
+    <value>Double click to assign yourself a task</value>
+  </data>
+  <data name="fun_lblEmail" xml:space="preserve">
+    <value>Double click to read the body of the selected email</value>
+  </data>
+  <data name="fun_lblInfo1" xml:space="preserve">
+    <value>Available tasks</value>
+  </data>
+  <data name="fun_lblInfo2" xml:space="preserve">
+    <value>Pending tasks</value>
+  </data>
+  <data name="fun_prinTitle" xml:space="preserve">
+    <value>Features</value>
+  </data>
+  <data name="fun_tc-1" xml:space="preserve">
+    <value>Task</value>
+  </data>
+  <data name="fun_tc-2" xml:space="preserve">
+    <value>Calendar</value>
+  </data>
+  <data name="fun_tc-3" xml:space="preserve">
+    <value>meetings</value>
+  </data>
+  <data name="fun_tc-4" xml:space="preserve">
+    <value>Mail</value>
+  </data>
+  <data name="fun_tc-5" xml:space="preserve">
+    <value>Shop</value>
+  </data>
+  <data name="fun_title" xml:space="preserve">
+    <value>Features</value>
+  </data>
+  <data name="lang" xml:space="preserve">
+    <value>ENG</value>
+  </data>
+  <data name="logIn" xml:space="preserve">
+    <value>Log in</value>
+  </data>
+  <data name="notiAd" xml:space="preserve">
+    <value>Notify an administrator.</value>
+  </data>
+  <data name="pan_adbtnAgregar" xml:space="preserve">
+    <value>Add</value>
+  </data>
+  <data name="pan_adbtnCargar" xml:space="preserve">
+    <value>Load imagen:</value>
+  </data>
+  <data name="pan_adbtnCerrar" xml:space="preserve">
+    <value>Close</value>
+  </data>
+  <data name="pan_adbtnModificar" xml:space="preserve">
+    <value>Modify</value>
+  </data>
+  <data name="pan_adcheckDeshab" xml:space="preserve">
+    <value>Disabled:</value>
+  </data>
+  <data name="pan_addtg_1" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="pan_addtg_2" xml:space="preserve">
+    <value>D.birth</value>
+  </data>
+  <data name="pan_addtg_3" xml:space="preserve">
+    <value>Position:</value>
+  </data>
+  <data name="pan_addtg_4" xml:space="preserve">
+    <value>Points:</value>
+  </data>
+  <data name="pan_addtg_5" xml:space="preserve">
+    <value>Mail:</value>
+  </data>
+  <data name="pan_addtg_6" xml:space="preserve">
+    <value>Password</value>
+  </data>
+  <data name="pan_addtg_7" xml:space="preserve">
+    <value>Erased</value>
+  </data>
+  <data name="pan_adlblCargo" xml:space="preserve">
+    <value>Position:</value>
+  </data>
+  <data name="pan_adlblCorr" xml:space="preserve">
+    <value>Mail:</value>
+  </data>
+  <data name="pan_adlblfech" xml:space="preserve">
+    <value>D.birth</value>
+  </data>
+  <data name="pan_adlblFoto" xml:space="preserve">
+    <value>Photo:</value>
+  </data>
+  <data name="pan_adlblIdAntes" xml:space="preserve">
+    <value>ID(Before change)</value>
+  </data>
+  <data name="pan_adlblNom" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="pan_adlblPassw" xml:space="preserve">
+    <value>Password:</value>
+  </data>
+  <data name="pan_adlblPunt" xml:space="preserve">
+    <value>Points:</value>
+  </data>
+  <data name="pan_adTitulo" xml:space="preserve">
+    <value>Administration panel</value>
+  </data>
+  <data name="passwd" xml:space="preserve">
+    <value>Password</value>
+  </data>
+  <data name="regBtnClose" xml:space="preserve">
+    <value>Close</value>
+  </data>
+  <data name="regBtnReg" xml:space="preserve">
+    <value>Register</value>
+  </data>
+  <data name="regCargar" xml:space="preserve">
+    <value>Load</value>
+  </data>
+  <data name="regCargo" xml:space="preserve">
+    <value>Position:</value>
+  </data>
+  <data name="regClave" xml:space="preserve">
+    <value>Password:</value>
+  </data>
+  <data name="regMostContra" xml:space="preserve">
+    <value>Show password</value>
+  </data>
+  <data name="regNaci" xml:space="preserve">
+    <value>Birth:</value>
+  </data>
+  <data name="regNombre" xml:space="preserve">
+    <value>Name:</value>
+  </data>
+  <data name="regTitle" xml:space="preserve">
+    <value>User register</value>
+  </data>
+  <data name="regUsu" xml:space="preserve">
+    <value>Register User</value>
+  </data>
+  <data name="sopbtnEnviar" xml:space="preserve">
+    <value>Send</value>
+  </data>
+  <data name="sopBtnENvin2" xml:space="preserve">
+    <value>An administrator will contact you with your new password.</value>
+  </data>
+  <data name="sopbtnEnvInf1" xml:space="preserve">
+    <value>Send report</value>
+  </data>
+  <data name="sopTitle" xml:space="preserve">
+    <value>Please describe the error as precisely as possible:</value>
+  </data>
+  <data name="sopTitle2" xml:space="preserve">
+    <value>Insert the email associated with your account:</value>
+  </data>
+  <data name="sop_tapcontrol1" xml:space="preserve">
+    <value>Notify Error</value>
+  </data>
+  <data name="sop_tapcontrol2" xml:space="preserve">
+    <value>Recover password</value>
+  </data>
+  <data name="sop_title" xml:space="preserve">
+    <value>Support</value>
+  </data>
+</root>
