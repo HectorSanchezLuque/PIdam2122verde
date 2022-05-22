@@ -124,6 +124,7 @@ namespace ProyectoIntegradoVerde.Formularios
 
         private void FrmPrincipal_Load_1(object sender, EventArgs e)
         {
+            lblHora.Text = DateTime.Now.ToString("hh:mm:ss");
             lblAbreFormulario.Text = user.Nombre + "  /  " + user.Cargo + "  /  " + user.Nif;
             timer1.Enabled = true;
             btnAdmin.Hide();
@@ -156,7 +157,7 @@ namespace ProyectoIntegradoVerde.Formularios
 
                 this.BackColor = Color.FromArgb(255, 255, 255);
                 lblAbreFormulario.ForeColor = Color.White;
-                lblHora.ForeColor = Color.FromArgb(0, 0, 122);
+                
                 lblFecha.ForeColor = Color.FromArgb(0, 0, 122);
                 btnAdmin.ForeColor = Color.FromArgb(0, 0, 122);
                 btnCerrarSesion.ForeColor = Color.FromArgb(0, 0, 122);
