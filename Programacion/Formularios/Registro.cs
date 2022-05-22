@@ -135,7 +135,7 @@ namespace ProyectoIntegradoVerde
 
 
 
-                            Usuario user = new Usuario(txtNifRegistro.Text, txtNombreRegistro.Text, dtpFNRegistro.Value.Date, txtPasswordRegistro.Text, txtEmailRegistro.Text, txtCargo.Text, img, 0);
+                            Usuario user = new Usuario(txtNifRegistro.Text, txtNombreRegistro.Text, dtpFNRegistro.Value.Date, txtCargo.Text, txtEmailRegistro.Text, txtPasswordRegistro.Text, img, 0);
 
                             user.AgregarUsuario();
                             MessageBox.Show("Usuario registrado");

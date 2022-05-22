@@ -916,7 +916,7 @@ namespace ProyectoIntegradoVerde.RecursosLocalizables {
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a Resgistrar Usuario.
+        ///   Busca una cadena traducida similar a Registrar Usuario.
         /// </summary>
         internal static string regUsu {
             get {
